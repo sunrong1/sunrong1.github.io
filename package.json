@@ -1,21 +1,21 @@
 {
-  "name": "sunrong-testing.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "dave-blog",
+  "description": "blog for testing",
+  "version": "2.0.0",
+  "license": "MIT",
+  "type": "module",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "vuepress build docs && npx gh-pages -d docs/.vuepress/dist"
+    "build": "vuepress-vite build src",
+    "clean": "vuepress-vite dev src --clean-cache",
+    "dev": "vuepress-vite dev src",
+    "update": "npx vp-update",
+     "deploy": "npx gh-pages -d docs/.vuepress/dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@vuepress/bundler-vite": "^2.0.0-rc.23",
-    "@vuepress/theme-default": "^2.0.0-rc.110",
+    "@vuepress/bundler-vite": "2.0.0-rc.23",
     "sass-embedded": "^1.89.2",
-    "vuepress": "^2.0.0-rc.23"
+    "vue": "^3.5.16",
+    "vuepress": "2.0.0-rc.23",
+    "vuepress-theme-hope": "2.0.0-rc.93"
   }
 }
