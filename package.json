@@ -9,7 +9,7 @@
     "clean": "vuepress-vite dev src --clean-cache",
     "dev": "vuepress-vite dev src",
     "update": "npx vp-update",
-    "deploy": "vuepress build docs && npx gh-pages -d docs/.vuepress/dist"
+    "deploy": "vuepress build docs && npx gh-pages -d src/.vuepress/dist"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.23",
