@@ -19,9 +19,9 @@ projects:
     link: https://链接地址
 
   - icon: book
-    name: 书籍名称
-    desc: 书籍详细描述
-    link: https://你的书籍链接
+    name: 微信读书
+    desc: 我喜欢的读书的地方
+    link: https://weread.qq.com/web/shelf
 
   - icon: newspaper
     name: 文章名称
@@ -40,9 +40,3 @@ projects:
 
 footer: MIT Licensed
 ---
-
-这是一个博客主页的案例。
-
-要使用此布局，你应该在页面前端设置 `layout: Blog` 和 `home: true`。
-
-相关配置文档请见 [博客主页](https://theme-hope.vuejs.press/zh/guide/blog/home.html)。

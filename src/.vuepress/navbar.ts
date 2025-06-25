@@ -9,7 +9,7 @@ export default navbar([
     prefix: "/posts/",
     children: [
       {
-        text: "苹果",
+        text: "AI",
         icon: "pen-to-square",
         prefix: "apple/",
         children: [
@@ -34,8 +34,6 @@ export default navbar([
             icon: "pen-to-square",
             link: "2",
           },
-          "3",
-          "4",
         ],
       },
       { text: "樱桃", icon: "pen-to-square", link: "cherry" },

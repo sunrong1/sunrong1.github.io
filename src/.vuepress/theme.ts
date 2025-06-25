@@ -4,11 +4,11 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+  hostname: "https://sunrong1.github.io",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "Mr.Sun",
+    url: "https://sunrong.site",
   },
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
@@ -32,18 +32,20 @@ export default hopeTheme({
     description: "前后端开发者，测试技术研究者",
     intro: "/intro.html",
     medias: {
-      // Baidu: "https://example.com",
+      Lark: "https://www.yuque.com/dashboard/books",
+      GitHub: "https://github.com/sunrong1/",
+      Gitee: "https://gitee.com/davesun",
+      Zhihu: "https://www.zhihu.com/people/sunrong1",
       BiliBili: "https://space.bilibili.com/569121037",
       // Bitbucket: "https://example.com",
       // Dingding: "https://example.com",
       // Discord: "https://example.com",
       // Dribbble: "https://example.com",
-      // Email: "mailto:info@example.com",
+      Email: "mailto:sunrong1990@126.com",
+      
       // Evernote: "https://example.com",
       // Facebook: "https://example.com",
       // Flipboard: "https://example.com",
-      Gitee: "https://gitee.com/davesun",
-      GitHub: "https://github.com/sunrong1/",
       // Gitlab: "https://gitee.com/davesun",
       // Gmail: "mailto:info@example.com",
       // Instagram: "https://example.com",
@@ -62,11 +64,11 @@ export default hopeTheme({
       // Weibo: "https://example.com",
       // Whatsapp: "https://example.com",
       // Youtube: "https://example.com",
-      Zhihu: "https://www.zhihu.com/people/sunrong1",
-      VuePressThemeHope: {
-        icon: "https://theme-hope-assets.vuejs.press/logo.svg",
-        link: "https://theme-hope.vuejs.press",
-      },
+      
+      // VuePressThemeHope: {
+      //   icon: "https://theme-hope-assets.vuejs.press/logo.svg",
+      //   link: "https://theme-hope.vuejs.press",
+      // },
     },
   },
 
