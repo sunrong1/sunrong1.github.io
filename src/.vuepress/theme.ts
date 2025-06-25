@@ -24,7 +24,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "默认页脚",
+  footer: "MIT Licensed",
   displayFooter: true,
 
   // 博客相关
@@ -37,12 +37,12 @@ export default hopeTheme({
       Gitee: "https://gitee.com/davesun",
       Zhihu: "https://www.zhihu.com/people/sunrong1",
       BiliBili: "https://space.bilibili.com/569121037",
+      Email: "mailto:sunrong1990@126.com",
       // Bitbucket: "https://example.com",
       // Dingding: "https://example.com",
       // Discord: "https://example.com",
       // Dribbble: "https://example.com",
-      Email: "mailto:sunrong1990@126.com",
-      
+
       // Evernote: "https://example.com",
       // Facebook: "https://example.com",
       // Flipboard: "https://example.com",
@@ -76,8 +76,8 @@ export default hopeTheme({
   encrypt: {
     config: {
       "/demo/encrypt.html": {
-        hint: "Password: 1234",
-        password: "1234",
+        hint: "Password: 123",
+        password: "123",
       },
     },
   },
