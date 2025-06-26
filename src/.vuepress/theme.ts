@@ -13,7 +13,7 @@ export default hopeTheme({
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "sunrong1/sunrong1.github.io",
 
   docsDir: "src",
 
@@ -37,7 +37,9 @@ export default hopeTheme({
       Gitee: "https://gitee.com/davesun",
       Zhihu: "https://www.zhihu.com/people/sunrong1",
       BiliBili: "https://space.bilibili.com/569121037",
+      Twitter: "https://x.com/home",
       Email: "mailto:sunrong1990@126.com",
+      // Linkedin: "www.linkedin.com/in/sunrong",
       // Bitbucket: "https://example.com",
       // Dingding: "https://example.com",
       // Discord: "https://example.com",
@@ -51,7 +53,7 @@ export default hopeTheme({
       // Instagram: "https://example.com",
       // Lark: "https://example.com",
       // Lines: "https://example.com",
-      // Linkedin: "https://example.com",
+
       // Pinterest: "https://example.com",
       // Pocket: "https://example.com",
       // QQ: "https://example.com",
@@ -59,7 +61,7 @@ export default hopeTheme({
       // Reddit: "https://example.com",
       // Rss: "https://example.com",
       // Steam: "https://example.com",
-      // Twitter: "https://example.com",
+      
       // Wechat: "https://example.com",
       // Weibo: "https://example.com",
       // Whatsapp: "https://example.com",

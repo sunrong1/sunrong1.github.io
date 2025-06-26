@@ -14,9 +14,9 @@ projects:
     link: https://你的项目链接
 
   - icon: link
-    name: 链接名称
-    desc: 链接详细描述
-    link: https://链接地址
+    name: Yuque
+    desc: 我的知识库
+    link: https://www.yuque.com/dashboard/books
 
   - icon: book
     name: 微信读书
