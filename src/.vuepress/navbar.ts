@@ -34,12 +34,12 @@ export default navbar([
         ],
       },
       "tomato",
+      {
+        text: "V2 文档",
+        icon: "book",
+        link: "https://theme-hope.vuejs.press/zh/",
+      }
     ],
   },
   "/demo/",
-  {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
-  },
 ]);

@@ -1,17 +1,18 @@
 ---
+date: 2025-06-28
 home: true
 layout: Blog
 icon: house
-title: Dave主页
+title: 主页
 heroImage: https://theme-hope-assets.vuejs.press/logo.svg
 heroText: dave testing
 heroFullScreen: true
 tagline: Test together, grow weekly
 projects:
   - icon: folder-open
-    name: 项目名称
+    name: 测试之家
     desc: 项目详细描述
-    link: https://你的项目链接
+    link: https://testerhome.com/
 
   - icon: link
     name: Yuque
@@ -29,14 +30,15 @@ projects:
     link: https://你的文章链接
 
   - icon: user-group
-    name: 伙伴名称
-    desc: 伙伴详细介绍
-    link: https://你的伙伴链接
+    name: Java Blog
+    desc: 二哥的Java进阶
+    link: https://javabetter.cn/blog.html
 
   - icon: https://theme-hope-assets.vuejs.press/logo.svg
-    name: 自定义项目
-    desc: 自定义详细介绍
-    link: https://你的自定义链接
+    name: Hope博客
+    desc: Hope主题作者
+    link: https://mister-hope.com/
 
-footer: MIT Licensed
+footer: '<a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2024107245号-1</a>'
 ---
+<!-- 这个是目录页面 -->
