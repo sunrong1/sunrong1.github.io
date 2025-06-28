@@ -29,7 +29,7 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "前后端开发者，测试技术研究者",
+    description: "软硬件测试开发，测试技术研究者，技术项目管理",
     intro: "/intro.html",
     medias: {
       Lark: "https://www.yuque.com/dashboard/books",

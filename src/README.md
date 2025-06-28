@@ -5,7 +5,7 @@ layout: Blog
 icon: house
 title: 主页
 heroImage: https://theme-hope-assets.vuejs.press/logo.svg
-heroText: dave testing
+heroText: Testing　Road
 heroFullScreen: true
 tagline: Test together, grow weekly
 projects:
