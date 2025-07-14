@@ -25,9 +25,9 @@ projects:
     link: https://weread.qq.com/web/shelf
 
   - icon: newspaper
-    name: 文章名称
-    desc: 文章详细描述
-    link: https://你的文章链接
+    name: 设计模式
+    desc: 图形设计模式
+    link: https://refactoring.guru/
 
   - icon: user-group
     name: Java Blog

@@ -12,7 +12,7 @@ export default navbar([
         icon: "pen-to-square",
         prefix: "AI/",
         children: [
-          { text: "苹果1", icon: "pen-to-square", link: "1" },
+          { text: "prompt工程", icon: "pen-to-square", link: "prompt" },
           { text: "苹果2", icon: "pen-to-square", link: "2" },
         ],
       },
