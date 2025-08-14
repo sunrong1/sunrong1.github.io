@@ -33,7 +33,6 @@ export default navbar([
           },
         ],
       },
-      "tomato",
       {
         text: "V2 文档",
         icon: "book",
@@ -41,5 +40,11 @@ export default navbar([
       }
     ],
   },
+  { text: "测试", link: "/testing" },
+  { text: "测试开发", link: "/dev" },
+  { text: "AI", link: "/AI" },
+  { text: "管理", link: "/manage" },
+  { text: "关于", link: "/intro" }, 
+
   "/demo/",
 ]);
