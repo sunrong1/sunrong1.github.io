@@ -1,9 +1,9 @@
 import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
-  "/",
+  "/",//首页，必留
   {
-    text: "博文",
+    text: "作品",
     icon: "pen-to-square",
     prefix: "/posts/",
     children: [
@@ -13,7 +13,7 @@ export default navbar([
         prefix: "AI/",
         children: [
           { text: "prompt工程", icon: "pen-to-square", link: "prompt" },
-          { text: "苹果2", icon: "pen-to-square", link: "2" },
+          { text: "RAG技术", icon: "pen-to-square", link: "2" },
         ],
       },
       {
@@ -40,11 +40,11 @@ export default navbar([
       }
     ],
   },
-  { text: "测试", link: "/testing" },
+  { text: "测试", link: "/testing" ,icon: "tag"},
   { text: "测试开发", link: "/dev" },
-  { text: "AI", link: "/AI" },
+  { text: "AI", link: "/AI/" },
   { text: "管理", link: "/manage" },
-  { text: "关于", link: "/intro" }, 
+  { text: "关于", link: "/intro", icon: "user"}, 
 
   "/demo/",
 ]);
