@@ -19,19 +19,7 @@ export default navbar([
       {
         text: "测试方法论",
         icon: "pen-to-square",
-        prefix: "method/",
-        children: [
-          {
-            text: "香蕉 1",
-            icon: "pen-to-square",
-            link: "1",
-          },
-          {
-            text: "香蕉 2",
-            icon: "pen-to-square",
-            link: "2",
-          },
-        ],
+        link: "method/",
       },
       {
         text: "V2 文档",
