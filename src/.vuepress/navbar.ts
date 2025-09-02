@@ -8,15 +8,6 @@ export default navbar([
     prefix: "/posts/",
     children: [
       {
-        text: "AI",
-        icon: "pen-to-square",
-        prefix: "AI/",
-        children: [
-          { text: "prompt工程", icon: "pen-to-square", link: "prompt" },
-          { text: "RAG技术", icon: "pen-to-square", link: "2" },
-        ],
-      },
-      {
         text: "测试方法论",
         icon: "pen-to-square",
         link: "method/",
@@ -29,9 +20,9 @@ export default navbar([
     ],
   },
   { text: "测试", link: "/testing" ,icon: "tag"},
-  { text: "测试开发", link: "/dev" },
-  { text: "AI", link: "/AI/" },
-  { text: "管理", link: "/manage" },
+  { text: "测试开发", link: "/dev" ,icon: "tag"},
+  { text: "AI", link: "/AI/" ,icon: "tag"},
+  { text: "管理", link: "/manage" ,icon: "tag"},
   { text: "关于", link: "/intro", icon: "user"}, 
 
   "/demo/",
