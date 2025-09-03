@@ -7,7 +7,7 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "DevForTesting",
+  title: "TestingFun",
   description: "sunrong's blog,Testing road",
 
   theme,

@@ -7,7 +7,8 @@ title: 主页
 heroImage: https://theme-hope-assets.vuejs.press/logo.svg
 heroText: Testing　Road
 heroFullScreen: true
-tagline: Test together, grow weekly
+tagline: Dev together, Test fun!
+description: 一个测试人的自我修养
 projects:
   - icon: folder-open
     name: 测试之家

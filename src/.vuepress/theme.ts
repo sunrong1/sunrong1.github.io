@@ -32,7 +32,14 @@ export default hopeTheme({
     description: "软硬件测试开发，测试技术研究者，技术项目管理",
     intro: "/intro.html",
     medias: {
-      Lark: "https://www.yuque.com/dashboard/books",
+      hwNote: {
+        link:"https://www.yuque.com/dashboard/books",
+        icon: "https://cloud.huawei.com/static/img/notepad.53b1da0..png",
+         },
+      yuque: {
+          icon: "https://mdn.alipayobjects.com/huamei_0prmtq/afts/img/A*sHlLTI41kIoAAAAAAAAAAAAADvuFAQ/original",
+          link: "https://www.yuque.com/dashboard/books",
+        },
       GitHub: "https://github.com/sunrong1/",
       Gitee: "https://gitee.com/davesun",
       Zhihu: "https://www.zhihu.com/people/sunrong1",

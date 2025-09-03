@@ -11,7 +11,7 @@ cover: /assets/images/cover3.jpg
 🛠️ 专精领域：  
 - 软硬件测试系统开发（Java/C#/Python）  
 - 测试效能提升体系设计  
-- AI在测试中的应用探索  
+- AI在测试中的应用与探索  
 ✍️ 在这里分享：技术洞察、团队管理心法、测试工程师的自我修养  
 🌱 业余：技术育儿实践家  | 微信读书800+赞 | 技术博客分享 | 围棋战术爱好者
 📫  [GitHub](https://github.com/sunrong1)
