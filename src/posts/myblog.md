@@ -6,6 +6,7 @@ category:
 tag:
   - target
   - production
+star: true
 ---
 
 # 我的博客建设之旅

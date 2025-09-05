@@ -1,5 +1,5 @@
 ---
-title: 配置演示
+title: 配置指导
 index: false
 icon: laptop-code
 category:

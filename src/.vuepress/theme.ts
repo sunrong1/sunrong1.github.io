@@ -85,7 +85,7 @@ export default hopeTheme({
   // 加密配置
   encrypt: {
     config: {
-      "/demo/encrypt.html": {
+      "/guide/encrypt.html": {
         hint: "Password: 123",
         password: "123",
       },
