@@ -85,9 +85,9 @@ export default hopeTheme({
   // 加密配置
   encrypt: {
     config: {
-      "/guide/encrypt.html": {
-        hint: "Password: 123",
-        password: "123",
+      "/guide/reflection_day.html": {
+        hint: "输入常用的password",
+        password: "111",
       },
     },
   },

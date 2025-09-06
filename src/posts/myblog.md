@@ -39,6 +39,7 @@ star: true
 - [ ] 1. [OTA测试工具架构](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI测试用例解读](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试开发洞察](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [管理之PMP指南](https://github.com/sunrong1/test-tool-chain)
 
 ### 2025年10月
 
