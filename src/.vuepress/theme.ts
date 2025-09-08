@@ -33,7 +33,7 @@ export default hopeTheme({
     intro: "/intro.html",
     medias: {
       hwNote: {
-        link:"https://www.yuque.com/dashboard/books",
+        link:"https://cloud.huawei.com/home#/home",
         icon: "https://cloud.huawei.com/static/img/notepad.53b1da0..png",
          },
       yuque: {
@@ -159,7 +159,7 @@ export default hopeTheme({
     // flowchart: true,
 
     // 在启用之前安装 mermaid
-    // mermaid: true,
+    mermaid: true,
 
     // playground: {
     //   presets: ["ts", "vue"],

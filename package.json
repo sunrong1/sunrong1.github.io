@@ -21,6 +21,7 @@
     "vuepress-theme-hope": "2.0.0-rc.93"
   },
   "dependencies": {
-    "@waline/client": "^3.6.0"
+    "@waline/client": "^3.6.0",
+    "mermaid": "^11.11.0"
   }
 }
