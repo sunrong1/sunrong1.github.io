@@ -19,10 +19,10 @@ export default navbar([
       }
     ],
   },
-  { text: "测试", link: "/testing/" ,icon: "tag"},
-  { text: "测试开发", link: "/dev/" ,icon: "tag"},
-  { text: "AI", link: "/AI/" ,icon: "tag"},
-  { text: "管理", link: "/manage/" ,icon: "tag"},
+  { text: "测试", link: "/testing/" ,icon: "bug"},
+  { text: "开发", link: "/dev/" ,icon: "code"},
+  { text: "AI", link: "/AI/" ,icon: "star"},
+  { text: "管理", link: "/manage/" ,icon: "heart"},
   { text: "关于", link: "/intro", icon: "user"}, 
 
   "/guide/",

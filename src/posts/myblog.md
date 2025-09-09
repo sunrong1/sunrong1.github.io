@@ -28,6 +28,10 @@ star: true
 
 我期望自己每周至少能分享一篇测试技术相关的文章，文章可以是技术心得也可以是其他相关内容。我希望能将自己的文章以issue的形式贴到本仓库中，由朋友们互相点评补充。文章中技术性较强的部分会通过引用其他链接进行。我会将相关的问题以及点评转发到自己的微信群中，请大家互相帮忙共同提升，最终将大家一起学习到的内容形成文章。这是一个小众的协作，希望朋友们多多支持。
 
+### 收益计划
+全面提升算法能力，给同事讲解；
+全面提升AI数学能力，给同事讲解，将清楚；
+
 ### 2025年8月
 
 - [ ] 1. [洞察基础](https://github.com/sunrong1/test-tool-chain)
@@ -36,13 +40,17 @@ star: true
 ### 2025年9月
 
 - [ ] 1. [AI线性代数基础](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [150算法启动](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [OTA测试工具架构](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI测试用例解读](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试开发洞察](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [管理之PMP指南](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [面试官技巧](https://github.com/sunrong1/test-tool-chain)
 
 ### 2025年10月
 
+- [ ] 1. [AI概率论基础](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [AI微积分基础](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试领域微服务架构演进](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试效能提升](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试工具链建设](https://github.com/sunrong1/test-tool-chain)
