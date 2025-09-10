@@ -35,12 +35,14 @@ star: true
 ### 2025年8月
 
 - [ ] 1. [洞察基础](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [技术规划基础](https://github.com/sunrong1/test-tool-chain)
 
 
 ### 2025年9月
 
+- [ ] 1. [可靠性测试AI自主检测机器人规划与设计](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI线性代数基础](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [150算法启动](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [150道算法启动](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [OTA测试工具架构](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI测试用例解读](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试开发洞察](https://github.com/sunrong1/test-tool-chain)
@@ -48,13 +50,17 @@ star: true
 - [ ] 1. [面试官技巧](https://github.com/sunrong1/test-tool-chain)
 
 ### 2025年10月
-
+- [ ] 1. [可靠性测试AI自主检测机器开发和演示](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI概率论基础](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI微积分基础](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试领域微服务架构演进](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试效能提升](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试工具链建设](https://github.com/sunrong1/test-tool-chain)
 
+### 2025年11月
+
 ## 我的能力雷达图
 
+```mermaid
 
+```
