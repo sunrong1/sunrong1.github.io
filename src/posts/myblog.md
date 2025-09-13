@@ -42,6 +42,7 @@ star: true
 
 - [ ] 1. [可靠性测试AI自主检测机器人规划与设计](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI线性代数基础](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [心流](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [150道算法启动](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [OTA测试工具架构](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI测试用例解读](https://github.com/sunrong1/test-tool-chain)

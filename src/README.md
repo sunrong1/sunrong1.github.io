@@ -5,9 +5,9 @@ layout: Blog
 icon: house
 title: 主页
 heroImage: https://theme-hope-assets.vuejs.press/logo.svg
-heroText: Testing　Road
+heroText: Dave Dev Road
 heroFullScreen: true
-tagline: Dev together, Test fun!
+tagline: Dev together, Test fun! 时光如水流逝，给世界留下点什么，我们不枉此生！
 description: 一个测试人的自我修养
 projects:
   - icon: folder-open

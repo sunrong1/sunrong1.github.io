@@ -21,3 +21,4 @@ star: 10
 ## 面试方法论
 
 结构化面试STAR法：
+Situation/Task ACTion ,Result,Reflection
