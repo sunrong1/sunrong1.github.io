@@ -27,10 +27,7 @@ tag:
 
 https://aistudio.baidu.com/project/edit/9460481?source=globalAgent
 
-
-
 ## 微积分
-
 
 # 数学之旅.王维克
 

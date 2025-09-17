@@ -33,17 +33,20 @@ star: true
 全面提升AI数学能力，给同事讲解，将清楚；
 
 ### 2025年8月
+经过几年的时间，终于突破了软件设计模式的门槛，融会贯通，金丹期；
 
 - [ ] 1. [洞察基础](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [技术规划基础](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [软件设计模式-23](https://github.com/sunrong1/test-tool-chain)
 
 
 ### 2025年9月
 
+
 - [ ] 1. [可靠性测试AI自主检测机器人规划与设计](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI线性代数基础](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [心流](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [150道算法启动](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [150道算法启动-练气期](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [OTA测试工具架构](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI测试用例解读](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试开发洞察](https://github.com/sunrong1/test-tool-chain)
@@ -51,6 +54,7 @@ star: true
 - [ ] 1. [面试官技巧](https://github.com/sunrong1/test-tool-chain)
 
 ### 2025年10月
+- [ ] 1. [150道算法启动-筑基期](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [可靠性测试AI自主检测机器开发和演示](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI概率论基础](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI微积分基础](https://github.com/sunrong1/test-tool-chain)
