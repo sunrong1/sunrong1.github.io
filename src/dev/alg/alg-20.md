@@ -6,7 +6,7 @@ category:
 tag:
   - 算法基础
   - 方法论
-star: 1
+star: 10
 ---
 
 # 算法 20
@@ -20,8 +20,11 @@ star: 1
   ○ 多巴胺激励：每完成10题，奖励自己30分钟休闲（如看视频、咖啡、零食）；完成练气期，奖励一个周末家庭活动（如公园游玩）。
   ○ 建议：使用LeetCode或牛客网，选择Easy和Medium题，注重理解基础概念。
 
+题目：
+https://leetcode.cn/studyplan/top-interview-150/ 
 开发地址：
 https://github.com/codespaces/vigilant-zebra-w49wx5j6vrc5v4x
+
 ## 整体算法学习计划
 总目标：完成200道算法题，并融会贯通，应对2026年3月前达到元婴级别。
 阶段详情：
@@ -62,12 +65,14 @@ https://github.com/codespaces/vigilant-zebra-w49wx5j6vrc5v4x
 ● 学习AI方面：算法是AI的基础，但当前集中算法面试，AI学习可暂放或每周花1小时了解概念。
 
 
-https://leetcode.cn/studyplan/top-interview-150/ 
+
 ## 前20的算法题
 
 9-15~9-17:
 每天看3~4个题目，每天听一个数据和算法的极客时间一篇；但是做题的速度比较慢；一天不到1题；
 构建好了Java17的环境；
+
+
 
 
 

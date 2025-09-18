@@ -66,6 +66,3 @@ star: true
 
 ## 我的能力雷达图
 
-```mermaid
-
-```

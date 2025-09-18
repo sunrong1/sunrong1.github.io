@@ -10,12 +10,12 @@ export default navbar([
       {
         text: "测试方法论",
         icon: "pen-to-square",
-        link: "method/",
+        link: "learning-method/",
       },
       {
-        text: "V2 文档",
+        text: "洞察",
         icon: "book",
-        link: "https://theme-hope.vuejs.press/zh/",
+        link: "insight-planning/",
       }
     ],
   },
@@ -24,6 +24,19 @@ export default navbar([
   { text: "AI", link: "/AI/" ,icon: "star"},
   { text: "管理", link: "/manage/" ,icon: "heart"},
   { text: "关于", link: "/intro", icon: "user"}, 
-
-  "/guide/",
+  { text: "其他", 
+    children: [
+      {
+        text: "英语",
+        icon: "pen-to-square",
+        link: "other/",
+      },
+      {
+        text: "V2 文档",
+        icon: "book",
+        link: "https://theme-hope.vuejs.press/zh/",
+      }
+    ],
+    icon: "user"
+  }, 
 ]);
