@@ -1,12 +1,11 @@
 ---
 icon: pen-to-square
-date: 2025-10-01
+date: 2025-09-01
 category:
   - 算法
 tag:
   - 算法基础
   - 方法论
-star: 9
 ---
 
 # 算法 50
