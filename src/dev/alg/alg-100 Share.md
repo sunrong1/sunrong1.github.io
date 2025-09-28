@@ -6,6 +6,7 @@ category:
 tag:
   - 算法基础
   - Masterpiece
+star: true
 ---
 
 # 算法 share My Masterpiece

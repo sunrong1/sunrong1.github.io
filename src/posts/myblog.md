@@ -7,6 +7,7 @@ tag:
   - target
   - production
 star: true
+sticky: true
 ---
 
 # 我的博客建设之旅
@@ -37,11 +38,10 @@ star: true
 
 - [ ] 1. [洞察基础](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [技术规划基础](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [软件设计模式-23](https://github.com/sunrong1/test-tool-chain)
+- [x] 1. [软件设计模式-23](https://www.yuque.com/u21806931/ylzhwm/omwv3g9caglz5ina)
 
 
 ### 2025年9月
-
 
 - [ ] 1. [可靠性测试AI自主检测机器人规划与设计](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI线性代数基础](https://github.com/sunrong1/test-tool-chain)
@@ -54,15 +54,18 @@ star: true
 - [ ] 1. [面试官技巧](https://github.com/sunrong1/test-tool-chain)
 
 ### 2025年10月
+
+- [ ] 1. [二叉树到决策树的思考艺术](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [150道算法启动-筑基期](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [可靠性测试AI自主检测机器开发和演示](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI概率论基础](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI微积分基础](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [测试领域微服务架构演进](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试效能提升](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试工具链建设](https://github.com/sunrong1/test-tool-chain)
 
 ### 2025年11月
+- [ ] 1. [SpringBoot微服务架构演进](https://github.com/sunrong1/test-tool-chain)
+- [ ] 
 
 ## 我的能力雷达图
 
