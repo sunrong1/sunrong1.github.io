@@ -10,7 +10,7 @@ star: true
 sticky: true
 ---
 
-# 我的博客建设之旅
+# 我的技术Dev之路
 
 ## 建设目标
 
@@ -65,7 +65,12 @@ sticky: true
 
 ### 2025年11月
 - [ ] 1. [SpringBoot微服务架构演进](https://github.com/sunrong1/test-tool-chain)
-- [ ] 
+- [ ] 1. [可靠性测试AI自主检测机器人开发和演示](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [测试开发洞察](https://github.com/sunrong1/test-tool-chain)
+
+### 2025年12月
+- [ ] 1. [技术突破总结](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [2026年规划](https://github.com/sunrong1/test-tool-chain)
 
 ## 我的能力雷达图
 
