@@ -9,7 +9,7 @@ tag:
 star: true
 ---
 
-# 算法 
+# 算法 Primary
 
 9月14日到2月16日（除夕）5个月：金丹期，6个月元婴。
 目标凡人修仙之元婴级大佬
@@ -153,6 +153,8 @@ https://github.com/codespaces/vigilant-zebra-w49wx5j6vrc5v4x
 你​没有创建任何新的 ListNode对象​（也就是没有创建新的节点）。
 你​只是创建了一个新的引用变量 slow（在栈上）​，它指向了和 head相同的对象（在堆上）。
 
+### 二叉树
 
+### 图
 
 

@@ -29,6 +29,9 @@ sticky: true
 
 我期望自己每周至少能分享一篇测试技术相关的文章，文章可以是技术心得也可以是其他相关内容。我希望能将自己的文章以issue的形式贴到本仓库中，由朋友们互相点评补充。文章中技术性较强的部分会通过引用其他链接进行。我会将相关的问题以及点评转发到自己的微信群中，请大家互相帮忙共同提升，最终将大家一起学习到的内容形成文章。这是一个小众的协作，希望朋友们多多支持。
 
+工作日：专项能力提升
+休息日：综合项能力提升
+
 ### 收益计划
 全面提升算法能力，给同事讲解；
 全面提升AI数学能力，给同事讲解，将清楚；
@@ -50,11 +53,15 @@ sticky: true
 - [ ] 1. [OTA测试工具架构](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [AI测试用例解读](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试开发洞察](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [管理之PMP指南](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [面试官技巧](https://github.com/sunrong1/test-tool-chain)
+
+
 
 ### 2025年10月
 
+工作日：算法、springboot
+周末：心流，学习方法、面试方法
+
+- [ ] 1. [微服务的演进-springboot](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [二叉树到决策树的思考艺术](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [150道算法启动-筑基期](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [可靠性测试AI自主检测机器开发和演示](https://github.com/sunrong1/test-tool-chain)
@@ -64,8 +71,12 @@ sticky: true
 - [ ] 1. [测试工具链建设](https://github.com/sunrong1/test-tool-chain)
 
 ### 2025年11月
+
 - [ ] 1. [SpringBoot微服务架构演进](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [项目交付效率提升——测试项目作战指挥中心](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [管理之PMP指南](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [可靠性测试AI自主检测机器人开发和演示](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [面试官技巧](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试开发洞察](https://github.com/sunrong1/test-tool-chain)
 
 ### 2025年12月
