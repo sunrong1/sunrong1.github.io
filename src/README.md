@@ -40,6 +40,11 @@ projects:
     desc: Hope主题作者
     link: https://mister-hope.com/
 
+  - icon: https://theme-hope-assets.vuejs.press/logo.svg
+    name: WPS
+    desc: 我的个人WPS
+    link: https://www.kdocs.cn/latest
+
 footer: '<a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2024107245号-1</a>'
 ---
 <!-- 这个是目录页面 -->

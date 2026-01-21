@@ -33,8 +33,14 @@ sticky: true
 休息日：综合项能力提升
 
 ### 收益计划
-全面提升算法能力，给同事讲解；
-全面提升AI数学能力，给同事讲解，将清楚；
+全面提升算法能力，给同事讲解，参加算法挑战赛；
+全面提升AI数学能力，给同事讲解，考AI基础算法专业级；
+
+### 2026年1月
+AI应用获得新突破，使用AI指导自己的思考方式
+- [ ] 1. [豆豆三部曲](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [托业英语学习](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [AI基础算法-1](https://github.com/sunrong1/test-tool-chain)
 
 ### 2025年8月
 经过几年的时间，终于突破了软件设计模式的门槛，融会贯通，金丹期；
@@ -72,7 +78,7 @@ sticky: true
 
 ### 2025年11月
 
-- [ ] 1. [SpringBoot微服务架构演进](https://github.com/sunrong1/test-tool-chain)
+- [x] 1. [SpringBoot微服务架构演进](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [项目交付效率提升——测试项目作战指挥中心](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [管理之PMP指南](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [可靠性测试AI自主检测机器人开发和演示](https://github.com/sunrong1/test-tool-chain)
@@ -82,6 +88,10 @@ sticky: true
 ### 2025年12月
 - [ ] 1. [技术突破总结](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [2026年规划](https://github.com/sunrong1/test-tool-chain)
+
+
+## 我的时间管理
+WPS在线文档：https://www.kdocs.cn/l/csD7myBfascK
 
 ## 我的能力雷达图
 
