@@ -39,8 +39,9 @@ sticky: true
 ### 2026年1月
 AI应用获得新突破，使用AI指导自己的思考方式
 - [ ] 1. [豆豆三部曲](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [托业英语学习](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [AI基础算法-1](https://github.com/sunrong1/test-tool-chain)
+- [ ] 2. [托业英语学习](https://github.com/sunrong1/test-tool-chain)
+- [ ] 2. [智能化环境管理系统](https://github.com/sunrong1/test-tool-chain)
+- [ ] 3. [AI基础算法-1](https://github.com/sunrong1/test-tool-chain)
 
 ### 2025年8月
 经过几年的时间，终于突破了软件设计模式的门槛，融会贯通，金丹期；
