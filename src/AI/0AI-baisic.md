@@ -16,23 +16,19 @@ tag:
 * [Python3 开发基础库](https://www.python.org/)
 * 数据开发环境：Anaconda 清华大学镜像https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&O=A
    jumpyter lab > notebook
-* 百度 飞桨
+* 百度 飞桨： https://www.paddlepaddle.org.cn/  https://aistudio.baidu.com/overview
 ### 人工智能AI学好的关键
 
 ——**(在AI中，赋予自己，成就自己，体现自己)**
 
 1. 专心，心力
 2. 数学能力
-3. 编程能力
+3. 编程能力 python
 4. 建模能力
 5. 交流能力
 6. 思考辩证的能力
 
 ## 人工智能基础能力
-
-人工智能培养计划 开课吧 2021-4月开始；
-
-机器学习如何在企业中落地 002期， 2021-9月开始
 
 ### AI领域的应用
 
@@ -110,16 +106,17 @@ Marr奖 ：ICCV 计算机视觉最高荣耀之一；
 
 ## 计算机视觉进阶
 
-
 ## python基础实战
 - 项目目的 weather.com.cn网站中提取24小时温度湿度等信息
 dave 发布在：https://blog.csdn.net/SUNSHANGJIN/article/details/86516752?spm=1001.2014.3001.5501
 
 ## 参考书籍资料
 - Kaggle https://www.kaggle.com 最佳的学习和练习场所
-* [廖雪峰 Python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
+- [廖雪峰 Python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
 - 《动手学深度学习》https://zh-v2.d2l.ai/index.html 
 - 开课吧 python从入门到进阶 2021-4
 - 《零基础实践深度学习》 2021-7
 - 百度架构师手把手带你零基础实践深度学习 2021-7
 - [AI工具集](https://ai-bot.cn/)
+- 人工智能培养计划 开课吧 2021-4月开始；
+- 机器学习如何在企业中落地 002期， 2021-9月开始
