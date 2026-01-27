@@ -34,7 +34,7 @@ sticky: true
 
 ### 收益计划
 全面提升算法能力，给同事讲解，参加算法挑战赛；
-全面提升AI数学能力，给同事讲解，考AI基础算法专业级；
+全面提升AI能力，给同事讲解，考AI基础算法专业级；
 
 ### 2026年1月
 AI应用获得新突破，使用AI指导自己的思考方式
@@ -42,6 +42,7 @@ AI应用获得新突破，使用AI指导自己的思考方式
 - [ ] 2. [托业英语学习](https://github.com/sunrong1/test-tool-chain)
 - [ ] 2. [智能化环境管理系统](https://github.com/sunrong1/test-tool-chain)
 - [ ] 3. [AI基础算法-1](https://github.com/sunrong1/test-tool-chain)
+- [ ] 3. [专利基础](https://sunrong.site/posts/innovation/interviewee%20experience.html)
 
 ### 2025年8月
 经过几年的时间，终于突破了软件设计模式的门槛，融会贯通，金丹期；

@@ -7,8 +7,8 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "TestingFun",
-  description: "sunrong's blog,Testing road",
+  title: "DevFun",
+  description: "sunrong's blog,Dev road",
 
   theme,
     // 新增：启用搜索插件
