@@ -7,7 +7,7 @@ title: dave dev fun
 heroImage: https://theme-hope-assets.vuejs.press/logo.svg
 heroText: Dave Dev Road
 heroFullScreen: true
-tagline: Dev together, Test fun! 时光如水流逝，给世界留下点什么，我们不枉此生！
+tagline: Dev together, innovate, fun! 时光如水流逝，给世界留下点什么，我们不枉此生！
 description: 一个开发人的自我修养
 projects:
   - icon: folder-open
