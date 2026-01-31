@@ -11,7 +11,7 @@ export default hopeTheme({
     url: "https://sunrong.site",
   },
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/logo.svg",
 
   repo: "sunrong1/sunrong1.github.io",
 

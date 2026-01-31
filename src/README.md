@@ -35,12 +35,12 @@ projects:
     desc: 二哥的Java进阶
     link: https://javabetter.cn/blog.html
 
-  - icon: https://theme-hope-assets.vuejs.press/logo.svg
+  - icon: user
     name: Hope博客
     desc: Hope主题作者
     link: https://mister-hope.com/
 
-  - icon: https://theme-hope-assets.vuejs.press/logo.svg
+  - icon: pen
     name: WPS
     desc: 我的个人WPS
     link: https://www.kdocs.cn/latest
