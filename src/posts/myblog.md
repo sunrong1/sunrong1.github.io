@@ -36,13 +36,26 @@ sticky: true
 全面提升算法能力，给同事讲解，参加算法挑战赛；
 全面提升AI能力，给同事讲解，考AI基础算法专业级；
 
+### 2026年2月
+
+- [ ] 1. [豆豆三部曲-读后感](https://github.com/sunrong1/test-tool-chain)
+- [ ] 2. [托业英语学习-2套](https://github.com/sunrong1/test-tool-chain)
+- [ ] 2. [智能化环境管理系统设计结束](https://github.com/sunrong1/test-tool-chain)
+- [ ] 3. [AI基础算法-1](https://github.com/sunrong1/test-tool-chain)
+- [ ] 3. [专利基础](https://sunrong.site/posts/innovation/interviewee%20experience.html)
+
 ### 2026年1月
 AI应用获得新突破，使用AI指导自己的思考方式
-- [ ] 1. [豆豆三部曲](https://github.com/sunrong1/test-tool-chain)
-- [ ] 2. [托业英语学习](https://github.com/sunrong1/test-tool-chain)
+
+- [x] 1. [豆豆三部曲](https://github.com/sunrong1/test-tool-chain)
+- [x] 2. [托业英语学习-1套](https://github.com/sunrong1/test-tool-chain)
 - [ ] 2. [智能化环境管理系统](https://github.com/sunrong1/test-tool-chain)
 - [ ] 3. [AI基础算法-1](https://github.com/sunrong1/test-tool-chain)
 - [ ] 3. [专利基础](https://sunrong.site/posts/innovation/interviewee%20experience.html)
+
+### 2025年12月
+- [ ] 1. [技术突破总结](https://github.com/sunrong1/test-tool-chain)
+- [ ] 1. [2026年规划](https://github.com/sunrong1/test-tool-chain)
 
 ### 2025年8月
 经过几年的时间，终于突破了软件设计模式的门槛，融会贯通，金丹期；
@@ -87,9 +100,7 @@ AI应用获得新突破，使用AI指导自己的思考方式
 - [ ] 1. [面试官技巧](https://github.com/sunrong1/test-tool-chain)
 - [ ] 1. [测试开发洞察](https://github.com/sunrong1/test-tool-chain)
 
-### 2025年12月
-- [ ] 1. [技术突破总结](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [2026年规划](https://github.com/sunrong1/test-tool-chain)
+
 
 
 ## 我的时间管理

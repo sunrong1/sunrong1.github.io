@@ -33,13 +33,13 @@ export default hopeTheme({
     intro: "/intro.html",
     medias: {
       hwNote: {
-        link:"https://cloud.huawei.com/home#/home",
+        link: "https://cloud.huawei.com/home#/home",
         icon: "https://cloud.huawei.com/static/img/notepad.53b1da0..png",
-         },
+      },
       yuque: {
-          icon: "https://mdn.alipayobjects.com/huamei_0prmtq/afts/img/A*sHlLTI41kIoAAAAAAAAAAAAADvuFAQ/original",
-          link: "https://www.yuque.com/dashboard/books",
-        },
+        icon: "https://mdn.alipayobjects.com/huamei_0prmtq/afts/img/A*sHlLTI41kIoAAAAAAAAAAAAADvuFAQ/original",
+        link: "https://www.yuque.com/dashboard/books",
+      },
       GitHub: "https://github.com/sunrong1/",
       Gitee: "https://gitee.com/davesun",
       Zhihu: "https://www.zhihu.com/people/sunrong1",
@@ -54,7 +54,6 @@ export default hopeTheme({
       // Dribbble: "https://example.com",
 
       // Evernote: "https://example.com",
-      // Facebook: "https://www.facebook.com/daverongsun/",
       // Flipboard: "https://example.com",
       // Gitlab: "https://gitee.com/davesun",
       // Gmail: "mailto:info@example.com",
@@ -69,12 +68,12 @@ export default hopeTheme({
       // Reddit: "https://example.com",
       // Rss: "https://example.com",
       // Steam: "https://example.com",
-      
+
       // Wechat: "https://example.com",
       // Weibo: "https://example.com",
       // Whatsapp: "https://example.com",
       // Youtube: "https://example.com",
-      
+
       // VuePressThemeHope: {
       //   icon: "https://theme-hope-assets.vuejs.press/logo.svg",
       //   link: "https://theme-hope.vuejs.press",
