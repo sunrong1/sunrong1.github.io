@@ -5,7 +5,7 @@ since: 2025-09-06 12:00:00
 category:
   - 反思
 tag:
-  - 每日反思
+  - 信念与反思
 
 star: true
 ---
@@ -17,6 +17,9 @@ star: true
 
 ## 反思总结
 
+### 2026年新年
+我的路在何方？
+学习阳明心学，不断提升自己的层次；
 
 ## 2025-9月的坚持
 [实际的文章内容。](https://www.yuque.com/u21806931/ylzhwm/mg9avduk0utsc5xd#fcpoE)

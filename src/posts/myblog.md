@@ -38,11 +38,13 @@ sticky: true
 
 ### 2026年2月
 
-- [ ] 1. [豆豆三部曲-读后感](https://github.com/sunrong1/test-tool-chain)
-- [ ] 2. [托业英语学习-2套](https://github.com/sunrong1/test-tool-chain)
-- [ ] 2. [智能化环境管理系统设计结束](https://github.com/sunrong1/test-tool-chain)
-- [ ] 3. [AI基础算法-1](https://github.com/sunrong1/test-tool-chain)
-- [ ] 3. [专利基础](https://sunrong.site/posts/innovation/interviewee%20experience.html)
+- [ ] 3. [个人简历 3个番茄](https://sunrong.site/posts/innovation/interviewee%20experience.html)
+- [ ] 1. [豆豆三部曲-读后感 3个番茄](https://github.com/sunrong1/test-tool-chain)
+- [ ] 2. [托业英语学习-2套和总结 2个番茄](https://github.com/sunrong1/test-tool-chain)
+- [ ] 2. [智能化环境管理系统设计结束 3个番茄](https://github.com/sunrong1/test-tool-chain)
+- [ ] 3. [AI基础算法-1 1个番茄](https://github.com/sunrong1/test-tool-chain)
+- [ ] 3. [专利基础 2个番茄](https://sunrong.site/posts/innovation/interviewee%20experience.html)
+- [ ] 3. [知识打结方法 2个番茄](https://sunrong.site/posts/innovation/interviewee%20experience.html)
 
 ### 2026年1月
 AI应用获得新突破，使用AI指导自己的思考方式
