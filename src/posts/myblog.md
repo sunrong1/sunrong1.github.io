@@ -36,6 +36,12 @@ sticky: true
 全面提升算法能力，给同事讲解，参加算法挑战赛；
 全面提升AI能力，给同事讲解，考AI基础算法专业级；
 
+### 2026年3月
+
+- [ ] 1. [openClaw使用,神奇的工具](https://sunrong.site/posts/innovation/interviewee%20experience.html)
+- [ ] 1. [使用AI让自己自我进化](https://sunrong.site/posts/innovation/interviewee%20experience.html)
+
+
 ### 2026年2月
 
 - [ ] 3. [个人简历 3个番茄](https://sunrong.site/posts/innovation/interviewee%20experience.html)
