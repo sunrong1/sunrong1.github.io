@@ -36,9 +36,14 @@ projects:
     link: https://javabetter.cn/blog.html
 
   - icon: user
-    name: Hope博客
-    desc: Hope主题作者
-    link: https://mister-hope.com/
+    name: AI Alg
+    desc: 千问AI算法老师
+    link: https://www.qianwen.com/chat/0abfa0dda9d54ec3b68378b76bd7f71c?source=tongyigw
+
+  # - icon: user
+  #   name: Hope博客
+  #   desc: Hope主题作者
+  #   link: https://mister-hope.com/
 
   - icon: pen
     name: WPS

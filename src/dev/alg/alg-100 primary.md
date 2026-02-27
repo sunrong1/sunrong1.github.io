@@ -11,7 +11,9 @@ star: true
 
 # 算法 Primary
 
-9月14日到2月16日（除夕）5个月：金丹期，6个月元婴。
+2026 week 8，过年还是因为各种原因，计划推迟了，还是让AI老师，带者我慢慢学把🤓
+AI老师：https://www.qianwen.com/chat/0abfa0dda9d54ec3b68378b76bd7f71c?source=tongyigw 
+
 目标凡人修仙之元婴级大佬
 
 1. 练气期（基础巩固）：9月14日 - 10月30日（1个月）
