@@ -9,7 +9,8 @@ tag:
 
 # openclaw
 2026年2月开始玩openclaw，越用约上瘾。
-我买了阿里云的openclaw服务器，可以直接在浏览器上玩：https://ecs-workbench-disposable.aliyun.com/view/instance/single/8e75shoowc
+我买了阿里云的openclaw服务器，可以直接在浏览器上玩：
+https://swasnext.console.aliyun.com/servers/us-east-1/278f7f88c56d4454a635f1b8e0cfa899/dashboard
 ## openclaw 介绍
 OpenClaw是
 

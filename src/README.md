@@ -6,8 +6,8 @@ icon: house
 title: dave dev fun
 heroImage: https://theme-hope-assets.vuejs.press/logo.svg
 heroText: Dave Dev Road
-heroFullScreen: true
-tagline: Dev together, innovate, fun! 时光如水流逝，给世界留下点什么，我们不枉此生！
+heroFullScreen: 
+tagline: Dev together, innovate, fun! 时光如水流逝，我们一起前行，一起探索，一起创新，一起玩耍！
 description: 一个开发人的自我修养
 projects:
   - icon: folder-open

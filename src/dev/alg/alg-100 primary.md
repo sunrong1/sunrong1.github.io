@@ -75,6 +75,45 @@ https://github.com/codespaces/vigilant-zebra-w49wx5j6vrc5v4x
 | 深化 | 第3个月 | **mastering 动态规划** | 动态规划(二)(三)、贪心、系统设计算法      | #122, #300, #1143, #322, #55, #146, #215 |
 | 融合 | 第4个月 | 融会贯通与面试模拟     | 高频企业真题、综合复习、面试技巧          | 专项刷“二叉树”和“DP”高频题，模拟面试     |
 
+## 整体学习总结
+还是让ai老师带我慢慢学,速度快，哈哈：
+https://www.qianwen.com/chat/0abfa0dda9d54ec3b68378b76bd7f71c?source=tongyigw
+### 数组
+关键技巧：
+快慢指针：用于去重、移除元素（如 LeetCode #26,#27，#283）。慢指针指向“下一个有效位置”，快指针负责“扫描”。
+左右指针：用于有序数组的两数之和、反转数组（如 LeetCode 1, 167）。
+同向双指针：滑动窗口的基础，维护一个区间 [left,right] 。
+
+### 链表
+
+1. 问题：链表复制，java在内存中到底做了什么？
+  ListNode slow = head;
+  ​slow创建了哪些储存空间？​​
+
+换句话说：当你写了这行代码时，​Java 在内存中到底分配了什么？slow是否占用了新的内存空间？它创建了新的链表节点吗？
+
+问题：
+✅ （1）在栈内存中：
+​声明了一个新的变量 slow，类型为 ListNode，这个变量会保存一个引用（即内存地址）。
+这个变量 slow是方法内的一个 ​局部变量，它存在于 ​栈帧（stack frame）​​ 中。
+✅ （2）在赋值时：
+你将 head的值（也就是它保存的 ​引用 / 地址）​复制给了 slow。
+也就是说：​slow和 head现在指向的是堆内存中的同一个 ListNode对象（比如头节点）​。
+
+🔁 ​总结：​​
+你​没有创建任何新的 ListNode对象​（也就是没有创建新的节点）。
+你​只是创建了一个新的引用变量 slow（在栈上）​，它指向了和 head相同的对象（在堆上）。
+
+### 二叉树
+https://leetcode.cn/problems/maximum-depth-of-binary-tree/?envType=study-plan-v2&envId=top-interview-150
+二叉树的最大深度；
+使用vscode开始编写；设置vscode自动格式化代码，使用快捷键ctrl+alt+l，或者自动保存时自动格式化代码；
+下一次使用notepad++再写一遍，两种方法；
+
+### 图
+
+
+
 ## 前20的算法题过程和心得
 
 1. 第38周
@@ -132,35 +171,4 @@ https://github.com/codespaces/vigilant-zebra-w49wx5j6vrc5v4x
 ### 排序
 冒泡排序、插入排序、选择排序；
 平时我们使用插入排序的时候更多。
-
-### 数组
-
-### 链表
-
-1. 问题：链表复制，java在内存中到底做了什么？
-  ListNode slow = head;
-  ​slow创建了哪些储存空间？​​
-
-换句话说：当你写了这行代码时，​Java 在内存中到底分配了什么？slow是否占用了新的内存空间？它创建了新的链表节点吗？
-
-问题：
-✅ （1）在栈内存中：
-​声明了一个新的变量 slow，类型为 ListNode，这个变量会保存一个引用（即内存地址）。
-这个变量 slow是方法内的一个 ​局部变量，它存在于 ​栈帧（stack frame）​​ 中。
-✅ （2）在赋值时：
-你将 head的值（也就是它保存的 ​引用 / 地址）​复制给了 slow。
-也就是说：​slow和 head现在指向的是堆内存中的同一个 ListNode对象（比如头节点）​。
-
-🔁 ​总结：​​
-你​没有创建任何新的 ListNode对象​（也就是没有创建新的节点）。
-你​只是创建了一个新的引用变量 slow（在栈上）​，它指向了和 head相同的对象（在堆上）。
-
-### 二叉树
-https://leetcode.cn/problems/maximum-depth-of-binary-tree/?envType=study-plan-v2&envId=top-interview-150
-二叉树的最大深度；
-使用vscode开始编写；设置vscode自动格式化代码，使用快捷键ctrl+alt+l，或者自动保存时自动格式化代码；
-下一次使用notepad++再写一遍，两种方法；
-
-### 图
-
 
