@@ -30,6 +30,7 @@ OpenClaw 是什么？
 Agent 原生：内置会话管理、工具调用、多 Agent 路由
 开源：MIT 许可，社区驱动
 2. 架构概览
+
 ┌─────────────────┐
 │  聊天应用        │
 │  WhatsApp       │
@@ -48,15 +49,15 @@ Agent 原生：内置会话管理、工具调用、多 Agent 路由
    │   CLI   │    │  Web UI  │    │   Agent  │
    │  工具    │    │  控制面板 │    │  (Pi)    │
    └─────────┘    └──────────┘    └──────────┘
-核心组件：
 
+* 核心组件：
 组件	作用
 Gateway	单一事实来源，管理所有会话、路由、通道连接
 Agent	嵌入的 pi-mono 运行时，处理 AI 逻辑
 Channels	WhatsApp/Telegram/Discord 等适配器
 Sessions	会话管理，JSONL 转录存储
 Tools	exec/read/edit/write/browser 等工具
-3. 核心概念
+1. 核心概念
 📁 Workspace（工作区）
 ~/.openclaw/workspace/
 ├── AGENTS.md      # 操作指令 + 内存规则
@@ -67,13 +68,15 @@ Tools	exec/read/edit/write/browser 等工具
 ├── MEMORY.md      # 长期记忆（精选）
 └── memory/        # 每日日志 (YYYY-MM-DD.md)
 🧠 会话管理
-会话键格式：agent:<agentId>:<channel>:<type>:<id>
+会话键格式：`agent:<agentId>:<channel>:<type>:<id>`
 DM 策略：可配置 dmScope 控制会话隔离级别
 main：所有 DM 共享一个会话（默认）
 per-channel-peer：每个通道 + 发送者独立会话（推荐多用户）
-存储位置：~/.openclaw/agents/<agentId>/sessions/
+存储位置：`~/.openclaw/agents/<agentId>/sessions`
+
 🤖 多 Agent 路由
 支持多个隔离的 Agent 共享一个 Gateway：
+
 ```json
 {
   agents: {
@@ -88,6 +91,7 @@ per-channel-peer：每个通道 + 发送者独立会话（推荐多用户）
   ]
 }
 ```
+
 4. 关键 CLI 命令
 
 * 查看状态
@@ -102,7 +106,7 @@ openclaw channels status     # 查看通道状态
 
 * Agent 管理
 openclaw agents list         * 列出所有 Agent
-openclaw agents add <name>   * 添加新 Agent
+openclaw agents add name   * 添加新 Agent
 
 * 会话管理
 openclaw sessions list       * 查看会话
@@ -112,6 +116,7 @@ openclaw sessions cleanup    * 清理旧会话
 openclaw security audit      * 安全检查
 5. 配置文件
 主配置：~/.openclaw/openclaw.json
+
 ```json
 {
   // Agent 配置
@@ -147,6 +152,7 @@ openclaw security audit      * 安全检查
   }
 }
 ```
+
 6. 工具系统
 内置工具：
 
@@ -159,7 +165,7 @@ sessions_* - 会话管理
 subagents - 子 Agent 编排
 Skills（技能）：
 
-位置：~/.openclaw/skills/ 或 <workspace>/skills/
+位置：~/.openclaw/skills/ 或 `<workspace>/skills/`
 每个 Skill 有 SKILL.md 说明用法
 当前可用技能：weather, searxng, healthcheck, qqbot-*, skill-creator
 7. 开发者工作流
@@ -181,6 +187,7 @@ openclaw security audit --json
 修改配置：编辑 ~/.openclaw/openclaw.json
 测试变更：openclaw gateway restart
 8. 安全最佳实践
+
 ```json
 {
   // 1. 限制 DM 访问
@@ -214,158 +221,8 @@ openclaw security audit --json
   }
 }
 ```
+
 1. 推荐学习路径
-今天：
-
-✅ 已完成身份设置
-📖 阅读 AGENTS.md 和 SOUL.md
-🔧 试试 openclaw status 和 openclaw gateway status
-明天：
-
-📖 深入阅读 /opt/openclaw/docs/concepts/ 下的文档
-🧪 尝试创建一个新 Agent：openclaw agents add test
-📝 写一个简单 Skill
-本周：
-
-🔌 配置第二个通道（Telegram 或 Discord）
-🤖 实验多 Agent 路由
-🛡️ 运行 openclaw security audit
-10. 资源链接
-本地文档：/opt/openclaw/docs/
-在线文档：https://docs.openclaw.ai
-GitHub：https://github.com/openclaw/openclaw
-Discord 社区：https://discord.com/invite/clawd
-技能市场：https://clawhub.com
-Dave，你想先从哪块开始深入？🤖
-
-架构细节 - Gateway 协议、WebSocket 通信
-配置实战 - 一起调配置，加通道
-Skill 开发 - 写个你自己的技能
-多 Agent - 搞个工作/生活分离的 Agent
-随便逛逛 - 我带你看看有意思的功能
-选一个，或者直接问问题！ 查看状态
-openclaw status
-
-* Gateway 管理
-openclaw gateway start|stop|restart|status
-
-* 通道管理
-openclaw channels login      * 登录新通道
-openclaw channels status     * 查看通道状态
-
-* Agent 管理
-openclaw agents list         * 列出所有 Agent
-openclaw agents add <name>   * 添加新 Agent
-
-* 会话管理
-openclaw sessions list       * 查看会话
-openclaw sessions cleanup    * 清理旧会话
-
-* 安全审计
-openclaw security audit      * 安全检查
-5. 配置文件
-主配置：~/.openclaw/openclaw.json
-```json
-{
-  // Agent 配置
-  agents: {
-    defaults: {
-      workspace: "~/.openclaw/workspace",
-      model: "dashscope-coding/qwen3.5-plus",
-    }
-  },
-  
-  // 通道配置
-  channels: {
-    whatsapp: {
-      allowFrom: ["+8613800138000"],  // 白名单
-      dmPolicy: "pairing",             // DM 需要配对
-    }
-  },
-  
-  // 会话配置
-  session: {
-    dmScope: "per-channel-peer",  // 安全 DM 模式
-    reset: {
-      mode: "daily",
-      atHour: 4,
-    }
-  },
-  
-  // 工具策略
-  tools: {
-    exec: {
-      applyPatch: true,  // 允许 apply_patch
-    }
-  }
-}
-```
-6. 工具系统
-内置工具：
-
-read / write / edit - 文件操作
-exec - 执行 shell 命令
-browser - 浏览器自动化
-web_search / web_fetch - 网络搜索
-message - 发送消息
-sessions_* - 会话管理
-subagents - 子 Agent 编排
-Skills（技能）：
-
-位置：~/.openclaw/skills/ 或 <workspace>/skills/
-每个 Skill 有 SKILL.md 说明用法
-当前可用技能：weather, searxng, healthcheck, qqbot-*, skill-creator
-7. 开发者工作流
-调试技巧
-* 查看实时日志
-openclaw logs --follow
-
-* WebSocket 调用测试
-openclaw gateway call health --params '{}'
-
-* 导出会话 JSON
-openclaw sessions --json > sessions.json
-
-* 安全检查
-openclaw security audit --json
-扩展开发
-创建 Skill：参考 /opt/openclaw/docs/tools/creating-skills.md
-自定义工具：在 workspace 的 tools/ 目录添加
-修改配置：编辑 ~/.openclaw/openclaw.json
-测试变更：openclaw gateway restart
-8. 安全最佳实践
-{
-  // 1. 限制 DM 访问
-  channels: {
-    whatsapp: {
-      dmPolicy: "pairing",  // 或 "allowlist"
-      allowFrom: ["你的号码"],
-    }
-  },
-  
-  // 2. 会话隔离
-  session: {
-    dmScope: "per-channel-peer",  // 多用户必开
-  },
-  
-  // 3. 工具限制（对不信任的 Agent）
-  agents: {
-    list: [{
-      id: "family",
-      tools: {
-        allow: ["read"],
-        deny: ["exec", "write", "edit"],
-      }
-    }]
-  },
-  
-  // 4. 沙箱模式
-  sandbox: {
-    mode: "all",
-    scope: "agent",
-  }
-}
-9. 推荐学习路径
 今天：
 
 ✅ 已完成身份设置

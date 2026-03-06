@@ -29,7 +29,7 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "软硬件测试开发，测试技术研究者，技术项目管理",
+    description: "测试工具架构设计与开发，AI测试开发研究者，技术项目管理",
     intro: "/intro.html",
     medias: {
       hwNote: {
