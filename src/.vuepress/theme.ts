@@ -206,6 +206,15 @@ export default hopeTheme({
       linkedin: true,
     },
 
+    // ✅ Umami Cloud 网站统计
+    analytics: {
+      provider: "umami",
+      umamiConfig: {
+        websiteId: "289eed61-a26d-4cd6-8ff8-214f51d0e7f2",
+        src: "https://cloud.umami.is/script.js",
+      },
+    },
+
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
     // pwa: {
     //   favicon: "/favicon.ico",
