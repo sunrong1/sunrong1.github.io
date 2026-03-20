@@ -196,32 +196,14 @@ export default hopeTheme({
 
     // ✅ 社交分享功能
     share: {
-      provider: "custom",
-      custom: [
-        {
-          name: "微信",
-          icon: "fa-brands fa-weixin",
-          shareURL: ({ url, title }) =>
-            `https://www.addthis.com/share?url=${encodeURIComponent(url)}`,
-        },
-        {
-          name: "微博",
-          icon: "fa-brands fa-weibo",
-          shareURL: ({ url, title }) =>
-            `https://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
-        },
-        {
-          name: "Twitter",
-          icon: "fa-brands fa-twitter",
-          shareURL: ({ url, title }) =>
-            `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
-        },
-        {
-          name: "复制链接",
-          icon: "fa-solid fa-link",
-          shareURL: ({ url }) => url,
-        },
-      ],
+      provider: "builtin",
+      weibo: true,
+      qq: true,
+      qzone: true,
+      wechat: true,
+      facebook: true,
+      twitter: true,
+      linkedin: true,
     },
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
