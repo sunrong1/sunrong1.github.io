@@ -1,5 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { searchPlugin } from "@vuepress/plugin-search";
+import { rssPlugin } from "@vuepress/plugin-rss";
 import theme from "./theme.js";
 
 export default defineUserConfig({
@@ -17,6 +18,14 @@ export default defineUserConfig({
       placeholder: "搜索文档...",
       maxResults: 10,
       indexPages: true,
+    }),
+    rssPlugin({
+      rss: [
+        {
+          path: "rss.xml",
+          count: 20, // 最新 20 篇文章
+        },
+      ],
     }),
   ],
 
