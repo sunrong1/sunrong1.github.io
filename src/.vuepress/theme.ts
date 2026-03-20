@@ -194,13 +194,25 @@ export default hopeTheme({
       prefix: "fa6-solid:",
     },
 
-    // ✅ 社交分享功能 - vuepress-theme-hope 内置支持
+    // ✅ 社交分享功能
     share: {
       provider: "builtin",
       platforms: ["Weibo", "Wechat", "QQ", "Qzone", "Twitter", "Facebook", "Linkedin"],
     },
 
-    // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
+    // ✅ 相关文章推荐
+    feed: {
+      atom: true,
+      json: true,
+      rss: true,
+    },
+
+    // ✅ SEO 优化
+    seo: {
+      twitter: "@sunrong1",
+    },
+
+    // ✅ PWA 配置（已在 config.ts 中配置）
     // pwa: {
     //   favicon: "/favicon.ico",
     //   cacheHTML: true,
