@@ -18,6 +18,9 @@ category:
 tag:
   - 页面配置
   - 使用指南
+
+home: true
+sticky: false
 # 此页面会在文章列表置顶
 sticky: false
 # 此页面会出现在星标文章中
