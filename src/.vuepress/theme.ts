@@ -199,20 +199,6 @@ export default hopeTheme({
       provider: "builtin",
       platforms: ["Weibo", "Wechat", "QQ", "Qzone", "Twitter", "Facebook", "Linkedin"],
     },
-
-    // ✅ 相关文章推荐
-    feed: {
-      atom: true,
-      json: true,
-      rss: true,
-    },
-
-    // ✅ SEO 优化
-    seo: {
-      twitter: "@sunrong1",
-    },
-
-    // ✅ PWA 配置（已在 config.ts 中配置）
     // pwa: {
     //   favicon: "/favicon.ico",
     //   cacheHTML: true,
