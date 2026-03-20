@@ -194,16 +194,7 @@ export default hopeTheme({
       prefix: "fa6-solid:",
     },
 
-    // ✅ Umami Cloud 网站统计
-    analytics: {
-      provider: "umami",
-      umamiConfig: {
-        websiteId: "289eed61-a26d-4cd6-8ff8-214f51d0e7f2",
-        src: "https://cloud.umami.is/script.js",
-      },
-    },
-
-    // ✅ 社交分享功能 - 在文章页面启用
+    // ✅ 社交分享功能 - vuepress-theme-hope 内置支持
     share: {
       provider: "builtin",
       platforms: ["Weibo", "Wechat", "QQ", "Qzone", "Twitter", "Facebook", "Linkedin"],
