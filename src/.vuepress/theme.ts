@@ -194,18 +194,6 @@ export default hopeTheme({
       prefix: "fa6-solid:",
     },
 
-    // ✅ 社交分享功能
-    share: {
-      provider: "builtin",
-      weibo: true,
-      qq: true,
-      qzone: true,
-      wechat: true,
-      facebook: true,
-      twitter: true,
-      linkedin: true,
-    },
-
     // ✅ Umami Cloud 网站统计
     analytics: {
       provider: "umami",
@@ -213,6 +201,12 @@ export default hopeTheme({
         websiteId: "289eed61-a26d-4cd6-8ff8-214f51d0e7f2",
         src: "https://cloud.umami.is/script.js",
       },
+    },
+
+    // ✅ 社交分享功能 - 在文章页面启用
+    share: {
+      provider: "builtin",
+      platforms: ["Weibo", "Wechat", "QQ", "Qzone", "Twitter", "Facebook", "Linkedin"],
     },
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
