@@ -157,12 +157,15 @@ quadrantChart
 - **GitHub**: [@sunrong1](https://github.com/sunrong1)
 - **知乎**: [@sunrong1](https://www.zhihu.com/people/sunrong1)
 - **B 站**: [@Dave_Dev_Road](https://space.bilibili.com/569121037)
-- **LinkedIn**: [sunrong1](https://www.linkedin.com/in/sunrong1)
 - **邮箱**: sunrong1990@126.com
 
-### 知识星球
-- **测试开发之路**：分享测试开发实战经验
-- **AI 应用实践**：大模型在测试中的应用
+### 📄 简历下载
+- [在线简历](/posts/01-career/resume.html)
+- [PDF 下载](/resume.pdf)（准备中）
+
+### 💼 项目作品
+- [技术栈详情](/posts/01-career/tech-stack.html)
+- [项目作品展示](/posts/01-career/projects.html)
 
 ---
 
