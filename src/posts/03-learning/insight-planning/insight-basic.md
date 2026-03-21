@@ -4,8 +4,8 @@ date: 2025-09-01
 categories:
   - 洞察
 tags:
-  - 洞察基础
-  - 方法论
+  - 规划与洞察
+  - 学习方法
   - 思维能力
   - 个人成长
 author: Mr.Sun

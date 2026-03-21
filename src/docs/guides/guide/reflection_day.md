@@ -3,9 +3,9 @@ icon: lock
 date: 2026-2-12 23:00:00
 since: 2025-09-06 12:00:00
 category:
-  - 反思
+  - 思维能力
 tag:
-  - 信念与反思
+  - 思维能力
 
 star: true
 ---

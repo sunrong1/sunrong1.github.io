@@ -5,7 +5,6 @@ update: 2026-3-12
 category:
   - AI
 tag:
-  - basic
 star: true
 ---
 

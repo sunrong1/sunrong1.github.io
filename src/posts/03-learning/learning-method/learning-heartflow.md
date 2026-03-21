@@ -4,9 +4,9 @@ date: 2025-09-14
 category:
   - 学习方法
 tag:
-  - 心流
+  - 学习方法
   - method
-  - 方法论
+  - 学习方法
 star: 10
 cover: /assets/images/flow-learning.png
 ---

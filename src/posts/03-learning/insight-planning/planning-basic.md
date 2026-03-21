@@ -4,9 +4,9 @@ date: 2025-09-01
 categories:
   - 规划
 tags:
-  - 规划基础
-  - 方法论
-  - 目标管理
+  - 规划与洞察
+  - 学习方法
+  - 规划与洞察
   - 个人成长
 author: Mr.Sun
 star: 10

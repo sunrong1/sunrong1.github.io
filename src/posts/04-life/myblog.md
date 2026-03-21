@@ -5,8 +5,6 @@ update: 2026-03-09
 category:
   - blog
 tag:
-  - target
-  - production
 star: true
 sticky: true
 ---

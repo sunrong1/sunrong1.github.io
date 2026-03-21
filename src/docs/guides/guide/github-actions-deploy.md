@@ -3,10 +3,8 @@ title: GitHub Actions 自动构建部署博客教程
 date: 2026-03-18
 author: Mr.Sun
 tags:
-  - github
-  - actions
-  - 部署
-  - 自动化
+  - 开源项目
+  - 测试技术
 category: 使用指南
 cover: /assets/images/github-actions-blog.png
 ---

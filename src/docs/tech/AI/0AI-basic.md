@@ -5,7 +5,6 @@ update: 2026-9-10
 category:
   - AI
 tag:
-  - basic
 ---
 
 # AI理论与知识基础

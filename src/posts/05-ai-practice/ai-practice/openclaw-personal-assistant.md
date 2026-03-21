@@ -6,7 +6,7 @@ categories:
 tags:
   - AI
   - OpenClaw
-  - 自动化
+  - 测试技术
   - 实战项目
 author: Mr.Sun
 ---
