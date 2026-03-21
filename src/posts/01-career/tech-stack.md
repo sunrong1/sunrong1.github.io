@@ -226,7 +226,7 @@ quadrantChart
 欢迎通过以下方式交流技术：
 
 - **GitHub**: [@sunrong1](https://github.com/sunrong1)
-- **邮箱**: sunrong1990@126.com
+- **邮箱**: sunrong1***@126.com
 - **知乎**: [@sunrong1](https://www.zhihu.com/people/sunrong1)
 - **博客**: [sunrong.site](https://sunrong.site)
 

@@ -47,7 +47,7 @@ export default hopeTheme({
       BiliBili: "https://space.bilibili.com/569121037",
       Twitter: "https://x.com/home",
       Facebook: "https://www.facebook.com/daverongsun/",
-      Email: "mailto:sunrong1990@126.com",
+      Email: "mailto:sunrong1***@126.com",
       Linkedin: "https://www.linkedin.com/feed/",
       // Bitbucket: "https://example.com",
       // Dingding: "https://example.com",
