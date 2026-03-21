@@ -5,8 +5,6 @@ category:
   - 学习方法
 tag:
   - 学习方法
-  - method
-  - 学习方法
 star: 10
 cover: /assets/images/flow-learning.png
 ---
