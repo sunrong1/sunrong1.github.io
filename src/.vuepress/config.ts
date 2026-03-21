@@ -30,7 +30,7 @@ export default defineUserConfig({
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?YOUR_BAIDU_TONGJI_ID";
+  hm.src = "https://hm.baidu.com/hm.js?40397fe5bc6d0c0c9fd718d8b4225476";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
