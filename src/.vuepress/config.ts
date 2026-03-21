@@ -20,8 +20,42 @@ export default defineUserConfig({
     }),
   ],
 
-  // 添加 Umami 统计脚本
+  // 添加 SEO 和统计脚本
   head: [
+    // 百度统计
+    [
+      "script",
+      {},
+      `
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?YOUR_BAIDU_TONGJI_ID";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+      `
+    ],
+    // 百度主动推送脚本
+    [
+      "script",
+      {},
+      `
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+      `
+    ],
+    // Umami 统计
     [
       "script",
       {
@@ -30,6 +64,10 @@ export default defineUserConfig({
         "data-website-id": "289eed61-a26d-4cd6-8ff8-214f51d0e7f2",
       },
     ],
+    // 站点验证
+    ["meta", { name: "baidu-site-verification", content: "YOUR_BAIDU_VERIFICATION_CODE" }],
+    ["meta", { name: "description", content: "Sun 的技术博客，分享测试开发、AI 应用、职场成长、育儿心得" }],
+    ["meta", { name: "keywords", content: "测试开发，AI 应用，职场成长，育儿，程序员，华为，上海" }],
   ],
 
   // 禁用预取以减少带宽
