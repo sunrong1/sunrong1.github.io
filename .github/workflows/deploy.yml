@@ -3,7 +3,7 @@ name: Deploy Blog to GitHub Pages
 on:
   push:
     branches:
-      - main  # 推送到 main 分支时触发（如果是 master 分支，请改为 master）
+      - master  # 推送到 master 分支时触发
 
   # 允许手动触发
   workflow_dispatch:
@@ -51,4 +51,4 @@ jobs:
           publish_branch: gh-pages
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: 'chore: auto deploy from main branch'
+          commit_message: 'chore: auto deploy from master branch'
