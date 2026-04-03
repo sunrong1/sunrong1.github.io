@@ -1,10 +1,9 @@
 ---
 icon: circle-info
+title: 关于我
 cover: /assets/images/cover3.jpg
 date: 2026-03-20
-category:
-  - 关于
-tag:
+tags:
   - 个人介绍
   - 关于我
 ---

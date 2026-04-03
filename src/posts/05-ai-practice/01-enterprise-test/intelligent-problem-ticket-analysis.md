@@ -1,14 +1,14 @@
 ---
 icon: pen-to-square
+title: AI赋能测试问题单智能分析方案
 date: 2026-03-02
 update: 2026-04-03
-category:
-  - AI实践
-tag:
+tags:
   - AI Agent
   - 测试智能化
   - 问题单分析
   - RAG
+  - AI实践
 star: true
 sticky: true
 ---

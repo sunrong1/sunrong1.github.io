@@ -1,10 +1,10 @@
 ---
 icon: user-group
-category:
+title: 程序员爸爸系列
+tags:
   - 程序员爸爸
   - 育儿心得
-tag:
-  - 育儿心得
+  - 亲子时光
 ---
 
 # 程序员爸爸系列
