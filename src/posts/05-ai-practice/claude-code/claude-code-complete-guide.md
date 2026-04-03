@@ -1,3 +1,14 @@
+---
+title: Claude Code 完全指南：从入门到精通
+date: 2026-04-03
+update: 2026-04-03
+tags:
+  - Claude Code
+  - AI编程
+  - 工具使用
+  - AI Agent
+---
+
 # Claude Code 完全指南：从入门到精通
 
 > 本文参考自[某白123的微信文章《Claude Code 完全指南》](https://mp.weixin.qq.com/s/5uhudUPNKLYwxZXB0_IH_g)，在此基础上增加了新手指引、国产模型配置和核心配置文件说明。

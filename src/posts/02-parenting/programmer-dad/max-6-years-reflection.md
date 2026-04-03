@@ -1,12 +1,11 @@
 ---
 title: Max 6 岁了：一个程序员爸爸的育儿反思
 date: 2026-03-19
-categories:
-  - 程序员爸爸
 tags:
   - 育儿心得
   - 思维能力
   - 6 岁
+  - 亲子时光
 author: Mr.Sun
 ---
 

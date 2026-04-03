@@ -1,10 +1,11 @@
 ---
 icon: pen-to-square
+title: 我的Dev之路
 date: 2025-07-14
 update: 2026-03-09
-category:
-  - blog
-tag:
+tags:
+  - 博客
+  - 技术分享
 star: true
 sticky: true
 ---
