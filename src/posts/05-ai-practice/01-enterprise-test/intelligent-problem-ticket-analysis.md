@@ -1,10 +1,20 @@
-# AI 赋能测试问题单智能分析方案
-
-**作者：** max 爸爸  
-**日期：** 2026-04-02  
-**标签：** AI Agent、测试智能化、问题单分析、RAG  
-
 ---
+icon: pen-to-square
+date: 2026-03-02
+update: 2026-04-01
+category:
+  - AI实践
+tag:
+  - AI Agent
+  - 测试智能化
+  - 问题单分析
+  - RAG
+star: true
+sticky: true
+---
+
+
+# AI 赋能测试问题单智能分析方案
 
 ## 背景
 
