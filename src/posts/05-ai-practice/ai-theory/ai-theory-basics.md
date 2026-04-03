@@ -1,10 +1,8 @@
 ---
 icon: book
-date: 2018-12-30
+date: 2026-04-03
 update: 2026-04-03
-category:
-  - AI实践
-tag:
+tags:
   - AI基础
   - 机器学习
   - 深度学习

@@ -1,10 +1,11 @@
 ---
 icon: pen-to-square
 date: 2025-09-14
-category:
+tags:
   - 学习方法
-tag:
-  - 学习方法
+  - 心流
+  - 专注力
+  - 自我提升
 star: 10
 cover: /assets/images/flow-learning.png
 ---
