@@ -6,7 +6,6 @@ categories:
 tags:
   - 规划与洞察
   - 学习方法
-  - 规划与洞察
   - 个人成长
 author: Mr.Sun
 star: 10

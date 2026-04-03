@@ -1,10 +1,10 @@
 ---
 icon: folder-open
 date: 2026-03-20
-category:
-  - 项目作品
-tag:
+tags:
   - 项目成果
+  - 自动化测试
+  - 职业发展
 ---
 
 # 项目作品与技术成果

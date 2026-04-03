@@ -1,13 +1,12 @@
 ---
 title: 用 OpenClaw 搭建个人 AI 助手：实战指南
 date: 2026-03-19
-categories:
-  - AI 实战
 tags:
   - AI
   - OpenClaw
   - 测试技术
   - 实战项目
+  - AI助手
 author: Mr.Sun
 ---
 

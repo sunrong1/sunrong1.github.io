@@ -1,13 +1,11 @@
 ---
 icon: certificate
 date: 2026-03-25
-category:
-  - 职业发展
-  - 项目管理
-tag:
+tags:
   - PMP
   - 项目管理
   - 职业认证
+  - 职业发展
 star: true
 sticky: true
 ---
