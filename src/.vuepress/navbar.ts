@@ -14,15 +14,6 @@ export default navbar([
     ],
   },
   {
-    text: "程序员爸爸",
-    icon: "fa-solid fa-user-group",
-    prefix: "/posts/02-parenting/",
-    link: "posts/02-parenting/",
-    children: [
-      { text: "育儿心得", link: "programmer-dad/" },
-    ],
-  },
-  {
     text: "学习成长",
     icon: "fa-solid fa-graduation-cap",
     prefix: "/posts/",
@@ -70,5 +61,4 @@ export default navbar([
       { text: "测试技术", link: "tech/testing/" },
     ],
   },
-  { text: "关于我", link: "/posts/04-life/intro.html", icon: "fa-solid fa-user" },
 ]);
