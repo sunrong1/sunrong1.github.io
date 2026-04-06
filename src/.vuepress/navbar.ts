@@ -61,4 +61,5 @@ export default navbar([
       { text: "测试技术", link: "tech/testing/" },
     ],
   },
+  { text: "关于我", link: "/posts/04-life/intro.html", icon: "fa-solid fa-user" },
 ]);
