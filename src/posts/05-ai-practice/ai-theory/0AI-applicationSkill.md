@@ -62,8 +62,6 @@ quadrantChart
 
 **关键认知：** 进行 3 次以上的迭代，才能保证效果。
 
-![AI-prompt.png](image.png)
-
 #### 提示词优化六原则
 
 | 原则 | 具体做法 | 示例 |
@@ -201,8 +199,6 @@ flowchart LR
 - 导入 10 个竞品官网
 - 让 AI 提取产品特性、定价策略、目标用户
 - 生成对比表格和 SWOT 分析
-
-![ai-modeManage](AI-modeManage.png)
 
 ---
 
