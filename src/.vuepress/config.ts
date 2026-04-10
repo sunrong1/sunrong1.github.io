@@ -6,8 +6,8 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "DevFun",
-  description: "sunrong's blog,Dev road",
+  title: "Dave Dev Fun",
+  description: "Dev together, innovate, fun! 一个开发人的自我修养",
 
   theme,
 
