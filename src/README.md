@@ -4,7 +4,7 @@ home: true
 layout: Blog
 icon: house
 title: Dave Dev Fun
-heroImage: https://theme-hope-assets.vuejs.press/logo.svg
+heroImage: /assets/images/cover.jpg
 heroText: Dave Dev Fun
 heroFullScreen: true
 tagline: Dev together, innovate, fun! 时光如水流逝，我们一起前行，一起探索，一起创新，一起玩耍！

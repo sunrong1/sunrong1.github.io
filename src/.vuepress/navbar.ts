@@ -83,5 +83,6 @@ export default navbar([
       { text: "微服务", link: "java/" },
     ],
   },
+  { text: "生活", link: "/posts/04-life/", icon: "fa-solid fa-ellipsis" },
   { text: "关于我", link: "/posts/04-life/intro.html", icon: "fa-solid fa-user" },
 ]);
