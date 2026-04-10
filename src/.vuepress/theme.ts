@@ -31,7 +31,6 @@ export default hopeTheme({
   blog: {
     description: "测试工具架构设计与开发，AI测试开发研究者，技术项目管理",
     intro: "/intro.html",
-    hero: "/assets/images/cover-bg.jpg",
     medias: {
       hwNote: {
         link: "https://cloud.huawei.com/home#/home",
@@ -45,10 +44,10 @@ export default hopeTheme({
       Gitee: "https://gitee.com/davesun",
       Zhihu: "https://www.zhihu.com/people/sunrong1",
       BiliBili: "https://space.bilibili.com/569121037",
-      Twitter: "https://x.com/home",
-      Facebook: "https://www.facebook.com/daverongsun/",
-      Email: "mailto:sunrong1***@126.com",
-      Linkedin: "https://www.linkedin.com/feed/",
+      Email: "mailto:sunrong1@126.com",
+      // Twitter: "https://x.com/home",
+      // Facebook: "https://www.facebook.com/daverongsun/",
+      // Linkedin: "https://www.linkedin.com/feed/",
       // Bitbucket: "https://example.com",
       // Dingding: "https://example.com",
       // Discord: "https://example.com",
