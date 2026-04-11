@@ -38,7 +38,7 @@ projects:
   - icon: user
     name: AI Alg
     desc: 千问AI算法老师
-    link: https://www.qianwen.com/chat/0abfa0dda9d54ec3b68378b76bd7f71c?source=tongyigw
+    link: https://www.qianwen.com/chat/4d7d5a16980146358c6c08272bb7067e
 
   # - icon: user
   #   name: Hope博客
