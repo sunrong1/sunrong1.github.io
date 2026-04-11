@@ -251,11 +251,216 @@ code-reviewer review-pr '{
 2. **错误处理**：一定要加重试机制
 3. **日志记录**：方便排查问题
 
+---
+
+## 🔴 实战避坑经验（2026年4月补充）
+
+### 坑1：Session Label 每天消失
+
+**问题现象**：设置的 session label 第二天不见了
+
+**根本原因**：OpenClaw 默认每天 4:00 AM 会重置会话（daily reset），label 跟着 session 走，session 重置后 label 就丢了
+
+**解决方案**：禁用每日重置，改为闲置 1 个月后重置
+
+```bash
+# 错误配置（默认）
+# session.reset.mode: "daily"  → 每天4点重置
+
+# 正确配置
+openclaw config set session.reset.mode idle
+openclaw config set session.reset.idleMinutes 43200  # 30天
+```
+
+**效果**：✅ Session 闲置 1 个月才重置，label 持久保存
+
+---
+
+### 坑2：无法查看历史会话记录
+
+**问题现象**：`sessions_history` 报错 `Session history visibility is restricted`
+
+**根本原因**：`tools.sessions.visibility` 默认为 `tree`，只能访问当前 session 树
+
+**解决方案**：修改为 `all`
+
+```bash
+openclaw config set tools.sessions.visibility all
+openclaw gateway restart
+```
+
+**效果**：✅ 可以查看所有会话历史
+
+---
+
+### 坑3：Cron Job 报 "Channel is required"
+
+**问题现象**：多个 cron job 报错 `Channel is required when multiple channels are configured: openclaw-weixin, wecom`
+
+**根本原因**：配置了多个 channel（个人微信 + 企业微信），`isolated` 类型的 cron job 必须显式指定 `delivery.channel`
+
+**解决方案**：给所有 isolated cron job 添加 channel 配置
+
+```bash
+# 示例：更新 job 配置
+# delivery: {
+#   mode: "announce",
+#   channel: "wecom"  # 指定企业微信
+# }
+```
+
+**易出错的 job 类型**：
+- AI Agent 每日学习提醒
+- AI Agent 资讯推送
+- AI Agent 复习提醒
+- 每日自我提升复盘
+
+---
+
+### 坑4：Cron Job 执行超时
+
+**问题现象**：`cron: job execution timed out`
+
+**根本原因**：
+1. 默认超时只有 60 秒
+2. 任务内容太重（读取文件 + 分析 + 生成摘要）
+3. 网络请求慢（搜索 API）
+
+**解决方案**：按需增加超时时间
+
+```bash
+# 简单任务：60-120 秒足够
+# 搜索+分析任务：建议 180-300 秒
+# 复杂任务：考虑拆分成多个步骤
+```
+
+---
+
+### 坑5：web_search 跨境搜索不稳定
+
+**问题现象**：使用 shadowsocks 代理搜索超时
+
+**根本原因**：跨境网络不稳定，DuckDuckGo 等服务国内访问慢
+
+**解决方案**：使用 Tavily 搜索服务（国内可访问）
+
+```bash
+# 1. 安装 tavily-search skill
+cd ~/.openclaw/extensions/tavily-search
+npm install
+
+# 2. 配置 API Key
+# 文件：~/.openclaw/extensions/tavily-search/.env
+TAVILY_API_KEY=tvly-xxx
+
+# 3. 测试
+node examples.js
+```
+
+**Tavily 优势**：
+- 国内可直接访问
+- 支持 `includeAnswer: true` 返回 AI 总结
+- 免费额度 1000 次/月
+
+---
+
+### 坑6：Gateway 重启失败
+
+**问题现象**：`openclaw gateway restart` 返回 exit code 1
+
+**根本原因**：systemd service 停止和启动之间存在时序问题
+
+**解决方案**：分开执行
+
+```bash
+# 错误方式
+openclaw gateway restart  # 可能失败
+
+# 正确方式
+openclaw gateway stop
+openclaw gateway start
+```
+
+---
+
+### 坑7：Heartbeat 提醒太频繁
+
+**问题现象**：收到太多 heartbeat 提醒
+
+**根本原因**：cron job 配置了太多重复的定时任务
+
+**解决方案**：统一规划，避免重复
+
+| 时间 | 任务 | 类型 |
+|------|------|------|
+| 7:30 | 早上学习提醒 | systemEvent |
+| 12:00 | AI Agent 资讯推送 | agentTurn + wecom |
+| 21:00 | 晚间学习总结 | systemEvent |
+| 22:00 | 每日自我提升复盘 | agentTurn + wecom |
+
+**注意**：工作日和休息日任务要分开，避免休息日收到工作提醒
+
+---
+
+## 📊 配置速查表
+
+```bash
+# Session 配置
+openclaw config set session.reset.mode idle
+openclaw config set session.reset.idleMinutes 43200
+
+# 工具权限配置
+openclaw config set tools.sessions.visibility all
+openclaw config set tools.profile full
+
+# 查看当前配置
+openclaw config get session.reset
+openclaw config get tools.sessions.visibility
+
+# 查看 cron job 状态
+openclaw cron list
+openclaw cron runs <job-id>
+```
+
 ### 改进方向
 
 1. **更多集成**：接入更多工具（日历、邮件等）
 2. **更智能**：用 AI 做更多决策
 3. **更稳定**：增加监控和告警
+
+---
+
+## 🆕 新增配置（2026年4月）
+
+### 定时任务配置
+
+```javascript
+// AI Agent 资讯推送 - 每天 12:00
+{
+  "name": "AI Agent 资讯推送",
+  "schedule": { "kind": "cron", "expr": "0 12 * * *", "tz": "Asia/Shanghai" },
+  "sessionTarget": "isolated",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "搜索最新 AI Agent 资讯，推荐 2-3 篇有价值的文章",
+    "timeoutSeconds": 300
+  },
+  "delivery": { "mode": "announce", "channel": "wecom" }
+}
+
+// 每日自我提升复盘 - 每天 22:00
+{
+  "name": "每日自我提升复盘",
+  "schedule": { "kind": "cron", "expr": "0 22 * * *", "tz": "Asia/Shanghai" },
+  "sessionTarget": "isolated",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "执行自我提升复盘流程...",
+    "timeoutSeconds": 300
+  },
+  "delivery": { "mode": "announce", "channel": "wecom" }
+}
+```
 
 ---
 
