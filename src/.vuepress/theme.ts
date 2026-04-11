@@ -31,7 +31,6 @@ export default hopeTheme({
   blog: {
     description: "测试工具架构设计与开发，AI测试开发研究者，技术项目管理",
     intro: "/intro.html",
-    hero: "/assets/images/cover-bg.jpg",
     medias: {
       hwNote: {
         link: "https://cloud.huawei.com/home#/home",
