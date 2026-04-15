@@ -18,7 +18,7 @@
 
 | 日期 | 学习内容 |
 |------|---------|
-| 04-07 | OpenClaw 升级 + AI Agent 课程 |
+| 04-07 | AI Agent 课程学习 |
 | 04-09 | AgentScope 调用 MCP |
 | 04-11 | learn-claude-code 仓库下载 + 学习计划制定 |
 | 04-12 | s01_agent_loop.py 源码解读 |
@@ -27,7 +27,7 @@
 
 | 日期 | 学习内容 |
 |------|---------|
-| 04-13 | LeetCode 200 并查集 + AgentScope SKILL |
+| 04-13 | AgentScope SKILL 调用 |
 | 04-14 | Claude Code day7_hooks + day8_memory + 全知识点复习 |
 | 04-15 | MCP 基础知识 + 旅游规划开源项目试用 |
 
@@ -222,18 +222,16 @@ class Memory:
 
 | 任务 | 状态 | 说明 |
 |------|------|------|
-| OpenClaw 升级 | ✅ | 熟悉升级流程 |
 | AI Agent 课程 | ✅ | 通勤时间学习 |
-| Claude Code 学习 OpenClaw | ✅ | 边学边挖源码 |
+| AgentScope MCP | ✅ | 调用方法学习 |
 | learn-claude-code 仓库 | ✅ | 下载完成 |
 | Claude Code 学习计划 | ✅ | 2-3周计划制定 |
-| LeetCode | ✅（3/5） | 链表、并查集 |
+| s01 源码解读 | ✅ | Agent Loop 核心模式 |
 
 ### Week 2（04-13 ~ 04-15）
 
 | 任务 | 状态 | 说明 |
 |------|------|------|
-| LeetCode | ✅（2/5） | 200并查集、207课程表 |
 | AgentScope SKILL | ✅ | 环境管理 SKILL 调通 |
 | day7_hooks | ✅ | Hook 机制练习 |
 | day8_memory | ✅ | Memory 类实现 |
