@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent 培训：核心实现与实战</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal { font-size: 32px; }
+        .reveal h1 { font-size: 2.2em; color: #2c3e50; }
+        .reveal h2 { font-size: 1.6em; color: #34495e; }
+        .reveal h3 { font-size: 1.3em; color: #7f8c8d; }
+        .reveal code { font-size: 0.7em; background: #f8f9fa; padding: 0.2em 0.4em; border-radius: 4px; }
+        .reveal pre { font-size: 0.6em; width: 100%; }
+        .reveal .fragment.highlight-blue { background: #3498db; color: white; }
+        .highlight-red { color: #e74c3c; }
+        .highlight-green { color: #27ae60; }
+        .highlight-blue { color: #3498db; }
+        .two-columns { display: flex; gap: 40px; align-items: flex-start; }
+        .two-columns > div { flex: 1; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.7em; margin: 2px; }
+        .tag-red { background: #e74c3c; color: white; }
+        .tag-green { background: #27ae60; color: white; }
+        .tag-blue { background: #3498db; color: white; }
+        .tag-yellow { background: #f39c12; color: white; }
+        .progress-table { width: 100%; border-collapse: collapse; font-size: 0.7em; }
+        .progress-table th, .progress-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .progress-table th { background: #34495e; color: white; }
+        .progress-table tr:nth-child(even) { background: #f8f9fa; }
+        .status-ok { color: #27ae60; font-weight: bold; }
+        .status-dev { color: #f39c12; font-weight: bold; }
+        .status-todo { color: #95a5a6; }
+    </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ========== 封面 ========== -->
+<section>
+    <h1>AI Agent 培训</h1>
+    <h2 style="color: #7f8c8d;">核心实现与实战</h2>
+    <p style="margin-top: 60px;">
+        <span class="tag tag-blue">HERO 平台 AI 转型</span>
+        <span class="tag tag-green">AgentScope</span>
+        <span class="tag tag-yellow">MCP</span>
+    </p>
+    <p style="margin-top: 40px; font-size: 0.6em; color: #95a5a6;">
+        培训时长：60 分钟 | 形式：知识讲解 + 实战演示
+    </p>
+    <p style="margin-top: 20px; font-size: 0.5em; color: #bdc3c7;">
+        版本 v1.0 | 2026-04-18
+    </p>
+</section>
+
+<!-- ========== 议程 ========== -->
+<section>
+    <h2>议程</h2>
+    <table style="font-size: 0.7em; width: 100%;">
+        <tr><td><strong>00:00-05</strong></td><td>开场 + 回顾</td><td>📢</td></tr>
+        <tr><td><strong>00:05-35</strong></td><td>核心概念深入（6个主题）</td><td>📚</td></tr>
+        <tr><td><strong>00:35-40</strong></td><td>休息 + Q&A</td><td>☕</td></tr>
+        <tr><td><strong>00:40-05</strong></td><td>实战演示</td><td>💻</td></tr>
+        <tr><td><strong>01:05-10</strong></td><td>总结 + 提问</td><td>❓</td></tr>
+    </table>
+</section>
+
+<!-- ========== Part 1: Agent Loop ========== -->
+<section>
+    <section>
+        <h2>主题一：Agent Loop</h2>
+        <p style="color: #e74c3c;">主循环逻辑</p>
+        <p style="font-size: 0.6em;">Agent 的"思考引擎"</p>
+    </section>
+    <section>
+        <h3>核心流程</h3>
+        <pre style="font-size: 0.6em;">
+用户输入 → 理解意图 → 规划行动 → 调用工具 → 接收反馈 → 输出结果
+     ↑__________________________________________________↓
+                    （循环直到任务完成）
+        </pre>
+    </section>
+    <section>
+        <h3>为什么需要循环？</h3>
+        <div style="font-size: 0.6em; text-align: left;">
+            <p>🤖 <strong>普通 API</strong> = 一次调用 = 问什么答什么</p>
+            <p>🔄 <strong>Agent Loop</strong> = 循环调用 = 自主完成任务</p>
+            <hr>
+            <p>类比：做饭</p>
+            <ul>
+                <li>普通 API：给你食材，告诉你做什么</li>
+                <li>Agent Loop：帮你做完整顿饭（洗菜→切菜→炒菜→装盘）</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h3>代码实现</h3>
+        <pre style="font-size: 0.5em;">
+class AgentLoop:
+    def run(self, user_input, max_turns=10):
+        for turn in range(max_turns):
+            response = self.model.generate(prompt)  # 调用模型
+            
+            if response.is_complete():  # 判断是否完成
+                return response.final_answer()
+            
+            if response.needs_tool():  # 需要调用工具
+                tool_result = self.execute_tool(response.tool_call)
+                self.memory.add_turn(...)  # 记忆更新
+        
+        return "任务超时"
+        </pre>
+    </section>
+</section>
+
+<!-- ========== Part 2: Hook ========== -->
+<section>
+    <section>
+        <h2>主题二：Hook</h2>
+        <p style="color: #e74c3c;">钩子机制</p>
+        <p style="font-size: 0.6em;">关键节点的"拦截器"</p>
+    </section>
+    <section>
+        <h3>Hook 类型</h3>
+        <table style="font-size: 0.6em; width: 100%;">
+            <tr><th>类型</th><th>作用</th><th>类比</th></tr>
+            <tr><td>before_tool</td><td>工具执行前拦截</td><td>海关检查</td></tr>
+            <tr><td>after_tool</td><td>工具执行后拦截</td><td>快递签收</td></tr>
+            <tr><td>before_model</td><td>模型调用前拦截</td><td>考试前检查</td></tr>
+            <tr><td>after_model</td><td>模型调用后拦截</td><td>批卷检查</td></tr>
+        </table>
+    </section>
+    <section>
+        <h3>应用场景</h3>
+        <div style="font-size: 0.55em; text-align: left;">
+            <p>✅ <strong>参数校验</strong> - before_tool：检查参数是否安全</p>
+            <p>✅ <strong>日志记录</strong> - after_tool：记录工具执行结果</p>
+            <p>✅ <strong>安全检查</strong> - before_model：检查 prompt 注入</p>
+            <p>✅ <strong>输出过滤</strong> - after_model：检查输出合规</p>
+        </div>
+    </section>
+    <section>
+        <h3>代码实现</h3>
+        <pre style="font-size: 0.5em;">
+class HooksManager:
+    def execute_hooks(self, hook_type, context):
+        for hook in self.hooks[hook_type]:
+            result = hook(context)
+            if result.get('skip'):  # 拦截
+                return result
+        return context
+
+# 使用
+hooks.register('before_tool', validate_params)
+hooks.register('after_tool', log_result)
+        </pre>
+    </section>
+</section>
+
+<!-- ========== Part 3: Memory ========== -->
+<section>
+    <section>
+        <h2>主题三：Memory</h2>
+        <p style="color: #e74c3c;">记忆系统</p>
+        <p style="font-size: 0.6em;">分层记忆管理</p>
+    </section>
+    <section>
+        <h3>为什么需要分层？</h3>
+        <div style="font-size: 0.55em; text-align: left;">
+            <p>⚠️ <strong>上下文窗口有限</strong> - LLM 有 token 限制</p>
+            <p>⚠️ <strong>不是所有信息都重要</strong> - 需要筛选</p>
+            <p>⚠️ <strong>成本考量</strong> - token 越多费用越高</p>
+        </div>
+    </section>
+    <section>
+        <h3>三层记忆架构</h3>
+        <pre style="font-size: 0.55em;">
+┌─────────────────────────────────────────┐
+│  瞬时记忆  │  当前上下文      │ 随token淘汰 │
+│  短期记忆  │  本次会话历史    │ 关闭后消失 │
+│  长期记忆  │  持久化存储      │ 跨会话保留 │
+└─────────────────────────────────────────┘
+        </pre>
+    </section>
+    <section>
+        <h3>代码实现</h3>
+        <pre style="font-size: 0.5em;">
+class HeroMemory:
+    def add_turn(self, user, response):
+        self.short_term.append(...)
+        
+        if len(self.short_term) > 10:
+            self.compress()  # 超过阈值自动压缩
+    
+    def compress(self):
+        # 保留最近 4 轮 + 摘要
+        summary = self.summarize(older)
+        self.short_term = [summary] + recent
+    
+    def save_to_long_term(self, key, value):
+        # 持久化到文件
+        self.long_term.append({key, value})
+        self.persist()
+        </pre>
+    </section>
+</section>
+
+<!-- ========== Part 4: Planning ========== -->
+<section>
+    <section>
+        <h2>主题四：Planning</h2>
+        <p style="color: #e74c3c;">任务规划</p>
+        <p style="font-size: 0.6em;">复杂任务的分解与执行</p>
+    </section>
+    <section>
+        <h3>规划策略</h3>
+        <table style="font-size: 0.55em; width: 100%;">
+            <tr><th>策略</th><th>场景</th><th>例子</th></tr>
+            <tr><td>单步规划</td><td>简单任务</td><td>"关闭 BBU"</td></tr>
+            <tr><td>多步规划</td><td>复杂任务</td><td>"配置环境并测试"</td></tr>
+            <tr><td>递归规划</td><td>不确定步骤</td><td>Agent 自决定</td></tr>
+        </table>
+    </section>
+    <section>
+        <h3>ReAct 模式</h3>
+        <pre style="font-size: 0.55em;">
+Thought → Action → Observation → Thought → ...
+ 思考      行动       观察        思考
+
+示例：
+Thought: 需要先查询当前配置
+Action: query_env_config
+Observation: 查到了 2 个 BBU，3 个 RRU
+Thought: 下一步设计配置方案
+Action: design_env_config
+...
+        </pre>
+    </section>
+    <section>
+        <h3>代码实现</h3>
+        <pre style="font-size: 0.5em;">
+def planning_react(task, tools):
+    for step in range(max_steps):
+        thought = model.generate(thought_prompt)
+        
+        if 'finish' in thought:
+            return result
+        
+        action, params = parse_plan(thought)
+        observation = tools[action].execute(params)
+    
+    return "任务未完成"
+        </pre>
+    </section>
+</section>
+
+<!-- ========== Part 5: MCP ========== -->
+<section>
+    <section>
+        <h2>主题五：MCP</h2>
+        <p style="color: #e74c3c;">Model Context Protocol</p>
+        <p style="font-size: 0.6em;">标准化 Agent 与工具的交互</p>
+    </section>
+    <section>
+        <h3>MCP 是什么？</h3>
+        <div style="font-size: 0.6em; text-align: left;">
+            <p>🔌 <strong>类比：电源适配器</strong></p>
+            <ul>
+                <li>不管什么设备（手机、电脑）</li>
+                <li>都用标准电源接口</li>
+                <li>适配器负责转换</li>
+            </ul>
+            <p>💡 <strong>MCP = Agent 的"适配器协议"</strong></p>
+        </div>
+    </section>
+    <section>
+        <h3>架构图</h3>
+        <pre style="font-size: 0.5em;">
+┌──────────────┐       MCP        ┌──────────────┐
+│   LLM/Agent  │ ←─────────────→  │  MCP Server  │
+│              │                  │              │
+│  - prompts   │                  │  - tools     │
+│  - resources │                  │  - resources │
+│  - tools     │                  │  - limits    │
+└──────────────┘                  └──────────────┘
+        </pre>
+    </section>
+    <section>
+        <h3>MCP Server 示例</h3>
+        <pre style="font-size: 0.5em;">
+from mcp.server import MCPServer
+
+hero = MCPServer(name="HERO")
+
+@hero.tool()
+def query_env_config(user_id: str):
+    return {'bbus': ['BBU-A', 'BBU-B'], 
+            'rrus': ['RRU-1', 'RRU-2']}
+
+@hero.tool()
+def modify_bbu_address(bbu_id, new_address):
+    return {'status': 'success'}
+
+hero.run()
+        </pre>
+    </section>
+</section>
+
+<!-- ========== Part 6: Harness ========== -->
+<section>
+    <section>
+        <h2>主题六：Harness Engineering</h2>
+        <p style="color: #e74c3c;">工程化编排</p>
+        <p style="font-size: 0.6em;">给 LLM 戴上马具</p>
+    </section>
+    <section>
+        <h3>核心问题</h3>
+        <div style="font-size: 0.6em; text-align: left;">
+            <p>❌ 没有 Harness 的 LLM：</p>
+            <ul>
+                <li>会胡说八道</li>
+                <li>乱调用工具</li>
+                <li>忘记关键上下文</li>
+                <li>行为不可预测</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h3>解决方案</h3>
+        <div style="font-size: 0.55em; text-align: left;">
+            <p>🐎 <strong>Harness = 马具</strong></p>
+            <p>野马很强大，但无法直接使用。戴上马具后才能拉车、耕地。</p>
+            <p>🤖 LLM = 野马，Harness Engineering = 给 LLM 戴上马具</p>
+        </div>
+    </section>
+    <section>
+        <h3>架构图</h3>
+        <pre style="font-size: 0.45em;">
+┌───────────────────────────────────────┐
+│        Harness Engineering             │
+├───────────────────────────────────────┤
+│  Planning ──→ Hooks ──→ Memory ──→ Tools │
+│       ↑                                 │
+│       └────── Feedback Loop ───────────┘│
+└───────────────────────────────────────┘
+        </pre>
+        <p style="font-size: 0.5em; color: #7f8c8d;">
+            LLM 是大脑，Harness 是神经系统
+        </p>
+    </section>
+</section>
+
+<!-- ========== 休息 ========== -->
+<section>
+    <h2>休息 5 分钟 ☕</h2>
+    <p style="font-size: 0.8em; color: #7f8c8d;">
+        实战演示部分即将开始
+    </p>
+    <p style="font-size: 0.6em; margin-top: 40px;">
+        准备好 HERO 环境演示
+    </p>
+</section>
+
+<!-- ========== 实战演示 Part 1 ========== -->
+<section>
+    <section>
+        <h2>实战演示一</h2>
+        <p style="color: #27ae60;">Agent Loop + MCP 交互</p>
+    </section>
+    <section>
+        <h3>演示代码</h3>
+        <pre style="font-size: 0.45em;">
+from agentscope import Agent
+from agentscope.rag import MCPClient
+
+mcp = MCPClient("http://hero-platform:8080/mcp")
+tools = mcp.discover_tools()
+
+agent = Agent(
+    name="HERO-Assistant",
+    model="qwen3.5",
+    tools=tools,
+    system_prompt="你是一个 HERO 平台助手..."
+)
+
+# 查询环境配置
+response = agent.run("帮我查看我的环境配置")
+print(response)
+        </pre>
+    </section>
+    <section>
+        <h3>运行结果</h3>
+        <pre style="font-size: 0.5em;">
+发现 3 个 HERO 微服务工具
+可用工具: ['query_env_config', 'design_env_config', 'modify_bbu_address']
+
+用户输入: 帮我查看我的环境配置
+
+[Agent 思考]
+调用工具: query_env_config
+
+[结果]
+{'bbus': ['BBU-A', 'BBU-B'], 
+ 'rrus': ['RRU-1', 'RRU-2', 'RRU-3']}
+
+Agent 输出: 您当前配置包含 2 个 BBU，3 个 RRU
+        </pre>
+    </section>
+</section>
+
+<!-- ========== 实战演示 Part 2 ========== -->
+<section>
+    <section>
+        <h2>实战演示二</h2>
+        <p style="color: #27ae60;">Memory 组件</p>
+    </section>
+    <section>
+        <h3>代码实现</h3>
+        <pre style="font-size: 0.45em;">
+class HeroMemory:
+    def __init__(self, user_id):
+        self.short_term = []
+        self.long_term = self._load()
+    
+    def add_interaction(self, user, agent, tools):
+        self.short_term.append({
+            'user': user,
+            'agent': agent,
+            'tools': tools
+        })
+        if len(self.short_term) > 10:
+            self.compress()
+    
+    def compress(self):
+        # 保留最近 4 轮 + 摘要
+        summary = self._summarize(self.short_term[:-8])
+        self.short_term = [{'type':'summary', 'content':summary}] 
+                           + self.short_term[-8:]
+        self._save_long_term(summary)
+
+# 演示：对话历史记住
+memory.add_interaction("帮我配置 RRU-1", "...", ['design_env_config'])
+memory.add_interaction("改成 RRU-2", "...", ['design_env_config'])
+# Agent 能记住上一轮是 RRU-1
+        </pre>
+    </section>
+</section>
+
+<!-- ========== 实战演示 Part 3 ========== -->
+<section>
+    <section>
+        <h2>实战演示三</h2>
+        <p style="color: #27ae60;">端到端场景</p>
+    </section>
+    <section>
+        <h3>用户请求</h3>
+        <pre style="font-size: 0.55em;">
+帮我查找我的环境配置，
+帮我设计一个跑 RRU 的 PSI 开关下的环境配置，
+修改 BBU 的地址。
+        </pre>
+    </section>
+    <section>
+        <h3>Agent 执行过程</h3>
+        <pre style="font-size: 0.5em;">
+[Agent 思考]
+这是一个复杂请求，需要分解为多个步骤：
+1. 查询当前环境配置
+2. 设计新的 RRU + PSI 配置
+3. 修改 BBU 地址
+
+[执行计划]
+步骤 1: query_env_config
+  → BBU: ['BBU-A', 'BBU-B']
+
+步骤 2: design_env_config
+  → 配置: RRU=['RRU-1'], PSI='PSI-1'
+
+步骤 3: modify_bbu_address
+  → BBU-A: 192.168.1.1 → 192.168.2.100
+        </pre>
+    </section>
+    <section>
+        <h3>最终结果</h3>
+        <pre style="font-size: 0.5em;">
+✅ 任务完成！
+
+1. 已查询环境配置：2 个 BBU，3 个 RRU，2 个 PSI
+2. 已设计配置方案：RRU-1 + PSI-1
+3. 已将 BBU-A 地址从 192.168.1.1 修改为 192.168.2.100
+        </pre>
+    </section>
+</section>
+
+<!-- ========== 实战演示 Part 4 ========== -->
+<section>
+    <section>
+        <h2>实战演示四</h2>
+        <p style="color: #27ae60;">Planning 组件（开发中）</p>
+    </section>
+    <section>
+        <h3>代码设计</h3>
+        <pre style="font-size: 0.5em;">
+class HeroPlanner:
+    def plan(self, task, context):
+        # 使用 ReAct 模式
+        prompt = f"""
+任务: {task}
+可用工具: {self.tool_descriptions}
+请规划步骤...
+"""
+        steps = model.generate(prompt)
+        return steps
+
+# 演示
+planner = HeroPlanner(['query_env_config', 
+                       'design_env_config', 
+                       'modify_bbu_address'])
+
+task = "帮我查找配置，设计 RRU + PSI 配置，修改 BBU 地址"
+plan = planner.plan(task)
+# 步骤1: query_env_config
+# 步骤2: design_env_config
+# 步骤3: modify_bbu_address
+        </pre>
+    </section>
+</section>
+
+<!-- ========== 当前进展 ========== -->
+<section>
+    <h2>HERO 平台 AI 转型进展</h2>
+    <table style="font-size: 0.6em; width: 100%;">
+        <tr><th>组件</th><th>状态</th><th>说明</th></tr>
+        <tr><td>MCP Server</td><td class="status-ok">✅ 完成</td><td>封装 HERO 微服务</td></tr>
+        <tr><td>Agent Loop</td><td class="status-ok">✅ 完成</td><td>基础主循环</td></tr>
+        <tr><td>Memory</td><td class="status-dev">🔄 开发中</td><td>短期记忆实现</td></tr>
+        <tr><td>Planning</td><td class="status-dev">🔄 开发中</td><td>ReAct 模式</td></tr>
+        <tr><td>Hooks</td><td class="status-todo">📋 计划中</td><td>日志、监控</td></tr>
+    </table>
+</section>
+
+<!-- ========== 总结 ========== -->
+<section>
+    <h2>总结</h2>
+    <table style="font-size: 0.6em; width: 100%;">
+        <tr><th>概念</th><th>核心理解</th></tr>
+        <tr><td><strong>Agent Loop</strong></td><td>循环执行，直到任务完成</td></tr>
+        <tr><td><strong>Hook</strong></td><td>关键节点的拦截器</td></tr>
+        <tr><td><strong>Memory</strong></td><td>分层记忆管理</td></tr>
+        <tr><td><strong>Planning</strong></td><td>任务分解与规划</td></tr>
+        <tr><td><strong>MCP</strong></td><td>标准化 Agent 与工具交互</td></tr>
+        <tr><td><strong>Harness</strong></td><td>给 LLM 戴上马具，稳定工作</td></tr>
+    </table>
+</section>
+
+<!-- ========== 讨论 ========== -->
+<section>
+    <h2>讨论问题</h2>
+    <div style="font-size: 0.6em; text-align: left;">
+        <p>1️⃣ 你们的工作中，哪些重复性任务可以先用 Agent 自动化？</p>
+        <p>2️⃣ 对 Agent 的哪些能力最感兴趣？</p>
+        <p>3️⃣ 对当前实现有什么建议？</p>
+    </div>
+</section>
+
+<!-- ========== 结束 ========== -->
+<section>
+    <h1>谢谢！</h1>
+    <p style="margin-top: 40px;">
+        <span class="tag tag-blue">AgentScope</span>
+        <span class="tag tag-green">HERO</span>
+        <span class="tag tag-yellow">MCP</span>
+    </p>
+    <p style="margin-top: 40px; font-size: 0.6em; color: #95a5a6;">
+        参考：AgentScope 文档 | Claude Code 源码 | 李宏毅 AI Agent 课程
+    </p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+<script>
+    Reveal.initialize({
+        hash: true,
+        slideNumber: 'c/t',
+        width: 1200,
+        height: 700,
+        margin: 0.1,
+        transition: 'slide',
+        center: true
+    });
+</script>
+</body>
+</html>
