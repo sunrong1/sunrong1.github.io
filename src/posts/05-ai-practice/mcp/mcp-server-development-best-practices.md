@@ -286,3 +286,7 @@ MCP 为 AI 应用与外部系统的连接提供了标准化的方式，但在生
 ---
 
 *本文基于团队 MCP 实践经验总结，供 OpenClaw 社区参考。*
+
+---
+
+如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

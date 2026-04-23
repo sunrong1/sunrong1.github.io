@@ -351,3 +351,7 @@ FROM environment_instance WHERE id = 123;
 ---
 
 *欢迎交流讨论！*
+
+---
+
+如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

@@ -304,3 +304,7 @@ author: Mr.Sun
 ---
 
 *本文基于 2026 年 4 月的 AI Agent 学习与实践，观点可能随技术发展而演进。*
+
+---
+
+如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

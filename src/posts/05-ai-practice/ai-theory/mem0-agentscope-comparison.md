@@ -212,3 +212,7 @@ AgentScope 项目 → Mem0（官方推荐，快速上手）
 ---
 
 _保持学习，持续进步。_
+
+---
+
+如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

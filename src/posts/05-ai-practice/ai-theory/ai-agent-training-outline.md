@@ -1031,3 +1031,7 @@ Planning 组件演示
 ---
 
 *培训材料版本：v1.0 | 2026-04-18*
+
+---
+
+如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

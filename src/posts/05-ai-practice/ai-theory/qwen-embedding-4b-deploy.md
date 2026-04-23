@@ -288,3 +288,7 @@ print(f"Embedding 向量维度: {len(response)}")
 ---
 
 _保持学习，持续进步。_
+
+---
+
+如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site
