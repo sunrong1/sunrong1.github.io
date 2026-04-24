@@ -5,8 +5,8 @@ export default navbar([
   {
     text: "职场成长",
     icon: "fa-solid fa-briefcase",
-    prefix: "/posts/01-career/",
-    link: "posts/01-career/",
+    prefix: "/posts/career/",
+    link: "career/",
     children: [
       { text: "华为成长", link: "huawei-experience/" },
       { text: "项目作品", link: "projects.html" },
@@ -17,8 +17,8 @@ export default navbar([
   {
     text: "学习成长",
     icon: "fa-solid fa-graduation-cap",
-    prefix: "/posts/03-learning/",
-    link: "03-learning/",
+    prefix: "/posts/learning/",
+    link: "learning/",
     children: [
       {
         text: "学习方法",
@@ -49,8 +49,8 @@ export default navbar([
   {
     text: "AI 实践",
     icon: "fa-solid fa-robot",
-    prefix: "/posts/05-ai-practice/",
-    link: "05-ai-practice/",
+    prefix: "/posts/ai-practice/",
+    link: "ai-practice/",
     children: [
       {
         text: "AI 理论",
@@ -70,19 +70,25 @@ export default navbar([
         prefix: "claude-code/",
         link: "claude-code/",
       },
+      {
+        text: "MCP 开发",
+        icon: "fa-solid fa-plug",
+        prefix: "mcp/",
+        link: "mcp/",
+      },
     ],
   },
   {
     text: "开发技术",
     icon: "fa-solid fa-laptop-code",
-    prefix: "/posts/06-dev/",
-    link: "06-dev/",
+    prefix: "/posts/dev/",
+    link: "dev/",
     children: [
       { text: "算法", link: "alg/" },
       { text: "数据库", link: "database/" },
       { text: "微服务", link: "java/" },
     ],
   },
-  { text: "生活", link: "/posts/04-life/", icon: "fa-solid fa-ellipsis" },
-  { text: "关于我", link: "/posts/04-life/intro.html", icon: "fa-solid fa-user" },
+  { text: "生活", link: "/posts/life/", icon: "fa-solid fa-ellipsis" },
+  { text: "关于我", link: "/posts/life/intro.html", icon: "fa-solid fa-user" },
 ]);
