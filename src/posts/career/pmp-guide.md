@@ -7,7 +7,6 @@ tags:
   - 职业认证
   - 职业发展
 star: true
-sticky: true
 ---
 
 # PMP 项目管理专业人士认证指南
