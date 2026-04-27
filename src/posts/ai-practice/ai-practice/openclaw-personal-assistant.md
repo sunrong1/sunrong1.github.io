@@ -1,5 +1,5 @@
 ---
-title: 用 OpenClaw 搭建个人 AI 助手：实战指南
+title: 用 OpenClaw 搭建个人 AI 助手：实战和避坑指南
 date: 2026-03-19
 tags:
   - AI
@@ -498,6 +498,6 @@ openclaw cron runs <job-id>
 
 ---
 
-**最后：** AI 助手不是一蹴而就的，需要持续迭代。希望我的经验能帮到你！
+**最后：** AI 助手不是一蹴而就的，需要持续迭代。希望我的经验能帮到你！欢迎到我的blog进行交流： [sunrong.site](https://sunrong.site)
 
 > 有问题欢迎交流 🌿
