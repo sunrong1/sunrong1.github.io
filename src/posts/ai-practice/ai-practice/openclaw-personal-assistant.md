@@ -1,5 +1,4 @@
 ---
-title: 用 OpenClaw 搭建个人 AI 助手：实战和避坑指南
 date: 2026-03-19
 tags:
   - AI
@@ -10,7 +9,7 @@ tags:
 author: Mr.Sun
 ---
 
-# 用 OpenClaw 搭建个人 AI 助手：实战指南
+# 用 OpenClaw 搭建个人 AI 助手：实战和避坑指南
 
 > 2026 年 2 月开始接触 OpenClaw，用它搭建了自己的 AI 助手。这篇文章记录从零到一的完整过程。
 
@@ -45,9 +44,9 @@ author: Mr.Sun
 我选择了阿里云 SWAS 服务器：
 
 ```
-配置：2 核 2G 40GB SSD
+配置：2 核 4G 40GB SSD
 系统：Ubuntu 22.04
-费用：约 100 元/月
+费用：约 200+ 元/年
 ```
 
 ### 2. 安装 OpenClaw

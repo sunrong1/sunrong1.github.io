@@ -1,6 +1,5 @@
 ---
 icon: user-group
-title: 程序员爸爸系列
 tags:
   - 程序员爸爸
   - 育儿心得

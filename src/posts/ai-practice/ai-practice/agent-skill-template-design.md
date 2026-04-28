@@ -1,5 +1,4 @@
 ---
-title: AI Agent 时代的环境运维 Skill 模板设计
 date: 2026-03-28
 categories:
   - AI 实践

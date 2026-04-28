@@ -1,5 +1,4 @@
 ---
-title: GitHub Actions 自动构建部署博客教程
 date: 2026-03-18
 author: Mr.Sun
 tags:

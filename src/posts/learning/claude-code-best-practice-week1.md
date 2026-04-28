@@ -1,5 +1,4 @@
 ---
-title: "Claude Code 最佳实践学习笔记：第一周"
 date: "2026-04-04"
 category: "03-learning"
 subCategory: "ai-tools"

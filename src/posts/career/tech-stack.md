@@ -1,6 +1,5 @@
 ---
 icon: code
-title: 技术栈与专业能力
 date: 2026-03-20
 tags:
   - 技术能力

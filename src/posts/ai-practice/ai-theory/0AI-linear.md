@@ -1,5 +1,4 @@
 ---
-title: AI 数学基础：程序员需要掌握的数学知识
 date: 2025-08-14
 updated: 2026-04-06
 categories:
