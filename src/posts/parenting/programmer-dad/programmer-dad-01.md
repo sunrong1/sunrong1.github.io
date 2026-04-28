@@ -146,3 +146,8 @@ def quality_time_with_max():
 **后记：** 写这篇文章时，Max 已经睡着了。看着他熟睡的脸，觉得一切辛苦都值得。
 
 > 欢迎其他程序员爸爸交流育儿心得 🌿
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

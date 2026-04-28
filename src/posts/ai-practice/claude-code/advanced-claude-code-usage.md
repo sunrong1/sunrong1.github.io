@@ -432,3 +432,8 @@ Claude Code 远不止是一个"代码补全工具"。它的真正威力在于：
 ---
 
 *如果你也有 Claude Code 的进阶技巧，欢迎交流！*
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

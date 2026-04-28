@@ -232,3 +232,8 @@ PMP 不仅是一张证书，更是一套**系统化的项目管理方法论**。
 - [华为成长系列](/posts/01-career/huawei-experience/)
 - [技术栈详情](/posts/01-career/tech-stack.html)
 - [面试经验](/posts/03-learning/interview/)
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

@@ -804,3 +804,8 @@ KR3：体检指标正常
 **共勉！** 🌿
 
 > 欢迎在评论区分享你的规划心得！
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

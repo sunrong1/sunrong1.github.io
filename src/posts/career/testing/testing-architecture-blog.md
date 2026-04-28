@@ -600,3 +600,8 @@ class TestWithRetry:
 ---
 
 *这份指南会持续更新，欢迎交流讨论。*
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

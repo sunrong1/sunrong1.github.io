@@ -205,3 +205,8 @@ openclaw skills invoke <skill-name> --params {...}
 _模板文件已同步到本地，后续会持续完善。_
 
 > 有问题欢迎交流 🌿
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

@@ -313,3 +313,8 @@ class SearchWriteOrchestrator:
 **相关阅读：**
 - [AI Coding 进阶之路：Claude Code 两周实战总结](https://sunrong1.github.io/ai-practice/claude-code/claude-code-weekly-summary/)
 - [Claude Code 完全指南：从入门到精通](https://sunrong1.github.io/ai-practice/claude-code/claude-code-complete-guide/)
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

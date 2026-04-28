@@ -268,3 +268,8 @@ Agent Skill 是 AI 时代的能力封装范式。它把专业能力从"个人经
 ---
 
 > 本文基于 2026-04-08 的实际对话和实践总结，记录了从理解 skill 运行机制到实际封装 self-improvement-mechanism skill 的完整过程。
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)
