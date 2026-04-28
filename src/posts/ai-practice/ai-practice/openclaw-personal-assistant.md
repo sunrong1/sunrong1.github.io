@@ -479,6 +479,212 @@ openclaw cron runs <job-id>
 
 ---
 
+## 📅 2026年4月实战补充：遇到的问题和解决方案
+
+> 4月份是深度使用 OpenClaw 的一个月，累计遇到了10+个实际问题。这里记录最核心的几个，供大家避坑。
+
+---
+
+### �坑8：企业微信授权失效（850003）
+
+**问题现象**：突然无法发送企业微信消息，提示 `unauthorized` 或授权码无效
+
+**发生场景**：
+- 04-08：首次发现失效
+- 04-20：再次失效
+- 04-25：又一次失效
+
+**根本原因**：企业微信的 `agentId` 授权码有时效性，每次配置变更后需要重新授权
+
+**排查步骤**：
+```bash
+# 1. 检查插件状态
+openclaw status
+
+# 2. 查看授权码对应的 agentId
+cat ~/.openclaw/extensions/wecom-openclaw-plugin/config.json
+
+# 3. 重新触发授权（企业微信后台操作）
+# 企业微信后台 → 应用管理 → 找到对应应用 → 重新获取 AgentId
+```
+
+**预防方案**：
+1. 记录每次授权码对应的配置
+2. 配置变更后第一时间检查功能是否正常
+3. 关键提醒任务要有备用通知渠道（微信/邮件）
+
+**教训**：这是最高频的问题，目前还没有彻底解决，需要每次发生时重新授权。
+
+---
+
+### �坑9：MiniMax 模型返回空回复
+
+**问题现象**：模型配置正确，但回复内容为空（`⚠️ No reply from model`）
+
+**发生时间**：04-08
+
+**根本原因**：MiniMax 模型在某些参数组合下推理异常
+
+**解决方案**：切换到其他模型（如 Qwen）
+
+```bash
+# 临时切换模型
+openclaw config set model minimax/MiniMax-M2.7
+
+# 或者用 Qwen 作为备用
+openclaw config set model qwen/qwen3.5-plus
+
+# 验证
+openclaw status
+```
+
+**经验**：
+- 多个模型配置做备用
+- 发现空回复立刻切模型
+- 记录各模型在不通场景下的表现
+
+---
+
+### 🐞 坑10：Subagent 忘记当前会话进展
+
+**问题现象**：启动 subagent 帮我学习时，过一会儿它就不知道我们学到哪里了
+
+**根本原因**：OpenClaw 每个会话（Session）独立，新会话没有历史记忆
+
+**解决方案**：
+
+**方法1：会话开始时手动提供上下文**
+
+每次开新会话，第一句话就说：
+> "我的情况：正在学 Claude Code，已经完成前11个主题，还剩错误处理和Token裁剪两个主题。今天是第5周学习计划第3天。"
+
+**方法2：用 memory 文件传递上下文**
+
+在 subagent 任务开始前，先把关键信息写入 memory 文件：
+```markdown
+<!-- memory/当前任务.md -->
+# 当前任务
+- 学习主题：Claude Code 源码解读
+- 当前进度：s01_agent_loop.py 已完成
+- 下一步：s02_tool_use.py
+- 学习目标：理解 Claude Code 核心架构
+```
+
+**方法3：利用 OpenClaw 的 memory 机制**
+
+在 AGENTS.md 里设置会话启动时自动读取的上下文文件，让 subagent 一启动就知道完整背景。
+
+---
+
+### 🐞 坑11：每小时归档 Cron 漏掉对话内容
+
+**问题现象**：设置了每小时自动归档，但有些对话内容没有被记录
+
+**根本原因**：Cron 触发时，对话可能还在进行中，内容还没说完，自然捕捉不到
+
+**排查过程**：
+1. 检查 cron 任务本身是否正常运行 ✅（12-23点全部成功）
+2. 检查归档逻辑 ✅（正常）
+3. 发现问题：用户对话中直接告诉我的内容被 cron 漏掉，因为 cron 触发时对话还没结束
+
+**解决方案**：
+
+**核心原则：对话中用户告知的重要内容，立即手动补录到 memory 文件，不依赖 cron**
+
+```markdown
+<!-- 对话中立即记录 -->
+# 2026-04-25 重要记录
+
+## LeetCode 进展
+- 04-25：完成 LeetCode 236（二叉树的最近公共祖先）
+- 本周：4/5 题
+
+## tmux 学习
+- 已学会基本命令：新建会话、分屏、切换窗口
+```
+
+**教训**：cron 归档只能覆盖"已结束"的对话，实时对话内容靠不住。
+
+---
+
+### 🐞 坑12：每周运动打卡提醒 Cron 失败（sessionTarget 缺失）
+
+**问题现象**：Cron Job 报错 `TypeError: Cannot read properties of undefined (reading 'startsWith')`
+
+**发生时间**：04-26
+
+**根本原因**：创建 cron job 时漏了 `sessionTarget` 字段，isolated 类型的 agentTurn 任务必须有这个字段
+
+**错误配置**：
+```javascript
+// ❌ 缺少 sessionTarget
+gatewayToken, name: "每周运动打卡提醒",
+schedule: { kind: "cron", expr: "0 20 * * 0", tz: "Asia/Shanghai" },
+payload: { kind: "agentTurn", message: "...", timeoutSeconds: 60 }
+```
+
+**正确配置**：
+```javascript
+// ✅ 完整配置
+gatewayToken, name: "每周运动打卡提醒",
+schedule: { kind: "cron", expr: "0 20 * * 0", tz: "Asia/Shanghai" },
+sessionTarget: "isolated",  // ← 必须加
+payload: { kind: "agentTurn", message: "...", timeoutSeconds: 60 }
+```
+
+**教训**：OpenClaw 的字段校验不够严格，很多报错信息不直接，需要根据经验判断。
+
+---
+
+### 💡 4月份使用经验总结
+
+**1. 双 Agent 协作模式很香**
+
+我现在同时用 OpenClaw 小沐 + Hermes Agent：
+- **OpenClaw 小沐**：日常助手、陪伴学习、即时问答
+- **Hermes Agent**：专业指导、直接指出问题、代码评审
+
+两者互补，比单一 Agent 效果好很多。
+
+**2. 定时任务要定期检查**
+
+Cron Job 配置后不会主动告诉你失败了，需要定期手动检查：
+```bash
+openclaw cron list
+openclaw cron runs <job-id>
+```
+
+**3. Heartbeat 主动模式的价值**
+
+原来 Heartbeat 只是"我还活着"的标志，现在我给它加了主动工作内容：
+- 检查学习进度
+- 提醒未完成任务
+- 推动用户行动
+
+**4. 用 AI 学习 AI 是最高效的模式**
+
+OpenClaw 小沐能看到我的代码，能针对性指导，比看视频教程效率高很多。
+
+---
+
+### 📝 一句话避坑总结（收藏）
+
+| # | 坑 | 一句话解决方案 |
+|---|-----|----------------|
+| 1 | Session Label 每天消失 | 改 `session.reset.mode` 为 `idle` |
+| 2 | 无法查看历史会话 | 改 `tools.sessions.visibility` 为 `all` |
+| 3 | Cron "Channel is required" | 给 isolated job 加 `delivery.channel` |
+| 4 | Cron 执行超时 | 加 `timeoutSeconds` 到 180-300s |
+| 5 | 跨境搜索不稳定 | 用 Tavily 替代 DuckDuckGo |
+| 6 | Gateway restart 失败 | 分开执行 stop + start |
+| 7 | 企业微信授权失效 | 重新获取 agentId，无解 |
+| 8 | MiniMax 空回复 | 切换到 Qwen 备用 |
+| 9 | Subagent 忘记进展 | 每次手动提供上下文 |
+| 10 | 归档漏掉对话内容 | 重要内容立即手动补录 |
+| 11 | Cron sessionTarget 缺失 | agentTurn 必须加 `sessionTarget` |
+
+---
+
 ## 📚 学习资源
 
 ### 官方文档
