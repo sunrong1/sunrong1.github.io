@@ -1,6 +1,5 @@
 ---
 icon: briefcase
-title: 华为成长系列
 tags:
   - 华为成长
   - 职场心得

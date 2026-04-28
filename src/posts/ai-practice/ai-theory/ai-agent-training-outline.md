@@ -1,5 +1,4 @@
 ---
-title: AI Agent 培训大纲 - 核心实现与实战
 date: 2026-04-18
 tags:
   - AI Agent

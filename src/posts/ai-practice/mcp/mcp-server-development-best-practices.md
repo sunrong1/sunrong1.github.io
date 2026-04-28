@@ -1,5 +1,4 @@
 ---
-title: MCP Server 接口开发规范与最佳实践
 date: 2026-04-22
 tags:
   - MCP
@@ -289,4 +288,4 @@ MCP 为 AI 应用与外部系统的连接提供了标准化的方式，但在生
 
 ---
 
-如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site
+如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

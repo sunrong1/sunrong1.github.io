@@ -1,6 +1,5 @@
 ---
 icon: circle-info
-title: 关于我
 cover: /assets/images/cover.jpg
 date: 2026-03-20
 tags:

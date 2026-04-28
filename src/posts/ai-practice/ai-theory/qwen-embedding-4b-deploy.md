@@ -1,5 +1,4 @@
 ---
-title: Qwen3-Embedding-4B 部署实战：从选型到生产环境
 date: 2026-04-20
 tags:
   - Qwen

@@ -1,6 +1,5 @@
 ---
 icon: pen-to-square
-title: 专利基础：了解专利的申请与保护
 date: 2026-01-23
 tags:
   - 专利基础
