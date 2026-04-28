@@ -290,3 +290,8 @@ ReAct LLM → 边想边做，通过行动验证思考
 - [AgentScope 多智能体协作实战](mem0-agentscope-comparison.md)
 - [OpenClaw vs Hermes Agent 对比](openclaw-hermes-comparison.md)
 - [AI Agent 训练路线图](ai-agent-training-outline.md)
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

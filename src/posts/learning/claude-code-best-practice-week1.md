@@ -301,3 +301,8 @@ mkdir -p ~/.claude/agents
 ---
 
 *保持学习，持续进化。*
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

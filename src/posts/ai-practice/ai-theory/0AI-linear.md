@@ -697,3 +697,8 @@ AI 领域发展很快（尤其是 LLM），保持学习节奏：
 - [PyTorch 官方教程](https://pytorch.org/tutorials/)
 - [《动手学深度学习》](https://zh-v2.d2l.ai/)
 - [Stanford CS224N - Deep Learning for NLP](https://web.stanford.edu/class/cs224n/)
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

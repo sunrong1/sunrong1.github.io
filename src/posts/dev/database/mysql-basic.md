@@ -569,3 +569,8 @@ WHERE
         AND department.Name IS NOT NULL
 ORDER BY department.Name , e1.Salary DESC
 ```
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

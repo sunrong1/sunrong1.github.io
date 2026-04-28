@@ -335,3 +335,8 @@ CoT 没有，ReAct 独有
 ---
 
 *本文为论文精读系列第 1 篇，记录于 2026-04-27*
+
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)
