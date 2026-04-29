@@ -29,10 +29,11 @@ star: true
 
 | 项目 | 信息 |
 |------|------|
-| 论文标题 | Toolformer: Language Models Can Teach Themselves to Use Tools |
-| 作者 | Timo Schick, Jane Dwivedi-Yu, Roberto Dessì, et al. (Meta AI) |
-| 发表时间 | 2023 |
-| 核心贡献 | LLM 通过自监督学习自主掌握工具调用能力 |
+| 论文 | Toolformer: Language Models Can Teach Themselves to Use Tools |
+| 原文链接 | https://arxiv.org/abs/2302.04761 |
+| 作者 | Meta AI (Timo Schick et al.) |
+| 时间 | 2023 |
+| 核心贡献 | LLM 自学使用工具，无需人工标注 |
 | 开源代码 | https://github.com/gerdanila/toolformer |
 
 ### 论文背景与动机
@@ -239,7 +240,7 @@ Toolformer 训练的是"在生成过程中**何时插入工具调用**"的能力
 
 | # | 论文 | 核心贡献 | 状态 |
 |---|------|---------|------|
-| 1 | Chain-of-Thought | 推理链提示 | 🔄 进行中 |
+| 1 | **Chain-of-Thought** | 推理链提示 | 理解推理的本质 | ✅ 已完成 |
 | 2 | **ReAct** | 推理+行动交替模式 | ✅ 已完成 |
 | 3 | **Toolformer** | LLM 自学使用工具 | ✅ 已完成 |
 | 4 | AgentVerse | 多 Agent 协作框架 | 📋 待读 |
@@ -270,7 +271,7 @@ Toolformer 训练的是"在生成过程中**何时插入工具调用**"的能力
 ### 推荐阅读顺序
 
 ```
-Week 1: CoT → ReAct → Toolformer（推理 + 工具基础） ✅
+Week 1: CoT ✅ → ReAct ✅ → Toolformer ✅（推理 + 工具基础，全部完成）
 Week 2: AgentVerse → MetaGPT → Generative Agents（多 Agent 架构）
 Week 3: Voyager → ChatDev → Reflexion（实践系统 + 反思）
 Week 4: MemGPT → RAG vs Memory（记忆系统）
@@ -293,3 +294,22 @@ Week 6: Computer Use → Agentic RAG → Self-Discovering（前沿）
 
 *学习日期：2026-04-29*
 *学习方式：导师考察制（每知识点深度掌握后推进）*
+
+---
+
+## 参考资料
+
+| 资料 | 链接 |
+|------|------|
+| 原文论文 | https://arxiv.org/abs/2302.04761 |
+| GitHub | https://github.com/gerdanila/toolformer |
+
+**相关阅读：**
+
+- [ReAct 论文深度解读](react-paper-learning.md)
+- [AgentVerse 论文深度解读](agentverse-paper-learning.md)
+- [Chain-of-Thought 论文精读](chain-of-thought-paper-learning.md)
+
+---
+
+欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)
