@@ -19,6 +19,7 @@ star: true
 
 > ReAct = **Re**asoning + **Act**ing  
 > 论文：Yao et al., 2023, Google Research + Princeton  
+> 原文链接：https://arxiv.org/abs/2210.03629  
 > 本文记录我的论文学习过程与核心理解
 
 <!-- more -->

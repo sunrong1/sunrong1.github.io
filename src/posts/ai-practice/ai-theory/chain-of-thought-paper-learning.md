@@ -51,11 +51,12 @@ star: true
 
 ## 三、论文基础信息
 
-| 项目 | 内容 |
+| 项目 | 信息 |
 |------|------|
-| **论文全称** | Chain-of-Thought Prompting Elicits Reasoning in Large Language Models |
-| **作者** | Google Research（Jason Wei et al.） |
-| **发表时间** | 2022 年 1 月（arXiv），NeurIPS 2022 正式发表 |
+| 论文 | Chain-of-Thought Prompting Elicits Reasoning in Large Language Models |
+| 原文链接 | https://arxiv.org/abs/2201.11903 |
+| 作者 | Jason Wei et al., Google Brain, 2022 |
+| 核心贡献 | 推理链提示，让 LLM 展示思考过程 |
 | **引用量** | 10000+（里程碑论文） |
 | **核心贡献** | 证明在 Prompt 中加入推理链，能显著提升 LLM 推理能力 |
 
