@@ -34,7 +34,8 @@ star: true
 | 原文链接 | https://openreview.net/forum?id=VtmBAGCN7o |
 | 作者 | 上海人工智能实验室、清华大学等 |
 | 时间 | 2024（ICLR 2024 oral） |
-| 核心贡献 | 结构化多 Agent 协作框架，通过 SOP 流程和角色化设计解决协作质量问题 |
+| 引用 | **1,678**（Semantic Scholar） |
+| 核心贡献 | ① SOP 流程规范化多 Agent 协作 ② 结构化通信协议消除语义歧义 ③ 角色化设计明确分工 ④ 软件工程任务效果显著 |
 | 开源 | https://github.com/geekan/MetaGPT |
 
 ### 论文背景与动机
