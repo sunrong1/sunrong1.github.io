@@ -33,7 +33,8 @@ star: true
 | 原文链接 | https://arxiv.org/abs/2302.04761 |
 | 作者 | Meta AI (Timo Schick et al.) |
 | 时间 | 2023 |
-| 核心贡献 | LLM 自学使用工具，无需人工标注 |
+| 引用 | **3,585**（Semantic Scholar） |
+| 核心贡献 | ① LLM 自监督学习工具使用，无需人工标注 ② 零样本泛化支持数千工具 ③ 显著提升问答/数学任务 |
 | 开源代码 | https://github.com/gerdanila/toolformer |
 
 ### 论文背景与动机
