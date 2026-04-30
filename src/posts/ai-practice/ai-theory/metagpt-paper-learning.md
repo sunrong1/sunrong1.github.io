@@ -33,7 +33,7 @@ star: true
 | 论文 | MetaGPT: Meta Programming for Multi-Agent Collaborative Framework |
 | 原文链接 | https://openreview.net/forum?id=VtmBAGCN7o |
 | 作者 | 上海人工智能实验室、清华大学等 |
-| 时间 | 2023 |
+| 时间 | 2024（ICLR 2024 oral） |
 | 核心贡献 | 结构化多 Agent 协作框架，通过 SOP 流程和角色化设计解决协作质量问题 |
 | 开源 | https://github.com/geekan/MetaGPT |
 
