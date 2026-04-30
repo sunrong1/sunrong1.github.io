@@ -31,7 +31,7 @@ star: true
 | 项目 | 信息 |
 |------|------|
 | 论文 | MetaGPT: Meta Programming for Multi-Agent Collaborative Framework |
-| 原文链接 | https://arxiv.org/abs/2308.03448 |
+| 原文链接 | https://openreview.net/forum?id=VtmBAGCN7o |
 | 作者 | 上海人工智能实验室、清华大学等 |
 | 时间 | 2023 |
 | 核心贡献 | 结构化多 Agent 协作框架，通过 SOP 流程和角色化设计解决协作质量问题 |
@@ -369,7 +369,7 @@ A：任务结构清晰、输出标准明确 → 选 MetaGPT；任务开放、需
 
 ## 十一、参考资料
 
-- 原文论文：https://arxiv.org/abs/2308.03448
+- 原文论文：https://openreview.net/forum?id=VtmBAGCN7o
 - 开源实现：https://github.com/geekan/MetaGPT
 - 前篇博客：[AgentVerse 论文深度解读](agentverse-paper-learning.md)
 - 后篇博客：（待更新）
