@@ -17,8 +17,9 @@ star: true
 
 # ReAct 论文深度解读：让大模型学会"边想边做"
 
-> ReAct = **Re**asoning + **Act**ing  
-> 论文：Yao et al., 2023, Google Research + Princeton  
+> ReAct = **Re**asoning + **Act**ing
+> 论文：Yao et al., 2022, Google Research + Princeton  
+> 原文链接：https://arxiv.org/abs/2210.03629  
 > 本文记录我的论文学习过程与核心理解
 
 <!-- more -->
@@ -61,8 +62,11 @@ CoT 的思考链：
 | 项目 | 信息 |
 |------|------|
 | 全称 | ReAct: Synergizing Reasoning and Acting in Language Models |
+| 原文链接 | https://arxiv.org/abs/2210.03629 |
 | 作者 | Shunyu Yao, Jeffrey Zhao, et al. (Google Research + Princeton) |
-| 时间 | 2023 年 |
+| 时间 | 2022 |
+| 引用 | **7,293**（Semantic Scholar） |
+| 核心贡献 | ① 推理与行动协同，解决了 CoT"闭门造车"问题 ② 外部工具交互获取实时信息 ③ HotPotQA/Fever 等任务 SOTA |
 | 开源 | https://react-yh2.fly.dev/ |
 
 ### 2.2 ReAct 三要素
