@@ -51,13 +51,13 @@ star: true
 
 ## 三、论文基础信息
 
-| 项目 | 内容 |
+| 项目 | 信息 |
 |------|------|
-| **论文全称** | Chain-of-Thought Prompting Elicits Reasoning in Large Language Models |
-| **作者** | Google Research（Jason Wei et al.） |
-| **发表时间** | 2022 年 1 月（arXiv），NeurIPS 2022 正式发表 |
-| **引用量** | 10000+（里程碑论文） |
-| **核心贡献** | 证明在 Prompt 中加入推理链，能显著提升 LLM 推理能力 |
+| 论文 | Chain-of-Thought Prompting Elicits Reasoning in Large Language Models |
+| 原文链接 | https://arxiv.org/abs/2201.11903 |
+| 作者 | Jason Wei et al., Google Brain, 2022 |
+| 引用 | **17,608**（Semantic Scholar） |
+| 核心贡献 | ① 思维链提示激发 LLM 推理能力 ② 小模型配合示例也能推理 ③ 数学/逻辑任务准确率显著提升 |
 
 ---
 
@@ -330,6 +330,7 @@ CoT 没有，ReAct 独有
 
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)（原文）
 - [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)（下篇精读目标）
+- [Voyager 论文深度解读](voyager-paper-learning.md)（后续阅读）
 - Hermes Agent 论文精读清单
 
 ---
