@@ -310,6 +310,7 @@ Week 6: Computer Use → Agentic RAG → Self-Discovering（前沿）
 - [ReAct 论文深度解读](react-paper-learning.md)
 - [AgentVerse 论文深度解读](agentverse-paper-learning.md)
 - [Chain-of-Thought 论文精读](chain-of-thought-paper-learning.md)
+- [Voyager 论文深度解读](voyager-paper-learning.md)
 
 ---
 

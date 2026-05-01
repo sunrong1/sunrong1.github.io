@@ -362,7 +362,7 @@ A：任务结构清晰、输出标准明确 → 选 MetaGPT；任务开放、需
 | 3 | Toolformer | LLM 自学使用工具 | ✅ 已完成 |
 | 4 | AgentVerse | 多 Agent 自由协作框架 | ✅ 已完成 |
 | 5 | MetaGPT | 结构化多 Agent 协作框架 | ✅ 已完成 |
-| 6 | Voyager | 具身智能 + 终身学习 | 📋 待读 |
+| 6 | **Voyager** | 具身智能 + 终身学习 | ✅ 已完成 |
 | 7 | MemGPT | 层级记忆管理 | 📋 待读 |
 | 8 | Computer Use | GUI Agent 突破 | 📋 待读 |
 
@@ -373,4 +373,4 @@ A：任务结构清晰、输出标准明确 → 选 MetaGPT；任务开放、需
 - 原文论文：https://openreview.net/forum?id=VtmBAGCN7o
 - 开源实现：https://github.com/geekan/MetaGPT
 - 前篇博客：[AgentVerse 论文深度解读](agentverse-paper-learning.md)
-- 后篇博客：（待更新）
+- 后篇博客：[Voyager 论文深度解读](voyager-paper-learning.md)
