@@ -323,5 +323,6 @@ class TestVoyager:
 - Toolformer：[《Toolformer 论文精读》](../ai-theory/toolformer-paper-learning)
 - AgentVerse：[《AgentVerse 论文精读》](./agentverse-paper-learning)
 - MetaGPT：[《MetaGPT 论文精读》](./metagpt-paper-learning)
+- MemGPT：[《MemGPT 论文精读》](./memgpt-paper-learning)
 
 > 有问题欢迎交流 🌿
