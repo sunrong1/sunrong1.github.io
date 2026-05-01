@@ -330,6 +330,7 @@ CoT 没有，ReAct 独有
 
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)（原文）
 - [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)（下篇精读目标）
+- [Voyager 论文深度解读](voyager-paper-learning.md)（后续阅读）
 - Hermes Agent 论文精读清单
 
 ---
