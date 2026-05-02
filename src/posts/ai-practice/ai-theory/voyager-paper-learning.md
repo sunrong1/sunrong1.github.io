@@ -324,5 +324,6 @@ class TestVoyager:
 - AgentVerse：[《AgentVerse 论文精读》](./agentverse-paper-learning)
 - MetaGPT：[《MetaGPT 论文精读》](./metagpt-paper-learning)
 - MemGPT：[《MemGPT 论文精读》](./memgpt-paper-learning)
+- Computer Use：[《Computer Use 论文精读》](./computer-use-paper-learning)
 
 > 有问题欢迎交流 🌿
