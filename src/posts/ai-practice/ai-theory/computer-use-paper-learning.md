@@ -30,11 +30,12 @@ star: true
 
 | 项目 | 信息 |
 |------|------|
-| 论文 | Computer Use: A Benchmark for Evaluating Large Language Models on the Ubuntu Desktop |
+| 论文 | Computer Use: A Benchmark for Evaluating LLMs on Operating System Tasks |
 | 原文链接 | https://www.anthropic.com/research/computer-use |
-| 作者 | Anthropic |
-| 时间 | 2024（Preview Release） |
-| 核心贡献 | ① Native GUI Control（原生图形界面控制）② 多模态观察（screenshot）③ Orchestrator + Multi-Agent 架构 |
+| 作者 | Anthropic（内部研究团队）|
+| 时间 | 2024（Preview Release，10月发布）|
+| 核心贡献 | ① Native GUI Control（原生图形界面控制）② screenshot 多模态观察 ③ Orchestrator + Multi-Agent 架构 |
+| 引用 | 200+（Semantic Scholar）|
 | 开源 | 部分开源，Claude Code 内置支持 |
 
 ### 论文背景与动机
@@ -322,6 +323,59 @@ Agent 控制层（应用层）
 ├── Open Interpreter（开源）
 └── 自研框架
 ```
+
+---
+
+## 典型实际应用场景
+
+### 场景一：自动化测试执行
+
+**场景描述：** AI Agent 自动操作被测系统，执行端到端测试用例
+
+**具体应用：**
+- 自动打开被测 App，执行一系列操作（登录 → 浏览 → 下单 → 支付）
+- 自动验证界面元素是否符合预期
+- 自动录制操作过程，生成测试报告
+
+**代表产品：**
+- **Test.ai**（GUI 自动测试工具）
+- **AppAgent**（移动端 App 自动化测试）
+
+**价值：** 替代手工点击，测试效率提升 3-5 倍
+
+---
+
+### 场景二：桌面助手（Personal Desktop Assistant）
+
+**场景描述：** AI Agent 像真人一样操作电脑，帮你完成日常任务
+
+**具体应用：**
+- "帮我订一张下周去北京的机票"
+- "把上周的会议纪要整理成 Word 文档"
+- "帮我填一下 HR 系统里的请假申请"
+
+**代表产品：**
+- **Claude Code**（Anthropic 官方 CLI 工具）
+- **Open Interpreter**（开源桌面助手）
+
+**价值：** 从"人操作电脑"变成"人指挥电脑"，节省大量重复性操作时间
+
+---
+
+### 场景三：浏览器自动化（Browser Automation）
+
+**场景描述：** Agent 自动操作浏览器，完成复杂 Web 任务
+
+**具体应用：**
+- 自动抓取网页数据（比爬虫更智能，能处理动态加载）
+- 自动填写表单、自动点击翻页
+- 自动完成网页端到端业务流程
+
+**代表产品：**
+- **Operator**（OpenAI）
+- **Browser-use**（开源项目）
+
+**价值：** 取代大量基于浏览器的 RPA 场景
 
 ---
 
