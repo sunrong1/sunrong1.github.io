@@ -202,9 +202,9 @@ graph TB
 | **内部技术论坛** | 20+ | 8,000+ | 华为内部 |
 
 **代表文章：**
-- [可靠性测试完整指南](/docs/tech/testing/reliabilityTesting.html) - 2000+ 阅读
-- [托业备考经验：在职 3 个月从 600 到 850+](/posts/03-learning/toeic-prep/toeic-865-experience.html) - 1500+ 阅读
-- [用 OpenClaw 搭建个人 AI 助手：实战指南](/posts/05-ai-practice/ai-practice/openclaw-personal-assistant.html) - 1200+ 阅读
+- [可靠性测试完整指南](/posts/career/testing/reliabilityTesting.html) - 2000+ 阅读
+- [托业备考经验：在职 3 个月从 600 到 850+](/posts/learning/english/busineAndToeic.html) - 1500+ 阅读
+- [用 OpenClaw 搭建个人 AI 助手：实战指南](/posts/ai-practice/ai-practice/openclaw-personal-assistant.html) - 1200+ 阅读
 
 ### 技术分享
 
@@ -268,6 +268,6 @@ graph TB
 
 **🌿 用技术创造价值，用成果证明能力！**
 
-[关于我](/posts/04-life/intro.html) | [技术栈](/posts/01-career/tech-stack.html) | [技术文章](/posts/)
+[关于我](/posts/life/intro.html) | [技术栈](/posts/career/tech-stack.html) | [技术文章](/posts/)
 
 </div>
