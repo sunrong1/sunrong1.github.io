@@ -174,9 +174,9 @@ quadrantChart
 - **博客文章**：35+ 篇
 - **累计阅读**：10,000+
 - **代表作品**：
-  - [可靠性测试完整指南](/docs/tech/testing/reliabilityTesting.html)
-  - [托业备考经验：在职 3 个月从 600 到 850+](/posts/03-learning/toeic-prep/toeic-865-experience.html)
-  - [用 OpenClaw 搭建个人 AI 助手：实战指南](/posts/05-ai-practice/ai-practice/openclaw-personal-assistant.html)
+  - [可靠性测试完整指南](/posts/career/testing/reliabilityTesting.html)
+  - [托业备考经验：在职 3 个月从 600 到 850+](/posts/learning/english/busineAndToeic.html)
+  - [用 OpenClaw 搭建个人 AI 助手：实战指南](/posts/ai-practice/ai-practice/openclaw-personal-assistant.html)
 
 ### 开源项目
 - **OpenClaw 个人助手**：集成企业微信、待办、文档管理的 AI 助手框架
@@ -233,6 +233,6 @@ quadrantChart
 
 **🌿 技术之路，永不止步！**
 
-[关于我](/posts/04-life/intro.html) | [项目作品](/posts/01-career/projects.html) | [技术文章](/posts/)
+[关于我](/posts/life/intro.html) | [项目作品](/posts/career/projects.html) | [技术文章](/posts/)
 
 </div>

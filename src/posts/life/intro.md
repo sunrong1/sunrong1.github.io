@@ -97,10 +97,10 @@ quadrantChart
 - 🏷️ **涵盖领域**：测试开发、AI 应用、职场成长、育儿心得
 
 **代表文章：**
-- [托业备考经验：在职 3 个月从 600 到 850+](/posts/03-learning/toeic-prep/toeic-865-experience.html)
-- [上海程序员通勤实录：每天 3 小时，我是如何利用的](/posts/01-career/huawei-experience/commute-learning-3hours.html)
-- [用 OpenClaw 搭建个人 AI 助手：实战指南](/posts/05-ai-practice/ai-practice/openclaw-personal-assistant.html)
-- [可靠性测试完整指南](/docs/tech/testing/reliabilityTesting.html)
+- [托业备考经验：在职 3 个月从 600 到 850+](/posts/learning/english/busineAndToeic.html)
+- [上海程序员通勤实录：每天 3 小时，我是如何利用的](/posts/career/huawei-experience/commute-learning-3hours.html)
+- [用 OpenClaw 搭建个人 AI 助手：实战指南](/posts/ai-practice/ai-practice/openclaw-personal-assistant.html)
+- [可靠性测试完整指南](/posts/career/testing/reliabilityTesting.html)
 
 ---
 
@@ -147,8 +147,8 @@ quadrantChart
 - [PDF 下载](/resume.pdf)（准备中）
 
 ### 💼 项目作品
-- [技术栈详情](/posts/01-career/tech-stack.html)
-- [项目作品展示](/posts/01-career/projects.html)
+- [技术栈详情](/posts/career/tech-stack.html)
+- [项目作品展示](/posts/career/projects.html)
 
 ---
 
