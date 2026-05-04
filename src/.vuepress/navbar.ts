@@ -6,7 +6,7 @@ export default navbar([
     text: "职场成长",
     icon: "fa-solid fa-briefcase",
     prefix: "/posts/career/",
-    link: "career/",
+    link: "/posts/career/",
     children: [
       { text: "华为成长", link: "huawei-experience/" },
       { text: "项目作品", link: "projects.html" },
@@ -18,7 +18,7 @@ export default navbar([
     text: "学习成长",
     icon: "fa-solid fa-graduation-cap",
     prefix: "/posts/learning/",
-    link: "learning/",
+    link: "/posts/learning/",
     children: [
       {
         text: "学习方法",
@@ -44,13 +44,25 @@ export default navbar([
         prefix: "english/",
         link: "english/",
       },
+      {
+        text: "PMP学习",
+        icon: "fa-solid fa-chart-line",
+        prefix: "pmp/",
+        link: "pmp/",
+      },
+      {
+        text: "技术创新",
+        icon: "fa-solid fa-lightbulb",
+        prefix: "innovation/",
+        link: "innovation/",
+      },
     ],
   },
   {
     text: "AI 实践",
     icon: "fa-solid fa-robot",
     prefix: "/posts/ai-practice/",
-    link: "ai-practice/",
+    link: "/posts/ai-practice/",
     children: [
       {
         text: "AI 理论",
@@ -76,19 +88,42 @@ export default navbar([
         prefix: "mcp/",
         link: "mcp/",
       },
+      {
+        text: "企业智能",
+        icon: "fa-solid fa-building",
+        prefix: "enterprise-test/",
+        link: "enterprise-test/",
+      },
     ],
   },
   {
     text: "开发技术",
     icon: "fa-solid fa-laptop-code",
     prefix: "/posts/dev/",
-    link: "dev/",
+    link: "/posts/dev/",
     children: [
       { text: "算法", link: "alg/" },
       { text: "数据库", link: "database/" },
-      { text: "微服务", link: "java/" },
+      { text: "微服务/DDD", link: "java/" },
     ],
   },
-  { text: "生活", link: "/posts/life/", icon: "fa-solid fa-ellipsis" },
-  { text: "关于我", link: "/posts/life/intro.html", icon: "fa-solid fa-user" },
+  {
+    text: "生活",
+    icon: "fa-solid fa-ellipsis",
+    prefix: "/posts/life/",
+    link: "/posts/life/",
+    children: [
+      { text: "关于我", link: "intro.html" },
+      { text: "博客", link: "myblog.html" },
+    ],
+  },
+  {
+    text: "育儿心得",
+    icon: "fa-solid fa-baby",
+    prefix: "/posts/parenting/",
+    link: "/posts/parenting/",
+    children: [
+      { text: "程序员爸爸", link: "programmer-dad/" },
+    ],
+  },
 ]);
