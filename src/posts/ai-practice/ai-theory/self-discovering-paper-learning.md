@@ -1,8 +1,8 @@
 ---
 title: Self-Discovering 论文深度解读：LLM 自我组合推理结构的突破性方法
 icon: puzzle
-date: 2026-05-02
-update: 2026-05-02
+date: 2026-05-04
+update: 2026-05-04
 categories:
   - AI 实践
 tags:
@@ -433,4 +433,6 @@ LLM 的选择过程：
 - Computer Use：[《Computer Use 论文精读》](./computer-use-paper-learning)
 - Agentic RAG：[《Agentic RAG 论文精读》](./agentic-rag-paper-learning)
 
-> 有问题欢迎交流 🌿
+---
+
+> 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site
