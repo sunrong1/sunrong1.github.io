@@ -326,5 +326,6 @@ class TestVoyager:
 - MemGPT：[《MemGPT 论文精读》](./memgpt-paper-learning)
 - Computer Use：[《Computer Use 论文精读》](./computer-use-paper-learning)
 - Agentic RAG：[《Agentic RAG 论文精读》](./agentic-rag-paper-learning)
+- Self-Discovering：[《Self-Discovering 论文精读》](./self-discovering-paper-learning)
 
 > 有问题欢迎交流 🌿

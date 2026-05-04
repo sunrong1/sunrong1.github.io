@@ -334,3 +334,4 @@ Week 6: Computer Use → Agentic RAG → Self-Discovering（前沿）
   - [MemGPT 论文精读](/ai-theory/memgpt-paper-learning)
 - Computer Use 论文精读](/ai-theory/computer-use-paper-learning)
 - Agentic RAG 论文精读](/ai-theory/agentic-rag-paper-learning)
+- Self-Discovering 论文精读](/ai-theory/self-discovering-paper-learning)
