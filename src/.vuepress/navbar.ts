@@ -62,7 +62,7 @@ export default navbar([
       { text: "我的博客", link: "myblog.html" },
       { text: "上海生活", link: "zhongshan-park-family-guide.html" },
       { text: "效率工具", link: "github-actions-deploy.html" },
-      { text: "育儿心得", link: "../parenting/" },
+      { text: "育儿心得", link: "/posts/parenting/" },
     ],
   },
   {
