@@ -1,6 +1,7 @@
 ---
 date: 2025-06-28
 home: true
+layout: Blog
 icon: house
 title: Dave Dev Fun
 heroImage: /assets/images/cover.jpg
