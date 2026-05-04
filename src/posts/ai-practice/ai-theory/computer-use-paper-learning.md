@@ -401,5 +401,6 @@ Agent 控制层（应用层）
 - Voyager：[《Voyager 论文精读》](./voyager-paper-learning)
 - MemGPT：[《MemGPT 论文精读》](./memgpt-paper-learning)
 - Agentic RAG：[《Agentic RAG 论文精读》](./agentic-rag-paper-learning)
+- Self-Discovering：[《Self-Discovering 论文精读》](./self-discovering-paper-learning)
 
 > 有问题欢迎交流 🌿
