@@ -328,4 +328,4 @@ class TestVoyager:
 - Agentic RAG：[《Agentic RAG 论文精读》](./agentic-rag-paper-learning)
 - Self-Discovering：[《Self-Discovering 论文精读》](./self-discovering-paper-learning)
 
-> 有问题欢迎交流 🌿
+> 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

@@ -180,4 +180,4 @@ Voyager 继承了 AgentVerse 的**动态角色调整**思路，并加入了：
 - Toolformer：[《Toolformer 论文精读》](../ai-theory/toolformer-paper-learning)
 - Voyager：[《Voyager 论文精读》](./voyager-paper-learning)
 
-> 有问题欢迎交流 🌿
+> 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

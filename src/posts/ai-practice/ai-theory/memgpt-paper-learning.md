@@ -335,3 +335,5 @@ Week 6: Computer Use → Agentic RAG → Self-Discovering（前沿）
 - Computer Use 论文精读](/ai-theory/computer-use-paper-learning)
 - Agentic RAG 论文精读](/ai-theory/agentic-rag-paper-learning)
 - Self-Discovering 论文精读](/ai-theory/self-discovering-paper-learning)
+
+> 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

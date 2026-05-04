@@ -227,4 +227,4 @@ test_pipeline = [
 - AgentVerse：[《AgentVerse 论文精读》](./agentverse-paper-learning)
 - Voyager：[《Voyager 论文精读》](./voyager-paper-learning)
 
-> 有问题欢迎交流 🌿
+> 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

@@ -1,8 +1,8 @@
 ---
 title: AI Agent 架构演进全景图：10篇论文核心洞察与 2025-2026 前沿进展
 icon: brain
-date: 2026-05-02
-update: 2026-05-02
+date: 2026-05-04
+update: 2026-05-04
 categories:
   - AI 实践
 tags:
@@ -631,4 +631,6 @@ Task Input → 内置规划器 → 内置工具选择 → 内置记忆管理 →
 - [Agentic RAG 论文精读](../ai-theory/agentic-rag-paper-learning)
 - [Self-Discovering 论文精读](../ai-theory/self-discovering-paper-learning)
 
-> 有问题欢迎交流 🌿
+---
+
+> 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

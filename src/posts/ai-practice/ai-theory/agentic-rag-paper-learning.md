@@ -1,8 +1,8 @@
 ---
 title: Agentic RAG 深度解读：检索增强与 Agent 能力的深度结合
 icon: search
-date: 2026-05-02
-update: 2026-05-02
+date: 2026-05-04
+update: 2026-05-04
 categories:
   - AI 实践
 tags:
@@ -447,4 +447,6 @@ Agent 可以用：
 - Computer Use：[《Computer Use 论文精读》](./computer-use-paper-learning)
 - Self-Discovering：[《Self-Discovering 论文精读》](./self-discovering-paper-learning)
 
-> 有问题欢迎交流 🌿
+---
+
+> 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site
