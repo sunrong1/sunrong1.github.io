@@ -17,9 +17,9 @@ tags:
   - Computer Use
   - Agentic RAG
   - Self-Discovering
-  - 2025
-  - 2026
   - 前沿进展
+  - "2025"
+  - "2026"
 author: Mr.Sun
 star: true
 ---
