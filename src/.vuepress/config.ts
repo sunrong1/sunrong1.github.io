@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import { searchPlugin } from "@vuepress/plugin-search";
 import theme from "./theme.js";
+import { busuanziPlugin } from "./plugins/busuanzi";
 
 export default defineUserConfig({
   base: "/",
@@ -18,6 +19,7 @@ export default defineUserConfig({
       maxResults: 10,
       indexPages: true,
     }),
+    busuanziPlugin,
   ],
 
   // 添加 SEO 和统计脚本
@@ -62,6 +64,14 @@ var _hmt = _hmt || [];
         defer: "",
         src: "https://cloud.umami.is/script.js",
         "data-website-id": "289eed61-a26d-4cd6-8ff8-214f51d0e7f2",
+      },
+    ],
+    // 不蒜子阅读数统计
+    [
+      "script",
+      {
+        defer: "",
+        src: "https://busuanzi.42du.cn/static/js/bsz.js",
       },
     ],
     // 站点验证
