@@ -32,7 +32,6 @@ export default navbar([
       { text: "项目作品", link: "projects.html" },
       { text: "技术栈", link: "tech-stack.html" },
       { text: "技术文章", link: "tech-papers/" },
-      { text: "学习洞见", link: "../learning/insights/" },
       { text: "英语学习", link: "../learning/english/" },
     ],
   },
