@@ -1,5 +1,4 @@
 ---
-title: MemGPT 论文深度解读：突破 LLM 上下文窗口限制的层级记忆管理
 icon: brain
 date: 2026-05-01
 update: 2026-05-01

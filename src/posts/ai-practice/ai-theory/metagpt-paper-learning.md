@@ -1,5 +1,4 @@
 ---
-title: MetaGPT 论文精读：ICLR 2024 Oral，角色化流水线式多Agent协作
 icon: code
 date: 2026-04-29
 update: 2026-05-01
