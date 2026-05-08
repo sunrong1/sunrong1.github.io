@@ -58,7 +58,7 @@ export default sidebar({
       prefix: "posts/parenting/",
       children: "structure",
     },
-    "posts/life/intro",
+    "intro",
   ],
   "/posts/ai-practice/": [
     "",

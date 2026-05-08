@@ -268,6 +268,6 @@ graph TB
 
 **🌿 用技术创造价值，用成果证明能力！**
 
-[关于我](/posts/life/intro.html) | [技术栈](/posts/career/tech-stack.html) | [技术文章](/posts/)
+[关于我](/intro.html) | [技术栈](/posts/career/tech-stack.html) | [技术文章](/posts/)
 
 </div>

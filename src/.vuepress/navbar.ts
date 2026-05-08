@@ -67,6 +67,6 @@ export default navbar([
   {
     text: "关于我",
     icon: "fa-solid fa-user",
-    link: "/posts/life/intro.html",
+    link: "intro.html",
   },
 ]);
