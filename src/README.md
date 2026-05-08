@@ -10,10 +10,10 @@ heroFullScreen: true
 tagline: Dev together, innovate, fun! 时光如水流逝，我们一起前行，一起探索，一起创新，一起玩耍！
 description: 一个开发人的自我修养
 projects:
-  - icon: folder-open
-    name: 测试之家
-    desc: 项目详细描述
-    link: https://testerhome.com/
+  # - icon: folder-open
+  #   name: 测试之家
+  #   desc: 项目详细描述
+  #   link: https://testerhome.com/
 
   - icon: link
     name: Yuque
