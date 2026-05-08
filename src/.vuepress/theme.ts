@@ -84,11 +84,11 @@ export default hopeTheme({
   // 加密配置
   encrypt: {
     config: {
-      "/guide/reflection_day.html": {
+      "/posts/learning/insights/reflection-day.html": {
         hint: "输入常用的password",
         password: "111",
       },
-      "/guide/interviewee_exp.html": {
+      "/posts/learning/insights/interviewee_exp.html": {
         hint: "输入常用的password",
         password: "111",
       },

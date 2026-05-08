@@ -171,11 +171,9 @@ quadrantChart
 ## 📚 技术影响力
 
 ### 技术文章
-- **博客文章**：35+ 篇
+- **博客文章**：45+ 篇
 - **累计阅读**：10,000+
 - **代表作品**：
-  - [可靠性测试完整指南](/posts/career/testing/reliabilityTesting.html)
-  - [托业备考经验：在职 3 个月从 600 到 850+](/posts/learning/english/busineAndToeic.html)
   - [用 OpenClaw 搭建个人 AI 助手：实战指南](/posts/ai-practice/ai-practice/openclaw-personal-assistant.html)
 
 ### 开源项目
