@@ -231,6 +231,6 @@ quadrantChart
 
 **🌿 技术之路，永不止步！**
 
-[关于我](/posts/life/intro.html) | [项目作品](/posts/career/projects.html) | [技术文章](/posts/)
+[关于我](/intro.html) | [项目作品](/posts/career/projects.html) | [技术文章](/posts/)
 
 </div>
