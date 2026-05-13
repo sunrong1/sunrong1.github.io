@@ -1,5 +1,4 @@
 ---
-title: Self-Discovering 论文深度解读：LLM 自我组合推理结构的突破性方法
 icon: puzzle
 date: 2026-05-04
 update: 2026-05-04

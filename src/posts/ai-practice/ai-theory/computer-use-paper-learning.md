@@ -1,5 +1,4 @@
 ---
-title: Computer Use 论文深度解读：AI Agent 操控操作系统的多模态突破
 icon: monitor
 date: 2026-05-04
 update: 2026-05-04

@@ -1,5 +1,4 @@
 ---
-title: AI Agent 架构演进全景图：10篇论文核心洞察与 2025-2026 前沿进展
 icon: brain
 date: 2026-05-04
 update: 2026-05-04

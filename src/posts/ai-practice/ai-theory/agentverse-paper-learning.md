@@ -1,5 +1,4 @@
 ---
-title: AgentVerse 论文精读：清华+微软的多Agent分层协作框架
 icon: users
 date: 2026-04-28
 update: 2026-05-01
