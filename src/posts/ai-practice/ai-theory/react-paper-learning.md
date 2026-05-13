@@ -1,5 +1,4 @@
 ---
-title: ReAct 论文深度解读：让大模型学会"边想边做"
 icon: brain
 date: 2026-04-28
 update: 2026-04-28

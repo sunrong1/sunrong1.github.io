@@ -1,5 +1,4 @@
 ---
-title: Voyager 论文精读：MIT+NVIDIA 的具身 Agent 终身学习框架
 icon: rocket
 date: 2026-05-01
 update: 2026-05-01

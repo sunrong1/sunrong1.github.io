@@ -1,5 +1,4 @@
 ---
-title: AgentBench 论文深度解读：第一个系统化评估 LLM 作为 Agent 能力的基准
 icon: chart-bar
 date: 2026-05-06
 update: 2026-05-06

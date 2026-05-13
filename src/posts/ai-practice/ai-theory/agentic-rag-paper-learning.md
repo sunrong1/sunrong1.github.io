@@ -1,5 +1,4 @@
 ---
-title: Agentic RAG 深度解读：检索增强与 Agent 能力的深度结合
 icon: search
 date: 2026-05-04
 update: 2026-05-04

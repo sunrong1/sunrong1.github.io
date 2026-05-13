@@ -1,5 +1,4 @@
 ---
-title: ChatDev 论文深度解读：AI 驱动的多 Agent 软件开发虚拟公司
 icon: code
 date: 2026-05-06
 update: 2026-05-06
