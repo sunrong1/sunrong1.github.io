@@ -1,5 +1,4 @@
 ---
-title: 沐沐的 STEM + 科学一年规划：用好奇心丈量世界
 icon: rocket
 date: 2026-05-10
 update: 2026-05-10
@@ -12,7 +11,6 @@ tags:
   - 亲子教育
   - 幼小衔接
 author: Mr.Sun
-star: true
 ---
 
 # 沐沐的 STEM + 科学一年规划：用好奇心丈量世界

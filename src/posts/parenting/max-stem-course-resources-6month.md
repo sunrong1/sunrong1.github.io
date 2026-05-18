@@ -1,5 +1,4 @@
 ---
-title: 沐沐的 STEM 学习资源宝库：6个月课程规划 + 优质资源推荐
 icon: book-open
 date: 2026-05-10
 update: 2026-05-10
@@ -14,7 +13,6 @@ tags:
   - 资源推荐
   - 竞赛入门
 author: Mr.Sun
-star: true
 ---
 
 # 沐沐的 STEM 学习资源宝库：6个月课程规划 + 优质资源推荐
