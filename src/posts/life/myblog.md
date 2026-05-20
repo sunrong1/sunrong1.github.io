@@ -1,120 +1,184 @@
 ---
-icon: pen-to-square
+title: 我的 Dev 之路
+icon: code
 date: 2025-07-14
-update: 2026-03-09
+update: 2026-05-20
+categories:
+  - 生活
 tags:
   - 博客
   - 技术分享
+  - 成长
+  - 程序员
+author: Mr.Sun
 star: true
 sticky: true
 ---
 
-# 我的Dev之路
+# 我的 Dev 之路
 
-## 建设目标
+> 11年技术路，从研发工程师到研发效率平台负责人，用技术改变世界，用博客记录成长 🌿
 
-期望在个人域名`surong.site`上建立个人技术博客，展示自己的技术实践。希望`surong.site`成为自己技术开发博客的重要阵地，并以此提升自己的影响力。设个人博客，博客的内容为技术相关，侧重在技术开发分享，也有少量个人生活感悟。
-同时，博客页面风格保持简约，同时兼顾可读性和美感，最终期望达到自己的预期。
+---
 
-期望大家多多交流反馈，通过我的博客能对自己有所促进。也希望通过我的博客能结识更多的同行、好友，互相交流分享。
+## 🎯 我的技术博客
 
-## 关于写作
+### 为什么写博客？
 
-我个人工作已经超过10年，从最初的研发工程师一直成长为研发效率平台负责人，技术积累非常深厚，非常希望将自己在工作中所学所感以及个人探索的技术记录下来，分享给感兴趣的朋友。这样既可以提升自己对所学技术的理解，还可以为以后的技术演讲做好备课。同时，在此过程中也可以互相切磋，互相学习。
+工作 11 年，从研发工程师一路成长为研发效率平台负责人，技术积累非常深厚。
 
-博客原文 + 精简版（知乎/掘金） + 视频解读（B站）
+**写博客的意义：**
+- ✅ 记录工作中的所学所感
+- ✅ 提升对技术的理解（费曼学习法）
+- ✅ 为技术演讲做准备
+- ✅ 结识同行好友，互相交流
 
-## 关于博文写作计划
+**我的目标：**
+> 希望 `surong.site` 成为自己技术开发博客的重要阵地，通过分享提升影响力，和更多同行互相切磋。
 
-我期望自己每周至少能分享一篇测试技术相关的文章，文章可以是技术心得也可以是其他相关内容。我希望能将自己的文章以issue的形式贴到本仓库中，由朋友们互相点评补充。文章中技术性较强的部分会通过引用其他链接进行。我会将相关的问题以及点评转发到自己的微信群中，请大家互相帮忙共同提升，最终将大家一起学习到的内容形成文章。这是一个小众的协作，希望朋友们多多支持。
+---
 
-工作日：专项能力提升
-休息日：综合项能力提升
+## 📚 博客内容体系
 
-### 收益计划
-全面提升算法能力，给同事讲解，参加算法挑战赛；
-全面提升AI能力，给同事讲解，考AI基础算法专业级；
+```
+博客内容 = 技术开发（70%）+ 个人成长（20%）+ 生活感悟（10%）
 
-### 2026年3月
+发布渠道：
+├── 原版（surong.site）→ 完整详细版
+├── 精简版（知乎/掘金）→ 精华提炼版
+└── 视频版（B站）→ 讲解演示版
+```
 
-- [ ] 1. [openClaw使用,神奇的工具](https://sunrong.site/posts/innovation/interviewee%20experience.html)
-- [ ] 1. [使用AI让自己自我进化](https://sunrong.site/posts/innovation/interviewee%20experience.html)
-- [ ] 1. [Vibe Coding体验](https://sunrong.site/posts/innovation/interviewee%20experience.html)
-- [ ] 1. [OpenCode体验](https://sunrong.site/posts/innovation/interviewee%20experience.html)
-- [ ] 2. [托业英语学习-2套和总结 2个番茄](https://github.com/sunrong1/test-tool-chain)
+---
 
+## 🚀 技术成长里程碑
 
-### 2026年2月
+### 2026 年 — AI Agent 突破年
 
-- [ ] 3. [个人简历 3个番茄](https://sunrong.site/posts/innovation/interviewee%20experience.html)
-- [ ] 1. [豆豆三部曲-读后感 3个番茄](https://github.com/sunrong1/test-tool-chain)
-- [ ] 2. [智能化环境管理系统设计结束 3个番茄](https://github.com/sunrong1/test-tool-chain)
-- [ ] 3. [AI基础算法-1 1个番茄](https://github.com/sunrong1/test-tool-chain)
-- [ ] 3. [专利基础 2个番茄](https://sunrong.site/posts/innovation/interviewee%20experience.html)
-- [ ] 3. [知识打结方法 2个番茄](https://sunrong.site/posts/innovation/interviewee%20experience.html)
+| 时间 | 里程碑 | 说明 |
+|------|--------|------|
+| 2026-05 | **算法决心** | "10年没攻克，这次一定" — 启动14天DP+回溯计划 |
+| 2026-04 | **论文完成** | AI Agent 论文 11 篇全部学完 |
+| 2026-03 | **工具升级** | OpenClaw + AI Agent 应用开发体系建立 |
+| 2026-02 | **方向明确** | AI Agent 是近10年最大的机会 |
 
-### 2026年1月
-AI应用获得新突破，使用AI指导自己的思考方式
+### 2025 年 — 系统设计突破年
 
-- [x] 1. [豆豆三部曲](https://github.com/sunrong1/test-tool-chain)
-- [x] 2. [托业英语学习-1套](https://github.com/sunrong1/test-tool-chain)
-- [ ] 2. [智能化环境管理系统-1](https://github.com/sunrong1/test-tool-chain)
-- [ ] 3. [AI基础算法-1](https://github.com/sunrong1/test-tool-chain)
-- [ ] 3. [专利基础](https://sunrong.site/posts/innovation/interviewee%20experience.html)
+| 时间 | 里程碑 | 说明 |
+|------|--------|------|
+| 2025-08 | **金丹期** | 突破软件设计模式，融会贯通 |
+| 2025-11 | ✅ | SpringBoot微服务架构演进完成 |
 
-### 2025年12月
-- [ ] 1. [技术突破总结](https://github.com/sunrong1/test-tool-chain)
-- [x] 1. [2026年规划](https://github.com/sunrong1/test-tool-chain)
+### 2024 年之前
 
-### 2025年8月
-经过几年的时间，终于突破了软件设计模式的门槛，融会贯通，金丹期；
+| 时间 | 里程碑 |
+|------|--------|
+| 2024 | 研发效率平台负责人 |
+| 2015 | 上海大学研究生毕业 |
+| ~2015 | 华为入职，开启技术之路 |
 
-- [ ] 1. [洞察基础](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [技术规划基础](https://github.com/sunrong1/test-tool-chain)
-- [x] 1. [软件设计模式-23](https://www.yuque.com/u21806931/ylzhwm/omwv3g9caglz5ina)
+---
 
+## 📋 2026 年学习计划
 
-### 2025年9月
+### 当前专注领域
 
-- [ ] 1. [可靠性测试AI自主检测机器人规划与设计](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [AI线性代数基础](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [心流](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [150道算法启动-练气期](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [OTA测试工具架构](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [AI测试用例解读](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [测试开发洞察](https://github.com/sunrong1/test-tool-chain)
+| 领域 | 目标 | 进度 |
+|------|------|------|
+| **算法（LeetCode）** | DP + 回溯突破 20+ 题 | 🔄 进行中 |
+| **AI Agent 应用** | 面试题 Q1-Q10 完成 | 🔄 进行中 |
+| **简历投递** | 7月前拿到 offer | 🔴 未启动 |
+| **系统设计** | 高级/专家岗必备 | ⚪ 待开始 |
 
-### 2025年10月
+### 每日时间分配
 
-工作日：算法、springboot
-周末：心流，学习方法、面试方法
+```
+工作日：
+├── 通勤（1小时）→ 算法 / 面试题
+├── 晚上（1.5小时）→ LeetCode / 技术深入 / 投递
+└── 睡前 → 反思复盘
 
-- [ ] 1. [微服务的演进-springboot](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [二叉树到决策树的思考艺术](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [150道算法启动-筑基期](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [可靠性测试AI自主检测机器开发和演示](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [AI概率论基础](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [AI微积分基础](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [测试效能提升](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [测试工具链建设](https://github.com/sunrong1/test-tool-chain)
+周末：
+├── 上午 → LeetCode 专项训练
+├── 下午 → 面试准备 / 项目
+└── 晚上 → 休息陪家人
+```
 
-### 2025年11月
+---
 
-- [x] 1. [SpringBoot微服务架构演进](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [项目交付效率提升——测试项目作战指挥中心](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [管理之PMP指南](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [可靠性测试AI自主检测机器人开发和演示](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [面试官技巧](https://github.com/sunrong1/test-tool-chain)
-- [ ] 1. [测试开发洞察](https://github.com/sunrong1/test-tool-chain)
+## 💪 我的能力雷达图
 
+| 能力 | 评分 | 说明 |
+|------|------|------|
+| **系统设计** | ⭐⭐⭐⭐⭐ | 架构能力强，能设计复杂系统 |
+| **测试系统开发** | ⭐⭐⭐⭐⭐ | 核心专长，11年深耕 |
+| **项目管理** | ⭐⭐⭐⭐ | 研发效率平台负责人 |
+| **产品设计** | ⭐⭐⭐⭐ | 从技术到产品的思维延伸 |
+| **AI Agent 应用** | ⭐⭐⭐ | 2026年重点突破方向 |
 
-## 我的时间管理
-WPS在线文档：https://www.kdocs.cn/l/csD7myBfascK
+---
 
-## 我的能力雷达图
+## 🔧 技术栈
 
-项目管理 ⭐⭐⭐⭐ 
-系统设计 ⭐⭐⭐⭐⭐
-测试系统开发 ⭐⭐⭐⭐⭐
-AI Agent应用开发 ⭐⭐⭐
-产品设计 ⭐⭐⭐⭐
+| 分类 | 技术 |
+|------|------|
+| **编程语言** | Java、Python、JavaScript |
+| **框架** | SpringBoot、Django、Vue |
+| **工具** | OpenClaw、Claude Code、Cline |
+| **AI** | AgentScope、LangChain、MemGPT、ReAct |
+| **存储** | Qdrant、Redis、PostgreSQL |
+| **DevOps** | Docker、K8s、Jenkins |
+
+---
+
+## 📈 已完成项目
+
+| 项目 | 说明 | 链接 |
+|------|------|------|
+| **OpenClaw 助手** | AI 个人助理，博客写作+学习管理 | [[博客]] |
+| **沐沐 STEM 计划** | 6岁孩子的科学启蒙方案 | [[博客]] |
+| **AI Agent 面试题库** | Q1-Q10 高级/专家岗答案 | [[内部]] |
+| **14天算法突破计划** | DP+回溯高频题训练 | [[memory]] |
+
+---
+
+## 📝 写作原则
+
+**内容标准：**
+- 🎯 有价值：能帮助读者解决问题
+- 🧠 有深度：不是浅尝辄止，是深入思考
+- 💡 有洞察：有自己的观点和见解
+
+**写作节奏：**
+- 工作日：专项能力提升（算法/系统设计）
+- 休息日：综合能力提升（面试/项目）
+
+---
+
+## 🤝 交流与反馈
+
+**期望：**
+- 大家多多交流反馈
+- 通过博客结识更多同行好友
+- 互相切磋，共同提升
+
+**联系我：**
+- 博客：surong.site
+- GitHub：sunrong1
+
+---
+
+## 📅 最近更新
+
+- 2026-05：算法 14 天计划进行中
+- 2026-05：面试官心得总结
+- 2026-04：AI Agent 论文 11 篇全部完成
+- 2026-03：OpenClaw 个人助手搭建完成
+
+---
+
+**在路上，在成长，在分享。** 🌿
+
+---
+
+**相关话题：** [[技术成长]] [[博客]] [[算法]] [[AI Agent]]
