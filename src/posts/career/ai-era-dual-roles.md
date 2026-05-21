@@ -1,5 +1,4 @@
 ---
-title: AI 时代的双面人生：驭龙少年与赛车手
 icon: user
 date: 2026-05-21
 update: 2026-05-21
