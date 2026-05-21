@@ -1,5 +1,4 @@
 ---
-title: 沐沐的 STEM 实验课第 2 周：自制冰棍
 icon: ice-cream
 date: 2026-05-17
 update: 2026-05-17

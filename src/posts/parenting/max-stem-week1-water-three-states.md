@@ -1,5 +1,4 @@
 ---
-title: 沐沐的 STEM 实验课第 1 周：水的三变身
 icon: droplet
 date: 2026-05-14
 update: 2026-05-17
