@@ -1,5 +1,4 @@
 ---
-title: Reflexion 论文深度解读：用语言代替梯度，让Agent学会自我反思
 icon: brain
 date: 2026-05-11
 update: 2026-05-11

@@ -1,5 +1,4 @@
 ---
-title: 沐沐的 STEM 实验课第 3 周：糖去哪了 — 溶解实验
 icon: salt
 date: 2026-05-18
 update: 2026-05-18
@@ -13,7 +12,6 @@ tags:
   - 第三周
   - 溶解
 author: Mr.Sun
-star: true
 ---
 
 # 沐沐的 STEM 实验课第 3 周：糖去哪了 — 溶解实验
