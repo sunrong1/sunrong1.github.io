@@ -13,7 +13,6 @@ tags:
   - 冰棍
   - 夏天
 author: Mr.Sun
-star: true
 ---
 
 # 沐沐的 STEM 实验课第 2 周：自制冰棍

@@ -11,7 +11,6 @@ tags:
   - 亲子实验
   - 第一周
 author: Mr.Sun
-star: true
 ---
 
 # 沐沐的 STEM 实验课第 1 周：水的三变身
