@@ -16,6 +16,9 @@ tags:
   - 测试驱动开发
   - TDD
   - 敏捷开发
+  - Executing Plans
+  - Brainstorming
+  - Subagent Driven Development
 author: Mr.Sun
 ---
 
@@ -51,6 +54,148 @@ author: Mr.Sun
 | **Brainstorming** | 头脑风暴，快速生成设计文档 | 帮我确定了像素风格、帧动画方案 |
 | **Subagent Driven Development** | 子 Agent 并行任务执行 | 同时跑多个开发任务，不阻塞 |
 | **Executing Plans** | 任务分解和执行计划 | 把大项目拆成小任务，一步步执行 |
+
+### Superpowers 工具最佳实践
+
+#### 1. Writing Plan（写作计划）
+
+**什么是 Writing Plan？**
+Writing Plan 是 Superpowers 的核心能力，它将设计和开发过程文档化，每个阶段都有清晰的检查点（checkbox）。
+
+**我的 Writing Plan 模板：**
+
+```markdown
+## Task 1: 项目脚手架
+### 创建基础配置文件
+- [ ] Step 1: 创建 package.json（依赖配置）
+- [ ] Step 2: 创建 tsconfig.json（TypeScript 配置）
+- [ ] Step 3: 创建 vite.config.ts（构建配置）
+- [ ] Step 4: 创建 index.html（HTML 入口）
+- [ ] Step 5: 提交代码并标记 Task 1 完成
+
+## Task 2: 类型定义
+### 建立类型安全基础
+- [ ] Step 1: 创建 src/types/index.ts（所有接口定义）
+- [ ] Step 2: 编写基础类型测试
+- [ ] Step 3: 提交代码并标记 Task 2 完成
+```
+
+**最佳实践：**
+
+| 原则 | 说明 |
+|------|------|
+| **每个 Step 独立** | 一个 Step 只做一件事，便于提交和回退 |
+| **checkbox 要具体** | "创建 package.json" 比 "配置环境" 更清晰 |
+| **每 Task 结尾提交** | 保持原子提交，便于追踪和回退 |
+| **先计划后执行** | 不要跳步，按计划执行 |
+
+
+#### 2. Executing Plans（执行计划）
+
+**什么是 Executing Plans？**
+Executing Plans 是将 Writing Plan 转化为可执行任务的能力。AI 会按照计划一步步执行，每个 Step 都是一个独立的开发任务。
+
+**执行流程：**
+
+```
+Writing Plan 文档
+    ↓
+Subagent 读取计划
+    ↓
+按顺序执行每个 Step
+    ↓
+每个 Step 完成 → 标记 checkbox
+    ↓
+遇到问题 → 暂停 → 人工介入
+    ↓
+所有 Step 完成 → Task 完成
+```
+
+**我的最佳实践：**
+
+| 场景 | 做法 |
+|------|------|
+| **任务分解** | Task 粒度适中（1-2 小时完成）|
+| **执行顺序** | 先基础后业务，先框架后细节 |
+| **遇到阻塞** | 停在当前 Step，等待人工决策 |
+| **代码 Review** | 每个 Step 完成后快速 Review |
+
+
+
+#### 3. Subagent Driven Development（子 Agent 驱动开发）
+
+**什么时候用 Subagent？**
+
+- 多个 Task 可以并行执行时
+- 需要同时跑多个开发任务
+- Task 之间没有依赖关系
+
+**我的用法：**
+```
+主 Agent（我）：规划 + 协调
+    ├── Subagent A：执行 Task 1（项目脚手架）
+    ├── Subagent B：执行 Task 2（类型定义）
+    └── Subagent C：执行 Task 3（游戏配置）
+```
+
+**最佳实践：**
+| 原则 | 说明 |
+|------|------|
+| **独立任务** | Subagent 执行的 Task 必须独立，无依赖 |
+| **清晰边界** | 每个 Subagent 只做一个 Task |
+| **结果汇总** | 主 Agent 汇总结果，协调下一步 |
+
+
+
+#### 4. Brainstorming（头脑风暴）
+
+**最佳使用场景：**
+- 项目初始化时的技术选型
+- 遇到问题需要多方分析
+- 需要快速生成设计文档
+
+**我的 prompt 模板：**
+```
+我想做一个[项目类型]，目标是[核心功能]，请帮我确定：
+1. 技术栈选型
+2. 项目结构
+3. 核心接口设计
+4. 开发优先级
+```
+
+**输出质量优化技巧：**
+- 越具体越好："像素风格"比"复古风格"更明确
+- 设定约束条件："需要支持移动端"、"预算有限"
+- 追问"为什么"：让 AI 解释决策原因，便于学习和优化
+
+
+#### 工具组合使用示例（我的工作流）
+
+
+```
+1. Brainstorming → 生成项目设计文档（GDD）
+   Input: "做一个像素风格的塔防游戏"
+   Output: 完整的设计文档
+
+2. Writing Plan → 将设计文档转化为开发计划
+   Input: GDD 文档
+   Output: 分层的 Task 列表 + 每个 Task 的 Step
+
+3. Executing Plans → 执行开发计划
+   Input: Writing Plan
+   Output: 一步步执行的代码
+
+4. Subagent → 并行加速（可选）
+   Input: 独立的 Task
+   Output: 并行执行的多个结果
+```
+
+
+**核心原则：**
+
+
+> 用工具约束 AI，而不是被 AI 带着走。
+> 工具是放大器，但方向盘始终在你手里。
 
 ### 开发环境
 
