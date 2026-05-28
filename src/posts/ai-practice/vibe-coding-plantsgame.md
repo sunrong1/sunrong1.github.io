@@ -12,6 +12,10 @@ tags:
   - TypeScript
   - Superpowers
   - 游戏开发
+  - Writing Plan
+  - 测试驱动开发
+  - TDD
+  - 敏捷开发
 author: Mr.Sun
 ---
 
@@ -196,8 +200,11 @@ interface GameEvents {
 
 ### 4. 测试覆盖：数值平衡可验证
 
+**测试驱动开发（TDD）是我的安全带**
+
+
 ```typescript
-// 81 个测试用例覆盖
+// 先写测试，再写实现
 describe('数值平衡测试', () => {
   test('向日葵产阳光量在合理范围', () => {
     for (let i = 0; i < 100; i++) {
@@ -209,14 +216,66 @@ describe('数值平衡测试', () => {
 });
 ```
 
-**有测试的好处：**
-- 改配置不用担心破坏其他功能
-- AI 可以大胆修改，我来做验证
-- 数值平衡有据可依
+**TDD 的三字法则：**
+- **红**（Red）：写一个失败的测试
+- **绿**（Green）：写代码让测试通过
+- **重构**（Refactor）：改善代码，保持测试通过
+
+**在 Vibe Coding 中，TDD 的价值更大：**
+- AI 生成的代码可能有漏洞，测试是安全网
+- 改配置之前先跑测试，确保不会破坏逻辑
+- 数值平衡有据可依，不是凭感觉调
+
+
+**测试覆盖率：81 个测试用例，覆盖：**
+- 植物配置数据校验
+- 僵尸行为逻辑
+- 阳光经济系统
+- 波次触发时机
+- 碰撞检测正确性
 
 ---
 
-## Vibe Coding 的实践感悟
+### 5. Writing Plan：用文档驱动开发
+
+**Writing Plan 是 Superpowers 的另一个核心能力**
+
+它将设计和开发过程文档化，确保每个阶段都有清晰的指导。
+
+**我的 Writing Plan 结构：**
+
+
+```
+## Task 1: 项目脚手架
+- [ ] Step 1: 创建 package.json
+- [ ] Step 2: 创建 tsconfig.json
+- [ ] Step 3: 创建 vite.config.ts
+- [ ] Step 4: 创建 index.html
+- [ ] Step 5: 提交
+
+## Task 2: 类型定义
+- [ ] Step 1: 创建 src/types/index.ts
+- [ ] Step 2: 提交
+```
+
+**Writing Plan 的价值：**
+
+
+| 维度 | 没有 Writing Plan | 有 Writing Plan |
+|------|------------------|----------------|
+| **任务完整性** | 可能遗漏步骤 | 每个步骤都有 checkbox |
+| **进度追踪** | 不知道做到哪了 | 一目了然 |
+| **交接能力** | 别人接手困难 | 文档即文档 |
+| **AI 协作** | AI 可能跳步 | AI 按计划执行 |
+
+**在 Vibe Coding 中，Writing Plan 让 AI 不跑偏：**
+- AI 生成的代码会按照计划一步步执行
+- 不会跳步，也不会重复做已经做过的
+- 便于 Review，每个 Commit 对应一个 Step
+
+**核心原则：**
+
+> 文档不是写完就完了，是开发过程中的"导航仪"
 
 ### AI 是放大器，不是替代者
 
@@ -265,17 +324,20 @@ MVP 版本 -> 快速发布 -> 用户反馈 -> 迭代优化
 
 **Vibe Coding + Superpowers = 高效迭代**
 
+
 | 要素 | 说明 |
 |------|------|
 | **工具** | Phaser 3 + TypeScript + Vite + Vitest |
-| **AI 辅助** | Superpowers (Brainstorming / Subagent / Executing Plans) |
+| **AI 辅助** | Superpowers (Brainstorming / Subagent / Executing Plans / Writing Plan) |
 | **架构** | 数据驱动 + 接口先行 + 事件解耦 |
+| **安全网** | TDD（测试驱动开发）+ 81 个测试用例 |
 | **迭代方式** | 小步快跑，快速 commit |
 
 **核心心法：**
 - 描述你想要什么，让 AI 帮你实现
 - 用架构约束 AI 生成的代码质量
-- 用测试保证迭代的安全性
+- 用 TDD 保证迭代的安全性
+- 用 Writing Plan 让 AI 不跑偏
 
 这就是 Vibe Coding 的精髓：**跟着感觉走，但不忘系好安全带。** 🌿
 
