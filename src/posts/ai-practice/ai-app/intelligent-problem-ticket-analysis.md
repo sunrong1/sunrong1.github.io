@@ -7,7 +7,7 @@ tags:
   - 测试智能化
   - 问题单分析
   - RAG
-  - AI实践
+  - AI 实践
 star: true
 ---
 

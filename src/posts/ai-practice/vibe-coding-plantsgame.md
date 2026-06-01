@@ -2,9 +2,9 @@
 title: Vibe Coding 实战：如何用 AI 工具高效迭代一个完整的塔防游戏
 icon: rocket
 date: 2026-05-28
-update: 2026-05-28
+update: 2026-06-01
 categories:
-  - AI实践
+  - AI 实践
 tags:
   - AI Coding
   - Vibe Coding
@@ -20,6 +20,7 @@ tags:
   - Brainstorming
   - Subagent Driven Development
 author: Mr.Sun
+star: true
 ---
 
 # Vibe Coding 实战：如何用 AI 工具高效迭代一个完整的塔防游戏
