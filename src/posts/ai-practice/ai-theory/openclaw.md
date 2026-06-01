@@ -7,6 +7,8 @@ tag:
   - OpenClaw
   - AI Agent
   - 开发者指南
+
+author: Mr.Sun
 ---
 
 # OpenClaw 开发者入门指南：从架构到实战的完整攻略

@@ -8,6 +8,8 @@ tag:
   - 面试
   - 自动化测试
 star: true
+
+author: Mr.Sun
 ---
 
 # 测试架构学习指南：从理论到实战

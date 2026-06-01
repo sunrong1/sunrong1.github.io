@@ -8,6 +8,8 @@ tag:
   - AI 应用
   - 学习方法
 star: true
+
+author: Mr.Sun
 ---
 
 # AI 应用技能

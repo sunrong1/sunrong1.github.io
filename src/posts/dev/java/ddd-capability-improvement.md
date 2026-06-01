@@ -10,6 +10,8 @@ tags:
   - 微服务
   - AI 实践
 star: true
+
+author: Mr.Sun
 ---
 
 # DDD 能力提升与实践建议：结合微服务与 AI 的探索

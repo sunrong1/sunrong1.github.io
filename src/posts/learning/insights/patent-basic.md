@@ -6,6 +6,8 @@ tags:
   - 知识产权
   - 创新
 star: 1
+
+author: Mr.Sun
 ---
 
 # 专利基础

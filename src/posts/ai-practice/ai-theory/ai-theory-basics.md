@@ -9,6 +9,8 @@ tags:
   - 计算机视觉
   - NLP
 star: true
+
+author: Mr.Sun
 ---
 
 # AI 理论与基础知识完全指南

@@ -6,6 +6,8 @@ tags:
   - AI编程
   - 工具使用
   - AI Agent
+
+author: Mr.Sun
 ---
 
 # Claude Code 完全指南：从入门到精通

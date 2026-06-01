@@ -10,6 +10,8 @@ tag:
   - 会话管理
   - 工具调用
 star: true
+
+author: Mr.Sun
 ---
 
 # Hermes Agent 使用经验：从工具调用到会话管理

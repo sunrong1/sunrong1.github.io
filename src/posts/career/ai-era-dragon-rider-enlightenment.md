@@ -1,4 +1,5 @@
 ---
+title: 驭龙少年：AI 时代的致良知之路
 icon: user
 date: 2026-05-21
 update: 2026-05-21

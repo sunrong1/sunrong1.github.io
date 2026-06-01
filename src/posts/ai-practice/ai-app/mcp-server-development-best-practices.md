@@ -5,6 +5,8 @@ tags:
   - AI Agent
   - 接口设计
   - 工程实践
+
+author: Mr.Sun
 ---
 
 # MCP Server 接口开发规范与最佳实践

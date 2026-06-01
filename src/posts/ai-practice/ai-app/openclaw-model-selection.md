@@ -5,6 +5,8 @@ tags:
   - 本地部署
   - AI Agent
   - 记忆管理
+
+author: Mr.Sun
 ---
 
 # OpenClaw 本地部署实践：助手使用避坑指南与记忆管理经验

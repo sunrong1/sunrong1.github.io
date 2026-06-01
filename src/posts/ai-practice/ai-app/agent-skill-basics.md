@@ -10,6 +10,8 @@ tag:
   - Skill 设计
   - 组件化思维
 star: true
+
+author: Mr.Sun
 ---
 
 # Agent Skill 基础：从理解到实践

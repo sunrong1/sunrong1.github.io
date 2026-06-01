@@ -11,6 +11,8 @@ tag:
   - 测试自动化
   - 架构升级
 star: true
+
+author: Mr.Sun
 ---
 
 # AI 友好型应用开发实践：环境管理升级

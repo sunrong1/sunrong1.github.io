@@ -8,6 +8,8 @@ tag:
   - 思维能力
 
 star: true
+
+author: Mr.Sun
 ---
 
 # 工作反思

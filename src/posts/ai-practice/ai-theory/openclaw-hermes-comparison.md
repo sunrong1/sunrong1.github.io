@@ -11,6 +11,8 @@ tags:
   - 个人助手
   - 工具对比
 star: true
+
+author: Mr.Sun
 ---
 
 # OpenClaw vs Hermes Agent：我的双 Agent 协作实践
