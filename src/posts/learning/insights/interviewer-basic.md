@@ -1,4 +1,10 @@
 ---
+title: 面试官基础：如何成为一位优秀的技术面试官
+icon: user-check
+date: 2026-05-20
+update: 2026-05-20
+categories:
+  - 学习心得
 tags:
   - 面试官
   - 面试经验

@@ -1,9 +1,18 @@
-# AI Agent 高级技能：多 Agent 协作架构设计与实战
-
-**作者：** max 爸爸  
-**日期：** 2026-04-24  
-**标签：** AI Agent, 多 Agent 协作, 架构设计, Claude Code, 面试总结
-
+---
+title: AI Agent 高级技能：多 Agent 协作架构设计与实战
+icon: users
+date: 2026-04-24
+update: 2026-04-24
+categories:
+  - AI 实践
+tags:
+  - AI Agent
+  - 多 Agent 协作
+  - 架构设计
+  - Claude Code
+  - 面试总结
+author: Mr.Sun
+star: true
 ---
 
 ## 前言

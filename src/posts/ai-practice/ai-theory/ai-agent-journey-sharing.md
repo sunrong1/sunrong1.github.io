@@ -1,11 +1,16 @@
-# 我的 AI Agent 学习之路：从概念到实践
-
-> "我下定决心学好用好 AI Agent，这是我近 10 年最大的一个机会，从来没有如此明确。"
-
-**作者：** max 爸爸  
-**日期：** 2026-04-18  
-**标签：** AI Agent / 学习笔记 / 实践分享  
-
+---
+title: 我的 AI Agent 学习之路：从概念到实践
+icon: map-signs
+date: 2026-04-18
+update: 2026-04-18
+categories:
+  - AI 实践
+tags:
+  - AI Agent
+  - 学习笔记
+  - 实践分享
+author: Mr.Sun
+star: true
 ---
 
 ## 背景

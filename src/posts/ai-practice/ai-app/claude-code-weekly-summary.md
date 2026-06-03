@@ -1,9 +1,17 @@
-# AI Coding 进阶之路：Claude Code 两周实战总结
-
-**作者：** max 爸爸  
-**日期：** 2026-04-15  
-**标签：** AI Coding, Claude Code, AI Agent, 学习总结
-
+---
+title: AI Coding 进阶之路：Claude Code 两周实战总结
+icon: rocket
+date: 2026-04-15
+update: 2026-04-15
+categories:
+  - AI 实践
+tags:
+  - AI Coding
+  - Claude Code
+  - AI Agent
+  - 学习总结
+author: Mr.Sun
+star: true
 ---
 
 ## 前言
