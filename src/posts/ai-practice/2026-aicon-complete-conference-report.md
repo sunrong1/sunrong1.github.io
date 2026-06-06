@@ -1,5 +1,5 @@
 ---
-title: Agentic AICon 2026 完整战报：12 场 talk + 1 场黄佳深度交流 + 12 篇博客
+title: Agentic AICon 2026 完整战报：29 场演讲 + 6 篇博客 + π 型人才转型路径
 icon: trophy
 date: 2026-06-06
 update: 2026-06-06
@@ -9,8 +9,8 @@ tags:
   - Agentic AICon
   - 2026 大会
   - 完整战报
-  - 黄佳
-  - 12 场 talk
+  - 29 场演讲
+  - π 型人才
   - AI Agent
   - 会议笔记
   - 范式重构
