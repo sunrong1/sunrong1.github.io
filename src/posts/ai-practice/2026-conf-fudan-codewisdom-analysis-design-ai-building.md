@@ -6,16 +6,11 @@ update: 2026-06-06
 categories:
   - AI 实践
 tags:
-  - 复旦
-  - codewisdom
-  - 复杂系统
-  - 分析设计
-  - 人机分工
-  - 问题空间
-  - 解空间
   - 会议笔记
+  - 复旦
   - 架构师视角
-  - AI 时代
+  - 复杂系统
+  - 人机分工
 author: Mr.Sun
 star: true
 ---

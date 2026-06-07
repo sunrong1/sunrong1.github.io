@@ -7,13 +7,10 @@ categories:
   - AI 实践
 tags:
   - AI Agent
-  - 技术选型
-  - OpenCode
   - AgentScope
-  - 测试自动化
-  - 工程实践
+  - OpenCode
+  - 技术选型
   - 团队决策
-  - 领导力
 author: Mr.Sun
 star: true
 ---

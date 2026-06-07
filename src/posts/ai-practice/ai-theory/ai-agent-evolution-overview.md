@@ -8,17 +8,8 @@ tags:
   - AI Agent
   - 架构演进
   - LLM
-  - CoT
-  - ReAct
-  - Toolformer
-  - Voyager
-  - MemGPT
-  - Computer Use
-  - Agentic RAG
-  - Self-Discovering
+  - 综述
   - 前沿进展
-  - "2025"
-  - "2026"
 author: Mr.Sun
 star: true
 ---

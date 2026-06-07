@@ -6,18 +6,10 @@ update: 2026-06-01
 categories:
   - AI 实践
 tags:
-  - AI Coding
   - Vibe Coding
-  - Phaser
-  - TypeScript
-  - Superpowers
+  - AI Coding
   - 游戏开发
-  - Writing Plan
-  - 测试驱动开发
   - TDD
-  - 敏捷开发
-  - Executing Plans
-  - Brainstorming
   - Subagent Driven Development
 author: Mr.Sun
 star: true

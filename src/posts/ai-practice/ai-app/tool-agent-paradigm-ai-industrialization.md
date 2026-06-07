@@ -6,12 +6,10 @@ update: 2026-06-06
 categories:
   - AI 实践
 tags:
-  - Tool Agent
+  - AI Agent
   - MCP
   - AI 工业化
-  - Agent Run
   - 阿里云
-  - 样板间
   - Token 节约
 author: Mr.Sun
 star: true
@@ -671,7 +669,7 @@ MCP 鉴权收口 = 安全的"单点"
 **欢迎交流讨论，我的 blog**：[sunrong.site](https://sunrong.site)
 
 **相关阅读：**
-- [AI Native 工程师转型：Harness 思维、Karpathy 模式、简历改造](ai-native-engineer-transformation.md)
+- [AI Native 工程师转型：Harness 思维、Karpathy 模式](harness-engineer-mindset.md)
 - [Agent 评测的 16 反思 + 4 层金字塔：复旦新框架](agent-evaluation-framework-fudan.md)
 - [Agentic AICon 2026 Day1 笔记：黄佳 + Qoder 的 8 点启示](agentic-aicon-2026-day1.md)
 - [PlantsGame MVP 复盘：用 Claude Code 28 小时完成](plantsgame-mvp-retrospect.md)

@@ -6,16 +6,11 @@ update: 2026-06-06
 categories:
   - AI 实践
 tags:
-  - 微流程 SOP
-  - Agentic
-  - 金融 AI
-  - 工程化原则
-  - 知识图谱
-  - 记忆分层
-  - 平安人寿
   - 会议笔记
-  - 企业级 AI
-  - 治理
+  - 微流程 SOP
+  - 工程化原则
+  - 金融 AI
+  - 知识图谱
 author: Mr.Sun
 star: true
 ---

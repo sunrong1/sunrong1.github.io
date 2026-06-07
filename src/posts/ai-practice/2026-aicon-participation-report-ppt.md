@@ -6,13 +6,11 @@ update: 2026-06-06
 categories:
   - AI 实践
 tags:
+  - 会议笔记
   - 参会报告
   - PPT
-  - Agentic AICon
-  - 2026 大会
-  - 公司内部
-  - 会议分享
   - 团队参考
+  - Agentic AICon
 author: Mr.Sun
 star: true
 ---
@@ -725,7 +723,7 @@ star: true
 │ 1. agentic-aicon-2026-day1             │
 │ 2. agent-evaluation-framework-fudan    │
 │ 3. plantsgame-mvp-retrospect            │
-│ 4. ai-native-engineer-transformation    │
+│ 4. harness-engineer-mindset              │
 │ 5. tool-agent-paradigm-ai-industrialization│
 │ 6. ai-era-pi-shaped-talent              │
 │ 7. 2026-conf-zhanggang-software-is-exploration│

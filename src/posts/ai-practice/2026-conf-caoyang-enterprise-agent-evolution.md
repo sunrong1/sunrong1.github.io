@@ -6,16 +6,11 @@ update: 2026-06-06
 categories:
   - AI 实践
 tags:
-  - 企业 Agent
-  - Harness
-  - 能力沉淀
-  - 护城河
-  - 评测
-  - 上下文引擎
-  - 组织 Harness
-  - 华为 TMG
   - 会议笔记
-  - AI 治理
+  - 华为 TMG
+  - Harness
+  - 护城河
+  - 组织 Harness
 author: Mr.Sun
 star: true
 ---

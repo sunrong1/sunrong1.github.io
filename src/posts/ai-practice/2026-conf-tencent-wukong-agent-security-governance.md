@@ -6,16 +6,11 @@ update: 2026-06-06
 categories:
   - AI 实践
 tags:
+  - 会议笔记
   - Agent 安全
   - 治理
-  - Checkpoint
-  - 框架选型
-  - Agent OS
-  - 腾讯
-  - 会议笔记
-  - 企业级 AI
-  - 边界设计
   - 灰度上线
+  - 框架选型
 author: Mr.Sun
 star: true
 ---

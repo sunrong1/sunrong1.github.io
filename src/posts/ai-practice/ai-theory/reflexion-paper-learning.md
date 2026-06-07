@@ -6,12 +6,10 @@ categories:
   - AI 实践
 tags:
   - AI Agent
+  - 论文解读
   - Reflexion
   - 自我反思
-  - 论文解读
   - LLM
-  - Verbal RL
-  - 自我优化
 author: Mr.Sun
 star: true
 ---

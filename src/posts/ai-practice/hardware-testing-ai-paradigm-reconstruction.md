@@ -10,12 +10,7 @@ tags:
   - 测试
   - 范式重构
   - Harness
-  - Agent Judge
-  - 数据飞轮
-  - RAG
-  - 知识引擎
-  - 会议笔记
-  - 转型思考
+  - 部门转型
 author: Mr.Sun
 star: true
 ---
@@ -329,7 +324,7 @@ Agentic AI 时代，测试的范式重构不是可选项，而是必答题。
 | 写作时间 | 2026-06-05 22:00-22:40 |
 | 写作方式 | 1 页 PPT → 完整博客 |
 | 引用金句 | 张刚 / 复旦 / 黄佳 3 场 talk |
-| 关联博客 | /ai-practice/ai-native-engineer-transformation/ |
+| 关联博客 | /ai-practice/ai-app/harness-engineer-mindset/ |
 | 关联博客 | /posts/ai-practice/2026-conf-zhanggang-software-is-exploration/ |
 
 ---

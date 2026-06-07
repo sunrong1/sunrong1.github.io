@@ -6,15 +6,11 @@ update: 2026-06-05
 categories:
   - AI 实践
 tags:
-  - 软件开发
-  - Vibe Coding
-  - 开发者认知
-  - AI 时代
-  - 问题定义
-  - 探索式开发
-  - grill-me
   - 会议笔记
-  - 英慕科技
+  - 软件开发
+  - 问题定义
+  - Vibe Coding
+  - grill-me
 author: Mr.Sun
 star: true
 ---

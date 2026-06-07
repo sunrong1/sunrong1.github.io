@@ -887,7 +887,7 @@ AI 提议，你把关
 
 **相关阅读：**
 - [Tool Agent 范式：从 5 万工具 MCP 化看 AI 工业化的未来](tool-agent-paradigm-ai-industrialization.md)
-- [AI Native 工程师转型：Harness 思维、Karpathy 模式、简历改造](ai-native-engineer-transformation.md)
+- [AI Native 工程师转型：Harness 思维、Karpathy 模式](harness-engineer-mindset.md)
 - [Agent 评测的 16 反思 + 4 层金字塔：复旦新框架](agent-evaluation-framework-fudan.md)
 - [Agentic AICon 2026 Day1 笔记：黄佳 + Qoder 的 8 点启示](agentic-aicon-2026-day1.md)
 - [PlantsGame MVP 复盘：用 Claude Code 28 小时完成](plantsgame-mvp-retrospect.md)

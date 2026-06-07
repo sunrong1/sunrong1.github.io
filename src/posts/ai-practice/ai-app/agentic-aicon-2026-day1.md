@@ -6,11 +6,8 @@ update: 2026-06-05
 categories:
   - AI 实践
 tags:
+  - 会议笔记
   - AI Agent
-  - Agentic AICon
-  - ADPS
-  - Qoder
-  - Claude Code
   - 多 Agent 架构
   - 知识工程
   - 组织变革

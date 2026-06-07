@@ -7,11 +7,9 @@ categories:
   - AI 实践
 tags:
   - AI Agent
-  - Agent 评测
+  - 评测
   - 复旦
-  - 评测框架
   - AgentBench
-  - Token 经济学
   - 工业落地
 author: Mr.Sun
 star: true

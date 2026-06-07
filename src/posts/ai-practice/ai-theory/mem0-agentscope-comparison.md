@@ -6,9 +6,6 @@ tags:
   - Mem0
   - AgentScope
   - 向量数据库
-  - Qdrant
-  - Chroma
-  - SQLite
 author: Mr.Sun
 ---
 
