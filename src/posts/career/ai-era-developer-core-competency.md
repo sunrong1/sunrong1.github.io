@@ -6,7 +6,7 @@ update: 2026-05-20
 categories:
   - 职业发展
 tags:
-  - AI时代
+  - AI 时代
   - 开发者能力
   - 认知能力
   - 工程方法

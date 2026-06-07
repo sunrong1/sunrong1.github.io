@@ -7,11 +7,9 @@ categories:
 tags:
   - STEM
   - 科学课程
-  - 可汗学院
-  - 少儿编程
   - 6岁
   - 资源推荐
-  - 竞赛入门
+  - 少儿编程
 author: Mr.Sun
 ---
 

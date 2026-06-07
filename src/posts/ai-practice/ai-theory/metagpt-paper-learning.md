@@ -6,9 +6,8 @@ categories:
   - AI 实践
 tags:
   - AI Agent
-  - Multi-Agent
   - MetaGPT
-  - ICLR
+  - Multi-Agent
   - 论文精读
   - 软件工程
 author: Mr.Sun

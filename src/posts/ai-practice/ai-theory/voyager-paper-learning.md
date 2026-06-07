@@ -6,11 +6,10 @@ categories:
   - AI 实践
 tags:
   - AI Agent
-  - Embodied Agent
   - Voyager
   - 终身学习
   - 论文精读
-  - Minecraft
+  - Embodied Agent
 author: Mr.Sun
 star: true
 ---

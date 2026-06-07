@@ -8,9 +8,8 @@ categories:
 tags:
   - AI 时代
   - π 型人才
-  - 项目管理 Agent
-  - 小红书
   - Harness 工程师
+  - 项目管理 Agent
   - 35 岁转型
 author: Mr.Sun
 star: true

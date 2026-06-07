@@ -11,7 +11,6 @@ tags:
   - Phaser3
   - 游戏开发
   - 项目复盘
-  - TypeScript
 author: Mr.Sun
 star: true
 ---

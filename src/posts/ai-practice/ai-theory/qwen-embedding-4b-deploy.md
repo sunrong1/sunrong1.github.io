@@ -6,7 +6,6 @@ tags:
   - llama.cpp
   - 向量数据库
   - RAG
-  - 模型部署
 author: Mr.Sun
 ---
 

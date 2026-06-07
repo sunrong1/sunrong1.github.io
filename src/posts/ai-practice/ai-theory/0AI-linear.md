@@ -4,12 +4,11 @@ updated: 2026-04-06
 categories:
   - AI
 tags:
-  - mathematics
-  - linear algebra
+  - 数学基础
+  - 线性代数
   - 微积分
   - 概率论
   - AI工程师
-  - 数学基础
 author: Mr.Sun
 ---
 

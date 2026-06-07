@@ -8,7 +8,6 @@ tags:
   - AI Agent
   - AgentBench
   - 评测基准
-  - LLM 评估
   - 清华大学
   - 论文解读
 author: Mr.Sun

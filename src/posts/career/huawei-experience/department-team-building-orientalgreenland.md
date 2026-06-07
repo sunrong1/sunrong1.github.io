@@ -10,7 +10,6 @@ tags:
   - 领导力
   - 团建活动
   - 党支部书记
-  - 职场心得
   - 团队管理
 author: Mr.Sun
 star: true

@@ -6,7 +6,7 @@ update: 2026-05-21
 categories:
   - 职业发展
 tags:
-  - AI时代
+  - AI 时代
   - 个人成长
   - 方法论
   - 认知提升
