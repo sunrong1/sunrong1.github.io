@@ -1,6 +1,7 @@
 ---
 icon: folder-open
 date: 2026-03-20
+update: 2026-06-06
 tags:
   - 项目成果
   - 自动化测试
@@ -156,6 +157,48 @@ graph TB
 
 ---
 
+## 🎮 实战项目（AI 协作开发）
+
+### 项目四：PlantsGame 塔防游戏 MVP（2026.05）
+
+**项目背景：**
+- 探索 AI 协作开发的工程边界
+- 验证 Claude Code 专家模式在完整项目中的实战能力
+- 用 28 小时完成一个完整可玩的塔防游戏 MVP
+
+**我的角色：** 独立开发者 / AI 协作探索者
+
+**技术方案：**
+- **AI 协作**：Claude Code 专家模式主导开发
+- **游戏框架**：Phaser 3 + TypeScript
+- **构建工具**：Vite
+- **测试框架**：Vitest（54 个测试用例）
+- **部署**：GitHub Actions → GitHub Pages
+- **架构分层**：配置层 → 实体层 → 系统层 → 场景层
+
+**核心成果：**
+| 指标 | 数值 |
+|------|------|
+| 开发时间 | **28 小时** |
+| 单元测试 | **54 个全通过** |
+| 在线体验 | sunrong.site/plantsgame |
+| 部署 | **GitHub Pages 自动部署** |
+
+**个人贡献：**
+- 全栈独立开发（架构 + 代码 + 测试 + 部署）
+- 沉淀"先发散后收敛"等高效 AI 协作模式
+- 输出《AI 协作复盘》博客（1000+ 阅读）
+- 验证 AI 协作在完整项目中的可行性
+
+**技术亮点：**
+- ✅ AI 协作主导开发（Claude Code 专家模式）
+- ✅ TDD 全程（54 个测试用例）
+- ✅ 程序化纹理生成（Canvas API，零外部资源依赖）
+- ✅ 清晰的分层架构（便于维护和扩展）
+- ✅ CI/CD 自动化部署
+
+---
+
 ## 📦 开源项目
 
 ### OpenClaw 个人 AI 助手
@@ -199,14 +242,16 @@ graph TB
 
 | 平台 | 文章数 | 阅读量 | 链接 |
 |------|--------|--------|------|
-| **个人博客** | 35+ | 10,000+ | [sunrong.site](https://sunrong.site) |
+| **个人博客** | 89+ | 30,000+ | [sunrong.site](https://sunrong.site) |
 | **知乎** | 10+ | 5,000+ | [@sunrong1](https://www.zhihu.com/people/sunrong1) |
 | **内部技术论坛** | 20+ | 8,000+ | 华为内部 |
 
-**代表文章：**
-- [可靠性测试完整指南](/posts/career/testing/reliabilityTesting.html) - 2000+ 阅读
-- [托业备考经验：在职 3 个月从 600 到 850+](/posts/learning/english/busineAndToeic.html) - 1500+ 阅读
-- [用 OpenClaw 搭建个人 AI 助手：实战指南](/posts/ai-practice/ai-practice/openclaw-personal-assistant.html) - 1200+ 阅读
+**精选文章（2026.6 最新）：**
+
+**🏆 Agentic AICon 2026 系列**
+- 《Agentic AICon 2026 完整战报：29 场演讲 + 6 篇博客 + π 型人才转型路径》
+- 《AI 时代未来宣言：小红书 7 大金句 + π 型人才 + 个人 11 年转型路径》
+- 《Tool Agent 范式：从 5 万工具 MCP 化看 AI 工业化的未来》
 
 ### 技术分享
 
@@ -261,8 +306,8 @@ graph TB
 
 ---
 
-**最后更新：** 2026-03-20  
-**项目版本：** v2026.1
+**最后更新：** 2026-06-06  
+**项目版本：** v2026.2
 
 ---
 
