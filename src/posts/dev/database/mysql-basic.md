@@ -10,6 +10,7 @@ tags:
   - SQL
   - LeetCode
 star: true
+public-safe: true
 ---
 
 # MySQL 必知必会：核心知识点与 LeetCode 实战速查

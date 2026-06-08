@@ -12,6 +12,7 @@ tag:
   - 自我提升
 star: true
 cover: /assets/images/flow-learning.png
+public-safe: true
 ---
 
 # AI 时代的心流学习法：如何与 AI 一起进入深度专注状态

@@ -9,6 +9,7 @@ tag:
   - 规划与洞察
 
 author: Mr.Sun
+public-safe: true
 ---
 
 # 英语学习提升和迭代

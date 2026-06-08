@@ -13,6 +13,7 @@ tags:
   - 管理
 author: Mr.Sun
 star: true
+public-safe: true
 ---
 
 # 面试官基础：如何成为一位优秀的技术面试官

@@ -12,6 +12,7 @@ tags:
   - 职场成长
 author: Mr.Sun
 star: 10
+public-safe: true
 ---
 
 # 面试官基础：如何成为一位优秀的技术面试官
