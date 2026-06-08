@@ -19,7 +19,7 @@ star: true
 
 > **会议**：Agentic AICon 2026 智能体应用与架构工程大会
 > **演讲**：阿里云《Tool Agent 范式与通义千问样板间》
-> **记录人**：Mr.Sun（11年华为测试架构师 / Spring AI MCP Server 实战）
+> **记录人**：Mr.Sun（资深测试架构师 / Spring AI MCP Server 实战）
 > **本文**：把 Day2 阿里云 7 场演讲中关于 Tool Agent、Agent Run、MemoryCollection、Sandbox 的核心思想，整理成一份"AI 工业化实战指南"
 
 ---
@@ -577,7 +577,7 @@ HiClaw 解决方案（Nacos 协议转换）：
 
 ---
 
-## 十一、面试最强回答（Tool Agent 完整版）
+## 十一、内部培训最强回答（Tool Agent 完整版）
 
 > "阿里云 Day2 7 场演讲给了我 3 大范式 + 4 大架构 + 6 大挑战 + 5 项核心能力：
 > 
