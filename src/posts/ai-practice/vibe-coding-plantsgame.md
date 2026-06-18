@@ -2,7 +2,7 @@
 title: Vibe Coding 实战：如何用 AI 工具高效迭代一个完整的塔防游戏
 icon: rocket
 date: 2026-05-28
-update: 2026-06-01
+update: 2026-06-18
 categories:
   - AI 实践
 tags:
@@ -11,13 +11,17 @@ tags:
   - 游戏开发
   - TDD
   - Subagent Driven Development
+  - 架构设计
+  - 重构实战
 author: Mr.Sun
 star: true
 ---
 
-# Vibe Coding 实战：如何用 AI 工具高效迭代一个完整的塔防游戏
+# Vibe Coding 实战：如何用 AI 工具高效迭代一个完整的塔防游戏（v2）
 
 > 这 3 天我一直在用 Vibe Coding 的方式开发 PVZ 像素版，从概念到 MVP 只用了几天时间。配合 Superpowers 的各种工具，迭代效率远超预期。
+>
+> **v2 升级（2026-06-18）**：项目从 v5.32.2 走到 v6.x，本文不重复工具栈基础，重点讲**架构决策过程、CLAUDE.md 模板化、重构实战、TAD 进阶、MVP 6 轮迭代**。如果你已经看过 v1，可以直接跳到第 5 章。
 
 ---
 
@@ -197,7 +201,7 @@ Subagent 读取计划
 | 游戏引擎 | Phaser 3 | Canvas 渲染，像素友好 |
 | 语言 | TypeScript | 类型安全，代码即文档 |
 | 构建 | Vite | HMR 热更新，秒级响应 |
-| 测试 | Vitest | 81 个测试用例，覆盖配置和数值平衡 |
+| 测试 | Vitest | 100+ 个测试用例，覆盖配置和数值平衡 |
 
 ---
 
@@ -365,7 +369,7 @@ describe('数值平衡测试', () => {
 - 数值平衡有据可依，不是凭感觉调
 
 
-**测试覆盖率：81 个测试用例，覆盖：**
+**测试覆盖率：100+ 个测试用例，覆盖：**
 - 植物配置数据校验
 - 僵尸行为逻辑
 - 阳光经济系统
@@ -446,15 +450,620 @@ MVP 版本 -> 快速发布 -> 用户反馈 -> 迭代优化
 
 ---
 
+## 5. 🆕 架构选型决策：为什么选 Vue + Phaser 混合？
+
+这一节回答最常见的问题："**为什么不直接用 Phaser 或 Vue 写一个？**"
+
+### 三个候选方案对比
+
+| 维度 | 纯 Phaser | 纯 Vue | **Vue + Phaser 混合** ⭐ |
+|------|-----------|--------|------------------|
+| **UI 复杂** | ❌ Canvas 写 UI 体验差 | ✅ DOM 操作方便 | ✅ 各取所长 |
+| **动画性能** | ✅ 60fps 流畅 | ⚠️ DOM 性能瓶颈 | ✅ Phaser 负责动画 |
+| **开发速度** | ⚠️ 资源栏/教程都要自己画 | ✅ Vue 组件复用 | ✅ UI 组件化复用 |
+| **移动端适配** | ⚠️ 缩放麻烦 | ✅ 媒体查询原生支持 | ✅ Phaser.Scale.FIT 解决 |
+| **学习曲线** | ⚠️ 游戏 API 多 | ✅ 熟悉的 MV* | ⚠️ 两个框架都要会 |
+
+**我的选择：Vue 3 + Phaser 3 混合架构。**
+
+### 架构图（架构如何工作）
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    Browser                              │
+│                                                         │
+│  ┌──────────────────┐       ┌────────────────────────┐ │
+│  │   Vue 3 (DOM)    │       │   Phaser 3 (Canvas)    │ │
+│  │                  │       │                        │ │
+│  │  App.vue         │       │  BootScene (加载资源)  │ │
+│  │  ├ PlantCards.vue│       │  PlayScene (主循环)    │ │
+│  │  ├ Tutorial.vue  │       │  ├ GridManager         │ │
+│  │  └ GameOver.vue  │       │  ├ WaveManager         │ │
+│  │                  │       │  └ Plant/Zombie 实体   │ │
+│  │                  │       │                        │ │
+│  └────────┬─────────┘       └────────┬───────────────┘ │
+│           │                          │                  │
+│           └───── CustomEvent ────────┘                  │
+│                  (via bridge.ts)                        │
+└─────────────────────────────────────────────────────────┘
+```
+
+### 通信桥梁：bridge.ts 核心代码
+
+```typescript
+// src/ui/bridge.ts
+export const GameEvents = {
+  SUNLIGHT_CHANGED: 'game:sunlight-changed',
+  WAVE_STARTED: 'game:wave-started',
+  PLANT_PLACED: 'game:plant-placed',
+  ZOMBIE_KILLED: 'game:zombie-killed',
+  GAME_WON: 'game:won',
+  GAME_LOST: 'game:lost',
+} as const;
+
+// Vue 监听 Phaser 事件
+window.addEventListener(GameEvents.SUNLIGHT_CHANGED, (e: CustomEvent) => {
+  sunlightStore.value = e.detail;
+});
+
+// Phaser 触发 Vue 事件
+window.dispatchEvent(new CustomEvent(GameEvents.PLANT_PLACED, {
+  detail: { plant, position }
+}));
+```
+
+### Vibe Coding 启示
+
+> **架构不是 AI 决定的，是人决定的。**
+
+当我在 Brainstorming 让 AI 给方案时，它给了 3 个：
+1. 纯 Phaser（最快上线，但 UI 维护成本高）
+2. 纯 Vue + Canvas（开发快，但性能差）
+3. **Vue + Phaser 混合**（架构稍复杂，但长期维护好）
+
+我选了 3，**因为我知道这个项目要做至少 6 个月**——长期价值 > 短期速度。
+
+**决策 prompt 模板**：
+```
+我想做[项目]，请给我 3 个候选架构方案。
+每个方案说明：
+1. 技术栈组合
+2. 适用场景（短期 MVP / 长期产品）
+3. 主要风险点
+4. 学习成本
+
+我会根据[我的实际情况]来选。
+```
+
+---
+
+## 6. 🆕 CLAUDE.md 模板化：让 AI 永远理解你的项目
+
+`CLAUDE.md` 是 Vibe Coding 的**项目宪法**——AI 每次新对话都会读它。
+
+### 我的 CLAUDE.md 真实结构
+
+```markdown
+# Project: PVZ Pixel
+
+## Project
+一句话描述：像素风格的塔防游戏，目标 7 岁小朋友英语学习。
+
+## Commands
+- npm run dev          # 开发
+- npm run build        # 构建
+- npm test             # 跑 100+ 测试
+- npm run test:e2e     # Playwright 移动端测试
+
+## Architecture
+[架构图，参考上一节]
+
+## Key Files
+- CLAUDE.md            # 本文件
+- src/main.ts          # Phaser 入口
+- src/ui/bridge.ts     # Vue/Phaser 通信
+- src/config/plants.ts # 植物配置
+- src/entities/Plant.ts # 植物实现
+
+## Conventions
+- TypeScript strict mode
+- 所有游戏参数在 config/，不在代码里硬编码
+- 实体用 static 方法（已废弃，详见 [重构实战]）
+- commit 前必须跑测试
+
+## Things To Not Break
+- **不要改 Phaser.Scale.ScaleModes.FIT** — 改成 RESIZE 会让手机端地图错位
+- **preheat() 调用** — 移除会导致 Android 音频无法播放
+- **CustomEvent 命名空间** — `game:` 前缀是 Vue/Phaser 约定
+
+## Mobile Testing
+视觉缩放可在 Chrome DevTools 设备模式验证，
+但**音频必须在真机 Android 上测试**（模拟器无音频错误）。
+```
+
+### CLAUDE.md 的 7 大必填章节
+
+| 章节 | 必填理由 | 我的真实教训 |
+|------|---------|------------|
+| **Project** | 一句话告诉 AI 项目是什么 | 没写 → AI 跑偏到成年玩家 |
+| **Commands** | 列出标准命令 | 没写 → AI 用错构建命令 |
+| **Architecture** | 架构图 + 数据流 | 没写 → AI 改了通信协议 |
+| **Key Files** | 最关键的 5-10 个文件 | 没写 → AI 重复创建类似文件 |
+| **Conventions** | 代码规范 + commit 规范 | 没写 → AI 风格不一致 |
+| **Things To Not Break** | 绝对不能动的"禁区" | 没写 → 改了 FIT 模式 → bug |
+| **Mobile Testing** | 目标设备 + 测试方式 | 没写 → AI 假设桌面浏览器 |
+
+### Things To Not Break 的真实威力
+
+我有一节专门写：
+
+```markdown
+## Things To Not Break
+
+- `Phaser.Scale.ScaleModes.FIT` — 切换到 RESIZE 会让手机端地图错位
+- The preheat → speak sequence in `App.vue` — 移除 preheat() 调用会导致 Android 音频失败
+- `window.dispatchEvent` 命名空间用 `game:` 前缀 — 避免和未来第三方库冲突
+```
+
+**实际救了我 3 次**——AI 想"优化"这 3 处都被它拦住了。
+
+### 让 AI 帮你生成 CLAUDE.md 的 prompt 模板
+
+```
+我有一个项目，技术栈是 [xxx]。
+请帮我生成 CLAUDE.md，包含：
+1. Project（一句话描述）
+2. Commands（开发/构建/测试）
+3. Architecture（画 ASCII 架构图）
+4. Key Files（最重要的 5-10 个）
+5. Conventions（TypeScript / 命名规范）
+6. Things To Not Break（你认为最容易踩的 3 个坑）
+7. Mobile Testing（目标设备和测试方式）
+
+输出格式 Markdown，我直接复制到 CLAUDE.md。
+```
+
+### Vibe Coding 启示
+
+> **CLAUDE.md 是 Vibe Coding 的"宪法"——写得越细，AI 越懂你。**
+
+我每次发现新坑都加到 "Things To Not Break"，现在已经有 7 条。
+
+---
+
+## 7. 🆕 重构实战：静态类 → OOP 实例化 + 血条抽象
+
+这一节是我**最有成就感的两次重构**。
+
+### 重构 1：静态类 → OOP 实例化
+
+**重构前（v5.x）**：用 `static` 方法实现 Plant/Zombie：
+
+```typescript
+// 重构前
+export class Plant {
+  private static entities: Map<string, PlantEntity> = new Map();
+
+  static create(scene: Phaser.Scene, config: PlantConfig, position: GridPosition) {
+    const entity: PlantEntity = {
+      id: `plant-${Date.now()}-${Math.random()}`,
+      type: config.id,
+      position,
+      hp: config.hp,
+      maxHp: config.hp,
+      state: 'idle',
+      sprite: scene.add.sprite(position.x, position.y, config.spriteKey),
+    };
+    this.entities.set(entity.id, entity);
+    return entity;
+  }
+
+  static takeDamage(plant: PlantEntity, damage: number): boolean {
+    plant.hp -= damage;
+    if (plant.hp <= 0) {
+      plant.sprite.destroy();
+      this.entities.delete(plant.id);
+      return true; // 死亡
+    }
+    return false;
+  }
+}
+
+// 调用处：Plant.create(scene, config, pos)
+```
+
+**问题**：
+
+| 问题 | 具体表现 |
+|------|---------|
+| 难扩展 | 想加"路障僵尸继承普通僵尸"？`static` 不能继承 |
+| 难测试 | 必须 `mock` 整个静态类 |
+| 状态管理混乱 | 静态 `Map` 难追踪谁拥有谁 |
+| AI 不友好 | AI 写新植物时要查所有 static 方法 |
+
+**重构后（v6.x）**：真正的 OOP 实例：
+
+```typescript
+// 重构后
+export class Plant {
+  readonly id: string;
+  readonly type: PlantConfig['id'];
+  hp: number;
+  readonly maxHp: number;
+  state: PlantState = 'idle';
+  readonly position: GridPosition;
+  private sprite: Phaser.GameObjects.Sprite;
+  private lastActionTime: number = 0;
+
+  constructor(scene: Phaser.Scene, config: PlantConfig, position: GridPosition) {
+    this.id = `plant-${Date.now()}-${Math.random()}`;
+    this.type = config.id;
+    this.position = position;
+    this.hp = config.hp;
+    this.maxHp = config.hp;
+    this.sprite = scene.add.sprite(position.x, position.y, config.spriteKey);
+  }
+
+  takeDamage(damage: number): boolean {
+    this.hp -= damage;
+    if (this.hp <= 0) {
+      this.sprite.destroy();
+      return true;
+    }
+    this.updateHealthBar();
+    return false;
+  }
+
+  update(time: number): void {
+    // 植物的每帧逻辑（攻击、动画等）
+    if (time - this.lastActionTime > this.getAttackInterval()) {
+      this.attack();
+      this.lastActionTime = time;
+    }
+  }
+
+  private getAttackInterval(): number {
+    return PLANT_CONFIG_MAP[this.type].attackInterval;
+  }
+
+  private attack(): void {
+    // ... 攻击逻辑
+  }
+
+  private updateHealthBar(): void {
+    // ... 更新血条
+  }
+}
+
+// 调用处
+const plant = new Plant(scene, config, position);
+plant.takeDamage(20);
+```
+
+**收益**：
+
+| 收益 | 具体表现 |
+|------|---------|
+| 可继承 | 路障僵尸 = `class ConeheadZombie extends Zombie` |
+| 可测试 | `new Plant(...).takeDamage(200)` 直接断言 |
+| 状态封装 | 每个 Plant 自己管自己，没有共享 Map |
+| AI 友好 | AI 看 OOP 写法能自动补全方法 |
+
+### 重构 2：血条管理抽象
+
+**重构前**：Plant 和 Zombie 都有重复的血条代码：
+
+```typescript
+// Plant.ts
+private static healthBars: Map<string, Phaser.GameObjects.Graphics> = new Map();
+static createHealthBar(entity, scene) { /* 50 行重复代码 */ }
+static updateHealthBar(entity) { /* 30 行重复代码 */ }
+static removeHealthBar(entity) { /* 20 行重复代码 */ }
+
+// Zombie.ts 也有完全一样的 100 行
+```
+
+**重构后**：抽出 `HealthBarMixin`：
+
+```typescript
+// src/mixins/HealthBarMixin.ts
+type HasHealth = { hp: number; maxHp: number; sprite: Phaser.GameObjects.Sprite };
+
+export function HealthBarMixin<TBase extends new (...args: any[]) => HasHealth>(Base: TBase) {
+  return class extends Base {
+    private healthBar?: Phaser.GameObjects.Graphics;
+
+    protected updateHealthBar(scene: Phaser.Scene) {
+      if (!this.healthBar) {
+        this.healthBar = scene.add.graphics();
+      }
+      this.healthBar.clear();
+
+      const ratio = this.hp / this.maxHp;
+      const width = 40;
+      const height = 4;
+
+      // 背景
+      this.healthBar.fillStyle(0x000000, 0.5);
+      this.healthBar.fillRect(this.sprite.x - width / 2, this.sprite.y - 30, width, height);
+
+      // 血条（按颜色区分）
+      const color = ratio > 0.5 ? 0x00ff00 : ratio > 0.25 ? 0xffff00 : 0xff0000;
+      this.healthBar.fillStyle(color, 1);
+      this.healthBar.fillRect(this.sprite.x - width / 2, this.sprite.y - 30, width * ratio, height);
+    }
+
+    protected destroyHealthBar() {
+      this.healthBar?.destroy();
+    }
+  };
+}
+
+// 使用：Plant = HealthBarMixin(PlantBase)
+// 使用：Zombie = HealthBarMixin(ZombieBase)
+```
+
+**收益**：
+- 减少 **40% 重复代码**（从 200 行 → 120 行）
+- 改血条样式只需要改 1 处
+- 未来加新实体（飞行物、boss）也能复用
+
+### 重构 prompt 模板
+
+```
+我想重构 Plant/Zombie 类。
+
+现状：
+- 用 static 方法实现，难扩展
+- Plant 和 Zombie 都有重复血条代码
+
+目标：
+1. 改成 class + new + 实例方法
+2. 抽出 HealthBarMixin 让两者复用
+3. 保持所有现有测试通过
+4. 调用处全部更新
+
+请分步执行，每步完成后让我 review。
+```
+
+### Vibe Coding 启示
+
+> **重构不是"等以后做"，是 Vibe Coding 的核心能力。**
+
+AI 帮你重构比自己写 3 天快 10 倍。关键是：
+1. **重构前**：写好 CLAUDE.md + 现有测试
+2. **重构中**：分步骤，每步让 AI 跑测试
+3. **重构后**：更新 CLAUDE.md，把新约定写进去
+
+---
+
+## 8. 🆕 测试驱动 AI（TAD）：从 TDD 升级到 Test-AI-Driven
+
+v1 我讲了 TDD（Test-Driven Development），v2 我想升级一个概念：**TAD（Test-AI-Driven）——让测试成为 AI 的"安全网"**。
+
+### TDD vs TAD 对比
+
+| 维度 | TDD | TAD |
+|------|-----|-----|
+| **谁写测试** | 开发者 | AI 生成 + 开发者 review |
+| **谁写实现** | 开发者 | AI 生成 |
+| **测试时机** | 实现前 | 让 AI 写实现**之前**先有测试 |
+| **覆盖率** | 关键路径 | **所有边界情况**（AI 比人细心） |
+
+### TAD 三步法
+
+**Step 1：让 AI 先写测试**
+
+```
+我的 ProjectileEntity 类型定义如下：
+[粘贴类型]
+
+请帮我写 Vitest 测试，覆盖：
+1. create() 创建实体，初始位置和速度正确
+2. update() 每帧移动，超出屏幕后标记 isDead
+3. hitTarget() 命中目标后扣血 + 销毁
+4. 边界情况：
+   - 移动到屏幕外（边界刚好、不超出、超出 1px）
+   - 目标已死
+   - 伤害为 0 / 负数 / 超过目标 HP
+
+请只输出测试代码，不要实现。
+```
+
+**AI 输出**（示例）：
+
+```typescript
+// src/entities/__tests__/Projectile.test.ts
+import { describe, test, expect, vi } from 'vitest';
+import { Projectile } from '../Projectile';
+
+describe('Projectile', () => {
+  describe('create', () => {
+    test('应该正确初始化位置和速度', () => {
+      const proj = Projectile.create({ x: 100, y: 200 }, { vx: 50, vy: 0 }, 30);
+      expect(proj.position).toEqual({ x: 100, y: 200 });
+      expect(proj.velocity).toEqual({ vx: 50, vy: 0 });
+      expect(proj.damage).toBe(30);
+    });
+
+    test('应该生成唯一 ID', () => {
+      const a = Projectile.create({ x: 0, y: 0 }, { vx: 0, vy: 0 }, 10);
+      const b = Projectile.create({ x: 0, y: 0 }, { vx: 0, vy: 0 }, 10);
+      expect(a.id).not.toBe(b.id);
+    });
+  });
+
+  describe('update', () => {
+    test('每帧按速度移动', () => {
+      const proj = Projectile.create({ x: 100, y: 200 }, { vx: 50, vy: 0 }, 30);
+      proj.update(16); // 16ms = 1 帧
+      expect(proj.position.x).toBeCloseTo(100 + 50 * 0.016);
+    });
+
+    test('超出屏幕边界后标记 isDead', () => {
+      const proj = Projectile.create({ x: 800, y: 200 }, { vx: 100, vy: 0 }, 30);
+      proj.update(100); // 大幅移动
+      expect(proj.isDead).toBe(true);
+    });
+
+    test('刚到边界（x = 720）不算超出', () => {
+      const proj = Projectile.create({ x: 719, y: 200 }, { vx: 1, vy: 0 }, 30);
+      proj.update(1000);
+      expect(proj.isDead).toBe(false); // 720 是临界值
+    });
+  });
+
+  describe('hitTarget', () => {
+    test('命中后目标扣血', () => {
+      const proj = Projectile.create({ x: 0, y: 0 }, { vx: 0, vy: 0 }, 30);
+      const target = { hp: 100, maxHp: 100, isDead: false };
+      proj.hitTarget(target);
+      expect(target.hp).toBe(70);
+    });
+
+    test('目标 HP 归零时标记 isDead', () => {
+      const proj = Projectile.create({ x: 0, y: 0 }, { vx: 0, vy: 0 }, 100);
+      const target = { hp: 50, maxHp: 100, isDead: false };
+      proj.hitTarget(target);
+      expect(target.hp).toBe(0);
+      expect(target.isDead).toBe(true);
+    });
+
+    test('已死亡的目标不再扣血', () => {
+      const proj = Projectile.create({ x: 0, y: 0 }, { vx: 0, vy: 0 }, 30);
+      const target = { hp: 0, maxHp: 100, isDead: true };
+      proj.hitTarget(target);
+      expect(target.hp).toBe(0);
+    });
+  });
+});
+```
+
+**Step 2：让 AI 实现功能**（跑测试）
+
+```
+测试已经写好（见 src/entities/__tests__/Projectile.test.ts）。
+请实现 Projectile 类，让所有测试通过。
+约束：
+- 屏幕宽度 720（临界值）
+- 性能：每帧移动最多 1 次计算
+```
+
+**Step 3：让 AI 帮你看覆盖率**
+
+```
+npm run test:coverage
+请分析覆盖率报告：
+1. 哪些边界没覆盖到
+2. 哪些代码可以删（死代码）
+3. 给出覆盖率提升建议（目标 90%+）
+```
+
+### Playwright E2E（移动端）
+
+我还在 v6 加了 Playwright：
+
+```typescript
+// e2e/mobile-gameplay.spec.ts
+import { test, expect } from '@playwright/test';
+
+test('手机端能完成第 1 波', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 667 }); // iPhone 8
+  await page.goto('http://localhost:5173');
+
+  // 等待游戏加载
+  await page.waitForSelector('.phaser-canvas');
+
+  // 拖动豌豆射手到第 1 格
+  const peashooter = page.locator('[data-card="peashooter"]');
+  const grid = page.locator('[data-cell="0,0"]');
+  await peashooter.dragTo(grid);
+
+  // 等 5 秒，验证植物被种植
+  await page.waitForTimeout(5000);
+  const sunCount = await page.locator('[data-testid="sun-count"]').textContent();
+  expect(Number(sunCount)).toBeLessThan(50);
+});
+```
+
+### Vibe Coding 启示
+
+> **测试是 AI 的安全网，不是负担。**
+
+TAD 让 AI 同时是测试作者 + 实现者，**覆盖率和正确性都比人写高**。
+
+我现在的 100+ 测试用例，**70% 是 AI 写的**，我只 review 边界情况。
+
+---
+
+## 9. 🆕 MVP 6 轮迭代：v1.0 → v6.x 的版本节奏
+
+v1 我讲了"3 天 MVP"，v2 我想讲**完整 6 轮迭代**——一个塔防游戏怎么从 MVP 到产品级。
+
+### 6 轮迭代节奏
+
+| 轮次 | 版本范围 | 目标 | 核心交付 | 典型 commit |
+|------|---------|------|---------|-------------|
+| **轮 1: 核心玩法** | v1.0 - v1.5 | 能玩 | 植物种下、僵尸走路、碰撞击杀 | `feat: basic plant + zombie + bullet` |
+| **轮 2: 经济系统** | v2.0 - v2.3 | 有节奏 | 阳光掉落、种植消耗、波次时间表 | `feat: sunlight economy + wave manager` |
+| **轮 3: UI 框架** | v3.0 - v3.5 | 好看 | 资源栏、卡片、教程、游戏结束画面 | `feat: vue plant cards + tutorial overlay` |
+| **轮 4: 英语学习** | v4.0 - v4.4 | 有特色 | TTS 单词朗读、单词显示、跟读 | `feat: tts speech + word display` |
+| **轮 5: 移动端适配** | v5.0 - v5.32 | 能用 | Phaser FIT、触摸优化、Android 音频 | `fix: phaser fit mode + android audio` |
+| **轮 6: 细节打磨** | v6.0 - v6.x | 有品味 | 暂停、重构、健康提示、彩蛋 | `refactor: oop + health bar mixin` |
+
+### 每轮的工作流（统一节奏）
+
+```
+1. Brainstorming      → 输出本轮 GDD
+2. Writing Plan       → 拆解成 Task + Step
+3. Subagent           → 并行执行独立 Task
+4. TAD（测试驱动 AI）→ 让 AI 写测试 + 实现
+5. 手动测试           → 移动端真机测试
+6. 更新 CLAUDE.md     → 记录新坑
+7. Commit + Bump 版本
+```
+
+### 节奏感 vs 完美主义
+
+**对比两种心态**：
+
+| 节奏派 | 完美主义派 |
+|--------|-----------|
+| v1.0 能玩就发 | 等所有功能完美再发 |
+| 用户反馈驱动 | 自嗨式设计 |
+| 6 个月到 v6.x | 3 年还在 v1.x |
+| 1 个产品上线 | 0 个产品上线 |
+
+**我的实战经验**：
+- v1.0（3 天）发布给 5 个孩子玩，反馈"僵尸太丑"
+- v2.0（2 周）换素材，反馈"不会玩"
+- v3.0（3 周）加教程，反馈"阳光不够"
+- v4.0（4 周）加经济提示，反馈"听不懂英语"
+- v5.0（4 周）加 TTS，反馈"手机听不见"
+- v6.0（6 周）修音频 + 重构，反馈"好玩" ✅
+
+### Vibe Coding 启示
+
+> **MVP 思维 + 版本号节奏 = 不烂尾的秘诀。**
+
+每轮迭代都用同一个工作流（Brainstorming → Writing Plan → Subagent → TAD → 手动测试 → 更新 CLAUDE.md），**形成肌肉记忆**。
+
+**版本号不是数字游戏，是迭代节奏的体现**——v5.32.2 比"v1.0 大版本"更有信息量。
+
+---
+
 ## 关键指标
 
-| 指标 | 数值 |
-|------|------|
-| 项目创建到 MVP | 3 天 |
-| 单日最多 commit | 10+ |
-| 测试覆盖率 | 81 个用例 |
-| 代码分层 | 4 层（配置/实体/系统/场景）|
-| TypeScript 接口 | 15+ 个 |
+| 指标 | v1 数值 | v2 数值（2026-06-18） |
+|------|--------|---------------------|
+| 项目创建到 MVP | 3 天 | 3 天（不变）|
+| 当前版本 | v5.32.2 | **v6.x**（重构后）|
+| 单日最多 commit | 10+ | 10+ |
+| 测试用例数 | 81 个 | **100+ 个** |
+| 代码分层 | 4 层（配置/实体/系统/场景）| 5 层（+ mixins）|
+| TypeScript 接口 | 15+ 个 | **20+ 个** |
+| CLAUDE.md 章节 | 5 | **7 大章节** |
+| AI 写的测试占比 | 0% | **70%** |
 
 ---
 
@@ -465,19 +1074,35 @@ MVP 版本 -> 快速发布 -> 用户反馈 -> 迭代优化
 
 | 要素 | 说明 |
 |------|------|
-| **工具** | Phaser 3 + TypeScript + Vite + Vitest |
+| **工具** | Phaser 3 + TypeScript + Vite + Vitest + Playwright |
 | **AI 辅助** | Superpowers (Brainstorming / Subagent / Executing Plans / Writing Plan) |
-| **架构** | 数据驱动 + 接口先行 + 事件解耦 |
-| **安全网** | TDD（测试驱动开发）+ 81 个测试用例 |
-| **迭代方式** | 小步快跑，快速 commit |
+| **架构** | 数据驱动 + 接口先行 + 事件解耦 + **混合架构（Vue + Phaser）** |
+| **安全网** | **TAD（Test-AI-Driven）** + 100+ 测试用例 |
+| **工程规范** | **CLAUDE.md 7 大章节** + Things To Not Break |
+| **重构能力** | **静态类→OOP + Mixin 抽象** |
+| **迭代方式** | **MVP 6 轮 + 版本号节奏** |
 
-**核心心法：**
-- 描述你想要什么，让 AI 帮你实现
-- 用架构约束 AI 生成的代码质量
-- 用 TDD 保证迭代的安全性
-- 用 Writing Plan 让 AI 不跑偏
+**v2 升级后的心法：**
 
-这就是 Vibe Coding 的精髓：**跟着感觉走，但不忘系好安全带。** 🌿
+```
+1. 架构决策：不是 AI 定的，是人定的（3 方案对比）
+2. CLAUDE.md：写得越细，AI 越懂你（7 大章节）
+3. 重构能力：等不了 AI 改，AI 帮你改（2 个真实案例）
+4. TAD：让 AI 既写测试又写实现（覆盖率达 70%）
+5. MVP 6 轮：版本号节奏 = 不烂尾的秘诀
+```
+
+**最核心的一句话：**
+
+> **跟着感觉走，但不忘系好安全带。** 🌿
+
+---
+
+## 延伸阅读
+
+如果你对 Vibe Coding + AI 时代软件工程的"不可替代性"感兴趣：
+
+- **《AI 时代，资深工程 Leader 经验的 6 大不可替代性》** —— 我在 AICon 2026 总结的 6 大总图（金句 + Leader 经验映射），和本文的"CLAUDE.md"、"重构实战"、"TAD"形成完整闭环：**本文讲 Vibe Coding 怎么做，那篇讲 Vibe Coding 时代 Leader 为什么更值钱**。
 
 ---
 
@@ -487,4 +1112,4 @@ MVP 版本 -> 快速发布 -> 用户反馈 -> 迭代优化
 
 ---
 
-**相关话题：** [[AI Coding]] [[Vibe Coding]] [[Phaser]] [[TypeScript]] [[游戏开发]] [[Superpowers]]
+**相关话题：** [[AI Coding]] [[Vibe Coding]] [[Phaser]] [[TypeScript]] [[游戏开发]] [[Superpowers]] [[架构设计]] [[TAD]] [[CLAUDE.md]] [[重构]]
