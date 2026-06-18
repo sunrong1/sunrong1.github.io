@@ -130,6 +130,133 @@ sudo systemctl restart caddy
 
 4. **域名建议提前准备好**——需要一个可解析的域名（我用的是自己的域名 `hermes.sunrong.site`）。
 
+## 附录：GitHub 代理稳定下载方案
+
+国内服务器/网络访问 GitHub 经常超时或限速，下面这套组合拳可以把成功率拉到 99% 以上。
+
+### 1. wget/curl 镜像（最直接）
+
+`ghproxy.net` 提供 GitHub releases / raw 文件镜像，直接在原始 URL 前加 `https://ghproxy.net/` 即可：
+
+```bash
+# 原始 URL
+https://github.com/coder/code-server/releases/download/v4.124.2/code-server-4.124.2-linux-amd64.tar.gz
+
+# 镜像 URL（前面加 https://ghproxy.net/）
+https://ghproxy.net/https://github.com/coder/code-server/releases/download/v4.124.2/code-server-4.124.2-linux-amd64.tar.gz
+
+# 用法
+wget https://ghproxy.net/https://github.com/coder/code-server/releases/download/v4.124.2/code-server-4.124.2-linux-amd64.tar.gz
+# 或
+curl -L -o code-server.tar.gz https://ghproxy.net/https://github.com/coder/code-server/releases/download/v4.124.2/code-server-4.124.2-linux-amd64.tar.gz
+```
+
+实测下载速度从 ~50KB/s 提升到 5-10MB/s（取决于代理服务器负载）。
+
+### 2. git clone 全局加速（推荐）
+
+配置一次，所有 `git clone https://github.com/...` 自动走代理：
+
+```bash
+git config --global url."https://ghproxy.net/https://".insteadOf "https://github.com/"
+```
+
+之后所有 GitHub clone 操作自动加速，无需手动改 URL。
+
+**临时单次使用**（不污染全局配置）：
+
+```bash
+git clone https://ghproxy.net/https://github.com/xxx/yyy.git
+```
+
+### 3. 浅克隆（节省 90% 流量）
+
+大多数情况不需要完整历史：
+
+```bash
+git clone --depth 1 https://github.com/xxx/yyy.git
+# 仅克隆最近 1 个 commit
+```
+
+如果之后需要完整历史，再 `git fetch --unshallow`。
+
+### 4. 增大 Git 缓冲区（针对大仓库）
+
+默认 1MB 缓冲区在大仓库（比如 Linux kernel）会失败：
+
+```bash
+git config --global http.postBuffer 524288000  # 500MB
+```
+
+### 5. raw.githubusercontent.com 文件加速
+
+GitHub 上的 raw 文件也能走代理：
+
+```bash
+# 原始
+https://raw.githubusercontent.com/xxx/yyy/main/README.md
+
+# 镜像
+https://ghproxy.net/https://raw.githubusercontent.com/xxx/yyy/main/README.md
+```
+
+### 6. 备用镜像（多重保险）
+
+`ghproxy.net` 偶尔也会挂，多备几个：
+
+- `https://ghproxy.com/`
+- `https://mirror.ghproxy.com/`
+- `https://gh-proxy.com/`
+- `https://fastgit.org/`（专门用于 git clone）
+
+**建议**：在 shell alias 里维护一个代理池：
+
+```bash
+# 加到 ~/.bashrc
+alias ghproxy="https://ghproxy.net/https://github.com/"
+# 用法
+git clone ${ghproxy}xxx/yyy.git
+```
+
+### 7. 终极方案：HTTP/HTTPS 代理环境变量
+
+如果整个网络环境都慢，直接配代理：
+
+```bash
+# 临时
+export http_proxy=socks5://127.0.0.1:1080
+export https_proxy=socks5://127.0.0.1:1080
+
+# 永久（写到 ~/.bashrc）
+echo 'export http_proxy=socks5://127.0.0.1:1080' >> ~/.bashrc
+echo 'export https_proxy=socks5://127.0.0.1:1080' >> ~/.bashrc
+```
+
+这样 wget / curl / git 全部自动走代理。
+
+### 8. GitHub CLI（gh）加速
+
+GitHub 官方 CLI 工具也支持代理：
+
+```bash
+export GH_HOST=https://ghproxy.net/https://github.com
+gh release download v4.124.2 --repo coder/code-server
+```
+
+---
+
+**组合拳优先级**：
+
+| 场景 | 推荐方案 |
+|------|---------|
+| 下载 release 文件 | `ghproxy.net/` URL 前缀 |
+| git clone 仓库 | `git config --global url."https://ghproxy.net/https://".insteadOf` |
+| 临时一次性 | 直接 wget/curl 走镜像 |
+| 整个网络慢 | 配 `http_proxy` / `https_proxy` 环境变量 |
+| gh 命令行 | `GH_HOST` 环境变量 |
+
+按需选用，**多备几个镜像 = 稳定**。
+
 ## 后续用法
 
 现在的使用场景：
