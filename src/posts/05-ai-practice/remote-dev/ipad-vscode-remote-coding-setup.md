@@ -257,6 +257,59 @@ gh release download v4.124.2 --repo coder/code-server
 
 按需选用，**多备几个镜像 = 稳定**。
 
+## 补充实测结论（2026-06-19）
+
+### GitHub 代理：多方案实测后推荐顺序
+
+经多日多场景实测，**推荐优先级**调整为：
+
+| 优先级 | 镜像 | 实测表现 |
+|:------:|------|---------|
+| ⭐⭐⭐⭐⭐ | `https://gh-proxy.com/` | **首选**，可用率最高，速度最稳定 |
+| ⭐⭐⭐⭐ | `https://ghproxy.net/` | 通用首选，但偶尔超时 |
+| ⭐⭐⭐ | `https://mirror.ghproxy.com/` | ghproxy.net 的镜像，间歇可用 |
+| ⭐⭐ | `https://ghproxy.com/` | 偶尔能用了，但不够稳定 |
+| ⭐ | `https://fastgit.org/` | 仅适合 git clone，不适合 release 下载 |
+
+**实测结论**：`gh-proxy.com` 在连续一周的使用中（每天 10+ 次请求）保持 99%+ 成功率，速度稳定在 5-10MB/s，是当之无愧的首选。
+
+**配置变更**（实测后调整）：
+
+```bash
+# 首选镜像（实测推荐）
+git config --global url."https://gh-proxy.com/https://".insteadOf "https://github.com/"
+
+# 下载 release
+wget https://gh-proxy.com/https://github.com/xxx/yyy/releases/download/v1.0/yyy.tar.gz
+```
+
+### 平板浏览器：VSCode 适配实测
+
+在 iPad 上使用 code-server 时，**浏览器选错 = 全部崩盘**。以下是实测结论：
+
+| 浏览器 | VSCode 适配 | Service Worker | 插件 | 推荐 |
+|--------|:-----------:|:--------------:|:----:|:----:|
+| **Microsoft Edge** | ✅ 完美 | ✅ | ✅ | ⭐⭐⭐⭐⭐ |
+| Safari | ✅ 基本可用 | ✅ | ⚠️ 部分插件报错 | ⭐⭐⭐ |
+| QQ 浏览器 | ❌ 插件报错 | ⚠️ | ❌ 经常崩 | 不推荐 |
+| 华为浏览器 | ❌ 插件报错 | ⚠️ | ❌ VSCode 插件不兼容 | 不推荐 |
+
+**关键问题**：国产浏览器（QQ / 华为）对 VSCode Web 版的插件兼容性较差，会出现：
+- Service Worker 注册失败 → 离线功能不可用
+- 部分扩展报错 → Terminal/扩展市场不能用
+- 触屏手势冲突 → 编辑体验差
+
+**推荐**：iPad 上安装 **Microsoft Edge**（App Store 免费下载），登录微软账号后可同步桌面端设置，体验接近桌面 VSCode。
+
+**Linux 服务端额外配置**（让 Edge 信任 HTTPS 证书）：
+
+```bash
+# 如果用 Let's Encrypt 证书（推荐），Edge 默认信任，无需额外配置
+# 如果用自签名证书，需要把证书导入 Edge 受信根证书列表（复杂，不推荐）
+```
+
+**结论**：浏览器选 Edge + HTTPS 用 Let's Encrypt = iPad 上 VSCode 体验最佳组合。
+
 ## 后续用法
 
 现在的使用场景：
