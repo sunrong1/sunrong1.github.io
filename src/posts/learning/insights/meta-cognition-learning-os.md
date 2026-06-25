@@ -1,7 +1,7 @@
 ---
 icon: brain
-date: 2026-06-22
-update: 2026-06-22
+date: 2026-06-23
+update: 2026-06-23
 category:
   - 学习方法
   - 元认知

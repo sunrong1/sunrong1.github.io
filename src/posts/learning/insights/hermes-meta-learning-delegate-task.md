@@ -1,7 +1,7 @@
 ---
 icon: robot
-date: 2026-06-22
-update: 2026-06-22
+date: 2026-06-24
+update: 2026-06-24
 category:
   - Hermes
   - Multi-Agent
