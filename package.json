@@ -12,13 +12,13 @@
     "deploy": "vuepress-vite build src &&copyfiles CNAME src/.vuepress/dist/ && npx gh-pages -d src/.vuepress/dist"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.20",
-    "@vuepress/plugin-search": "2.0.0-rc.91",
+    "@vuepress/bundler-vite": "2.0.0-rc.30",
+    "@vuepress/plugin-search": "2.0.0-rc.131",
     "copyfiles": "^2.4.1",
-    "sass-embedded": "^1.89.2",
-    "vue": "^3.5.16",
-    "vuepress": "2.0.0-rc.20",
-    "vuepress-theme-hope": "2.0.0-rc.78"
+    "sass-embedded": "^1.100.0",
+    "vue": "^3.5.40",
+    "vuepress": "2.0.0-rc.30",
+    "vuepress-theme-hope": "2.0.0-rc.107"
   },
   "dependencies": {
     "@waline/client": "^3.6.0",
