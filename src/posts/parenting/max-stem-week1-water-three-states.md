@@ -2,16 +2,17 @@
 icon: droplet
 date: 2026-05-14
 update: 2026-05-17
-categories:
+category:
   - 育儿
-tags:
+tag:
   - STEM
   - 科学启蒙
   - 6岁
   - 亲子实验
   - 第一周
 author: Mr.Sun
----
+------
+
 
 # 沐沐的 STEM 实验课第 1 周：水的三变身
 

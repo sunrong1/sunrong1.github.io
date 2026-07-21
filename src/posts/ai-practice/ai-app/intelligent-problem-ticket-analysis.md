@@ -2,7 +2,7 @@
 icon: pen-to-square
 date: 2026-03-02
 update: 2026-04-03
-tags:
+tag:
   - AI Agent
   - 测试智能化
   - 问题单分析
@@ -11,7 +11,8 @@ tags:
 star: true
 
 author: Mr.Sun
----
+------
+
 
 
 # AI 赋能测试问题单智能分析方案

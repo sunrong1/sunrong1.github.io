@@ -3,16 +3,17 @@ title: Claude Code 进阶用法：从小工到专家
 icon: terminal
 date: 2026-04-04
 update: 2026-04-04
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - Claude Code
   - AI 编程
   - 效率提升
   - 开发工作流
 author: Mr.Sun
 star: true
----
+------
+
 
 ## 前言
 

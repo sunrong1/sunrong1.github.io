@@ -2,9 +2,9 @@
 icon: monitor
 date: 2026-05-04
 update: 2026-05-04
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - Computer Use
   - GUI Agent
@@ -12,7 +12,8 @@ tags:
   - 论文解读
 author: Mr.Sun
 star: true
----
+------
+
 
 # Computer Use 论文深度解读：AI Agent 操控操作系统的多模态突破
 

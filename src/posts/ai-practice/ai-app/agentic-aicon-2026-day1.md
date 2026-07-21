@@ -3,9 +3,9 @@ title: Agentic AICon 2026 Day1 笔记：从 ADPS 到 4 极飞轮，中国 Agent 
 icon: presentation
 date: 2026-06-05
 update: 2026-06-05
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - 会议笔记
   - AI Agent
   - 多 Agent 架构
@@ -13,7 +13,8 @@ tags:
   - 组织变革
 author: Mr.Sun
 star: true
----
+------
+
 
 # Agentic AICon 2026 Day1 笔记：从 ADPS 到 4 极飞轮，中国 Agent 工程师的 8 点启示
 

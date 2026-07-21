@@ -2,9 +2,9 @@
 icon: code
 date: 2026-04-29
 update: 2026-05-01
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - MetaGPT
   - Multi-Agent
@@ -12,7 +12,8 @@ tags:
   - 软件工程
 author: Mr.Sun
 star: true
----
+------
+
 
 # MetaGPT 论文精读：ICLR 2024 Oral，角色化流水线式多Agent协作
 

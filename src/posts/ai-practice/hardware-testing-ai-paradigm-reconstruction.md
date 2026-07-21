@@ -3,9 +3,9 @@ title: Agentic AI 时代，测试的范式重构：从 1 页 PPT 到完整框架
 icon: shuffle
 date: 2026-06-05
 update: 2026-06-05
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - 测试
   - 范式重构
@@ -13,7 +13,8 @@ tags:
   - 部门转型
 author: Mr.Sun
 star: true
----
+------
+
 
 # Agentic AI 时代，测试的范式重构——未来规划
 

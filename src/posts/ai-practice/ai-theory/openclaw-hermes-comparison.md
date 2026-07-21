@@ -2,9 +2,9 @@
 icon: scale-balanced
 date: 2026-04-25
 update: 2026-04-25
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - OpenClaw
   - Hermes Agent
   - AI Agent
@@ -13,7 +13,8 @@ tags:
 star: true
 
 author: Mr.Sun
----
+------
+
 
 # OpenClaw vs Hermes Agent：我的双 Agent 协作实践
 

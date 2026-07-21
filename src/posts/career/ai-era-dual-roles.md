@@ -3,16 +3,17 @@ title: AI 时代的双面人生：驭龙少年与赛车手
 icon: user
 date: 2026-05-21
 update: 2026-05-21
-categories:
+category:
   - 职业发展
-tags:
+tag:
   - AI 时代
   - 个人成长
   - 方法论
   - 认知提升
 author: Mr.Sun
 star: true
----
+------
+
 
 # AI 时代的双面人生：驭龙少年与赛车手
 

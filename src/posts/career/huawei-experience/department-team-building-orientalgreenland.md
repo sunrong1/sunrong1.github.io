@@ -3,9 +3,9 @@ title: 60+ 人部门团建实战：从 0 到 1 组织的东方绿洲之旅
 icon: users
 date: 2026-06-01
 update: 2026-06-01
-categories:
+category:
   - 职场
-tags:
+tag:
   - 华为成长
   - 领导力
   - 团建活动
@@ -13,7 +13,8 @@ tags:
   - 团队管理
 author: Mr.Sun
 star: true
----
+------
+
 
 # 60+ 人部门团建实战：从 0 到 1 组织的东方绿洲之旅
 

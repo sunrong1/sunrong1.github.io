@@ -1,15 +1,16 @@
 ---
 title: iPad 上使用 VSCode 在线编程：code-server + Caddy 反向代理实战
 date: '2026-06-17'
-tags:
+tag:
   - VSCode
   - code-server
   - 远程开发
   - 工具链
   - Caddy
-categories:
+category:
   - AI 实践
----
+------
+
 
 ## 背景
 

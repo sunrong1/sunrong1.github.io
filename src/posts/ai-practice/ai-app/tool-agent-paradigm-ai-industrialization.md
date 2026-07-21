@@ -3,9 +3,9 @@ title: Tool Agent 范式：从 5 万工具 MCP 化看 AI 工业化的未来
 icon: tool
 date: 2026-06-06
 update: 2026-06-06
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - MCP
   - AI 工业化
@@ -13,7 +13,8 @@ tags:
   - Token 节约
 author: Mr.Sun
 star: true
----
+------
+
 
 # Tool Agent 范式：从 5 万工具 MCP 化看 AI 工业化的未来
 

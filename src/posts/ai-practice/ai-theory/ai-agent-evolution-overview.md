@@ -2,9 +2,9 @@
 icon: brain
 date: 2026-05-04
 update: 2026-05-04
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - 架构演进
   - LLM
@@ -12,7 +12,8 @@ tags:
   - 前沿进展
 author: Mr.Sun
 star: true
----
+------
+
 
 # AI Agent 架构演进全景图：10篇论文核心洞察与 2025-2026 前沿进展
 

@@ -2,9 +2,9 @@
 icon: brain
 date: 2026-05-01
 update: 2026-05-01
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - MemGPT
   - 层级记忆
@@ -12,7 +12,8 @@ tags:
   - 论文解读
 author: Mr.Sun
 star: true
----
+------
+
 
 # MemGPT 论文深度解读：突破 LLM 上下文窗口限制的层级记忆管理
 

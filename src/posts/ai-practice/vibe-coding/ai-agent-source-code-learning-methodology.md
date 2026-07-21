@@ -1,16 +1,17 @@
 ---
 title: Vibe Coding 学习源码的方法论：四层索引 + 并行扫描
 date: '2026-06-22'
-tags:
+tag:
   - Vibe Coding
   - AI Agent
   - AgentScope
   - 源码学习
   - 方法论
   - CodeBuddy
-categories:
+category:
   - AI 实践
----
+------
+
 
 ## 背景
 

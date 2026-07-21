@@ -3,9 +3,9 @@ title: Agentic AICon 2026 完整战报：12 场 talk + 1 场黄佳深度交流 +
 icon: trophy
 date: 2026-06-06
 update: 2026-06-06
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - 会议笔记
   - AI Agent
   - 完整战报
@@ -13,7 +13,8 @@ tags:
   - 范式重构
 author: Mr.Sun
 star: true
----
+------
+
 
 # Agentic AICon 2026 完整战报：12 场 talk + 1 场黄佳深度交流 + 12 篇博客
 

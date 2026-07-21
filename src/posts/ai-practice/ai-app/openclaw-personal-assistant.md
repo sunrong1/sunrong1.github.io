@@ -1,12 +1,13 @@
 ---
 date: 2026-03-19
-tags:
+tag:
   - AI
   - OpenClaw
   - 实战项目
   - AI助手
 author: Mr.Sun
----
+------
+
 
 # 用 OpenClaw 搭建个人 AI 助手：实战、避坑与持续迭代
 

@@ -1,12 +1,13 @@
 ---
 date: 2026-03-18
 author: Mr.Sun
-tags:
+tag:
   - 开源项目
   - 测试技术
 category: 使用指南
 cover: /assets/images/github-actions-blog.png
----
+------
+
 
 # GitHub Actions 自动构建部署博客教程
 

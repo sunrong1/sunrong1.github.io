@@ -3,9 +3,9 @@ title: 面试官基础：如何成为一位优秀的技术面试官
 icon: user-check
 date: 2026-05-20
 update: 2026-05-20
-categories:
+category:
   - 职场
-tags:
+tag:
   - 面试
   - 技术面试
   - 面试官
@@ -14,7 +14,8 @@ tags:
 author: Mr.Sun
 star: true
 public-safe: true
----
+------
+
 
 # 面试官基础：如何成为一位优秀的技术面试官
 

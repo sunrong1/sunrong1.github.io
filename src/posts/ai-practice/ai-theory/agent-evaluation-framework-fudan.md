@@ -3,9 +3,9 @@ title: Agent 评测的 16 反思 + 4 层金字塔：复旦新框架对中国 Age
 icon: clipboard-check
 date: 2026-06-05
 update: 2026-06-05
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - 评测
   - 复旦
@@ -13,7 +13,8 @@ tags:
   - 工业落地
 author: Mr.Sun
 star: true
----
+------
+
 
 # Agent 评测的 16 反思 + 4 层金字塔：复旦新框架对中国 Agent 工程师的启示
 

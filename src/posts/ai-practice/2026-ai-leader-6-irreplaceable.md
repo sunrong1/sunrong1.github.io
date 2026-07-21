@@ -2,10 +2,11 @@
 title: "AI 时代，资深工程 Leader 经验的 6 大不可替代性"
 date: 2026-06-11
 category: ai-practice
-tags: [AI Agent, 团队管理, 领导力, 软件工程, 复杂系统, 第一性原理]
+tag: [AI Agent, 团队管理, 领导力, 软件工程, 复杂系统, 第一性原理]
 public-safe: true
 description: "从 AICon 2026 顶级演讲者金句提炼的资深工程 Leader 在 AI 时代的 6 大不可替代性框架"
----
+------
+
 
 # AI 时代，资深工程 Leader 经验的 6 大不可替代性
 

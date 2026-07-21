@@ -2,9 +2,9 @@
 icon: brain
 date: 2026-05-07
 update: 2026-05-07
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI 协作
   - 效率提升
   - 认知升级
@@ -12,7 +12,8 @@ tags:
   - AI Agent
 author: Mr.Sun
 star: true
----
+------
+
 
 # 与 AI 协作的认知升级：我是如何把效率提升 10 倍的
 

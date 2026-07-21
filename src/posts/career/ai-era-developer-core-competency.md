@@ -3,9 +3,9 @@ title: AI 时代开发者的核心能力：从"写代码"到"判断力"
 icon: brain
 date: 2026-05-20
 update: 2026-05-20
-categories:
+category:
   - 职业发展
-tags:
+tag:
   - AI 时代
   - 开发者能力
   - 认知能力
@@ -13,7 +13,8 @@ tags:
   - 个人成长
 author: Mr.Sun
 star: true
----
+------
+
 
 # AI 时代开发者的核心能力：从"写代码"到"判断力"
 

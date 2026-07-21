@@ -208,3 +208,13 @@ async def on_tool_call(
 > 想一起学 AgentScope 8 周？留言，咱互相监督。
 >
 > —— Mr.Sun, 2026-07-18
+
+---
+
+## 📚 AgentScope 8 周学习系列
+
+- 🎯 **本篇：W1 架构全景 + 核心类图**（你正在读）
+- 🔧 **[配套工具：SM-2 复习系统](https://sunrong.site/posts/ai-practice/ai-app/sm2-review-system.html)** — 420 行 Python 的自适应复习
+- 📝 **[W2：真学习复盘](https://sunrong.site/posts/ai-practice/ai-app/agentscope-w2-real-learning.html)** — 从伪产出到真读代码 5 天记录
+
+**完整承诺**：[LEARNING.md](https://github.com/sunrong1/agentscope/blob/learning-journal/LEARNING.md) · 持续更新到 9-12

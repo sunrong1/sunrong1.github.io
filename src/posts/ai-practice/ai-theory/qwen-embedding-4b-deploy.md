@@ -1,13 +1,14 @@
 ---
 date: 2026-04-20
-tags:
+tag:
   - Qwen
   - Embedding
   - llama.cpp
   - 向量数据库
   - RAG
 author: Mr.Sun
----
+------
+
 
 # Qwen3-Embedding-4B 部署实战：从选型到生产环境
 

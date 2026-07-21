@@ -2,9 +2,9 @@
 icon: code
 date: 2026-05-06
 update: 2026-05-06
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - ChatDev
   - Multi-Agent
@@ -12,7 +12,8 @@ tags:
   - 论文解读
 author: Mr.Sun
 star: true
----
+------
+
 
 # ChatDev 论文深度解读：AI 驱动的多 Agent 软件开发虚拟公司
 

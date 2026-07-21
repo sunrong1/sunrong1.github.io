@@ -1,13 +1,14 @@
 ---
 date: 2026-04-18
-tags:
+tag:
   - AI Agent
   - 培训
   - AgentScope
   - MCP
   - HERO平台
 author: Mr.Sun
----
+------
+
 
 # AI Agent 培训大纲：核心实现与实战
 

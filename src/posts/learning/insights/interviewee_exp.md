@@ -2,14 +2,15 @@
 icon: user-tie
 date: 2026-03-21
 update: 2026-03-21
-tags:
+tag:
   - 面试经验
   - 职场心得
   - 职业发展
 
 author: Mr.Sun
 public-safe: true
----
+------
+
 
 # 面试复盘：程序员的转型思考
 

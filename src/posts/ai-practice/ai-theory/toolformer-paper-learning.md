@@ -2,9 +2,9 @@
 icon: wrench
 date: 2026-04-29
 update: 2026-04-29
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - Toolformer
   - 工具调用
@@ -12,7 +12,8 @@ tags:
   - 自监督学习
 author: Mr.Sun
 star: true
----
+------
+
 
 # Toolformer 论文深度解读：LLM 自学使用工具
 

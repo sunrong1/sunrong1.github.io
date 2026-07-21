@@ -3,9 +3,9 @@ title: 王阳明心学 × AI 时代系列（3 篇）
 icon: book
 date: 2026-06-01
 update: 2026-06-01
-categories:
+category:
   - 职业发展
-tags:
+tag:
   - 王阳明
   - 心学
   - AI 时代
@@ -13,7 +13,8 @@ tags:
   - 致良知
 author: Mr.Sun
 star: true
----
+------
+
 
 # 王阳明心学 × AI 时代系列（3 篇）
 

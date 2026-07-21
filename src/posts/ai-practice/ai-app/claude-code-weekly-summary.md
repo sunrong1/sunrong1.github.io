@@ -3,16 +3,17 @@ title: AI Coding 进阶之路：Claude Code 两周实战总结
 icon: rocket
 date: 2026-04-15
 update: 2026-04-15
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Coding
   - Claude Code
   - AI Agent
   - 学习总结
 author: Mr.Sun
 star: true
----
+------
+
 
 ## 前言
 

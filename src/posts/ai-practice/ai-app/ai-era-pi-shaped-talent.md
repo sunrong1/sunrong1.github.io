@@ -3,9 +3,9 @@ title: AI 时代未来宣言：小红书 7 大金句 + π 型人才 + 个人 11 
 icon: rocket
 date: 2026-06-06
 update: 2026-06-06
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI 时代
   - π 型人才
   - Harness 工程师
@@ -13,7 +13,8 @@ tags:
   - 35 岁转型
 author: Mr.Sun
 star: true
----
+------
+
 
 # AI 时代未来宣言：小红书 7 大金句 + π 型人才 + 个人 11 年转型路径
 

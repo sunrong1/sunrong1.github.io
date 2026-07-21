@@ -2,9 +2,9 @@
 icon: chart-bar
 date: 2026-05-06
 update: 2026-05-06
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - AgentBench
   - 评测基准
@@ -12,7 +12,8 @@ tags:
   - 论文解读
 author: Mr.Sun
 star: true
----
+------
+
 
 # AgentBench 论文深度解读：第一个系统化评估 LLM 作为 Agent 能力的基准
 

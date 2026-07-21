@@ -2,7 +2,7 @@
 icon: book
 date: 2026-04-27
 update: 2026-04-27
-tags:
+tag:
   - AI Agent
   - Chain-of-Thought
   - 论文精读
@@ -10,7 +10,8 @@ tags:
   - AI 理论
 author: Mr.Sun
 star: true
----
+------
+
 
 # Chain-of-Thought 论文精读：从引导问题到知识掌握
 

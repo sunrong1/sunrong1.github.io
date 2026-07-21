@@ -2,9 +2,9 @@
 icon: rocket
 date: 2026-05-08
 update: 2026-05-08
-categories:
+category:
   - 学习成长
-tags:
+tag:
   - 职业发展
   - AI Agent
   - 认知升级
@@ -12,7 +12,8 @@ tags:
   - 学习方法
 author: Mr.Sun
 star: true
----
+------
+
 
 # 找到方向的一年：我是如何让人生重新清晰起来的
 

@@ -2,9 +2,9 @@
 icon: puzzle
 date: 2026-05-04
 update: 2026-05-04
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - Self-Discovering
   - 推理结构
@@ -12,7 +12,8 @@ tags:
   - 论文解读
 author: Mr.Sun
 star: true
----
+------
+
 
 # Self-Discovering 论文深度解读：LLM 自我组合推理结构的突破性方法
 

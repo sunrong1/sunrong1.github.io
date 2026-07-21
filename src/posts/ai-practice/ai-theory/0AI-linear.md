@@ -1,16 +1,17 @@
 ---
 date: 2025-08-14
 updated: 2026-04-06
-categories:
+category:
   - AI
-tags:
+tag:
   - 数学基础
   - 线性代数
   - 微积分
   - 概率论
   - AI工程师
 author: Mr.Sun
----
+------
+
 
 # AI 数学基础：程序员需要掌握的数学知识
 

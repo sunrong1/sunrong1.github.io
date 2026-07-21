@@ -2,16 +2,17 @@
 icon: book-open
 date: 2026-05-10
 update: 2026-05-10
-categories:
+category:
   - 育儿
-tags:
+tag:
   - STEM
   - 科学课程
   - 6岁
   - 资源推荐
   - 少儿编程
 author: Mr.Sun
----
+------
+
 
 # 沐沐的 STEM 学习资源宝库：6个月课程规划 + 优质资源推荐
 

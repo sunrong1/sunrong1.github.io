@@ -1,13 +1,14 @@
 ---
 date: 2026-04-17
-tags:
+tag:
   - AI Agent
   - 软件架构
   - Harness Engineering
   - AI 转型
   - 技术洞察
 author: Mr.Sun
----
+------
+
 
 # AI 时代的软件架构变革：从"计算机"到"智能体"
 

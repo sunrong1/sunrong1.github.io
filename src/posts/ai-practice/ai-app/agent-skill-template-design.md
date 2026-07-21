@@ -1,15 +1,16 @@
 ---
 date: 2026-03-28
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - Skill 开发
   - 环境运维
   - MCP
   - OpenClaw
 author: Mr.Sun
----
+------
+
 
 # AI Agent 时代的环境运维 Skill 模板设计
 

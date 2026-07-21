@@ -3,9 +3,9 @@ title: 学习操作系统升级 — 5 Agent 协作 + 周分级思维 + 极简哲
 icon: 🎯
 date: 2026-07-01
 updated: 2026-07-01
-categories:
+category:
   - 学习方法
-tags:
+tag:
   - 元认知
   - 多 Agent
   - 学习系统
@@ -13,7 +13,8 @@ tags:
 cover: https://sunrong1.github.io/assets/learning-os-5-agent.png
 author: Mr.Sun
 star: true
----
+------
+
 
 # 学习操作系统升级 — 5 Agent 协作 + 周分级思维 + 极简哲学
 

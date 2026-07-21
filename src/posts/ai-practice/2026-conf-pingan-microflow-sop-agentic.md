@@ -3,9 +3,9 @@ title: 平安人寿：微流程 SOP + Agentic 金融快捷服务（13 个金句 
 icon: bank
 date: 2026-06-06
 update: 2026-06-06
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - 会议笔记
   - 微流程 SOP
   - 工程化原则
@@ -13,7 +13,8 @@ tags:
   - 知识图谱
 author: Mr.Sun
 star: true
----
+------
+
 
 # 平安人寿：微流程 SOP + Agentic 金融快捷服务（13 个金句 + 完整框架）
 

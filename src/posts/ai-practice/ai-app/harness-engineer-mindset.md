@@ -3,9 +3,9 @@ title: AI Native 工程师转型：Harness 思维、Karpathy 模式完整指南
 icon: user-tie
 date: 2026-06-05
 update: 2026-06-05
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Native
   - Harness 工程师
   - 工程师转型
@@ -13,7 +13,8 @@ tags:
   - 团队管理
 author: Mr.Sun
 star: true
----
+------
+
 
 # AI Native 工程师转型：Harness 思维、Karpathy 模式完整指南
 

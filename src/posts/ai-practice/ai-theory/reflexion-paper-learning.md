@@ -2,9 +2,9 @@
 icon: brain
 date: 2026-05-11
 update: 2026-05-20
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - 论文解读
   - Reflexion
@@ -12,7 +12,8 @@ tags:
   - LLM
 author: Mr.Sun
 star: true
----
+------
+
 
 # Reflexion 论文深度解读：用语言代替梯度，让Agent学会自我反思
 

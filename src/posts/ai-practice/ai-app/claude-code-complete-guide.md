@@ -1,14 +1,15 @@
 ---
 date: 2026-04-03
 update: 2026-04-03
-tags:
+tag:
   - Claude Code
   - AI 编程
   - 工具使用
   - AI Agent
 
 author: Mr.Sun
----
+------
+
 
 # Claude Code 完全指南：从入门到精通
 

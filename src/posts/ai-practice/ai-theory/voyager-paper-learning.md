@@ -2,9 +2,9 @@
 icon: rocket
 date: 2026-05-01
 update: 2026-05-01
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - Voyager
   - 终身学习
@@ -12,7 +12,8 @@ tags:
   - Embodied Agent
 author: Mr.Sun
 star: true
----
+------
+
 
 # Voyager 论文精读：MIT+NVIDIA 的具身 Agent 终身学习框架
 

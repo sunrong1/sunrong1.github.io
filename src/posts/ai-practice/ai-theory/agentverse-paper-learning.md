@@ -2,9 +2,9 @@
 icon: users
 date: 2026-04-28
 update: 2026-05-01
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - Multi-Agent
   - AgentVerse
@@ -12,7 +12,8 @@ tags:
   - 清华大学
 author: Mr.Sun
 star: true
----
+------
+
 
 # AgentVerse 论文精读：清华+微软的多Agent分层协作框架
 

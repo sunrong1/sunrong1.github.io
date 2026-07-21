@@ -3,15 +3,16 @@ title: 我的 AI Agent 学习之路：从概念到实践
 icon: map-signs
 date: 2026-04-18
 update: 2026-04-18
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - 学习笔记
   - 实践分享
 author: Mr.Sun
 star: true
----
+------
+
 
 ## 背景
 

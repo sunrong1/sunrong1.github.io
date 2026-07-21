@@ -2,9 +2,9 @@
 icon: brain
 date: 2026-04-25
 update: 2026-04-25
-categories:
+category:
   - 开发
-tags:
+tag:
   - DDD
   - 能力提升
   - 微服务
@@ -12,7 +12,8 @@ tags:
 star: true
 
 author: Mr.Sun
----
+------
+
 
 # DDD 能力提升与实践建议：结合微服务与 AI 的探索
 

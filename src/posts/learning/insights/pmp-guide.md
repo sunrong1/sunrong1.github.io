@@ -1,7 +1,7 @@
 ---
 icon: certificate
 date: 2026-03-25
-tags:
+tag:
   - PMP
   - 项目管理
   - 职业认证
@@ -10,7 +10,8 @@ star: true
 
 author: Mr.Sun
 public-safe: true
----
+------
+
 
 # PMP 项目管理专业人士认证指南
 

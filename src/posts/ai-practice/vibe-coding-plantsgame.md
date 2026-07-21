@@ -3,9 +3,9 @@ title: Vibe Coding 实战：如何用 AI 工具高效迭代一个完整的塔防
 icon: rocket
 date: 2026-05-28
 update: 2026-06-18
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - Vibe Coding
   - AI Coding
   - 游戏开发
@@ -15,7 +15,8 @@ tags:
   - 重构实战
 author: Mr.Sun
 star: true
----
+------
+
 
 # Vibe Coding 实战：如何用 AI 工具高效迭代一个完整的塔防游戏（v2）
 

@@ -3,9 +3,9 @@ title: 我的 Dev 之路
 icon: code
 date: 2025-07-14
 update: 2026-05-20
-categories:
+category:
   - 生活
-tags:
+tag:
   - 博客
   - 技术分享
   - 成长
@@ -13,7 +13,8 @@ tags:
 author: Mr.Sun
 star: true
 sticky: true
----
+------
+
 
 # 我的 Dev 之路
 

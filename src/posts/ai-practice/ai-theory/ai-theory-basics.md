@@ -2,7 +2,7 @@
 icon: book
 date: 2026-04-03
 update: 2026-04-03
-tags:
+tag:
   - AI基础
   - 机器学习
   - 深度学习
@@ -11,7 +11,8 @@ tags:
 star: true
 
 author: Mr.Sun
----
+------
+
 
 # AI 理论与基础知识完全指南
 

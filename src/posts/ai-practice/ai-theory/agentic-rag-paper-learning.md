@@ -2,9 +2,9 @@
 icon: search
 date: 2026-05-04
 update: 2026-05-04
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - Agentic RAG
   - RAG
@@ -12,7 +12,8 @@ tags:
   - 知识管理
 author: Mr.Sun
 star: true
----
+------
+
 
 # Agentic RAG 深度解读：检索增强与 Agent 能力的深度结合
 

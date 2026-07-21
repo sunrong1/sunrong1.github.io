@@ -3,14 +3,15 @@ title: AI Agent 论文系列：从 ReAct 到 AgentBench
 icon: book
 date: 2026-06-01
 update: 2026-06-01
-categories:
+category:
   - AI 实践
-tags:
+tag:
   - AI Agent
   - 论文学习
   - 系列索引
 author: Mr.Sun
----
+------
+
 
 # AI Agent 论文系列（11 篇）
 

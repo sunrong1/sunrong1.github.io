@@ -3,9 +3,9 @@ title: 驭龙少年：AI 时代的致良知之路
 icon: user
 date: 2026-05-21
 update: 2026-05-21
-categories:
+category:
   - 职业发展
-tags:
+tag:
   - AI 时代
   - 个人成长
   - 王阳明
@@ -13,7 +13,8 @@ tags:
   - 致良知
 author: Mr.Sun
 star: true
----
+------
+
 
 # 驭龙少年：AI 时代的致良知之路
 

@@ -4,14 +4,15 @@ date: 2018-10-11 22:21:00
 update: 2026-05-05
 category:
   - 数据库
-tags:
+tag:
   - MySQL
   - 数据库基础
   - SQL
   - LeetCode
 star: true
 public-safe: true
----
+------
+
 
 # MySQL 必知必会：核心知识点与 LeetCode 实战速查
 

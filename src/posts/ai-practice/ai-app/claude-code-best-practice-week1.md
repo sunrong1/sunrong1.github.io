@@ -2,13 +2,14 @@
 date: "2026-04-04"
 category: "03-learning"
 subCategory: "ai-tools"
-tags:
+tag:
   - Claude Code
   - AI编程工具
   - Agent开发
   - 学习笔记
 description: "系统学习 Claude Code 最佳实践项目，第一周聚焦核心概念：Subagents、Commands、Skills 和 Memory"
----
+------
+
 
 # Claude Code 最佳实践学习笔记：第一周
 

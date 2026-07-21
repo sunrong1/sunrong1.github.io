@@ -1,14 +1,15 @@
 ---
 date: 2025-09-01
-categories:
+category:
   - 规划
-tags:
+tag:
   - 规划与洞察
   - 学习方法
   - 个人成长
 author: Mr.Sun
 star: 10
----
+------
+
 
 # 规划基础：如何制定可执行的人生规划
 

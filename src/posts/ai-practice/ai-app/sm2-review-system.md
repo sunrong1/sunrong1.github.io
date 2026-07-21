@@ -250,7 +250,7 @@ DATA_FILE = Path("words/review_data.json")
 
 - 📂 **完整代码**：[github.com/sunrong1/agentscope · tools/review.py](https://github.com/sunrong1/agentscope/blob/learning-journal/tools/review.py)
 - 📖 **使用文档**：[tools/README.md](https://github.com/sunrong1/agentscope/blob/learning-journal/tools/README.md)
-- 🎯 **W1 学习总结**：[W1: AgentScope 架构全景 + 核心类图](https://sunrong.site/posts/ai-practice/agentscope-w1-architecture.html)
+- 🎯 **W1 学习总结**：[W1: AgentScope 架构全景 + 核心类图](https://sunrong.site/posts/ai-practice/ai-app/agentscope-w1-architecture.html)
 - 📋 **公开承诺**：[LEARNING.md](https://github.com/sunrong1/agentscope/blob/learning-journal/LEARNING.md)
 - 🧠 **SM-2 原始论文**：P.A. Wozniak, *Optimization of repetition spacing in the practice of learning* (1990)
 
@@ -265,3 +265,13 @@ DATA_FILE = Path("words/review_data.json")
 > 跟学习 AgentScope 一样，**与其焦虑，不如动手**。420 行代码 = 一个能跑一辈子的复习工具。
 >
 > —— Mr.Sun, 2026-07-19
+
+---
+
+## 📚 AgentScope 8 周学习系列
+
+- 🎯 **[W1：架构全景 + 核心类图](https://sunrong.site/posts/ai-practice/ai-app/agentscope-w1-architecture.html)** — 单一 Agent 类 + 6 原语 MessageBus + 双层洋葱
+- 📝 [W2：真学习复盘](https://sunrong.site/posts/ai-practice/ai-app/agentscope-w2-real-learning.html) — 从伪产出到真读代码 5 天记录
+- 🔧 本篇：SM-2 复习系统（配套工具）
+
+**完整承诺**：[LEARNING.md](https://github.com/sunrong1/agentscope/blob/learning-journal/LEARNING.md) · 持续更新到 9-12
