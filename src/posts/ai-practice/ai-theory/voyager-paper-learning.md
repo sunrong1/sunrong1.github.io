@@ -2,9 +2,9 @@
 icon: rocket
 date: 2026-05-01
 update: 2026-05-01
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - AI Agent
   - Voyager
   - 终身学习
@@ -12,9 +12,7 @@ tag:
   - Embodied Agent
 author: Mr.Sun
 star: true
-------
-
-
+---***
 # Voyager 论文精读：MIT+NVIDIA 的具身 Agent 终身学习框架
 
 > Voyager: An Open-Ended Embodied Agent with Large Language Models
@@ -39,8 +37,7 @@ star: true
 | 开源 | https://github.com/MineDojo/Voyager |
 | 核心贡献 | ① 基于 LLM 的终身学习具身 Agent ② 三层组件架构 ③ Minecraft 环境中持续技能习得 |
 
----
-
+***
 ## 二、核心贡献
 
 ### 2.1 问题背景
@@ -158,8 +155,7 @@ class Curriculum:
 - **难度自适应**：根据 Agent 表现动态调整任务难度
 - **循序渐进**：先学简单技能，再组合成复杂技能
 
----
-
+***
 ## 三、实验验证
 
 ### 3.1 测试环境
@@ -179,8 +175,7 @@ class Curriculum:
 
 > Voyager 是第一个在 Minecraft 中展现**终身学习能力**的 Agent 系统。
 
----
-
+***
 ## 四、我的核心理解
 
 ### 4.1 为什么三层架构有效
@@ -228,8 +223,7 @@ class Curriculum:
 | AgentVerse | 动态角色 + 分层协作 | 开放多步任务 |
 | **Voyager** | **技能库 + 课程 + 终身学习** | **超长 horizon 任务** |
 
----
-
+***
 ## 五、实战思考
 
 ### 5.1 在自动化测试平台中的应用
@@ -278,8 +272,7 @@ class TestVoyager:
 2. **课程管理** - 按难度组织学习路径：单元测试 → 集成测试 → E2E 测试
 3. **提示工程基础设施** - 把领域知识编码进提示，而非让模型猜
 
----
-
+***
 ## 六、架构演进总结
 
 ### AI Agent 架构演进：从单步推理到终身学习
@@ -302,8 +295,7 @@ class TestVoyager:
 **这条演进路径指向的方向：**
 > 未来的 Agent 系统 = 强大的基础模型 + 高效的记忆系统 + 智能的学习机制
 
----
-
+***
 ## 七、总结
 
 | 维度 | Voyager |
@@ -315,8 +307,7 @@ class TestVoyager:
 
 **一句话总结：** Voyager 用"技能库 + 课程管理"解决了 Agent 的遗忘问题，为开放世界中的终身学习 Agent 提供了标杆架构。
 
----
-
+***
 **相关论文：**
 - ReAct 循环：[《ReAct 论文精读》](../ai-theory/react-paper-learning)
 - Toolformer：[《Toolformer 论文精读》](../ai-theory/toolformer-paper-learning)

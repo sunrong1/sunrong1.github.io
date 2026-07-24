@@ -1,23 +1,20 @@
 ---
 date: 2026-04-18
-tag:
+tags:
   - AI Agent
   - 培训
   - AgentScope
   - MCP
   - HERO平台
 author: Mr.Sun
-------
-
-
+---***
 # AI Agent 培训大纲：核心实现与实战
 
 **培训时长：** 60 分钟  
 **形式：** 50% 知识讲解 + 50% 实战演示  
 **前提：** 听众已了解 AI Agent 基本概念
 
----
-
+***
 ## 📋 整体时间分配
 
 | 时间 | 内容 | 形式 |
@@ -28,8 +25,7 @@ author: Mr.Sun
 | 0:40 ~ 1:05 | 实战演示 | 演示 |
 | 1:05 ~ 1:10 | 总结 + 提问 | 讨论 |
 
----
-
+***
 ## 🔥 第一部分：核心概念深入（0:05 ~ 0:35）
 
 ### 【0:05-0:12】主题一：Agent Loop（主循环逻辑）
@@ -96,8 +92,7 @@ class AgentLoop:
         return "任务超时"
 ```
 
----
-
+***
 ### 【0:12-0:18】主题二：Hook（钩子机制）
 
 **核心知识点：**
@@ -178,8 +173,7 @@ def validate_params(context):
 hooks.register('before_tool', validate_params)
 ```
 
----
-
+***
 ### 【0:18-0:25】主题三：Memory（短期/长期记忆）
 
 **核心知识点：**
@@ -285,8 +279,7 @@ memory.save_to_long_term(
 )
 ```
 
----
-
+***
 ### 【0:25-0:28】主题四：Planning（任务规划）
 
 **核心知识点：**
@@ -382,8 +375,7 @@ def plan_hero_task(user_request):
     return planning_react(task, hero_tools)
 ```
 
----
-
+***
 ### 【0:28-0:31】主题五：MCP（Model Context Protocol）
 
 **核心知识点：**
@@ -487,8 +479,7 @@ async def agent_query_hero(user_request):
     return result
 ```
 
----
-
+***
 ### 【0:31-0:35】主题六：Harness Engineering（工程化编排）
 
 **核心知识点：**
@@ -545,8 +536,7 @@ async def agent_query_hero(user_request):
 >
 > **这就是为什么我们说："LLM 是大脑，Harness 是神经系统"**
 
----
-
+***
 ## 🎯 第二部分：实战演示（0:40 ~ 1:05）
 
 ### 【0:40-0:42】演示环境说明
@@ -561,8 +551,7 @@ async def agent_query_hero(user_request):
 > - 已实现：MCP Server 封装、基础 Agent Loop
 > - 开发中：Memory 组件、Planning 组件
 
----
-
+***
 ### 【0:42-0:48】演示一：基础 Agent Loop + MCP 交互
 
 **代码：**
@@ -647,8 +636,7 @@ Agent 输出: 您当前的环境配置包含：
 - PSI 开关: PSI-1, PSI-2
 ```
 
----
-
+***
 ### 【0:48-0:54】演示二：Memory 组件（对话历史存储）
 
 **代码：**
@@ -778,8 +766,7 @@ print("（Agent 可以基于这个上下文理解对话连贯性）")
 （Agent 可以基于这个上下文理解对话连贯性）
 ```
 
----
-
+***
 ### 【0:54-1:00】演示三：端到端场景（自然语言 → 完成任务）
 
 **完整场景代码：**
@@ -883,8 +870,7 @@ print(response)
 3. 已将 BBU-A 地址从 192.168.1.1 修改为 192.168.2.100
 ```
 
----
-
+***
 ### 【1:00-1:05】演示四：展示当前开发中的 Planning 组件
 
 **代码（设计思路）：**
@@ -985,8 +971,7 @@ Planning 组件演示
          参数: {'bbu_id': 'BBU-A', 'new_address': '192.168.2.100'}
 ```
 
----
-
+***
 ## 📝 总结（1:05 ~ 1:10）
 
 ### 核心要点回顾
@@ -1010,8 +995,7 @@ Planning 组件演示
 | Planning | 🔄 开发中 | 实现 ReAct 模式 |
 | Hooks | 📋 计划中 | 下周开始 |
 
----
-
+***
 ## ❓ 提问环节
 
 **讨论问题：**
@@ -1020,18 +1004,15 @@ Planning 组件演示
 2. 对 Agent 的哪些能力最感兴趣？
 3. 对当前实现有什么建议？
 
----
-
+***
 ## 📚 参考资源
 
 - AgentScope 官方文档
 - Claude Code 源码：learn-claude-code
 - 李宏毅 AI Agent 课程
 
----
-
+***
 *培训材料版本：v1.0 | 2026-04-18*
 
----
-
+***
 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

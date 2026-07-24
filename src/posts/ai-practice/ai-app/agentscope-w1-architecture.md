@@ -2,9 +2,9 @@
 icon: sitemap
 date: 2026-07-18
 update: 2026-07-18
-category:
+categories:
   - AI 应用
-tag:
+tags:
   - AgentScope
   - MultiAgent
   - 架构设计
@@ -202,15 +202,13 @@ async def on_tool_call(
 - 🏛️ 官方仓库：[agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope)
 - 📖 官方文档：[docs.agentscope.io](https://docs.agentscope.io/)
 
----
-
+***
 > 觉得有用？欢迎在 [issue](https://github.com/sunrong1/agentscope/issues) 留言。
 > 想一起学 AgentScope 8 周？留言，咱互相监督。
 >
 > —— Mr.Sun, 2026-07-18
 
----
-
+***
 ## 📚 AgentScope 8 周学习系列
 
 - 🎯 **本篇：W1 架构全景 + 核心类图**（你正在读）

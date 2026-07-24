@@ -3,24 +3,21 @@ title: AI Coding 进阶之路：Claude Code 两周实战总结
 icon: rocket
 date: 2026-04-15
 update: 2026-04-15
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - AI Coding
   - Claude Code
   - AI Agent
   - 学习总结
 author: Mr.Sun
 star: true
-------
-
-
+---***
 ## 前言
 
 过去两周，我通过 Claude Code 系统学习了 AI Agent 的核心知识体系。从 Agent Loop 到 Memory 管理，从 Hooks 机制到 MCP 协议，每天都在进步。这篇文章整理这两周的学习历程和核心收获。
 
----
-
+***
 ## 📅 学习时间线
 
 ### 第一周（04-06 ~ 04-12）：打基础
@@ -40,8 +37,7 @@ star: true
 | 04-14 | Claude Code day7_hooks + day8_memory + 全知识点复习 |
 | 04-15 | MCP 基础知识 + 旅游规划开源项目试用 |
 
----
-
+***
 ## 📚 核心知识点
 
 ### 1. Agent Loop（Agent 循环）
@@ -62,8 +58,7 @@ star: true
 
 **本质：** LLM 是大脑，Agent 是手，工具是工具箱，循环是血液循环。
 
----
-
+***
 ### 2. Context Management（上下文管理）
 
 **核心问题：** Token 限制下如何管理上下文
@@ -75,8 +70,7 @@ star: true
 | 滑动窗口 | 固定大小缓冲区，保留最近 N 条 |
 | 摘要 | 压缩成摘要，保留关键信息 |
 
----
-
+***
 ### 3. Planning（规划）
 
 **两种模式：**
@@ -88,8 +82,7 @@ star: true
 
 **类比：** 增量规划 = 迭代开发，计划修正 = 敏捷变更
 
----
-
+***
 ### 4. Hooks（钩子）
 
 **核心思想：** 在不修改核心代码的情况下，插入自定义逻辑
@@ -109,8 +102,7 @@ star: true
 | 重量 | 轻量（单点） | 重型（完整模块） |
 | 典型用途 | 日志、校验 | 微信、飞书 |
 
----
-
+***
 ### 5. Memory（记忆）
 
 **核心问题：** Agent 如何跨会话记住信息？
@@ -126,8 +118,7 @@ star: true
 - **读取：** 用户输入时，加载到上下文
 - **写入：** 执行过程中，重要信息持久化
 
----
-
+***
 ### 6. MCP 协议
 
 **核心问题：** 如何让 Agent 调用外部服务？
@@ -147,8 +138,7 @@ Agent → MCP Client → MCP Server → 外部服务
 | 调用方式 | 直接函数调用 | HTTP/WebSocket |
 | 扩展性 | 低 | 高 |
 
----
-
+***
 ## 💻 实战练习
 
 ### day3_todo - Todo CLI 工具
@@ -186,8 +176,7 @@ class Memory:
         return "【记忆】" + " | ".join([f"{k}: {v}" for k, v in self.data.items()])
 ```
 
----
-
+***
 ## 🔍 知识弱点分析
 
 通过这两周的学习，发现还有 4 个薄弱点需要加强：
@@ -199,8 +188,7 @@ class Memory:
 | 3 | Tool | 参数校验失败处理 |
 | 4 | Memory | 向量检索 / RAG |
 
----
-
+***
 ## 💡 核心感悟
 
 ### 1. 学习方法论
@@ -223,8 +211,7 @@ class Memory:
 
 把学习成果组件化，可以复用、组合、优化。
 
----
-
+***
 ## 📊 学习进度
 
 ### Week 1（04-06 ~ 04-12）
@@ -247,8 +234,7 @@ class Memory:
 | 知识点复习 | ✅ | 全知识点复习完成 |
 | MCP 基础 | ✅ | 协议原理和架构 |
 
----
-
+***
 ## 🔗 工作中的实践
 
 ### MCP Server 架构决策
@@ -275,19 +261,16 @@ class Memory:
 - 测试分析 Skill
 - 环境管理 Skill
 
----
-
+***
 ## 结语
 
 AI Agent 的学习是一个循序渐进的过程。从 Agent Loop 到 Context Management，从 Hooks 到 Memory，从 Planning 到 MCP，每一个概念都是构建复杂 AI 系统的基石。
 
 **学习路上，陪伴很重要。** 有 AI 助手的持续记录和反馈，学习变得更高效、更有方向。
 
----
-
+***
 *如果你也在学习 AI Agent，欢迎交流讨论。*
 
 
----
-
+***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

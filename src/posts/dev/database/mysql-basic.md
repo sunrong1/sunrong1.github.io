@@ -2,18 +2,16 @@
 icon: database
 date: 2018-10-11 22:21:00
 update: 2026-05-05
-category:
+categories:
   - 数据库
-tag:
+tags:
   - MySQL
   - 数据库基础
   - SQL
   - LeetCode
 star: true
 public-safe: true
-------
-
-
+---***
 # MySQL 必知必会：核心知识点与 LeetCode 实战速查
 
 > MySQL 基础速查手册，涵盖常用 SQL 语法、核心知识点、阿里开发规范，以及 LeetCode 题目精解。适合快速回顾和面试准备。
@@ -30,8 +28,7 @@ public-safe: true
 | [中等 LeetCode](#中等难度) | 5 题 | ⭐⭐ |
 | [困难 LeetCode](#困难难度) | 3 题 | ⭐⭐⭐ |
 
----
-
+***
 ## 📚 核心知识速查
 
 ### 1. 索引基础
@@ -103,8 +100,7 @@ EXPLAIN SELECT * FROM table_name WHERE ...;
 
 **记忆口诀：** From → Join → On → Where → Group By → Having → Select → Distinct → Order By → Limit
 
----
-
+***
 ## 🔧 常用工具
 
 ### 开发工具
@@ -132,8 +128,7 @@ docker run -p 3306:3306 --name mysql5.7 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5
 | 新开 SQL 编辑器 | `Ctrl + T` |
 | 查看执行解释 | `Ctrl + Alt + X` |
 
----
-
+***
 ## 📖 SQL 核心知识点
 
 ### 字符串处理函数
@@ -207,12 +202,10 @@ SELECT * FROM employee WHERE name REGEXP 's[1-3]';
 SELECT * FROM employee WHERE name REGEXP '\\.';
 ```
 
----
-
+***
 ## 📝 LeetCode 题目精解
 
----
-
+***
 ### 简单难度
 
 #### 1. 上升的温度
@@ -235,8 +228,7 @@ WHERE w1.Temperature > w2.Temperature
   AND DATEDIFF(w1.RecordDate, w2.RecordDate) = 1;
 ```
 
----
-
+***
 #### 2. 超过5名学生的课
 
 > 找出有至少5名学生选修的课程。
@@ -256,8 +248,7 @@ GROUP BY class
 HAVING COUNT(DISTINCT student) >= 5;
 ```
 
----
-
+***
 #### 3. 交换工资
 
 > 交换表中男女性别数据。
@@ -274,8 +265,7 @@ UPDATE salary
 SET sex = IF(sex = 'm', 'f', 'm');
 ```
 
----
-
+***
 #### 4. 超过经理收入的员工
 
 > 查找收入超过经理的员工姓名。
@@ -296,8 +286,7 @@ WHERE e1.ManagerId = e2.id
   AND e1.salary > e2.salary;
 ```
 
----
-
+***
 #### 5. 删除重复的电子邮箱
 
 > 删除重复邮箱，保留 Id 最小的那条。
@@ -317,8 +306,7 @@ WHERE p1.Email = p2.Email
   AND p1.Id > p2.Id;
 ```
 
----
-
+***
 #### 6. 查找重复的电子邮箱
 
 **知识点：** GROUP BY + HAVING / 派生表
@@ -346,8 +334,7 @@ JOIN Person p2 ON p1.Email = p2.Email
 WHERE p1.Id <> p2.Id;
 ```
 
----
-
+***
 #### 7. 第二高的薪水
 
 **知识点：** LIMIT + OFFSET / IFNULL + DISTINCT
@@ -369,8 +356,7 @@ SELECT IFNULL(
 ) AS SecondHighestSalary;
 ```
 
----
-
+***
 ### 中等难度
 
 #### 1. 换座位
@@ -389,16 +375,14 @@ FROM seat
 ORDER BY id;
 ```
 
----
-
+***
 #### 2. 分数排名
 
 > 分数相同则 Rank 相同。
 
 **知识点：** 变量 / JOIN（待补充）
 
----
-
+***
 #### 3. 连续出现的数字
 
 > 找出至少连续出现3次的数字。
@@ -413,8 +397,7 @@ JOIN Logs AS m3 ON m2.id = m3.id - 1
 WHERE m1.Num = m2.Num AND m1.Num = m3.Num;
 ```
 
----
-
+***
 #### 4. 第N高的薪水（函数）
 
 > 创建一个函数返回第 N 高的薪水。
@@ -432,8 +415,7 @@ BEGIN
 END;
 ```
 
----
-
+***
 #### 5. 部门工资最高的员工
 
 **知识点：** IN + 子查询 + JOIN
@@ -452,8 +434,7 @@ WHERE e.Salary IN (
 );
 ```
 
----
-
+***
 ### 困难难度
 
 #### 1. 体育馆的人流量
@@ -474,8 +455,7 @@ WHERE s1.people >= 100 AND s2.people >= 100 AND s3.people >= 100
 ORDER BY s1.id;
 ```
 
----
-
+***
 #### 2. 行程和用户
 
 > 统计 2013-10-01 至 2013-10-03 非禁止用户的取消率。
@@ -497,8 +477,7 @@ AND Request_at BETWEEN '2013-10-01' AND '2013-10-03'
 GROUP BY Request_at;
 ```
 
----
-
+***
 #### 3. 部门工资前三高的员工
 
 **知识点：** COUNT(DISTINCT) + 自连接
@@ -520,8 +499,7 @@ AND d.Name IS NOT NULL
 ORDER BY d.Name, e1.Salary DESC;
 ```
 
----
-
+***
 ## 📚 学习资源
 
 | 资源 | 说明 |
@@ -531,8 +509,7 @@ ORDER BY d.Name, e1.Salary DESC;
 | LeetCode 数据库练习 | 边学边练 |
 | Ben Forta《MySQL 必知必会》| 入门经典教材 |
 
----
-
+***
 ## 💡 面试高频考点
 
 | 考点 | 频率 | 说明 |
@@ -545,6 +522,5 @@ ORDER BY d.Name, e1.Salary DESC;
 | 子查询与联表 | ⭐⭐⭐⭐ | 性能对比 |
 | NULL 处理 | ⭐⭐⭐ | IFNULL、IS NULL |
 
----
-
+***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

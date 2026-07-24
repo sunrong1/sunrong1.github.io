@@ -1,18 +1,16 @@
 ---
 date: 2025-08-14
 updated: 2026-04-06
-category:
+categories:
   - AI
-tag:
+tags:
   - 数学基础
   - 线性代数
   - 微积分
   - 概率论
   - AI工程师
 author: Mr.Sun
-------
-
-
+---***
 # AI 数学基础：程序员需要掌握的数学知识
 
 > 数学是造物主的语言，一个数学公式的表达能力，是我用语言无法企及的。作为程序员，掌握数学能帮助我们理解 AI 的本质。
@@ -44,8 +42,7 @@ author: Mr.Sun
 | **信息论** | ⭐⭐⭐⭐ | 交叉熵损失、困惑度、BERT/ GPT |
 | **图论** | ⭐⭐⭐ | 知识图谱、社交网络、图神经网络 |
 
----
-
+***
 ## 🎯 线性代数：AI 的核心语言
 
 ### 为什么线性代数重要
@@ -233,8 +230,7 @@ class LoRALinear(nn.Module):
         return F.linear(x, self.weight) + (x @ self.A @ self.B) * (self.alpha / self.rank)
 ```
 
----
-
+***
 ## 📐 微积分：优化的基础
 
 ### 为什么需要微积分
@@ -327,8 +323,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
 # LLM 微调常用学习率: 1e-5 ~ 5e-5
 ```
 
----
-
+***
 ## 🎲 概率论：不确定性的数学
 
 ### 为什么需要概率
@@ -424,8 +419,7 @@ kl_loss = F.kl_div(
 ) * (temperature ** 2)
 ```
 
----
-
+***
 ## 📊 数理统计：从数据中学习
 
 ### 核心概念
@@ -504,8 +498,7 @@ bleu = sentence_bleu(reference, candidate)
 rouge = rouge_score.rouge_n(reference, candidate, n=1)
 ```
 
----
-
+***
 ## 🔗 图论：关系的数学
 
 ### 在 AI 中的应用
@@ -548,8 +541,7 @@ class SAGEConv(nn.Module):
         return F.relu(self.linear(out))
 ```
 
----
-
+***
 ## 📚 学习资源推荐
 
 ### 在线课程
@@ -581,8 +573,7 @@ class SAGEConv(nn.Module):
 - **Weights & Biases**：训练监控
 - **LangChain**：LLM 应用开发框架
 
----
-
+***
 ## 💡 学习建议
 
 ### 1. 学习路线图
@@ -651,8 +642,7 @@ AI 领域发展很快（尤其是 LLM），保持学习节奏：
 - 复现开源项目
 - 参与 Kaggle 竞赛
 
----
-
+***
 ## 📝 总结
 
 **数学对于 AI 程序员的重要性：**
@@ -679,16 +669,14 @@ AI 领域发展很快（尤其是 LLM），保持学习节奏：
 - 持续学习，不要急于求成
 - 享受数学之美
 
----
-
+***
 **共勉！** 🌿
 
 > "数学是造物主的语言"
 >
 > 掌握这门语言，我们能更好地理解世界，创造更智能的系统。
 
----
-
+***
 ## 🔗 参考链接
 
 - [3Blue1Brown - 线性代数本质](https://www.bilibili.com/video/av19128521/)
@@ -699,6 +687,5 @@ AI 领域发展很快（尤其是 LLM），保持学习节奏：
 - [Stanford CS224N - Deep Learning for NLP](https://web.stanford.edu/class/cs224n/)
 
 
----
-
+***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

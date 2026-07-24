@@ -2,9 +2,9 @@
 icon: code
 date: 2026-04-29
 update: 2026-05-01
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - AI Agent
   - MetaGPT
   - Multi-Agent
@@ -12,9 +12,7 @@ tag:
   - 软件工程
 author: Mr.Sun
 star: true
-------
-
-
+---***
 # MetaGPT 论文精读：ICLR 2024 Oral，角色化流水线式多Agent协作
 
 > MetaGPT: Meta Programming for Multi-Agent Framework
@@ -37,8 +35,7 @@ star: true
 | 开源 | GitHub: MetaGPT 项目 |
 | 核心贡献 | 角色化流水线式多 Agent 协作，将人类软件工程 SOP 映射到多 Agent 系统 |
 
----
-
+***
 ## 二、核心贡献
 
 ### 2.1 问题背景
@@ -99,8 +96,7 @@ MetaGPT 的关键创新：**让 Agent 用结构化消息通信**
 
 这样下一级 Agent 拿到的是**结构化的、明确的输入**，不需要"猜测"上一级 Agent 说了什么。
 
----
-
+***
 ## 三、实验验证
 
 ### 3.1 测试场景
@@ -115,8 +111,7 @@ MetaGPT 的关键创新：**让 Agent 用结构化消息通信**
 
 > MetaGPT 在软件开发任务上显著优于单 Agent 和其他多 Agent 方案，证明了**角色化 + 流水线 + 结构化通信**的有效性。
 
----
-
+***
 ## 四、我的核心理解
 
 ### 4.1 为什么 MetaGPT 效果好
@@ -154,8 +149,7 @@ MetaGPT 的关键创新：**让 Agent 用结构化消息通信**
 - MetaGPT 适合"有标准答案"的任务（代码生成等）
 - AgentVerse 适合"需要探索"的任务
 
----
-
+***
 ## 五、实战思考
 
 ### 5.1 在自动化测试平台中的应用
@@ -190,8 +184,7 @@ test_pipeline = [
 2. **结构化通信 > 自然语言** → 减少 Agent 之间的理解偏差
 3. **先固化再优化** → 先跑通流水线，再考虑动态调整
 
----
-
+***
 ## 六、架构演进视角
 
 ### 从简单到复杂的演进
@@ -205,8 +198,7 @@ test_pipeline = [
 
 **复杂度递进的本质：** 任务越开放、horizon 越长 → 需要越强的"记忆 + 学习 + 复用"能力
 
----
-
+***
 ## 七、总结
 
 | 维度 | MetaGPT |
@@ -218,8 +210,7 @@ test_pipeline = [
 
 **一句话总结：** MetaGPT 用工程化思维解决 Agent 协作问题，证明了"约束 > 自由"在多 Agent 系统中的价值。
 
----
-
+***
 **相关论文：**
 - ReAct 循环：[《ReAct 论文精读》](../ai-theory/react-paper-learning)
 - Toolformer：[《Toolformer 论文精读》](../ai-theory/toolformer-paper-learning)

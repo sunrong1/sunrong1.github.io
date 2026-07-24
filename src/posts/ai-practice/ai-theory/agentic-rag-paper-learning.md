@@ -2,9 +2,9 @@
 icon: search
 date: 2026-05-04
 update: 2026-05-04
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - AI Agent
   - Agentic RAG
   - RAG
@@ -12,9 +12,7 @@ tag:
   - 知识管理
 author: Mr.Sun
 star: true
-------
-
-
+---***
 # Agentic RAG 深度解读：检索增强与 Agent 能力的深度结合
 
 > Agentic RAG: Combining Retrieval-Augmented Generation with Agent Capabilities
@@ -57,8 +55,7 @@ Agentic RAG 要解决的核心问题是：
 
 > **如何让 RAG 系统像 Agent 一样，具备规划、判断、迭代和自适应能力？**
 
----
-
+***
 ## 二、核心问题
 
 ### 传统 RAG 的流程与局限
@@ -90,8 +87,7 @@ Agentic RAG 要解决的核心问题是：
 
 > **传统 RAG 是一个"单向管道"——检索到什么就用什么，生成什么就信什么。Agentic RAG 在这个管道上加入了 Agent 的"大脑"，让它能规划、能判断、能迭代。**
 
----
-
+***
 ## 三、Agentic RAG 核心机制
 
 ### 机制一：Query Rewriting（查询改写）
@@ -113,8 +109,7 @@ Agentic RAG 要解决的核心问题是：
 - 用户问题表述不清 → 改写成精准检索词
 - 检索不到结果 → 尝试同义词改写
 
----
-
+***
 ### 机制二：Routing（路由）
 
 > Agent 判断该从哪个知识库、用哪种策略检索
@@ -130,8 +125,7 @@ Agentic RAG 要解决的核心问题是：
 - 用哪种检索策略（向量检索 vs 关键词检索 vs 知识图谱）
 - 是否需要触发特殊工具（计算器、Web 搜索）
 
----
-
+***
 ### 机制三：Iterative Retrieval（迭代式检索）
 
 > 检索结果不满意？Agent 决定重新检索
@@ -148,8 +142,7 @@ Agentic RAG 要解决的核心问题是：
 
 **这就是"迭代优化"——传统 RAG 做不到的。**
 
----
-
+***
 ### 机制四：Tool Calling（工具调用）
 
 > Agent 可以调用多种工具，不只是向量检索
@@ -166,8 +159,7 @@ Agent 可以用：
 
 **Agent 决定什么时候用什么工具。**
 
----
-
+***
 ## 四、Agentic RAG 架构图
 
 ```
@@ -191,8 +183,7 @@ Agent 可以用：
                                          Graph
 ```
 
----
-
+***
 ## 五、多跳检索（Multi-hop Retrieval）
 
 ### 什么是多跳检索
@@ -246,8 +237,7 @@ Agent 可以用：
 
 > **如果回答这个问题需要先知道另一个问题的答案，就需要多跳。**
 
----
-
+***
 ## 六、Agentic RAG vs 传统 RAG 对比
 
 | 维度 | 传统 RAG | Agentic RAG |
@@ -260,8 +250,7 @@ Agent 可以用：
 | 自适应 | 否 | 是 |
 | 工具调用 | 仅向量检索 | 多工具协作 |
 
----
-
+***
 ## 七、与前文的递进关系
 
 ### AI Agent 能力演进
@@ -293,8 +282,7 @@ Agent 可以用：
 | 检索能力 | 一次性检索 | 迭代优化检索 |
 | 知识管理 | 无管理 | Agent 规划+路由 |
 
----
-
+***
 ## 八、知识要点
 
 ### 知识要点 1：Agentic RAG 的 4 个核心能力
@@ -325,8 +313,7 @@ Agent 可以用：
 | "为什么特斯拉选择在得克萨斯州建厂？" | 是 | 原因多元，需多源综合 |
 | "2024年诺贝尔物理学奖得主的主要贡献是什么？" | 是 | 需先确认得主（第一跳），再查贡献（第二跳）|
 
----
-
+***
 ## 九、框架对比总结
 
 ### Naive RAG → Agentic RAG 演进
@@ -346,8 +333,7 @@ Agent 可以用：
 
 > **Agentic RAG = RAG（检索管道）+ Agent（规划/判断/迭代）= 让检索系统拥有"大脑"**
 
----
-
+***
 ## 典型实际应用场景
 
 ### 场景一：企业私域知识库问答
@@ -366,8 +352,7 @@ Agent 可以用：
 
 **价值：** 从"找文档"变成"找答案"，知识获取效率提升 5-10 倍
 
----
-
+***
 ### 场景二：法律/医疗等专业领域问答
 
 **场景描述：** 律师/医生需要从海量判例/文献中检索相关信息
@@ -384,8 +369,7 @@ Agent 可以用：
 
 **价值：** 专业领域信息过载问题的终极解决方案
 
----
-
+***
 ### 场景三：产品售后智能客服
 
 **场景描述：** 用户咨询产品问题，客服需要从产品文档、FAQ、维修记录中找答案
@@ -402,8 +386,7 @@ Agent 可以用：
 
 **价值：** 解决 70% 常见问题，降低人工客服压力
 
----
-
+***
 ### 场景四：代码库智能问答（Code RAG）
 
 **场景描述：** 开发者需要了解某个代码模块的功能、历史、用法
@@ -420,8 +403,7 @@ Agent 可以用：
 
 **价值：** 加速代码审查、知识传承 onboarding
 
----
-
+***
 ## 十、总结
 
 | 维度 | Agentic RAG |
@@ -433,8 +415,7 @@ Agent 可以用：
 
 **一句话总结：** Agentic RAG 在传统 RAG 的检索管道上加入了 Agent 的规划、判断和迭代能力，让检索系统从"被动查资料"变成"主动找答案"。
 
----
-
+***
 **相关论文：**
 - CoT 推理：[《CoT 论文精读》](../ai-theory/chain-of-thought-paper-learning)
 - ReAct 循环：[《ReAct 论文精读》](../ai-theory/react-paper-learning)
@@ -446,6 +427,5 @@ Agent 可以用：
 - Computer Use：[《Computer Use 论文精读》](./computer-use-paper-learning)
 - Self-Discovering：[《Self-Discovering 论文精读》](./self-discovering-paper-learning)
 
----
-
+***
 > 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

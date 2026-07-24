@@ -1,17 +1,15 @@
 ---
 title: iPad 上使用 VSCode 在线编程：code-server + Caddy 反向代理实战
 date: '2026-06-17'
-tag:
+tags:
   - VSCode
   - code-server
   - 远程开发
   - 工具链
   - Caddy
-category:
+categories:
   - AI 实践
-------
-
-
+---***
 ## 背景
 
 每天地铁通勤 2 小时，以前这部分时间基本浪费了——看看文章、刷刷手机，到公司后人已经很累。
@@ -244,8 +242,7 @@ export GH_HOST=https://ghproxy.net/https://github.com
 gh release download v4.124.2 --repo coder/code-server
 ```
 
----
-
+***
 **组合拳优先级**：
 
 | 场景 | 推荐方案 |
@@ -413,9 +410,7 @@ iPad (Edge) → code-server (远程容器) → Code Buddy AI 助手
 
 整个方案成本极低（一台低配云服务器 + 域名），效果接近本地开发体验。
 
----
-
-
+***
 *如果你有更好的远程开发方案，欢迎交流。*
 
 ## 后续用法更新（2026-07-06）
@@ -453,5 +448,4 @@ iPad (Edge) → code-server (远程容器) → Code Buddy AI 助手
 
 > **40 元/月的云服务器 + 14 寸小本 + iPad = 完整"非工作时间 = 工作时间"的双倍杠杆**。
 
----
-
+***

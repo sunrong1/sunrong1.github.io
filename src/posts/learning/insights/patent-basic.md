@@ -1,16 +1,14 @@
 ---
 icon: pen-to-square
 date: 2026-01-23
-tag:
+tags:
   - 专利基础
   - 知识产权
   - 创新
 star: 1
 
 author: Mr.Sun
-------
-
-
+---***
 # 专利基础
 个人专利占总体专利的10%。且80%的专利是非发明专利。
 ## 什么是专利
@@ -128,6 +126,5 @@ author: Mr.Sun
 
 
 
----
-
+***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

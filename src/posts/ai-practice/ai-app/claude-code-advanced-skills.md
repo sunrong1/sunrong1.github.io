@@ -3,9 +3,9 @@ title: AI Agent 高级技能：多 Agent 协作架构设计与实战
 icon: users
 date: 2026-04-24
 update: 2026-04-24
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - AI Agent
   - 多 Agent 协作
   - 架构设计
@@ -13,17 +13,14 @@ tag:
   - 面试总结
 author: Mr.Sun
 star: true
-------
-
-
+---***
 ## 前言
 
 本文是 Claude Code 学习两周实战总结的续篇。在[上篇文章](https://sunrong1.github.io/ai-practice/claude-code/claude-code-weekly-summary/)中，我记录了 Agent Loop、Context Management、Planning、Hooks、Memory 等核心基础知识的学习。
 
 **这篇文章聚焦于 AI Agent 的高级技能核心：多 Agent 协作。** 多 Agent 是现代 AI Agent 系统的主流架构模式，也是面试中高级/专家岗位的必考内容。
 
----
-
+***
 ## 1. 为什么需要多 Agent 协作？
 
 ### 1.1 单一 Agent 的三大局限
@@ -50,8 +47,7 @@ star: true
 | 需要不同专业能力 | 多 Agent 分工 |
 | 需要并行加速 | 多 Agent 并行 |
 
----
-
+***
 ## 2. 多 Agent 协作架构
 
 ### 2.1 核心架构图
@@ -87,8 +83,7 @@ star: true
 | **并行** | 任务1 ∥ 任务2 ∥ 任务3 | max(T1, T2, T3) | 无依赖、可独立 |
 | **层次化** | Orchestrator 统领多层 Agent | 嵌套 | 复杂大任务 |
 
----
-
+***
 ## 3. 多 Agent 协作模式深度解析
 
 ### 3.1 Orchestrator 模式
@@ -174,8 +169,7 @@ class Orchestrator:
 > 串行 = 一步一步来
 > 并行 = 多个人同时做不同的事
 
----
-
+***
 ## 4. 多 Agent 通信机制
 
 ### 4.1 消息传递模式
@@ -196,8 +190,7 @@ class Orchestrator:
 | **独立上下文** | 每个 Agent 独立上下文 | 干净但不共享 |
 | **选择性共享** | 通过 Orchestrator 按需分发 | 灵活但复杂 |
 
----
-
+***
 ## 5. 多 Agent 实战：构建搜索写作系统
 
 ### 5.1 需求
@@ -238,8 +231,7 @@ class SearchWriteOrchestrator:
 | **上下文优化** | 每个 Agent 只传必要信息，减少 token 消耗 |
 | **错误处理** | 单个 Agent 失败不影响整体流程 |
 
----
-
+***
 ## 6. 多 Agent 的挑战与解决方案
 
 ### 6.1 常见挑战
@@ -271,8 +263,7 @@ class SearchWriteOrchestrator:
 → 真正遇到瓶颈再引入多 Agent
 ```
 
----
-
+***
 ## 7. 面试核心知识点
 
 ### 7.1 一句话速记
@@ -296,16 +287,14 @@ class SearchWriteOrchestrator:
 | **什么时候用多 Agent？** | 复杂任务、多步骤、需要不同专业能力、需要并行加速 |
 | **Swarm Tax 是什么？** | 多 Agent 系统消耗更多 token，但效果不一定更好 |
 
----
-
+***
 ## 8. 练习项目
 
 | 项目 | 路径 | 核心技能 |
 |------|------|----------|
 | 多 Agent 协作 | `~/repos/claude-lab/day15_multi_agent` | Orchestrator + Specialist 模式 |
 
----
-
+***
 ## 结语
 
 多 Agent 协作是 AI Agent 高级技能的核心，也是面试中高级/专家岗位的必考内容。理解多 Agent 的架构模式、通信机制、上下文管理，以及何时使用多 Agent，是成为 AI Agent 专家的关键。
@@ -318,13 +307,11 @@ class SearchWriteOrchestrator:
 → 引入时要有明确的收益
 ```
 
----
-
+***
 **相关阅读：**
 - [AI Coding 进阶之路：Claude Code 两周实战总结](https://sunrong1.github.io/ai-practice/claude-code/claude-code-weekly-summary/)
 - [Claude Code 完全指南：从入门到精通](https://sunrong1.github.io/ai-practice/claude-code/claude-code-complete-guide/)
 
 
----
-
+***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

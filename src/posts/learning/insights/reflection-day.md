@@ -2,9 +2,9 @@
 icon: lock
 date: 2026-2-12 23:00:00
 since: 2025-09-06 12:00:00
-category:
+categories:
   - 思维能力
-tag:
+tags:
   - 思维能力
 
 star: true
@@ -78,6 +78,5 @@ author: Mr.Sun
 
 
 
----
-
+***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

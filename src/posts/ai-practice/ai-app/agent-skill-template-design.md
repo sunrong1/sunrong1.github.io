@@ -1,17 +1,15 @@
 ---
 date: 2026-03-28
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - AI Agent
   - Skill 开发
   - 环境运维
   - MCP
   - OpenClaw
 author: Mr.Sun
-------
-
-
+---***
 # AI Agent 时代的环境运维 Skill 模板设计
 
 > 在 AI Agent 时代，如何快速扩展 AI 的能力边界？答案是：Skill 模板 + AI 自动生成。
@@ -24,16 +22,14 @@ author: Mr.Sun
 
 这让我想到：Skill 不仅仅是"让 AI 调用工具"，更是**扩展 AI 能力的标准方式**。
 
----
-
+***
 ## 🎯 我的实践
 
 我正在做的"智能环境管理系统"已经搭建好了 MCP Server，现在思考的是：**如何快速扩展 Skill 能力？**
 
 答案是：**先定义 Skill 模板，让 AI 根据模板批量生成 Skill。**
 
----
-
+***
 ## 📋 Skill 模板结构
 
 ```
@@ -49,8 +45,7 @@ skill-<operation-name>/
     └── api-guide.md   # API 设计指南
 ```
 
----
-
+***
 ## 🔧 核心要素
 
 ### 1. SKILL.md - 技能定义
@@ -58,11 +53,10 @@ skill-<operation-name>/
 定义技能的基本信息：
 
 ```markdown
----
+***
 name: <skill-name>
 description: <技能一句话描述>
----
-
+***
 # 技能名称
 
 ## 输入参数
@@ -150,8 +144,7 @@ description: <技能一句话描述>
 参数校验 → 权限验证 → 执行操作 → 结果确认 → 状态更新
 ```
 
----
-
+***
 ## 🚀 如何使用
 
 ### Step 1: 定义 Skill 元数据
@@ -175,8 +168,7 @@ cd skill-<operation-name>
 openclaw skills invoke <skill-name> --params {...}
 ```
 
----
-
+***
 ## 💭 思考
 
 **人的价值在哪？**
@@ -193,21 +185,18 @@ openclaw skills invoke <skill-name> --params {...}
 
 这不就是"带着 AI 走"的真实案例吗？
 
----
-
+***
 ## 📝 后续计划
 
 1. 把现有 Skill 整理成模板
 2. 让 AI 学会根据模板生成 Skill
 3. 建立 Skill 库，快速扩展能力边界
 
----
-
+***
 _模板文件已同步到本地，后续会持续完善。_
 
 > 有问题欢迎交流 🌿
 
 
----
-
+***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

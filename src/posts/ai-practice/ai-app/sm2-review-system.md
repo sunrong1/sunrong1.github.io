@@ -2,9 +2,9 @@
 icon: brain
 date: 2026-07-19
 update: 2026-07-19
-category:
+categories:
   - AI 应用
-tag:
+tags:
   - 学习系统
   - SM-2
   - 间隔重复
@@ -254,8 +254,7 @@ DATA_FILE = Path("words/review_data.json")
 - 📋 **公开承诺**：[LEARNING.md](https://github.com/sunrong1/agentscope/blob/learning-journal/LEARNING.md)
 - 🧠 **SM-2 原始论文**：P.A. Wozniak, *Optimization of repetition spacing in the practice of learning* (1990)
 
----
-
+***
 > **写在最后**
 >
 > "学"和"记住"是两件事。学完不复习 = 24 小时后忘掉 70%。
@@ -266,8 +265,7 @@ DATA_FILE = Path("words/review_data.json")
 >
 > —— Mr.Sun, 2026-07-19
 
----
-
+***
 ## 📚 AgentScope 8 周学习系列
 
 - 🎯 **[W1：架构全景 + 核心类图](https://sunrong.site/posts/ai-practice/ai-app/agentscope-w1-architecture.html)** — 单一 Agent 类 + 6 原语 MessageBus + 双层洋葱

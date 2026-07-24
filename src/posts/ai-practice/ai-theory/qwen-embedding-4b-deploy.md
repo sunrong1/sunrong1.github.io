@@ -1,15 +1,13 @@
 ---
 date: 2026-04-20
-tag:
+tags:
   - Qwen
   - Embedding
   - llama.cpp
   - 向量数据库
   - RAG
 author: Mr.Sun
-------
-
-
+---***
 # Qwen3-Embedding-4B 部署实战：从选型到生产环境
 
 > 4 月 20 日完成 Qwen3-Embedding-4B 和 Qwen 3.6-35B 的生产环境部署，本文详细记录选型思路、部署流程、踩坑经验，以及实际验证代码。
@@ -32,8 +30,7 @@ Embedding 模型是 RAG（检索增强生成）的核心组件，负责将文本
 - 可变维度 embedding，灵活适配不同场景
 - 国产模型，社区活跃
 
----
-
+***
 ## 二、模型选择对比
 
 ### 2.1 部署方案对比
@@ -52,8 +49,7 @@ Embedding 模型是 RAG（检索增强生成）的核心组件，负责将文本
 
 **结论：** 生产环境使用 FP16 版本，虽然显存占用更高，但稳定性更好。
 
----
-
+***
 ## 三、部署流程
 
 ### 3.1 环境准备
@@ -113,8 +109,7 @@ CUDA_VISIBLE_DEVICES=3 nohup ./build/bin/llama-server \
  > /var/log/llama-server.log 2>&1 &
 ```
 
----
-
+***
 ## 四、命令参数详解
 
 | 参数 | 说明 | 推荐值 |
@@ -136,8 +131,7 @@ CUDA_VISIBLE_DEVICES=3 nohup ./build/bin/llama-server \
 | `--mlock` | 锁定内存 | 防止换出 |
 | `--no-mmap` | 不使用内存映射 | 配合 mlock 使用 |
 
----
-
+***
 ## 五、踩坑记录
 
 ### 5.1 vLLM 部署问题
@@ -168,8 +162,7 @@ llama-server -m model.gguf --port 8000
 - ✅ `--embedding` 参数简单直接
 - ✅ MRL 支持只需请求中不加 dimensions
 
----
-
+***
 ## 六、验证方式
 
 ### 6.1 curl 快速验证
@@ -210,8 +203,7 @@ response = embedding_model TextEmbedding.create("你好世界")
 print(f"Embedding 向量维度: {len(response)}")
 ```
 
----
-
+***
 ## 七、Qwen 3.6-35B 部署命令参考
 
 作为对比，这里提供 Qwen 3.6-35B 的部署命令：
@@ -242,8 +234,7 @@ print(f"Embedding 向量维度: {len(response)}")
 - Embedding 模型只需 1 张 V100
 - Embedding 模型端口 8000，3.6-35B 端口 8001
 
----
-
+***
 ## 八、硬件配置总结
 
 | 模型 | 显卡 | 显存 | 端口 |
@@ -251,8 +242,7 @@ print(f"Embedding 向量维度: {len(response)}")
 | Qwen 3.6-35B | 3 × V100 32GB | 96GB | 8001 |
 | Qwen3-Embedding-4B | 1 × V100 32GB | 32GB | 8000 |
 
----
-
+***
 ## 九、总结
 
 ### 9.1 部署建议
@@ -276,18 +266,15 @@ print(f"Embedding 向量维度: {len(response)}")
 - 向量语义搜索
 - 本地 AI Agent 开发
 
----
-
+***
 ## 参考资料
 
 - [llama.cpp GitHub](https://github.com/ggerganov/llama.cpp)
 - [Qwen3-Embedding-4B HuggingFace](https://huggingface.co/Qwen/Qwen3-Embedding-4B)
 - [Matryoshka Representation Learning](https://arxiv.org/abs/2205.13147)
 
----
-
+***
 _保持学习，持续进步。_
 
----
-
+***
 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

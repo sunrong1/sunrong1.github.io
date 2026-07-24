@@ -2,9 +2,9 @@
 icon: monitor
 date: 2026-05-04
 update: 2026-05-04
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - AI Agent
   - Computer Use
   - GUI Agent
@@ -12,9 +12,7 @@ tag:
   - 论文解读
 author: Mr.Sun
 star: true
-------
-
-
+---***
 # Computer Use 论文深度解读：AI Agent 操控操作系统的多模态突破
 
 > Computer Use: Anthropic's Breakthrough in Native GUI Control for AI Agents
@@ -57,8 +55,7 @@ Computer Use 要解决的核心问题是：
 
 > **如何让 Agent 像人类一样，用视觉感知真实操作系统，通过鼠标和键盘操作真实 GUI？**
 
----
-
+***
 ## 二、核心问题
 
 ### 传统 Agent 的操作困境
@@ -75,8 +72,7 @@ Computer Use 要解决的核心问题是：
 **之前的 Agent 是"盲人"——需要别人告诉它屏幕上有什么。
 Computer Use 让 Agent 第一次"睁开眼"，直接看见屏幕，像人一样操作 GUI。**
 
----
-
+***
 ## 三、核心思想：Native GUI Control
 
 ### 1. 什么是 Native GUI Control
@@ -104,8 +100,7 @@ Screenshot → Agent直接看到屏幕截图
 | 执行方式 | 调用预定义函数 | 模拟人类鼠标/键盘操作 |
 | 观察方式 | API 返回文本/结构化数据 | screenshot（视觉像素） |
 
----
-
+***
 ## 四、Action Space 详解
 
 ### 完整的操作空间
@@ -173,8 +168,7 @@ Computer Use 的输入**不只是像素**，而是结构化信息：
 - 哪个输入框有焦点
 - 某个按钮是否可点击
 
----
-
+***
 ## 五、Orchestrator + Multi-Agent 架构
 
 ### 为什么需要 Orchestrator
@@ -223,8 +217,7 @@ Computer Use 的输入**不只是像素**，而是结构化信息：
 3. **结果整合** — 汇总各 Agent 输出，形成最终结果
 4. **失败恢复** — 检测失败，重试或切换策略
 
----
-
+***
 ## 六、与前文的递进关系
 
 ### AI Agent 能力演进
@@ -254,8 +247,7 @@ Computer Use 的输入**不只是像素**，而是结构化信息：
 | 感知能力 | 别人告诉它有什么 | 自己看见屏幕 |
 | 操作系统 | 游戏/受限环境 | 真实桌面 OS |
 
----
-
+***
 ## 七、知识要点
 
 ### 知识要点 1：Action Space 的独特性
@@ -289,8 +281,7 @@ Computer Use 的输入**不只是像素**，而是结构化信息：
 - 人类的眼睛 → screenshot() 的像素输入
 - 人类的手指 → mouse/keyboard API 的操作输出
 
----
-
+***
 ## 八、优秀实践生态
 
 ### 官方实现
@@ -323,8 +314,7 @@ Agent 控制层（应用层）
 └── 自研框架
 ```
 
----
-
+***
 ## 典型实际应用场景
 
 ### 场景一：自动化测试执行
@@ -342,8 +332,7 @@ Agent 控制层（应用层）
 
 **价值：** 替代手工点击，测试效率提升 3-5 倍
 
----
-
+***
 ### 场景二：桌面助手（Personal Desktop Assistant）
 
 **场景描述：** AI Agent 像真人一样操作电脑，帮我完成日常任务
@@ -359,8 +348,7 @@ Agent 控制层（应用层）
 
 **价值：** 从"人操作电脑"变成"人指挥电脑"，节省大量重复性操作时间
 
----
-
+***
 ### 场景三：浏览器自动化（Browser Automation）
 
 **场景描述：** Agent 自动操作浏览器，完成复杂 Web 任务
@@ -376,8 +364,7 @@ Agent 控制层（应用层）
 
 **价值：** 取代大量基于浏览器的 RPA 场景
 
----
-
+***
 ## 九、总结
 
 | 维度 | Computer Use |
@@ -389,8 +376,7 @@ Agent 控制层（应用层）
 
 **一句话总结：** Computer Use 让 Agent 第一次拥有视觉感知通道，通过 screenshot + mouse/keyboard 模拟人类操作真实操作系统，是多模态 Agent 的里程碑突破。
 
----
-
+***
 **相关论文：**
 - CoT 推理：[《CoT 论文精读》](../ai-theory/chain-of-thought-paper-learning)
 - ReAct 循环：[《ReAct 论文精读》](../ai-theory/react-paper-learning)
@@ -402,6 +388,5 @@ Agent 控制层（应用层）
 - Agentic RAG：[《Agentic RAG 论文精读》](./agentic-rag-paper-learning)
 - Self-Discovering：[《Self-Discovering 论文精读》](./self-discovering-paper-learning)
 
----
-
+***
 > 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

@@ -2,11 +2,11 @@
 icon: robot
 date: 2026-06-24
 update: 2026-06-24
-category:
+categories:
   - Hermes
   - Multi-Agent
   - 元认知
-tag:
+tags:
   - Hermes Agent
   - Multi-Agent
   - delegate_task
@@ -29,8 +29,7 @@ star: true
 
 这篇博客**专门写方案 B**——**用 Hermes 的 `delegate_task` 工具实现 4 Agent 学习系统的完整方案**。
 
----
-
+***
 ## 一、方案 B 的核心本质
 
 ### 1.1 什么是 delegate_task？
@@ -81,8 +80,7 @@ star: true
 └─ 性价比最高
 ```
 
----
-
+***
 ## 二、3 种调用方式详解
 
 ### 2.1 方式 1：单任务调用
@@ -329,8 +327,7 @@ def meta_learning_pipeline(codebase, weeks=6):
 7. 主对话收到最终 Meta 的摘要
 ```
 
----
-
+***
 ## 三、4 Agent 学习系统的完整架构
 
 ### 3.1 整体架构图
@@ -454,8 +451,7 @@ META_AGENT_PROMPT = """
 """
 ```
 
----
-
+***
 ## 四、完整代码实现
 
 ### 4.1 核心函数
@@ -624,8 +620,7 @@ def weekly_review(codebase):
     ])
 ```
 
----
-
+***
 ## 五、实际使用流程
 
 ### 5.1 启动学习（第 1 天）
@@ -707,8 +702,7 @@ delegate_task(
 )
 ```
 
----
-
+***
 ## 六、关键参数详解
 
 ### 6.1 delegate_task 参数表
@@ -755,8 +749,7 @@ toolsets=["file", "terminal", "web"]
 └─ 例: 并行分析 3 个模块
 ```
 
----
-
+***
 ## 七、4 Agent 协作的 3 种模式
 
 ### 模式 1：完全串行
@@ -809,8 +802,7 @@ meta = delegate_task(
 
 **适用**：复杂任务（先并行再综合）
 
----
-
+***
 ## 八、关键限制与注意事项
 
 ### 8.1 3 个关键限制
@@ -884,8 +876,7 @@ delegate_task(
 # 再全部
 ```
 
----
-
+***
 ## 九、与"4 Skill 方案 A"的对比
 
 ### 9.1 4 Skill vs 4 delegate_task
@@ -931,8 +922,7 @@ delegate_task(
 └─ 不用 4 个 LLM（成本太高）
 ```
 
----
-
+***
 ## 十、立即可执行（5 步启动）
 
 ### Step 1：建目录（5 分钟）
@@ -994,8 +984,7 @@ def meta_learning_pipeline(codebase, weeks=6):
 # → 触发 weekly_review
 ```
 
----
-
+***
 ## 十一、6 周路线图（方案 B 视角）
 
 ### Week 1：建立基础设施
@@ -1064,8 +1053,7 @@ def meta_learning_pipeline(codebase, weeks=6):
 └─ 整体颜色 ≥ 85% 绿
 ```
 
----
-
+***
 ## 十二、与"AI 时代超级学习者"博客的呼应
 
 ### 12.1 4 delegate_task Agent = 5 大方法论自动化
@@ -1087,8 +1075,7 @@ def meta_learning_pipeline(codebase, weeks=6):
 闭环 4: 进度追踪 → Meta Agent
 ```
 
----
-
+***
 ## 十三、与"Meta-Harness"博客的呼应
 
 ### 13.1 4 Agent = Meta-Harness 在学习领域的应用
@@ -1116,8 +1103,7 @@ def meta_learning_pipeline(codebase, weeks=6):
 └─ → 11 年测试经验 = 直接应用
 ```
 
----
-
+***
 ## 十四、方案的诚实反思
 
 ### 14.1 方案 B 的 3 个限制
@@ -1158,8 +1144,7 @@ def meta_learning_pipeline(codebase, weeks=6):
 └─ 失败可重试
 ```
 
----
-
+***
 ## 💎 关键洞见
 
 > **方案 B 不是"4 个不同 AI"**——
@@ -1190,8 +1175,7 @@ def meta_learning_pipeline(codebase, weeks=6):
 > - 想快速响应
 > - → 用方案 A（4 Skill）
 
----
-
+***
 ## 🎯 思考题
 
 > 1. **你的 4 个子 Agent，第一个任务是哪个代码库？**
@@ -1200,8 +1184,7 @@ def meta_learning_pipeline(codebase, weeks=6):
 > 4. **你会先试 1 个 delegate_task，还是直接 4 个一起？**
 > 5. **你愿意把 4 Agent 写入"AI 协作"工作流吗？**
 
----
-
+***
 ## 📚 系列文章
 
 - 《AI 时代的超级学习者》— 2026-06-22
@@ -1210,8 +1193,7 @@ def meta_learning_pipeline(codebase, weeks=6):
 - 《在 Hermes 上实现多 Agent 元认知学习系统》— 2026-06-22
 - 《Hermes 多 Agent 学习系统：方案 B 完整实现》— 2026-06-22 ✨
 
----
-
+***
 > **小 bot 后记**：
 >
 > 这篇博客是对上一篇文章的**诚实补充**——

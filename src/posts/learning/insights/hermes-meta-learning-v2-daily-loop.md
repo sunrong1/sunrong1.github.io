@@ -2,11 +2,11 @@
 icon: rocket
 date: 2026-06-25
 update: 2026-06-25
-category:
+categories:
   - Hermes
   - Multi-Agent
   - 元认知
-tag:
+tags:
   - Hermes Agent
   - Multi-Agent
   - 元认知学习

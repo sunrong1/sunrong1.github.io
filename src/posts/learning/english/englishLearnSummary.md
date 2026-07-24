@@ -3,9 +3,9 @@ icon: pen-to-square
 date: 2026-01-22 20:04:47
 since: 2020-06-22 20:04:43
 update: 2026-03-09 20:04:47
-category:
+categories:
   - english
-tag:
+tags:
   - 规划与洞察
 
 author: Mr.Sun
@@ -282,6 +282,5 @@ Bench:公园长椅
 
 
 
----
-
+***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

@@ -2,9 +2,9 @@
 icon: fire
 date: 2026-07-21
 update: 2026-07-21
-category:
+categories:
   - AI 应用
-tag:
+tags:
   - AgentScope
   - 学习反思
   - 元认知
@@ -186,8 +186,7 @@ W2-D6 (7-25 周六) + W2-D7 (7-26 周日) 是自由日 + 周自检：
 
 **8 周后见，朋友们**。**这次是真的见**。
 
----
-
+***
 > **资源链接**
 > - 📂 学习仓库：[github.com/sunrong1/agentscope](https://github.com/sunrong1/agentscope/tree/learning-journal) · 分支 `learning-journal`
 > - 📋 公开承诺：[LEARNING.md](https://github.com/sunrong1/agentscope/blob/learning-journal/LEARNING.md)
@@ -197,8 +196,7 @@ W2-D6 (7-25 周六) + W2-D7 (7-26 周日) 是自由日 + 周自检：
 >
 > —— Mr.Sun, 2026-07-21 · 真学习第 5 天
 
----
-
+***
 ## 📚 AgentScope 8 周学习系列
 
 - 🎯 **[W1：架构全景 + 核心类图](https://sunrong.site/posts/ai-practice/ai-app/agentscope-w1-architecture.html)** — 单一 Agent 类 + 6 原语 + 双层洋葱

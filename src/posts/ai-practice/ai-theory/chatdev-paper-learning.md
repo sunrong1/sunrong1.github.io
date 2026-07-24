@@ -2,9 +2,9 @@
 icon: code
 date: 2026-05-06
 update: 2026-05-06
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - AI Agent
   - ChatDev
   - Multi-Agent
@@ -12,9 +12,7 @@ tag:
   - 论文解读
 author: Mr.Sun
 star: true
-------
-
-
+---***
 # ChatDev 论文深度解读：AI 驱动的多 Agent 软件开发虚拟公司
 
 > ChatDev: Communicative Agents for Software Development
@@ -71,8 +69,7 @@ star: true
 
 > **ChatDev 的核心洞察：语言是统一桥梁——自然语言适合系统设计，编程语言适合调试优化。多 Agent 通过"说人话"和"说代码"两种方式协作，最终交付完整软件。**
 
----
-
+***
 ## 二、ChatDev 的 Multi-Agent 架构
 
 ### 2.1 虚拟公司组织架构
@@ -112,8 +109,7 @@ Assistant: [继续完善]
 
 **关键设计**：Instructor 和 Assistant **角色固定**，不会互换。这解决了"角色翻转"问题。
 
----
-
+***
 ## 三、Chat Chain 流水线
 
 ### 3.1 什么是 Chat Chain？
@@ -186,8 +182,7 @@ Chat Chain = 链式工作流，把软件开发分成**三个主要阶段**：
 - 自然语言沟通有助于系统设计的全面性
 - 编程语言沟通有助于代码调试和优化
 
----
-
+***
 ## 四、Inception Prompting
 
 ### 4.1 问题：如何让 LLM 稳定扮演特定角色？
@@ -242,8 +237,7 @@ LLM 的知识 = 一个巨大的知识库
 
 **本质：不是模型变了，而是 Prompt 决定了 LLM 展示哪部分能力。**
 
----
-
+***
 ## 五、记忆机制
 
 ### 5.1 两级记忆架构
@@ -289,8 +283,7 @@ ChatDev 为每个 Agent 配备了两级记忆：
 | **每个 Phase 聚焦当前任务** | 鼓励有针对性的协作 |
 | **保持跨阶段上下文** | 实现阶段间的信息连续性 |
 
----
-
+***
 ## 六、Communicative Dehallucination
 
 ### 6.1 问题：代码幻觉
@@ -343,8 +336,7 @@ Dehallucination：Assistant 向 Instructor 请求信息（外部通信）
 本质：用"问问题"代替"猜答案"
 ```
 
----
-
+***
 ## 七、评价结果
 
 ### 7.1 Ablation Study（消融实验）
@@ -401,8 +393,7 @@ Dehallucination：Assistant 向 Instructor 请求信息（外部通信）
 
 **最常见错误**：缺少 `import` 语句 —— 说明 LLM 在生成代码时容易"想当然"地忽略基础元素。
 
----
-
+***
 ## 八、与 MetaGPT 的本质区别
 
 | 维度 | MetaGPT | ChatDev |
@@ -419,8 +410,7 @@ Dehallucination：Assistant 向 Instructor 请求信息（外部通信）
 >
 > **ChatDev 是"对话式协作"——只有 Instructor 和 Assistant 之间传递信息，其他 Agent 感知不到对话内容。**
 
----
-
+***
 ## 九、局限性
 
 | 局限 | 说明 |
@@ -430,8 +420,7 @@ Dehallucination：Assistant 向 Instructor 请求信息（外部通信）
 | **评测复杂** | 通用软件自动评测非常复杂 |
 | **成本** | 多 Agent 需要更多 token 和时间 |
 
----
-
+***
 ## 十、与前文的递进关系
 
 ### AI Agent 能力演进
@@ -469,8 +458,7 @@ AI软件开发团队 (ChatDev)         ← NEW
 | **错误处理** | 单 Agent 反思 | 双 Agent 相互质疑 |
 | **应用场景** | 通用任务 | 专业化软件开发 |
 
----
-
+***
 ## 十一、核心知识掌握
 
 ### 知识要点 1：ChatDev 的核心架构
@@ -522,8 +510,7 @@ AI软件开发团队 (ChatDev)         ← NEW
 - **长时记忆**：当前 Phase 完成后，将最终解决方案传递给下一个 Phase，实现跨 Phase 的上下文连续性
 - **本质区别**：短时记忆 = "我刚才说了什么"；长时记忆 = "上游给了我什么"
 
----
-
+***
 ## 十二、总结
 
 | 维度 | ChatDev |
@@ -537,8 +524,7 @@ AI软件开发团队 (ChatDev)         ← NEW
 
 > **ChatDev 通过 Chat Chain 流水线 + 角色扮演 + Communicative Dehallucination，让多个 LLM Agent 像一个虚拟软件公司一样协作，为 AI 驱动的软件开发提供了新范式。**
 
----
-
+***
 **相关论文：**
 - CoT 推理：[《CoT 论文精读》](../ai-theory/chain-of-thought-paper-learning)
 - ReAct 循环：[《ReAct 论文精读》](../ai-theory/react-paper-learning)
@@ -552,6 +538,5 @@ AI软件开发团队 (ChatDev)         ← NEW
 - Self-Discovering：[《Self-Discovering 论文精读》](./self-discovering-paper-learning)
 - AgentBench：[《AgentBench 论文精读》](./agentbench-paper-learning)
 
----
-
+***
 > 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

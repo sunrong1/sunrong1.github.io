@@ -2,9 +2,9 @@
 icon: brain
 date: 2026-05-04
 update: 2026-05-04
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - AI Agent
   - 架构演进
   - LLM
@@ -12,9 +12,7 @@ tag:
   - 前沿进展
 author: Mr.Sun
 star: true
-------
-
-
+---***
 # AI Agent 架构演进全景图：10篇论文核心洞察与 2025-2026 前沿进展
 
 > 从 Chain-of-Thought 到 Self-Discovering，10篇论文串起的 AI Agent 进化之路
@@ -30,8 +28,7 @@ star: true
 - **上篇**：10 篇论文的核心洞察与架构演进
 - **下篇**：2025-2026 年的最新进展与未来展望
 
----
-
+***
 ## 上篇：10篇论文核心洞察
 
 ### 论文学习清单
@@ -49,8 +46,7 @@ star: true
 | 9 | **Agentic RAG** | 2024 | 检索增强+Agent | ✅ |
 | 10 | **Self-Discovering** | 2024 | 自我组合推理结构 | ✅ |
 
----
-
+***
 ## 二、整体演进时间线
 
 ```
@@ -82,8 +78,7 @@ star: true
                └─────┘
 ```
 
----
-
+***
 ## 三、分维度演进详解
 
 ### 维度 1：推理能力演进
@@ -104,8 +99,7 @@ Self-Discovering（2024）：动态选择最优推理路径
 
 **核心演进逻辑：推理结构从"人工指定"到"自我发现"**
 
----
-
+***
 ### 维度 2：工具使用演进
 
 ```
@@ -124,8 +118,7 @@ Agentic Tool Use（2025+）：智能选择最优工具
 | **Function Calling** | 显式 API 调用 | 灵活但需人工定义 |
 | **Agentic Tool Use** | Agent 自己决定用什么工具 | 动态自适应 |
 
----
-
+***
 ### 维度 3：多 Agent 协作演进
 
 ```
@@ -144,8 +137,7 @@ Orchestrator（2024）：总指挥+分工 Agent
 | **MetaGPT** | SOP 约束通信 | 封闭任务，有标准流程 |
 | **Orchestrator** | 总指挥分解+整合 | 复杂任务，多应用协作 |
 
----
-
+***
 ### 维度 4：记忆管理演进
 
 ```
@@ -164,8 +156,7 @@ MemGPT（2023）：三层记忆+中断机制
 | **MemGPT** | Core/Recall/Archive 三层 + 中断 | 主动记忆管理 |
 | **主动记忆** | Agent 自己判断该记什么 | 减少无关信息干扰 |
 
----
-
+***
 ### 维度 5：感知与执行演进
 
 ```
@@ -182,8 +173,7 @@ Computer Use（2024）：视觉感知 + 鼠标键盘操作
 | **Computer Use** | screenshot 像素 | mouse/keyboard |
 | **多模态 Agent** | 视觉+听觉+传感器 | 物理世界交互 |
 
----
-
+***
 ### 维度 6：知识管理演进
 
 ```
@@ -202,8 +192,7 @@ Agentic RAG（2024）：Query改写+路由+迭代+多跳
 | **Agentic RAG** | 迭代优化+多跳推理 | 计算成本高 |
 | **动态知识图谱** | 实时更新+因果 | 技术复杂度高 |
 
----
-
+***
 ## 四、十大架构模式全景图
 
 ```
@@ -245,8 +234,7 @@ Agentic RAG（2024）：Query改写+路由+迭代+多跳
 └─────────────────────────────────────────────────────────────┘
 ```
 
----
-
+***
 ## 五、十大里程碑
 
 | # | 论文 | 里程碑意义 |
@@ -259,8 +247,7 @@ Agentic RAG（2024）：Query改写+路由+迭代+多跳
 | 8 | **Computer Use** | Agent 第一次"看见"真实世界，像人一样操作 GUI |
 | 10 | **Self-Discovering** | 推理结构从人工设计到自我发现，泛化能力质变 |
 
----
-
+***
 ## 六、知识体系自查清单
 
 ```
@@ -296,12 +283,10 @@ Agentic RAG（2024）：Query改写+路由+迭代+多跳
 └─────────────────────────────────────────────────────────────┘
 ```
 
----
-
+***
 ## 下篇：2025-2026 前沿进展
 
----
-
+***
 ## 七、2025-2026 技术演进概览
 
 ```
@@ -324,8 +309,7 @@ Self-Discovering              Agent 2.0                   原生Agent
                           └─────────┘
 ```
 
----
-
+***
 ## 八、2025 年核心技术进展
 
 ### 8.1 Agent Memory 范式升级
@@ -343,8 +327,7 @@ Self-Discovering              Agent 2.0                   原生Agent
 - 长期记忆和短期工作记忆的边界被重新定义
 - 记忆压缩技术大幅提升 recall 效率
 
----
-
+***
 ### 8.2 多模态 Agent 成熟
 
 **Computer Use 的进化方向**
@@ -362,8 +345,7 @@ Self-Discovering              Agent 2.0                   原生Agent
 - **UFO 2.0**（Microsoft）：Windows Agent 全面升级
 - **OS-World+**（OpenGVLab）：更大规模的 GUI Agent benchmark
 
----
-
+***
 ### 8.3 Multi-Agent 协作深化
 
 **从固定模式到自适应协作**
@@ -380,8 +362,7 @@ Self-Discovering              Agent 2.0                   原生Agent
 - 多 Agent 之间的通信开销大幅降低，效率提升 3-5x
 - 协作失败后的自我修复能力成为标配
 
----
-
+***
 ### 8.4 RAG 范式持续进化
 
 **Agentic RAG 的下一代**
@@ -399,8 +380,7 @@ Self-Discovering              Agent 2.0                   原生Agent
 - **MemoRAG**：更强的长期记忆 + RAG 结合
 - **Adaptive RAG**：根据问题类型动态选择检索策略
 
----
-
+***
 ### 8.5 推理效率与成本优化
 
 **从"暴力推理"到"智能推理"**
@@ -412,8 +392,7 @@ Self-Discovering              Agent 2.0                   原生Agent
 | 多步推理不稳定 | 增加 Prompt | Tree of Thoughts / Self-Consistency 改进 |
 | 长任务规划差 | 固定 Chain | 世界模型 + 规划引擎 |
 
----
-
+***
 ## 九、2026 年前沿方向（预览）
 
 ### 9.1 原生 Agent 架构
@@ -433,8 +412,7 @@ Task Input → 内置规划器 → 内置工具选择 → 内置记忆管理 →
 - **Model-Based RL**：用世界模型增强规划能力
 - **Continuous Learning in LLM**：LLM 自己的在线学习能力
 
----
-
+***
 ### 9.2 世界模型与具身智能
 
 **Agent 理解物理世界的能力**
@@ -452,8 +430,7 @@ Task Input → 内置规划器 → 内置工具选择 → 内置记忆管理 →
 - **Physical Intelligence**：把大模型能力迁移到机器人
 - **世界模型**：World Models, DreamerV3, Gemini 物理世界模拟
 
----
-
+***
 ### 9.3 多 Agent 社会
 
 **Agent 之间的协作与竞争**
@@ -468,8 +445,7 @@ Task Input → 内置规划器 → 内置工具选择 → 内置记忆管理 →
 └── Agent 治理与安全成为核心议题
 ```
 
----
-
+***
 ### 9.4 自主性与可控性平衡
 
 **核心张力：Agent 越自主，能力越强，但也越危险**
@@ -481,8 +457,7 @@ Task Input → 内置规划器 → 内置工具选择 → 内置记忆管理 →
 | L3 | 自我改进 | 高 | 研究中 |
 | L4 | 自主复制 | 极高 | 治理讨论中 |
 
----
-
+***
 ## 十、未来学习路径建议
 
 ### 短期（1-3个月）：深化落地
@@ -525,8 +500,7 @@ Task Input → 内置规划器 → 内置工具选择 → 内置记忆管理 →
 | **自主学习** | Meta-Learning, L2M | Agent 如何持续自我改进？ |
 | **Agent 安全** | Constitutional AI, RLHF | 如何保证 Agent 可控？ |
 
----
-
+***
 ## 十一、个人发展建议
 
 ```
@@ -560,8 +534,7 @@ Task Input → 内置规划器 → 内置工具选择 → 内置记忆管理 →
 └─────────────────────────────────────────────────────────────┘
 ```
 
----
-
+***
 ## 十二、总结
 
 ### 演进规律
@@ -608,8 +581,7 @@ Task Input → 内置规划器 → 内置工具选择 → 内置记忆管理 →
 | **Agentic RAG** | 给 RAG 加个"大脑"，让它会规划判断 |
 | **Self-Discovering** | LLM 自我发现最优推理结构 |
 
----
-
+***
 **相关论文精读：**
 - [CoT 论文精读](../ai-theory/chain-of-thought-paper-learning)
 - [ReAct 论文精读](../ai-theory/react-paper-learning)
@@ -622,6 +594,5 @@ Task Input → 内置规划器 → 内置工具选择 → 内置记忆管理 →
 - [Agentic RAG 论文精读](../ai-theory/agentic-rag-paper-learning)
 - [Self-Discovering 论文精读](../ai-theory/self-discovering-paper-learning)
 
----
-
+***
 > 如果你也在学习 AI Agent，欢迎交流讨论，我的 blog：https://sunrong.site

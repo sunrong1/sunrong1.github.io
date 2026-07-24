@@ -2,9 +2,9 @@
 icon: pen-to-square
 date: 2026-04-08
 update: 2026-05-09
-category:
+categories:
   - AI
-tag:
+tags:
   - AI Agent
   - OpenClaw
   - Skill 设计
@@ -18,8 +18,7 @@ author: Mr.Sun
 
 > 基于 2026-04-08 的深度实践，系统梳理 Agent Skill 的核心概念、运行机制和设计经验
 
----
-
+***
 ## 🎯 什么是 Agent Skill？
 
 **Skill = 专业能力 = 核心竞争力**
@@ -33,8 +32,7 @@ author: Mr.Sun
 | **可组合** | 组合成复杂系统 | 多个 skill 组合成工作流 |
 | **可优化迭代** | 版本升级，接口兼容 | 持续改进，保持向后兼容 |
 
----
-
+***
 ## 🔄 Skill 运行逻辑
 
 Skill 的执行遵循清晰的流程：
@@ -59,14 +57,14 @@ Skill 的执行遵循清晰的流程：
 读取 SKILL.md 文件，解析 frontmatter 和主体内容：
 
 ```yaml
----
+***
 name: skill-name
 description: "技能描述"
 metadata:
   author: ...
   created: ...
   tags: [...]
----
+***
 ```
 
 ### 3. 上下文注入
@@ -96,8 +94,7 @@ workspace/
 - 命令输出
 - 结构化数据
 
----
-
+***
 ## 🧩 Skill 组件化思维
 
 ### 组件化优势
@@ -112,7 +109,7 @@ workspace/
 基于 2026-04-08 的深度反思，封装了自我改进机制：
 
 ```yaml
----
+***
 name: self-improvement-mechanism
 description: "自我改进机制技能，封装通过反思、记录、优化实现持续成长的系统化方法。包含每日反思、学习记录、错误分析和能力提升流程。"
 metadata:
@@ -120,7 +117,7 @@ metadata:
   created: 2026-04-08
   version: 1.0.0
   tags: [self-improvement, reflection, learning, growth, productivity]
----
+***
 ```
 
 **核心机制**:
@@ -129,8 +126,7 @@ metadata:
 3. **记忆管理**: 每天必须创建 memory 文件
 4. **技能封装**: 把改进流程变成可复用 skill
 
----
-
+***
 ## 🎨 Skill Description 设计经验
 
 ### 核心原则
@@ -179,8 +175,7 @@ metadata:
 - [ ] **使用标准术语**（避免方言、俚语）
 - [ ] **测试匹配效果**（用不同问法测试是否能匹配到）
 
----
-
+***
 ## 🔧 Skill 高级机制
 
 ### 1. Skill 组合
@@ -225,8 +220,7 @@ metadata:
 7. 验证修复
 ```
 
----
-
+***
 ## 🚀 实践建议
 
 ### 对于 Skill 开发者
@@ -241,8 +235,7 @@ metadata:
 3. **学会**技能组合，解决复杂问题
 4. **熟练**调试方法，快速解决问题
 
----
-
+***
 ## 💡 核心洞察
 
 ### 1. Skill 不是"代码"，是"可执行的文档"
@@ -260,8 +253,7 @@ metadata:
 - 临时方案 → 可复用技能
 - 零散知识 → 系统化能力
 
----
-
+***
 ## 📚 学习路径建议
 
 1. **基础阶段**: 理解 skill 运行逻辑，阅读现有 skill
@@ -269,8 +261,7 @@ metadata:
 3. **进阶阶段**: 设计复杂 skill，实现技能组合
 4. **专家阶段**: 优化匹配算法，设计 skill 框架
 
----
-
+***
 ## 🎬 结语
 
 Agent Skill 是 AI 时代的能力封装范式。它把专业能力从"个人经验"变成"可复用资产"，从"临时方案"变成"系统化组件"。
@@ -282,11 +273,9 @@ Agent Skill 是 AI 时代的能力封装范式。它把专业能力从"个人经
 2. 优化现有 skill 的 description，提高匹配精度
 3. 尝试 skill 组合，解决更复杂的问题
 
----
-
+***
 > 本文基于 2026-04-08 的实际对话和实践总结，记录了从理解 skill 运行机制到实际封装 self-improvement-mechanism skill 的完整过程。
 
 
----
-
+***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

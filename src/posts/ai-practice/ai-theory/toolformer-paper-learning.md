@@ -2,9 +2,9 @@
 icon: wrench
 date: 2026-04-29
 update: 2026-04-29
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - AI Agent
   - Toolformer
   - 工具调用
@@ -12,9 +12,7 @@ tag:
   - 自监督学习
 author: Mr.Sun
 star: true
-------
-
-
+---***
 # Toolformer 论文深度解读：LLM 自学使用工具
 
 > Toolformer: Language Models Can Teach Themselves to Use Tools
@@ -47,8 +45,7 @@ star: true
 
 **核心问题：** 能否让 LLM **自己学会**何时该调用工具，而不是靠人工教？
 
----
-
+***
 ## 二、论文整体结构
 
 ```
@@ -77,8 +74,7 @@ star: true
 3. **泛化能力强**：训练好的 Toolformer 可以泛化到未见过的工具
 4. **性能提升显著**：在多项任务上，使用 Toolformer 的 LLM 表现显著提升
 
----
-
+***
 ## 三、核心问题：如何让 LLM 自学使用工具？
 
 ### 传统方法的困境
@@ -95,8 +91,7 @@ star: true
 
 这是 **自监督学习** 在工具调用领域的首次成功应用。
 
----
-
+***
 ## 四、与 ReAct 的本质区别
 
 | 维度 | ReAct | Toolformer |
@@ -112,8 +107,7 @@ star: true
 > ReAct = 临时抱佛脚（每次都要在 Prompt 里说明）  
 > Toolformer = 学会了这个技能（参数里内化了能力）
 
----
-
+***
 ## 五、自监督三步法（核心机制）
 
 Toolformer 的训练流程分为三步：**Sample → Execute → Filter**
@@ -136,8 +130,7 @@ Toolformer 的训练流程分为三步：**Sample → Execute → Filter**
 
 **核心：** **量化标准**——用训练 loss 判断边际增益，有增益才保留。这保证了只有真正提升生成质量的工具调用才会被保留。
 
----
-
+***
 ## 六、为什么用预测 Loss？
 
 ### 常见误区
@@ -159,8 +152,7 @@ Toolformer 训练的是"在生成过程中**何时插入工具调用**"的能力
 **一句话总结：**
 > 它训练的是**生成过程**（何时插工具），不是**任务结果**（任务答对没），所以用生成信号而非任务信号。
 
----
-
+***
 ## 七、核心知识掌握
 
 ### 知识要点 1：核心概念
@@ -173,8 +165,7 @@ Toolformer 训练的是"在生成过程中**何时插入工具调用**"的能力
 - Toolformer 让 LLM 自己发现何时调用有价值（自我发现）
 - 这是"学会技能"与"使用技能"的本质区别
 
----
-
+***
 ### 知识要点 2：自监督三步法
 
 **问题：** Toolformer 的 Sample → Execute → Filter 三步，每一步在做什么？核心是谁？
@@ -187,8 +178,7 @@ Toolformer 训练的是"在生成过程中**何时插入工具调用**"的能力
 | **Execute** | 外部 Tool Executor 执行候选调用，获取真实结果 | LLM 只生成请求，真正执行靠外部系统 |
 | **Filter** | 只保留"调用后 loss < 不调用时的 loss"的样本 | **量化标准**——基于训练 loss 的边际增益判断 |
 
----
-
+***
 ### 知识要点 3：过滤逻辑
 
 **问题：** Toolformer 如何判断"这个工具调用是有价值的，应该保留"？
@@ -198,8 +188,7 @@ Toolformer 训练的是"在生成过程中**何时插入工具调用**"的能力
 - **无用**：调用后 loss 没减少或增加 → 丢弃
 - 这叫"工具调用带来的**边际增益**"
 
----
-
+***
 ### 知识要点 4：与 ReAct 对比
 
 | 维度 | ReAct | Toolformer |
@@ -209,8 +198,7 @@ Toolformer 训练的是"在生成过程中**何时插入工具调用**"的能力
 | 推理时需要 Prompt 吗？ | 需要 | 不需要 |
 | 本质区别 | Prompt 外部驱动 | 参数微调，内化能力 |
 
----
-
+***
 ## 八、总结
 
 ### 核心结论
@@ -233,8 +221,7 @@ Toolformer 训练的是"在生成过程中**何时插入工具调用**"的能力
 | 推理依赖 | 每次需要 Prompt | 无需 Prompt |
 | 学习方式 | 无训练（上下文学习） | 自监督微调 |
 
----
-
+***
 ## 附录：AI Agent 论文精读计划（完整版）
 
 ### 必读经典（8篇，掌握核心知识）
@@ -291,13 +278,11 @@ Week 6: Computer Use → Agentic RAG → Self-Discovering（前沿）
 | "Agent 的终身学习如何实现？" | Voyager |
 | "GUI Agent 对测试自动化的启发？" | Computer Use |
 
----
-
+***
 *学习日期：2026-04-29*
 *学习方式：导师考察制（每知识点深度掌握后推进）*
 
----
-
+***
 ## 参考资料
 
 | 资料 | 链接 |
@@ -312,6 +297,5 @@ Week 6: Computer Use → Agentic RAG → Self-Discovering（前沿）
 - [Chain-of-Thought 论文精读](chain-of-thought-paper-learning.md)
 - [Voyager 论文深度解读](voyager-paper-learning.md)
 
----
-
+***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

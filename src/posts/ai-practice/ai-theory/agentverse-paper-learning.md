@@ -2,9 +2,9 @@
 icon: users
 date: 2026-04-28
 update: 2026-05-01
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - AI Agent
   - Multi-Agent
   - AgentVerse
@@ -12,9 +12,7 @@ tag:
   - 清华大学
 author: Mr.Sun
 star: true
-------
-
-
+---***
 # AgentVerse 论文精读：清华+微软的多Agent分层协作框架
 
 > AgentVerse: Empowering LLM-based Agents with Hierarchical Cooperative Tasks
@@ -35,8 +33,7 @@ star: true
 | 时间 | 2023 |
 | 核心贡献 | 多 Agent 分层协作框架，通过任务分解和动态协作提升整体表现 |
 
----
-
+***
 ## 二、核心贡献
 
 ### 2.1 问题背景
@@ -83,8 +80,7 @@ AgentVerse 的一个关键创新是**动态调整 Agent 角色**：
 - 根据任务类型调整角色组合
 - 支持反馈循环优化协作效果
 
----
-
+***
 ## 三、实验验证
 
 ### 3.1 测试场景
@@ -99,8 +95,7 @@ AgentVerse 的一个关键创新是**动态调整 Agent 角色**：
 
 > 分层协作相比单 Agent 和平级协作均有显著提升，证明了任务分解 + 动态调整的有效性。
 
----
-
+***
 ## 四、我的核心理解
 
 ### 4.1 与 MetaGPT 的关键区别
@@ -122,8 +117,7 @@ AgentVerse 的一个关键创新是**动态调整 Agent 角色**：
 - 复杂任务不需要一开始就设计好所有角色
 - 让系统根据任务需求**动态组织**，才是真正的多 Agent 协作
 
----
-
+***
 ## 五、实战思考
 
 ### 5.1 在自动化测试平台中的应用
@@ -160,8 +154,7 @@ Voyager 继承了 AgentVerse 的**动态角色调整**思路，并加入了：
 
 从 AgentVerse → Voyager，是一个从"动态协作"到"终身学习"的自然延伸。
 
----
-
+***
 ## 六、总结
 
 | 维度 | AgentVerse |
@@ -173,8 +166,7 @@ Voyager 继承了 AgentVerse 的**动态角色调整**思路，并加入了：
 
 **一句话总结：** AgentVerse 证明了"动态组织 > 固定配置"，是多 Agent 领域的重要里程碑。
 
----
-
+***
 **相关论文：**
 - ReAct 循环：[《ReAct 论文精读》](../ai-theory/react-paper-learning)
 - Toolformer：[《Toolformer 论文精读》](../ai-theory/toolformer-paper-learning)

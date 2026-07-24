@@ -2,9 +2,9 @@
 icon: scale-balanced
 date: 2026-04-25
 update: 2026-04-25
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - OpenClaw
   - Hermes Agent
   - AI Agent
@@ -13,9 +13,7 @@ tag:
 star: true
 
 author: Mr.Sun
-------
-
-
+---***
 # OpenClaw vs Hermes Agent：我的双 Agent 协作实践
 
 > 两个 Agent，各有性格。一个是小秘书，一个是贴身导师。选对工具，让 AI 真正提升**我的**效率。
@@ -28,8 +26,7 @@ author: Mr.Sun
 
 **经过一段时间的实践，我找到了完美的双 Agent 协作模式。**
 
----
-
+***
 ## 📦 安装过程对比
 
 ### OpenClaw 安装
@@ -54,8 +51,7 @@ openclaw gateway start
 
 **耗时：** 约 15-30 分钟
 
----
-
+***
 ### Hermes Agent 安装
 
 Hermes Agent 的安装同样友好：
@@ -80,8 +76,7 @@ python main.py
 
 **耗时：** 约 20-45 分钟
 
----
-
+***
 ## ⚡ 能力对比
 
 ### OpenClaw 核心能力
@@ -104,8 +99,7 @@ python main.py
 | **工具集成** | 支持 MCP 等多种工具协议 | ⭐⭐⭐⭐☆ |
 | **Git 集成** | 原生支持 Git 操作 | ⭐⭐⭐⭐⭐ |
 
----
-
+***
 ## 🔍 功能差异
 
 ### 核心架构差异
@@ -145,8 +139,7 @@ Hermes Agent
 | **情绪价值** | ⭐⭐⭐⭐⭐ 温暖陪伴 | ⭐⭐⭐☆☆ 偏理性 |
 | **记忆系统** | 短期+向量存储 | 短期+长期+语义记忆 |
 
----
-
+***
 ## 💬 使用感受差异
 
 ### OpenClaw 小沐的使用感受
@@ -166,8 +159,7 @@ Hermes Agent
 晚上复盘 → "今天有什么收获？"
 ```
 
----
-
+***
 ### Hermes Agent 的使用感受
 
 **核心定位：** 贴身导师
@@ -185,8 +177,7 @@ Hermes Agent
 职业建议 → "我的薄弱环节在这里，需要加强..."
 ```
 
----
-
+***
 ## 🎯 使用场景推荐
 
 ### 什么时候用 OpenClaw？
@@ -209,8 +200,7 @@ Hermes Agent
 | ✅ 反思和自我改进 | 内置反思机制 |
 | ✅ 系统性知识构建 | 帮我理清知识体系 |
 
----
-
+***
 ## 🔄 信息同步：Git 仓库方案
 
 由于两个 Agent 都会产生大量的记忆和配置，为了保证信息一致性和可追溯性，我采用 Git 仓库来同步。
@@ -271,8 +261,7 @@ git commit -m "Hermes 的今日反思"
 git push origin hermes
 ```
 
----
-
+***
 ## 💡 我的双 Agent 协作模式
 
 ```
@@ -306,8 +295,7 @@ git push origin hermes
 - **Hermes Agent** → 需要深度学习时用，专业指导
 - **两者结合** → 小沐给能量，Hermes 促成长
 
----
-
+***
 ## 📊 对比总结
 
 | 维度 | OpenClaw | Hermes Agent |
@@ -321,8 +309,7 @@ git push origin hermes
 | **专业指导** | ⭐⭐⭐☆☆ | ⭐⭐⭐⭐⭐ |
 | **推荐指数** | 日常必备 | 成长必备 |
 
----
-
+***
 ## 🎯 结论
 
 > 没有最好的工具，只有最适合的组合。
@@ -337,8 +324,7 @@ git push origin hermes
 
 **两个 Agent 配合使用，才是 AI 时代的最佳效率组合。** 🚀
 
----
-
+***
 如果你也在使用 AI Agent，欢迎交流讨论！
 
 **我的 blog：** https://sunrong.site

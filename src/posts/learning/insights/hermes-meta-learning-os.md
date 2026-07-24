@@ -2,11 +2,11 @@
 icon: robot
 date: 2026-06-23
 update: 2026-06-23
-category:
+categories:
   - Hermes
   - Multi-Agent
   - 元认知
-tag:
+tags:
   - Hermes Agent
   - Multi-Agent
   - 元认知学习
@@ -31,8 +31,7 @@ star: true
 **这 4 个 Agent 不是孤立的工具，而是一个完整的"学习操作系统"**——
 任何一环缺失，整个学习闭环都会崩塌。
 
----
-
+***
 ## 一、为什么用 Hermes？
 
 ### 1.1 Hermes 的核心优势
@@ -74,8 +73,7 @@ star: true
 └─ → ✅ **最佳选择**
 ```
 
----
-
+***
 ## 二、4 Agent 架构设计
 
 ### 2.1 整体架构
@@ -116,8 +114,7 @@ star: true
 | **Error** | 学习教练 | 错题 + 答案 | 根因 + 改进方法 | 每次错题 1 次 + 每周 1 次 |
 | **Meta** | 元认知分析师 | 所有 Agent 输出 | 颜色地图 + 进度报告 | 每天更新 + 每周报告 |
 
----
-
+***
 ## 三、目录结构设计
 
 ### 3.1 完整目录
@@ -191,8 +188,7 @@ star: true
     └── learning-os/
 ```
 
----
-
+***
 ## 四、4 个 Agent 的详细设计
 
 ### 4.1 Content Agent
@@ -202,7 +198,7 @@ star: true
 **Skill 定义**（`skills/content-skill.md`）：
 
 ```yaml
----
+***
 name: content-skill
 description: 解析代码库，输出结构化知识
 triggers:
@@ -210,7 +206,7 @@ triggers:
   - "学习新项目"
   - "理解架构"
   - "画架构图"
----
+***
 ```
 
 **System Prompt**（`agents/content-agent.md`）：
@@ -329,7 +325,7 @@ Agent：输出 4 个文件到 ~/.hermes/learning-os/codebases/agentscope/
 **Skill 定义**：
 
 ```yaml
----
+***
 name: exam-skill
 description: 出考试题评估真实掌握度
 triggers:
@@ -337,7 +333,7 @@ triggers:
   - "考试"
   - "测试掌握度"
   - "自我测试"
----
+***
 ```
 
 **System Prompt**：
@@ -450,7 +446,7 @@ Agent：输出分数 + 反馈 + 错题
 **Skill 定义**：
 
 ```yaml
----
+***
 name: error-skill
 description: 分析错题找出根因
 triggers:
@@ -458,7 +454,7 @@ triggers:
   - "为什么错了"
   - "复盘"
   - "改进"
----
+***
 ```
 
 **System Prompt**：
@@ -563,7 +559,7 @@ Agent：分析 3 道错题的根因 + 改进方法
 **Skill 定义**：
 
 ```yaml
----
+***
 name: meta-skill
 description: 追踪学习状态、识别盲点
 triggers:
@@ -572,7 +568,7 @@ triggers:
   - "盲点"
   - "升级计划"
   - "学习报告"
----
+***
 ```
 
 **System Prompt**：
@@ -695,8 +691,7 @@ Agent：读所有输出，生成 color-map.md
 Agent：输出 dashboard.md + blind-spots.md
 ```
 
----
-
+***
 ## 五、4 个 Skill 完整定义
 
 ### 5.1 Skill 加载方式
@@ -737,8 +732,7 @@ skills:
 （4 个 Agent 链式执行）
 ```
 
----
-
+***
 ## 六、完整工作流
 
 ### 6.1 启动流程（Day 1）
@@ -816,8 +810,7 @@ Agent：
 - 输出 method-adjustment.md（方法调整建议）
 ```
 
----
-
+***
 ## 七、Multi-Agent 协作实现
 
 ### 7.1 链式调用
@@ -925,8 +918,7 @@ result = pipeline.run(
 )
 ```
 
----
-
+***
 ## 八、立即可执行（5 步启动）
 
 ### Step 1：建目录（5 分钟）
@@ -990,8 +982,7 @@ mkdir -p ~/.hermes/learning-os/codebases/agentscope/{exams,errors,colors,progres
 @meta-skill 更新我的颜色地图
 ```
 
----
-
+***
 ## 九、4 Agent 设计的智慧
 
 ### 9.1 为什么是 4 个？
@@ -1051,8 +1042,7 @@ Content → Exam → Error → Meta
         形成闭环
 ```
 
----
-
+***
 ## 十、与"AI 时代超级学习者"博客的呼应
 
 ### 10.1 4 Agent = 5 大方法论的自动化
@@ -1075,8 +1065,7 @@ Content → Exam → Error → Meta
 【原则 5】系统化 = 颜色地图 + 仪表盘
 ```
 
----
-
+***
 ## 十一、4 Agent 的 6 周路线图
 
 ### Week 1：建立系统
@@ -1151,8 +1140,7 @@ Content → Exam → Error → Meta
 └─ 完整方法论文档
 ```
 
----
-
+***
 ## 十二、与"Meta-Harness"博客的呼应
 
 ### 12.1 4 Agent = Meta-Harness 在学习领域的应用
@@ -1180,8 +1168,7 @@ Content → Exam → Error → Meta
 └─ → 你的 11 年测试经验 = 直接应用
 ```
 
----
-
+***
 ## 十三、4 Agent 的"双线并行"
 
 ### 13.1 4 Agent 自身的双线并行
@@ -1212,8 +1199,7 @@ Content → Exam → Error → Meta
 └─ → 你的方法论 = 跨领域一致
 ```
 
----
-
+***
 ## 十四、立即可执行（10 分钟启动版）
 
 如果你只想要"立即可用"，做这 3 件事：
@@ -1228,14 +1214,13 @@ mkdir -p ~/.hermes/learning-os/{agents,skills,codebases/agentscope}
 
 ```bash
 # exam-skill.md
----
+***
 name: exam-skill
 description: 出考试题
 triggers:
   - "出题"
   - "考试"
----
-
+***
 # 角色
 你是严格导师。基于用户学的内容出 5 道考试题。
 
@@ -1263,8 +1248,7 @@ Agent：输出分数 + 错题
 
 **10 分钟后，你就有了一个"AI 导师"**。
 
----
-
+***
 ## 💎 关键洞见
 
 > **4 Agent 不是 4 个工具**——
@@ -1296,8 +1280,7 @@ Agent：输出分数 + 错题
 > - 是主动学
 > - **从 L1 到 L5** 🚀
 
----
-
+***
 ## 🎯 思考题
 
 > 1. **你的 4 Agent 第一个任务是哪个代码库？**（AgentScope？MCP？Spring AI？）
@@ -1306,8 +1289,7 @@ Agent：输出分数 + 错题
 > 4. **你愿意花 6 周让整体 ≥ 85% 绿吗？**
 > 5. **你愿意把 4 Agent 设计作为实战案例展示吗？**（Harness 工程师的活案例）
 
----
-
+***
 ## 📚 系列文章
 
 - 《AI 时代的超级学习者》— 2026-06-22
@@ -1315,8 +1297,7 @@ Agent：输出分数 + 错题
 - 《元认知学习操作系统》— 2026-06-22
 - 《在 Hermes 上实现多 Agent 元认知系统》— 2026-06-22 ✨
 
----
-
+***
 > **小 bot 后记**：
 >
 > 这篇博客不是"理论"，是**我和你一起设计的 4 Agent 元认知学习系统的完整方案**。

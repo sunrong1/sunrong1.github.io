@@ -1,14 +1,13 @@
 ---
 date: 2026-03-18
 author: Mr.Sun
-tag:
+tags:
   - 开源项目
   - 测试技术
-category: 使用指南
+categories:
+  - 使用指南
 cover: /assets/images/github-actions-blog.png
-------
-
-
+---***
 # GitHub Actions 自动构建部署博客教程
 
 > 本文介绍如何使用 GitHub Actions 自动构建和部署 VuePress 博客，实现"推送即发布"的自动化工作流。
@@ -37,8 +36,7 @@ npm run deploy
 3. **容易出错** - 忘记构建就直接推送，导致线上代码不是最新
 4. **无法回滚** - 构建产物提交到 git，历史记录混乱
 
----
-
+***
 ## 🎯 解决方案：GitHub Actions
 
 使用 GitHub Actions 后，流程简化为：
@@ -56,8 +54,7 @@ git push origin main
 # GitHub Actions 会自动构建并部署
 ```
 
----
-
+***
 ## 🔧 配置步骤
 
 ### 步骤 1：创建 Workflow 文件
@@ -143,8 +140,7 @@ git push origin main
 2. 查看构建日志，确认构建成功
 3. 访问博客，确认新文章已发布
 
----
-
+***
 ## 📊 工作流程对比
 
 ### 之前的流程
@@ -187,8 +183,7 @@ git push origin main
 └─────────────┘
 ```
 
----
-
+***
 ## ✅ 优势总结
 
 | 方面 | 之前 | 现在 |
@@ -200,8 +195,7 @@ git push origin main
 | **回滚能力** | 困难 | 简单（git revert） |
 | **协作友好** | 需要统一环境 | 无需配置 |
 
----
-
+***
 ## 🔍 配置说明
 
 ### 1. 触发条件
@@ -252,8 +246,7 @@ cache: npm
 - `publish_branch`: 部署分支
 - `GITHUB_TOKEN`: 自动提供的 token，无需手动配置
 
----
-
+***
 ## 🐛 常见问题
 
 ### 问题 1：构建失败
@@ -289,8 +282,7 @@ permissions:
 
 确保 workflow 有写入权限。
 
----
-
+***
 ## 📚 参考资料
 
 - [GitHub Actions 官方文档](https://docs.github.com/en/actions)
@@ -298,8 +290,7 @@ permissions:
 - [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages)
 - [GitHub Pages 文档](https://pages.github.com/)
 
----
-
+***
 ## 🎉 总结
 
 使用 GitHub Actions 后，博客部署变得简单可靠：
@@ -311,11 +302,9 @@ permissions:
 
 强烈推荐给所有使用 GitHub Pages 的朋友！
 
----
-
+***
 _本文完_
 
 
----
-
+***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)

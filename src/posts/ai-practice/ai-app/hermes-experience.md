@@ -2,9 +2,9 @@
 icon: robot
 date: 2026-04-29
 update: 2026-04-29
-category:
+categories:
   - AI
-tag:
+tags:
   - AI Agent
   - Hermes
   - 会话管理
@@ -20,16 +20,14 @@ author: Mr.Sun
 > 日期：2026-04-29  
 > 标签：AI Agent, Hermes, 会话管理, 工具调用
 
----
-
+***
 ## 什么是 Hermes Agent？
 
 Hermes 是我在 OpenClaw 双 Agent 架构中的**第二 Agent**——定位是我的专属导师（另一个是小沐陪伴）。它是一个强大的 AI Agent 框架，支持多平台接入（飞书、WeCom、QQ、Telegram 等），具备完整的工具生态和会话管理能力。
 
 最近在使用过程中遇到一个典型问题：**会话每天被清空**，排查过程让我对 Hermes 的架构有了更深入的理解。
 
----
-
+***
 ## 问题：为什么会话每天都会"丢失"？
 
 ### 现象
@@ -55,8 +53,7 @@ session_reset:
 
 这解释了为什么 WeCom 显示历史消息，但 Hermes 已经不认我了——WeCom 只是"消息展示层"，而 Hermes 的 session ID 被清空了。
 
----
-
+***
 ## 解决方案
 
 修改配置关闭会话重置：
@@ -70,8 +67,7 @@ session_reset:
 
 修改后需要重启 Hermes 服务生效。
 
----
-
+***
 ## 延伸思考：工具学习 vs 工具推理
 
 在和 Hermes 讨论 AI Agent 时，我们触及了一个核心概念区分：
@@ -87,8 +83,7 @@ session_reset:
 
 这和 Hermes 的架构设计也有关系——它既需要"学会使用工具"（Skill 机制），也需要"推理工具调用"（Agent Loop + Hooks）。
 
----
-
+***
 ## Hermes 核心架构笔记
 
 基于我的使用经验，总结 Hermes 的关键组件：
@@ -118,8 +113,7 @@ hermes-cli / hermes-telegram / hermes-discord
 hermes-whatsapp / hermes-slack / hermes-qqbot
 ```
 
----
-
+***
 ## 实战经验总结
 
 1. **会话丢失不等于聊天记录丢失** — 平台消息 vs Agent session 是两套独立机制
@@ -128,8 +122,7 @@ hermes-whatsapp / hermes-slack / hermes-qqbot
 4. **Skill 是复用的关键** — 把常见任务封装成 Skill，避免重复工作
 5. **session_search 是找回上下文的好工具** — 即使 session 断了，历史记录还在
 
----
-
+***
 ## 下一步
 
 Hermes 的深度定制还在继续。下一步计划探索：
@@ -137,6 +130,5 @@ Hermes 的深度定制还在继续。下一步计划探索：
 - 多 Agent 协作模式
 - Skill 的自动化测试
 
----
-
+***
 *如果你也在使用 Hermes，遇到类似问题，欢迎交流。*

@@ -3,22 +3,19 @@ title: AI Agent 论文系列：从 ReAct 到 AgentBench
 icon: book
 date: 2026-06-01
 update: 2026-06-01
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - AI Agent
   - 论文学习
   - 系列索引
 author: Mr.Sun
-------
-
-
+---***
 # AI Agent 论文系列（11 篇）
 
 > 系统学习 11 篇 AI Agent 领域核心论文，从基础范式到评测基准，构建完整的知识体系。
 
----
-
+***
 ## 📚 论文列表（按学习顺序）
 
 | # | 论文 | 核心概念 | 难度 | 链接 |
@@ -35,8 +32,7 @@ author: Mr.Sun
 | 10 | **Self-Discovering** | 原子推理模块自由组合 | ⭐⭐⭐⭐ | [详情](./self-discovering-paper-learning.md) |
 | 11 | **AgentBench** | 多维度 Agent 评测基准 | ⭐⭐⭐ | [详情](./agentbench-paper-learning.md) |
 
----
-
+***
 ## 🧠 架构演进理解
 
 ```
@@ -55,22 +51,19 @@ ReAct → MetaGPT → AgentVerse → Voyager
 | **自我进化** | Self-Discovering | 自主发现推理模式 |
 | **评测体系** | AgentBench | 标准化基准 |
 
----
-
+***
 ## 💡 关键洞察
 
 1. **记忆系统是分水岭** - Voyager 和 MemGPT 解决了"长 horizon 任务"
 2. **工具调用是基础设施** - ReAct 和 Toolformer 是后续所有论文的基石
 3. **评测标准化是行业成熟的标志** - AgentBench 让"哪个 Agent 更好"可量化
 
----
-
+***
 ## 🎯 适用读者
 
 - 准备 AI Agent 方向面试的同学
 - 想系统性了解 Agent 演进的工程师
 - 关注最新 AI 进展的产品经理/架构师
 
----
-
+***
 _最后更新：2026-06-01_

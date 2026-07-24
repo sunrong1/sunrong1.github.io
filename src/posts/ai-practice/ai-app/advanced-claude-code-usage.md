@@ -3,26 +3,23 @@ title: Claude Code 进阶用法：从小工到专家
 icon: terminal
 date: 2026-04-04
 update: 2026-04-04
-category:
+categories:
   - AI 实践
-tag:
+tags:
   - Claude Code
   - AI 编程
   - 效率提升
   - 开发工作流
 author: Mr.Sun
 star: true
-------
-
-
+---***
 ## 前言
 
 Claude Code 是 Anthropic 官方推出的命令行 AI 编程工具，基于 Claude 模型，可以直接在你的终端里帮你写代码、调试、重构。
 
 大多数人对它的用法还停留在"粘贴代码让它改"的阶段。其实它还有很多强大的进阶能力，用好了能让开发效率提升数倍。这篇文章分享我在实际工作中摸索出来的进阶用法。
 
----
-
+***
 ## 1. 用 SPEC.md 管理项目上下文
 
 Claude Code 有个项目级上下文管理机制。通过创建 `SPEC.md` 文件，可以让它"记住"项目的技术栈、代码规范、架构约定等，贯穿整个会话。
@@ -65,8 +62,7 @@ Claude Code 有个项目级上下文管理机制。通过创建 `SPEC.md` 文件
 
 创建 `SPEC.md` 后，Claude Code 在整个会话中都会遵循这些规范，不会写出 `require()` 而不是 `import`，也不会建议你用 `console.log` 调试。
 
----
-
+***
 ## 2. 精准控制：`.claude-ignore` 和指令
 
 和 `.gitignore` 类似，Claude Code 支持 `.claude-ignore` 文件，用于排除不想让 AI 读取的敏感文件。
@@ -98,8 +94,7 @@ claude --web
 claude --dangerous --backup
 ```
 
----
-
+***
 ## 3. 多文件重构：一次性改造整个模块
 
 这是 Claude Code 最强大的能力之一。当你需要重构一个模块时，它能一次性理解所有相关文件，并进行协调修改。
@@ -143,8 +138,7 @@ Claude Code 会：
 | 手动逐个改 | 30分钟+ | 高（容易漏文件） |
 | Claude Code | 2-3分钟 | 低（全局扫描） |
 
----
-
+***
 ## 4. 自动化测试生成
 
 Claude Code 可以根据代码逻辑自动生成单元测试和集成测试。
@@ -186,8 +180,7 @@ claude src/utils/validator.ts
 - 数据库连接失败时的降级处理
 ```
 
----
-
+***
 ## 5. 调试加速：让 AI 帮你分析 Bug
 
 Claude Code 可以直接读取错误日志和代码，帮你定位问题。
@@ -223,8 +216,7 @@ Error: Cannot read properties of undefined (reading 'map')
 [10:23:48] Memory usage: 892MB / 1024MB
 ```
 
----
-
+***
 ## 6. Git 工作流：从分支创建到 Code Review
 
 Claude Code 和 Git 结合得非常好，可以覆盖整个 Git 工作流。
@@ -264,8 +256,7 @@ claude
 不要修改任何文件，只输出 review 意见。
 ```
 
----
-
+***
 ## 7. 处理大型代码库
 
 ### 按需读取，不要全丢给 AI
@@ -303,8 +294,7 @@ claude --max-tokens 4000
 每步完成后请停下来，让我确认再继续。
 ```
 
----
-
+***
 ## 8. 快捷键和效率技巧
 
 ### 交互模式快捷键
@@ -342,8 +332,7 @@ claude
 4. 检查是否有遗漏的引用
 ```
 
----
-
+***
 ## 9. 自定义指令：让 AI 更懂你的项目
 
 通过 `.claude` 目录下的 `commands.md` 可以定义项目的自定义命令。
@@ -378,8 +367,7 @@ claude /tdd 为 UserService 添加一个新的 createUser 方法
 claude /security-check
 ```
 
----
-
+***
 ## 10. 常见坑与避坑指南
 
 ### 坑一：上下文丢失
@@ -417,8 +405,7 @@ Claude Code 编辑文件时默认直接覆盖。
 - 查看官方文档为准
 - 指定具体版本号
 
----
-
+***
 ## 总结
 
 Claude Code 远不止是一个"代码补全工具"。它的真正威力在于：
@@ -430,19 +417,16 @@ Claude Code 远不止是一个"代码补全工具"。它的真正威力在于：
 
 关键是要把它当成一个超级助手，而不是一个命令执行器。你指挥得越精准，它发挥得越好。
 
----
-
+***
 **下一步：**
 
 - 试试本文介绍的一个技巧，用在下一个任务里
 - 持续迭代自己的使用习惯，形成最佳实践
 - 和团队分享，一起提升团队开发效率
 
----
-
+***
 *如果你也有 Claude Code 的进阶技巧，欢迎交流！*
 
 
----
-
+***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)
