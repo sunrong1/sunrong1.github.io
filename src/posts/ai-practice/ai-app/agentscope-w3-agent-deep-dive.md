@@ -2,9 +2,9 @@
 icon: fire
 date: 2026-07-31
 update: 2026-07-31
-category:
+categories:
   - AI 应用
-tag:
+tags:
   - AgentScope
   - 学习反思
   - 元认知

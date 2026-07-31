@@ -2,11 +2,7 @@
 icon: fire
 date: 2026-07-21
 update: 2026-07-31
-<<<<<<< HEAD
 categories:
-=======
-category:
->>>>>>> ff07a3508 (feat(blog): W3 Agent 模块深潜 - _agent.py 3289 行读完)
   - AI 应用
 tags:
   - AgentScope
