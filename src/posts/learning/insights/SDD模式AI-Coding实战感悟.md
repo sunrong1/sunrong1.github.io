@@ -1,5 +1,5 @@
 ---
-title: SDD 模式 AI Coding 实战感悟 — HERO AI 项目开发纪实
+title: SDD 模式 AI Coding 实战感悟 — 数字员工 AI 项目开发纪实
 category: AI Coding
 tag: SDD / AI工程化 / 个人复盘
 cover: /img/cover-sdd-hero.jpg
@@ -7,9 +7,9 @@ icon: 🦸
 date: 2026-08-03 08:00:00
 ---
 
-# SDD 模式 AI Coding 实战感悟 — HERO AI 项目开发纪实
+# SDD 模式 AI Coding 实战感悟 — 数字员工 AI 项目开发纪实
 
-> 这几天，我用 SDD（Spec-Driven Development）模式完成了 HERO AI 项目的长时间开发。这是**我第一次完整跑通**"从 spec → design → tasks → develop"的全流程。本文记录过程中的真实感悟、踩过的坑、可复用的方法，供自己和同行参考。
+> 这几天，我用 SDD（Spec-Driven Development）模式完成了数字员工 AI 项目的长时间开发。这是**我第一次完整跑通**"从 spec → design → tasks → develop"的全流程。本文记录过程中的真实感悟、踩过的坑、可复用的方法，供自己和同行参考。
 
 <!-- more -->
 
@@ -304,12 +304,12 @@ SDD 模式不是银弹，但它确实是目前把"AI 写代码"这件事从"碰�
 
 ---
 
-## 附录：HERO AI 项目简介
+## 附录：数字员工 AI 项目简介
 
 > 简要说明项目背景，帮助读者理解本文讨论的具体场景。
 
 ```
-【项目名】HERO AI（化名）
+【项目名】数字员工 AI（化名）
 【周期】X 周
 【规模】中等
 【技术栈】略（保护具体技术选型）
@@ -320,6 +320,6 @@ SDD 模式不是银弹，但它确实是目前把"AI 写代码"这件事从"碰�
 
 ---
 
-**写于 2026-08-03 HERO AI 项目交付后。**
+**写于 2026-08-03 数字员工 AI 项目交付后。**
 
 **第一次完整跑通 SDD 全流程的真实复盘。**
