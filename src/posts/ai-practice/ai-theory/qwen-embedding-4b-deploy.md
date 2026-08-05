@@ -7,6 +7,7 @@ tags:
   - 向量数据库
   - RAG
 author: Mr.Sun
+icon: 🧠
 ---***
 # Qwen3-Embedding-4B 部署实战：从选型到生产环境
 

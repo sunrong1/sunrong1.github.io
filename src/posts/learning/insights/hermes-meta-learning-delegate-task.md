@@ -17,6 +17,9 @@ star: true
 
 # Hermes 多 Agent 学习系统：方案 B 完整实现（delegate_task 版）
 
+
+<!-- more -->
+
 > **从"理论"到"代码"：4 个独立子 Agent 协作的完整方案**
 
 之前的文章《在 Hermes 上实现多 Agent 元认知学习系统》我写得太"理想化"——

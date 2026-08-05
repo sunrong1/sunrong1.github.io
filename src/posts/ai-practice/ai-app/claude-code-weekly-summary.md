@@ -15,6 +15,9 @@ star: true
 ---***
 ## 前言
 
+
+<!-- more -->
+
 过去两周，我通过 Claude Code 系统学习了 AI Agent 的核心知识体系。从 Agent Loop 到 Memory 管理，从 Hooks 机制到 MCP 协议，每天都在进步。这篇文章整理这两周的学习历程和核心收获。
 
 ***

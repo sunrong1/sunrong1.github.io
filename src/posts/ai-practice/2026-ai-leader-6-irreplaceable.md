@@ -9,6 +9,9 @@ description: "从 AICon 2026 顶级演讲者金句提炼的资深工程 Leader �
 ---***
 # AI 时代，资深工程 Leader 经验的 6 大不可替代性
 
+
+<!-- more -->
+
 ## 引言：AI 没让软件工程过时
 
 2026 年 6 月 5-6 日，Agentic AICon 2026 在上海召开。

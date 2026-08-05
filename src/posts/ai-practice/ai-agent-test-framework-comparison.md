@@ -16,6 +16,9 @@ star: true
 ---***
 # AI Agent 测试框架对比：OpenCode vs AgentScope
 
+
+<!-- more -->
+
 > 推动部门 AI Agent 项目时，我遇到了一个技术选型冲突——部门专家推荐 OpenCode，我倾向 AgentScope。这份文档是**"不带立场的对比"**，用数据说话，让团队选，不是让立场选。
 
 ***

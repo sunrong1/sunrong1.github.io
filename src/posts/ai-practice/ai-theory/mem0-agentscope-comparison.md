@@ -7,6 +7,7 @@ tags:
   - AgentScope
   - 向量数据库
 author: Mr.Sun
+icon: 🧠
 ---***
 # AI Agent 记忆系统实战：Mem0/Qdrant/Chroma/SQLite 对比
 

@@ -16,6 +16,9 @@ author: Mr.Sun
 
 # Hermes Agent 使用经验：从工具调用到会话管理
 
+
+<!-- more -->
+
 > 作者：Mr.Sun  
 > 日期：2026-04-29  
 > 标签：AI Agent, Hermes, 会话管理, 工具调用

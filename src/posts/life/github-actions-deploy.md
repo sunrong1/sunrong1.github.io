@@ -7,6 +7,7 @@ tags:
 categories:
   - 使用指南
 cover: /assets/images/github-actions-blog.png
+icon: 🌱
 ---***
 # GitHub Actions 自动构建部署博客教程
 

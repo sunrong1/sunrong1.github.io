@@ -9,8 +9,12 @@ tags:
   - Agent开发
   - 学习笔记
 description: "系统学习 Claude Code 最佳实践项目，第一周聚焦核心概念：Subagents、Commands、Skills 和 Memory"
+icon: 🚀
 ---***
 # Claude Code 最佳实践学习笔记：第一周
+
+
+<!-- more -->
 
 > 📅 学习日期：2026 年 4 月 4 日  
 > 🎯 学习目标：掌握 Claude Code 核心概念，理解 Agentic Coding 工作流

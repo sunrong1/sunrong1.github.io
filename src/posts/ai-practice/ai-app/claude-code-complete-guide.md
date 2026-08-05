@@ -8,6 +8,7 @@ tags:
   - AI Agent
 
 author: Mr.Sun
+icon: 🚀
 ---***
 # Claude Code 完全指南：从入门到精通
 

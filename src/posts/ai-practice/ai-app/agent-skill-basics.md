@@ -16,6 +16,9 @@ author: Mr.Sun
 
 # Agent Skill 基础：从理解到实践
 
+
+<!-- more -->
+
 > 基于 2026-04-08 的深度实践，系统梳理 Agent Skill 的核心概念、运行机制和设计经验
 
 ***

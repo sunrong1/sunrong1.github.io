@@ -9,6 +9,7 @@ tags:
   - Caddy
 categories:
   - AI 实践
+icon: 🌐
 ---***
 ## 背景
 
@@ -35,6 +36,9 @@ tar -xvzf code-server-4.124.2-linux-amd64.tar.gz
 
 ```bash
 # 生成自签名证书
+
+<!-- more -->
+
 mkdir -p ~/.config/code-server
 cd ~/.config/code-server
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \

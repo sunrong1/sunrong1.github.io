@@ -9,8 +9,12 @@ tags:
   - MCP
   - OpenClaw
 author: Mr.Sun
+icon: 🚀
 ---***
 # AI Agent 时代的环境运维 Skill 模板设计
+
+
+<!-- more -->
 
 > 在 AI Agent 时代，如何快速扩展 AI 的能力边界？答案是：Skill 模板 + AI 自动生成。
 

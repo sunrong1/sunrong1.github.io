@@ -35,6 +35,9 @@ Claude Code 有个项目级上下文管理机制。通过创建 `SPEC.md` 文件
 ```markdown
 # SPEC.md
 
+
+<!-- more -->
+
 ## 技术栈
 - Node.js 18+
 - TypeScript 5.x

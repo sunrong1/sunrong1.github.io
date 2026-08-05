@@ -10,6 +10,7 @@ tags:
   - CodeBuddy
 categories:
   - AI 实践
+icon: 🎮
 ---***
 ## 背景
 
@@ -127,6 +128,9 @@ CodeBuddy 展示了一次"四层索引"实战，**4 个工具调用并发发出*
 
 ```python
 # 1. 测功能地图
+
+<!-- more -->
+
 list_dir tests/
 
 # 2. 拿模块边界

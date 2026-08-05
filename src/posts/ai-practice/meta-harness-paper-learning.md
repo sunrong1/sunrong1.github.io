@@ -17,6 +17,9 @@ star: true
 
 # Meta-Harness 论文精读 + 我和小 bot 的对话录
 
+
+<!-- more -->
+
 > **写给每一个想做 AI 时代架构师的工程师**
 
 今天早上 9 点，我和我的 AI 助理小 bot 一起精读了 **Meta-Harness: End-to-End Optimization of Model Harnesses**（普林斯顿大学，2026-06-12）。
