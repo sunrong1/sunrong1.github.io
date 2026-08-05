@@ -16,6 +16,7 @@ star: true
 ---***
 ## 前言
 
+<!-- more -->
 本文是 Claude Code 学习两周实战总结的续篇。在[上篇文章](https://sunrong1.github.io/ai-practice/claude-code/claude-code-weekly-summary/)中，我记录了 Agent Loop、Context Management、Planning、Hooks、Memory 等核心基础知识的学习。
 
 **这篇文章聚焦于 AI Agent 的高级技能核心：多 Agent 协作。** 多 Agent 是现代 AI Agent 系统的主流架构模式，也是面试中高级/专家岗位的必考内容。
@@ -205,7 +206,6 @@ class Orchestrator:
 ```python
 # Orchestrator
 
-<!-- more -->
 
 class SearchWriteOrchestrator:
     def __init__(self):
