@@ -1,7 +1,7 @@
 ---
 icon: chat-alt-dots
 date: 2026-08-06
-update: 2026-08-06
+update: 2026-08-07
 categories:
   - AI 应用
 tags:
@@ -24,6 +24,8 @@ author: Mr.Sun
 
 <!-- more -->
 
+> **TL;DR**：W4 完成 4 段 1418 行 4 笔记——**8 大概念飞跃**：① Strategy Pattern for Block ② 同一生命周期两状态机（HITL 2.0） ③ 字段分组 = 访问模式分组 ④ Big Method OK if Cohesive ⑤ Factory > 继承 for role-only ⑥ Type-Aware Streaming Merge ⑦ **Schema Cascade**（3 actor 3 layer）⑧ **Validation Responsibility Delegation**（上游有→委托，没有→自己验）。**83% 胜率**——质量稳定 8.0+。
+
 ## 一、W4 vs W3
 
 ```
@@ -45,6 +47,19 @@ W3 是"深潜期"——W4 是"宽度扩张期"——**5 大模块横向**。
 | **W4-D1 ~ D4 累计** | | **1418** | **12** | **10** |
 
 **4 天 10 强**——**胜率 83%**——**W4 进度顺利**。
+
+### 📑 8 大飞跃速查
+
+| # | 飞跃 | 来源 | 一句话 |
+|---|---|---|---|
+| 1 | **Strategy Pattern for Block routing** | W4-D1 段 1 | 8 种 block = Union 表达，不是继承 |
+| 2 | **Two State Machines for One Lifecycle** | W4-D1 段 1 | pre/post execution 状态机分离（HITL 2.0）|
+| 3 | **Field Grouping = Access Pattern Grouping** | W4-D1 段 2 | 字段分组 = 消费者分组 |
+| 4 | **Big Method OK if Cohesive** | W4-D1 段 2 | SRP = 1 个理由改，不 = 方法要短 |
+| 5 | **Factory Function for Role-Only Variants** | W4-D1 段 2 | 角色型 variant 用 factory 不用 class |
+| 6 | **Type-Aware Streaming Merge** | W4-D3 | 流式合并按 block type 决定策略 |
+| 7 | **Schema Cascade** | W4-D4 | 3 actor 3 layer 互不耦合 |
+| 8 | **Validation Responsibility Delegation** | W4-D4 | 上游有 → 委托，没有 → 自己验 |
 
 ## 三、8 大概念飞跃
 
