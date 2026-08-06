@@ -19,7 +19,6 @@ star: true
 # Hermes 多 Agent 元认知学习系统 V2：每日循环版
 
 
-<!-- more -->
 
 > **V1 → V2 关键升级**：从"4 Agent 各自独立"到"4 Agent 协作循环"
 >
@@ -27,6 +26,7 @@ star: true
 
 ## 为什么需要 V2？
 
+<!-- more -->
 V1 的 4 Agent 是"独立工具"，但...
 
 **V1 的问题**：

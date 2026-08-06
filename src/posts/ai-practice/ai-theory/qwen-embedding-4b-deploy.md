@@ -13,9 +13,9 @@ icon: 🧠
 
 > 4 月 20 日完成 Qwen3-Embedding-4B 和 Qwen 3.6-35B 的生产环境部署，本文详细记录选型思路、部署流程、踩坑经验，以及实际验证代码。
 
-<!-- more -->
 
 ## 一、为什么要部署 Embedding 模型？
+<!-- more -->
 
 Embedding 模型是 RAG（检索增强生成）的核心组件，负责将文本转换为向量表示。
 
@@ -30,6 +30,7 @@ Embedding 模型是 RAG（检索增强生成）的核心组件，负责将文本
 - 支持 Matryoshka Representation Learning (MRL)
 - 可变维度 embedding，灵活适配不同场景
 - 国产模型，社区活跃
+
 
 ***
 ## 二、模型选择对比

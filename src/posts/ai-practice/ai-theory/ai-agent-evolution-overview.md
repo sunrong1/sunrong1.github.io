@@ -18,10 +18,10 @@ star: true
 > 从 Chain-of-Thought 到 Self-Discovering，10篇论文串起的 AI Agent 进化之路
 > 本文是对 AI Agent 架构演进的系统性回顾与展望
 
-<!-- more -->
 
 ## 一、写在前面
 
+<!-- more -->
 过去一段时间，我系统性地学习了 10 篇 AI Agent 领域的核心论文，从 2021 年的 Chain-of-Thought 到 2024 年的 Self-Discovering。这些论文串起来，就是一部 AI Agent 能力进化的编年史。
 
 本文分为两部分：

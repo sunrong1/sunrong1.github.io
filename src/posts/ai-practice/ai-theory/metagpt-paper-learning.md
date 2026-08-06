@@ -20,10 +20,10 @@ star: true
 > 原文链接：https://openreview.net/forum?id=VtmBAGCN7o
 > 本文记录我的论文学习过程与核心理解
 
-<!-- more -->
 
 ## 一、论文基础介绍
 
+<!-- more -->
 ### 基本信息
 
 | 项目 | 信息 |

@@ -17,18 +17,20 @@ author: Mr.Sun
 # Hermes Agent 使用经验：从工具调用到会话管理
 
 
-<!-- more -->
 
 > 作者：Mr.Sun  
 > 日期：2026-04-29  
 > 标签：AI Agent, Hermes, 会话管理, 工具调用
 
 ***
+<!-- more -->
+
 ## 什么是 Hermes Agent？
 
 Hermes 是我在 OpenClaw 双 Agent 架构中的**第二 Agent**——定位是我的专属导师（另一个是小沐陪伴）。它是一个强大的 AI Agent 框架，支持多平台接入（飞书、WeCom、QQ、Telegram 等），具备完整的工具生态和会话管理能力。
 
 最近在使用过程中遇到一个典型问题：**会话每天被清空**，排查过程让我对 Hermes 的架构有了更深入的理解。
+
 
 ***
 ## 问题：为什么会话每天都会"丢失"？

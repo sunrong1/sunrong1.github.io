@@ -19,10 +19,10 @@ star: true
 > 论文：UC Berkeley Packer, Wooders, Lin, Fang, Patil, Stoica, Gonzalez，2023  
 > 本文记录我的论文学习过程与核心理解
 
-<!-- more -->
 
 ## 一、论文基础介绍
 
+<!-- more -->
 ### 基本信息
 
 | 项目 | 信息 |

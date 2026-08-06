@@ -14,12 +14,12 @@ icon: 🚀
 # Claude Code 最佳实践学习笔记：第一周
 
 
-<!-- more -->
 
 > 📅 学习日期：2026 年 4 月 4 日  
 > 🎯 学习目标：掌握 Claude Code 核心概念，理解 Agentic Coding 工作流
 
 ***
+<!-- more -->
 ## 一、为什么学习这个项目？
 
 在 AI Agent 开发领域，**Claude Code** 是 Anthropic 官方推出的最强编程助手之一。而 [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) 是目前最全面的 Claude Code 最佳实践汇总，包含：

@@ -20,10 +20,10 @@ star: true
 > 原文链接：https://arxiv.org/abs/2210.03629  
 > 本文记录我的论文学习过程与核心理解
 
-<!-- more -->
 
 ## 一、背景：CoT 的局限性
 
+<!-- more -->
 在 ReAct 之前，**Chain-of-Thought (CoT)** 已经成为提升 LLM 推理能力的标配方法。
 
 ### CoT 解决了什么问题？

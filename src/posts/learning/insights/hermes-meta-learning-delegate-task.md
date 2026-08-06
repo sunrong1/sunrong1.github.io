@@ -18,7 +18,6 @@ star: true
 # Hermes 多 Agent 学习系统：方案 B 完整实现（delegate_task 版）
 
 
-<!-- more -->
 
 > **从"理论"到"代码"：4 个独立子 Agent 协作的完整方案**
 
@@ -33,6 +32,7 @@ star: true
 这篇博客**专门写方案 B**——**用 Hermes 的 `delegate_task` 工具实现 4 Agent 学习系统的完整方案**。
 
 ***
+<!-- more -->
 ## 一、方案 B 的核心本质
 
 ### 1.1 什么是 delegate_task？
