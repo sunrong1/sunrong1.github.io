@@ -13,6 +13,7 @@ tags:
   - Harness 工程师
   - 自动化
 star: true
+public-safe: true
 ---
 
 # 在 Hermes 上实现多 Agent 元认知学习系统

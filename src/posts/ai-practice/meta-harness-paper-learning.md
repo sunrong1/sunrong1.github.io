@@ -13,6 +13,7 @@ tags:
   - 复利思维
   - 论文精读
 star: true
+public-safe: true
 ---
 
 # Meta-Harness 论文精读 + 我和小 bot 的对话录

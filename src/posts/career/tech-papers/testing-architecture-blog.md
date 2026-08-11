@@ -8,6 +8,7 @@ tags:
   - 面试
   - 自动化测试
 star: true
+public-safe: true
 
 author: Mr.Sun
 ---

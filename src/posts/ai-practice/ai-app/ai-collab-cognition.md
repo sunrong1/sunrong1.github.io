@@ -10,6 +10,7 @@ tags:
   - 认知升级
   - 职业发展
   - AI Agent
+public-safe: true
 author: Mr.Sun
 star: true
 ---***
