@@ -8,7 +8,6 @@ tags:
   - AgentScope
   - Phoenix
   - OpenTelemetry
-  - HERO AI
   - AI Agent
   - Evaluation
   - Observability
@@ -20,13 +19,13 @@ star: true
 author: Mr.Sun
 ---
 
-# HERO AI 行为监控实战：从一条 Phoenix Span 到 4 级 Evaluation Engine
+# AI Agent 项目行为监控实战：从一条 Phoenix Span 到 4 级 Evaluation Engine
 
-> 接 [W6 记忆与上下文](https://sunrong.site/posts/ai-practice/ai-app/agentscope-w6-memory-and-context.html) + [W7 段 2 Tracing 模块](https://sunrong.site/blog/)：前两篇讲"AgentScope 怎么产生 Trace"——**本篇讲"拿到 Trace 后怎么用 Phoenix 做 HERO AI 的行为监控"**——**从 1 条真实 Span 出发**——**走到 4 级 Evaluation Engine 设计**。
+> 接 [W6 记忆与上下文](https://sunrong.site/posts/ai-practice/ai-app/agentscope-w6-memory-and-context.html) + [W7 段 2 Tracing 模块](https://sunrong.site/blog/)：前两篇讲"AgentScope 怎么产生 Trace"——**本篇讲"拿到 Trace 后怎么用 Phoenix 做 AI Agent 项目的行为监控"**——**从 1 条真实 Span 出发**——**走到 4 级 Evaluation Engine 设计**。
 
 <!-- more -->
 
-> **TL;DR**：HERO AI 的 Phoenix 监控分 **6 个阶段**落地。本篇不写复杂 Dashboard——**只回答 1 个问题**："**我现在手上有 1 条 `mcp__hero__searchUserEnvTool` 的 Span 数据，我应该按什么顺序把它变成可用的工程指标？**" 答案：**Phase 1 确认 Span → Phase 2 HERO Metadata → Phase 3 Tool Analytics → Phase 4 Behavior Analytics → Phase 5 Evaluation → Phase 6 Optimization**。其中 **HERO Metadata** 是最关键的一层——**不要把统计建立在 `gen_ai.tool.name` 字符串前缀上**——**必须显式加 `hero.tool.type` 字段**。
+> **TL;DR**：AI Agent 项目的 Phoenix 监控分 **6 个阶段**落地。本篇不写复杂 Dashboard——**只回答 1 个问题**："**我现在手上有 1 条 `mcp__app__queryUserEnv` 的 Span 数据，我应该按什么顺序把它变成可用的工程指标？**" 答案：**Phase 1 确认 Span → Phase 2 Agent Metadata → Phase 3 Tool Analytics → Phase 4 Behavior Analytics → Phase 5 Evaluation → Phase 6 Optimization**。其中 **Agent Metadata** 是最关键的一层——**不要把统计建立在 `gen_ai.tool.name` 字符串前缀上**——**必须显式加 `agent.tool.type` 字段**。
 
 ## 一、先理解这条 Span 在 Phoenix 里是什么
 
@@ -34,9 +33,9 @@ author: Mr.Sun
 
 ```text
 span_kind = TOOL
-gen_ai.tool.name = mcp__hero__searchUserEnvTool
-input = {"username": "s00837623"}
-output = ["RRU_PSI_OTA", "RRU_白盒", ...]
+gen_ai.tool.name = mcp__app__queryUserEnv
+input = {"username": "user_001"}
+output = ["TestEnv_A", "TestEnv_B", ...]
 duration = 1.057s
 status_code = OK
 ```
@@ -47,7 +46,7 @@ Phoenix 把它理解成：
 Trace
 └── Agent / Workflow
     └── TOOL
-        └── mcp__hero__searchUserEnvTool
+        └── mcp__app__queryUserEnv
             ├── input
             ├── output
             ├── duration
@@ -59,7 +58,7 @@ Trace
 
 ## 二、我真正要解决的 5 个问题
 
-不是一上来做 Dashboard——**先定义 HERO 的 MCP / Skill 统计模型**。
+不是一上来做 Dashboard——**先定义 Agent 项目的 MCP / Skill 统计模型**。
 
 ### 2.1 基础统计模型
 
@@ -80,7 +79,7 @@ Trace
 
 ```text
 MCP
- ├── searchUserEnvTool
+ ├── queryUserEnv
  │   ├── 调用次数
  │   ├── 成功率
  │   ├── 平均耗时
@@ -92,7 +91,7 @@ MCP
  └── xxxTool
 ```
 
-**这才是后面 HERO Evaluation Engine 的基础**。
+**这才是后面 Agent Evaluation Engine 的基础**。
 
 ## 三、第一步：直接在 Phoenix UI 查询 MCP
 
@@ -105,7 +104,7 @@ span_kind == 'TOOL'
 或者针对单个 MCP：
 
 ```python
-span_kind == 'TOOL' and gen_ai.tool.name == 'mcp__hero__searchUserEnvTool'
+span_kind == 'TOOL' and gen_ai.tool.name == 'mcp__app__queryUserEnv'
 ```
 
 Phoenix UI 的 Span 查询支持 Python expression 过滤语法——**Python SDK 和 UI 共用同一套过滤逻辑**。
@@ -129,15 +128,15 @@ Search
 我现在这条 Span：
 
 ```json
-"gen_ai.tool.name": "mcp__hero__searchUserEnvTool"
+"gen_ai.tool.name": "mcp__app__queryUserEnv"
 ```
 
 **非常好**——**但未来会出现**：
 
 ```text
-mcp__hero__searchUserEnvTool
-mcp__hero__getProjectInfo
-mcp__hero__createTicket
+mcp__app__queryUserEnv
+mcp__app__getProjectInfo
+mcp__app__createTicket
 skill_search_user
 skill_query_project
 skill_generate_report
@@ -155,7 +154,7 @@ name
 
 **后面会非常乱**。
 
-## 五、HERO Metadata 层设计（最关键）
+## 五、Agent Metadata 层设计（最关键）
 
 **Tool Span 最好长这样**：
 
@@ -163,18 +162,18 @@ name
 {
   "span_kind": "TOOL",
 
-  "gen_ai.tool.name": "mcp__hero__searchUserEnvTool",
+  "gen_ai.tool.name": "mcp__app__queryUserEnv",
 
   "metadata": {
-    "hero.tool.type": "MCP",
-    "hero.tool.name": "searchUserEnvTool",
-    "hero.tool.server": "hero",
-    "hero.tool.version": "1.0",
-    "hero.agent.name": "xxxAgent",
-    "hero.agent.version": "1.2",
-    "hero.workflow.name": "xxxWorkflow",
-    "hero.project.id": "xxx",
-    "hero.user.id": "s00837623"
+    "agent.tool.type": "MCP",
+    "agent.tool.name": "queryUserEnv",
+    "agent.tool.server": "app",
+    "agent.tool.version": "1.0",
+    "agent.name": "xxxAgent",
+    "agent.version": "1.2",
+    "workflow.name": "xxxWorkflow",
+    "project.id": "xxx",
+    "user.id": "user_001"
   }
 }
 ```
@@ -186,11 +185,11 @@ name
   "span_kind": "TOOL",
 
   "metadata": {
-    "hero.tool.type": "SKILL",
-    "hero.tool.name": "search_project",
-    "hero.skill.name": "search_project",
-    "hero.agent.name": "xxxAgent",
-    "hero.workflow.name": "xxxWorkflow"
+    "agent.tool.type": "SKILL",
+    "agent.tool.name": "search_project",
+    "agent.skill.name": "search_project",
+    "agent.name": "xxxAgent",
+    "workflow.name": "xxxWorkflow"
   }
 }
 ```
@@ -198,8 +197,8 @@ name
 **这样就能精确统计**：
 
 ```python
-hero.tool.type == "MCP"      # 筛 MCP
-hero.tool.type == "SKILL"    # 筛 Skill
+agent.tool.type == "MCP"      # 筛 MCP
+agent.tool.type == "SKILL"    # 筛 Skill
 ```
 
 **而不是靠**：
@@ -212,7 +211,7 @@ gen_ai.tool.name.startswith("mcp__")  # 字符串前缀推断
 
 ### 5.1 为什么 Metadata 这么关键
 
-| 维度 | 按 name 字符串 | 按 hero.tool.type |
+| 维度 | 按 name 字符串 | 按 agent.tool.type |
 | --- | --- | --- |
 | 准确度 | ⚠️ 易错（命名规范变化）| ✅ 显式 |
 | 扩展性 | ❌ 加新类型要改解析 | ✅ 自动支持 |
@@ -226,10 +225,10 @@ gen_ai.tool.name.startswith("mcp__")  # 字符串前缀推断
 ```text
 tool_name                      count
 ------------------------------------------------
-mcp__hero__searchUserEnvTool    3200
-mcp__hero__getProjectInfo       1800
-mcp__hero__createTicket         1200
-mcp__hero__xxx                   900
+mcp__app__queryUserEnv    3200
+mcp__app__getProjectInfo       1800
+mcp__app__createTicket         1200
+mcp__app__xxx                   900
 ...
 ```
 
@@ -249,7 +248,7 @@ status_code != OK       # 失败
 例如：
 
 ```text
-mcp__hero__searchUserEnvTool
+mcp__app__queryUserEnv
 调用：3200
 成功：3150
 失败：50
@@ -277,7 +276,7 @@ duration ≈ 1.058 秒
 按 Tool 聚合：
 
 ```text
-searchUserEnvTool
+queryUserEnv
 count = 3200
 avg   = 1.02s
 p50   = 0.83s
@@ -310,7 +309,7 @@ query_spans()
    ↓
 Pandas
    ↓
-HERO Evaluation Engine
+Agent Evaluation Engine
 ```
 
 Phoenix 官方提供 Span Query / DataFrame 方式提取和分析 Span 数据。
@@ -339,9 +338,9 @@ df.groupby("gen_ai.tool.name").size()
 ```text
 tool_name                      count
 ------------------------------------------------
-mcp__hero__searchUserEnvTool    3200
-mcp__hero__getProjectInfo       1800
-mcp__hero__createTicket         1200
+mcp__app__queryUserEnv    3200
+mcp__app__getProjectInfo       1800
+mcp__app__createTicket         1200
 ```
 
 继续用 `status_code` / `duration` / `session.id` / `conversation.id` 分析。
@@ -385,12 +384,12 @@ Workflow
       ▼
 RequirementAgent
       │
-      ├── searchUserEnvTool
+      ├── queryUserEnv
       ├── getProjectInfo
-      └── searchUserEnvTool
+      └── queryUserEnv
 ```
 
-**这比"searchUserEnvTool 调用了 3200 次"有价值得多**。
+**这比"queryUserEnv 调用了 3200 次"有价值得多**。
 
 可以继续问：
 
@@ -401,7 +400,7 @@ RequirementAgent
 假设你发现：
 
 ```text
-searchUserEnvTool
+queryUserEnv
 所有 Agent 平均：1.2 次 / workflow
 
 某 Agent (X)：
@@ -421,7 +420,7 @@ searchUserEnvTool
 
 > **Agent 行为分析工具**
 
-**这正是 HERO Evaluation Engine 最有价值的地方**。
+**这正是 Agent Evaluation Engine 最有价值的地方**。
 
 ## 十三、Skill 同理
 
@@ -429,13 +428,13 @@ searchUserEnvTool
 
 ```text
 span_kind = TOOL
-metadata.hero.tool.type = SKILL
+metadata.agent.tool.type = SKILL
 ```
 
 **只要用**：
 
 ```python
-metadata.hero.tool.type == "SKILL"
+metadata.agent.tool.type == "SKILL"
 ```
 
 **就能筛出 Skill**。然后同 6-10 节：
@@ -452,7 +451,7 @@ Skill
  └── 用户分布
 ```
 
-## 十四、HERO Tool Analytics 整体架构
+## 十四、Agent Tool Analytics 整体架构
 
 ```text
                    Phoenix
@@ -464,7 +463,7 @@ Skill
              └────────┬─────────┘
                       │
                       ▼
-              HERO Evaluation
+              Agent Evaluation
                   Engine
                       │
           ┌───────────┼───────────┐
@@ -515,7 +514,7 @@ Agent 有没有调用正确的 Tool？
 
 ```text
 发现：
-searchUserEnvTool 平均每个 Workflow 调用 4.7 次
+queryUserEnv 平均每个 Workflow 调用 4.7 次
 正常应该 ≤ 2 次
         ↓
 Evaluation Engine
@@ -536,7 +535,7 @@ Evaluation Engine
 | Phase | 内容 | 时间 |
 | --- | --- | --- |
 | **Phase 1** | Phoenix Trace<br/>确认 MCP / Skill Span 数据完整 | 1 周 |
-| **Phase 2** | HERO Metadata<br/>统一 MCP / Skill / Agent / Workflow 标识 | 1 周 |
+| **Phase 2** | Agent Metadata<br/>统一 MCP / Skill / Agent / Workflow 标识 | 1 周 |
 | **Phase 3** | Tool Analytics<br/>调用量 / 成功率 / Latency / P95/P99 / 错误 | 1-2 周 |
 | **Phase 4** | Behavior Analytics<br/>重复调用 / 异常调用 / Tool 选择 / 调用链 | 2-3 周 |
 | **Phase 5** | Evaluation<br/>Tool Use Correctness / Efficiency / Response Quality | 2-4 周 |
@@ -562,23 +561,23 @@ end_time
 status_code
 ```
 
-**基础上已经够用**。但为了 HERO Evaluation Engine，建议**补这些**：
+**基础上已经够用**。但为了 Agent Evaluation Engine，建议**补这些**：
 
 ```text
-hero.tool.type         ← 最关键
-hero.tool.name
-hero.tool.server
-hero.tool.version
-hero.agent.name
-hero.agent.version
-hero.workflow.name
-hero.workflow.version
-hero.project.id
-hero.user.id
-hero.environment
+agent.tool.type         ← 最关键
+agent.tool.name
+agent.tool.server
+agent.tool.version
+agent.name
+agent.version
+workflow.name
+workflow.version
+project.id
+user.id
+environment
 ```
 
-**尤其是** `hero.tool.type`——**强烈建议加**——**让数据明确变成 MCP / SKILL**——**而不是靠名字推断**。
+**尤其是** `agent.tool.type`——**强烈建议加**——**让数据明确变成 MCP / SKILL**——**而不是靠名字推断**。
 
 ## 十八、立即动手：4 步小实验
 
@@ -593,7 +592,7 @@ span_kind == 'TOOL'
 ### ② 查看你的 MCP
 
 ```text
-gen_ai.tool.name == 'mcp__hero__searchUserEnvTool'
+gen_ai.tool.name == 'mcp__app__queryUserEnv'
 ```
 
 ### ③ 看一个 MCP 的 Trace
@@ -637,18 +636,18 @@ Phoenix Query
     ↓
 Pandas
     ↓
-HERO Evaluation Engine
+Agent Evaluation Engine
 ```
 
 其中最重要的是：
 
 > **Span 是什么 → Attribute 怎么设计 → 怎么 Query → 怎么聚合 → 怎么形成 Evaluation**
 
-这与 [W6 HERO Metadata 设计](https://sunrong.site/posts/ai-practice/ai-app/agentscope-w6-memory-and-context.html) 是同一套思路——**先把数据规范化**——**再分析**。
+这与 [W6 Agent Metadata 设计](https://sunrong.site/posts/ai-practice/ai-app/agentscope-w6-memory-and-context.html) 是同一套思路——**先把数据规范化**——**再分析**。
 
 ## 二十、下一步：MCP/Skill Analytics V0.1
 
-下一步直接拿 Phoenix 里真实的 `mcp__hero__searchUserEnvTool` 数据，做 **"MCP/Skill Analytics V0.1"**：
+下一步直接拿 Phoenix 里真实的 `mcp__app__queryUserEnv` 数据，做 **"MCP/Skill Analytics V0.1"**：
 
 ```text
 Phoenix UI 查询
@@ -666,9 +665,9 @@ phoenix.Client().query_spans()
 
 ## 写在最后
 
-HERO AI 的 Evaluation Engine 不应该是"一上来就做的复杂 Dashboard"——**而是从 1 条 Span 开始**——**6 阶段逐步演进**——**每阶段都有可交付的工程指标**。
+AI Agent 项目的 Evaluation Engine 不应该是"一上来就做的复杂 Dashboard"——**而是从 1 条 Span 开始**——**6 阶段逐步演进**——**每阶段都有可交付的工程指标**。
 
-**最重要的不是"用什么工具"**——**而是"用什么数据模型"**——**HERO Metadata 是这个数据模型的核心**——**没有它，所有分析都建在沙滩上**。
+**最重要的不是"用什么工具"**——**而是"用什么数据模型"**——**Agent Metadata 是这个数据模型的核心**——**没有它，所有分析都建在沙滩上**。
 
 **如果你也在做 AI Agent 监控**——**欢迎交流**——**我的邮箱 sunrong1990@126.com**。
 
