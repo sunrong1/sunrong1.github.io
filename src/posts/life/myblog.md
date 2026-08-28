@@ -32,7 +32,7 @@ public-safe: true
 ```
 心 × 行 = 成果
    ↑     ↑
-   ↑     └─ 行动（开源贡献 / 博客 / 项目实战 / 简历）
+   ↑     └─ 行动（开源贡献 / 博客 / 项目实战 / 总结）
    └─────── 认知（心学体系 / 方法论 / 自我迭代）
 ```
 
@@ -48,7 +48,7 @@ public-safe: true
 
 | 维度 | 详情 |
 |---|---|
-| **姓名** | 孙荣（笔名 Mr.Sun / Dave）|
+| **姓名** | 笔名 Mr.Sun（Dave）|
 | **职级** | 17 级技术专家（华为无线 → 智能车 BU 内部 transfer 申请中）|
 | **工龄** | 11.2 年（2015-03 入职）|
 | **教育** | 山东枣庄 → 上海大学通信系统硕士 |
@@ -77,36 +77,35 @@ public-safe: true
 | 时间 | 事件 | 状态 |
 |---|---|---|
 | 2026.07–09 | **8 周 AgentScope 2.0 深潜** | 🟢 W2-W6 完成 / W7-W8 进行中 |
-| 2026.07 | **PR #2217 合并上游** | ✅ merged |
+| 2026.07 | **Issue #2166 + 推动 PR #2167 合并** | ✅ merged |
 | 2026.08 | **PR #2343 提交上游** | 🟡 待 review |
 | 2026.08 | **3 段 W6 blog 发布** | ✅ W4 + W6 上线 |
 | 2026.08 | **Phoenix + AI Agent 监控 blog** | ✅ 上线 |
 | 2026.09.12 | **8 周计划收官** | 🎯 终极 PR + 复盘 |
-| 2026.09–10 | **4 周面试冲刺** | 📋 4 周计划已就绪 |
+| 2026.09–10 | **4 周能力提升冲刺** | 📋 4 周计划已就绪 |
 
 ---
 
-## 🏆 4 大上游开源贡献（公开可查证）
+## 🏆 上游开源贡献（公开可查证）
 
-> **这一节是 99% 候选没有的差异化优势**。所有贡献均在 [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) 主线仓库。
+> **我的 AgentScope 2.0 实战：4 项上游贡献**。所有贡献均在 [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) 主线仓库，HR 可查证。
 
-### ① PR #2217 ✅【已合并】fix(agent): count reasoning-acting rounds once
-- **位置**：`src/agentscope/agent/_agent.py:973-978`
-- **修复**：HITL 等待期间不再计数 → 节省 30-50% iterations
-- **链接**：https://github.com/agentscope-ai/agentscope/pull/2217
-
-### ② Issue #2166 + 推动 PR #2167 合并
-- 报告 `_acting_impl` 状态机 bug + 推动社区修复
+### ① Issue #2166 + 推动 PR #2167 合并 ✅
+- 报告 `_acting_impl` 状态机 bug + 推动社区开发者基于报告提交 PR
 - **链接**：https://github.com/agentscope-ai/agentscope/issues/2166
 
-### ③ PR #2343 🟡【待 review】fix(rag): matryoshka embedding dimensions
+### ② PR #2343 🟡【待 review】fix(rag): matryoshka embedding dimensions
 - **修复**：BGE/M3E 等非 matryoshka 模型不传 dimensions
 - **CI 状态**：mypy/flake8/pylint/black 全绿 + 7/7 tests pass
 - **链接**：https://github.com/agentscope-ai/agentscope/pull/2343
 
-### ④ Issue #2344（PR #2343 配套）
+### ③ Issue #2344（PR #2343 配套）
 - 详细 bug 描述 + 复现代码
 - **链接**：https://github.com/agentscope-ai/agentscope/issues/2344
+
+### ④ 阅读上游 PR（持续）
+- 持续阅读 + 学习 + 评论上游 PR（如 #2217 等）
+- 提升架构视野，转化为自己的设计参考
 
 ---
 
@@ -136,7 +135,7 @@ public-safe: true
 | 方法论 | 实战案例 |
 |---|---|
 | **3 档反馈**（✅✅强 / ⚠️浅 / ❌缺）| 8 周 AgentScope 笔记 89 强 |
-| **双线并行**（学习 ∥ 行动）| V6/V7 简历 + 内外部并行 |
+| **双线并行**（学习 ∥ 行动）| V6/V7 总结 + 内外部并行 |
 | **动力三角**（心 × 行 × 反馈）| H1 2026 5 大项目并行 |
 | **30 天行动清单** | 8 周计划 = 8 个 7 天迭代 |
 | **Harness 优化** | 11 年测试平台 + 1 年 AI Harness |
@@ -236,15 +235,15 @@ public-safe: true
 | 领域 | 目标 | 进度 |
 |---|---|---|
 | **AgentScope 2.0** | 8 周深读（W6 完成）| 🟢 6/8 周 |
-| **4 周面试冲刺** | 简历 + 投递 + 30 高频题 | 🟡 1/4 周 |
+| **4 周能力提升冲刺** | 总结 + 投递 + 30 高频题 | 🟡 1/4 周 |
 | **LeetCode** | DP + 回溯 20+ 题 | 🟢 持续中 |
-| **V6/V7 简历** | 智能车 BU 申请 + 外部冲高 | ✅ 已完成 |
+| **V6/V7 总结** | 智能车 BU 申请 + 外部冲高 | ✅ 已完成 |
 
 ### 每日时间分配
 
 ```
 工作日：
-├── 通勤（1小时）→ 算法 / 面试题
+├── 通勤（1小时）→ 算法 / 算法题
 ├── 中午（30分钟）→ 博客写作
 ├── 晚上（1.5小时）→ AgentScope / LeetCode
 └── 睡前 → 反思复盘
@@ -283,7 +282,7 @@ public-safe: true
 - 📧 邮箱：sunrong1990@126.com
 - 🌐 博客：sunrong.site
 - 🔗 GitHub：sunrong1
-- 📱 微信：rorynick
+- 
 
 ---
 
@@ -292,10 +291,10 @@ public-safe: true
 - **2026-08-28**：W7 段 2 Tracing + Phoenix 监控 blog 上线
 - **2026-08-26**：W6 记忆与上下文 blog 上线
 - **2026-08-24**：AgentScope 2.0 拉取最新代码（415 commits）
-- **2026-08-22**：V7 AI Coding 工程师简历创建
+- **2026-08-22**：V7 AI Coding 工程师总结创建
 - **2026-08-08**：W5-D2 工具与插件学习（tool/_response.py 205 行）
 - **2026-08-04**：PR #2343 + Issue #2344 提交上游
-- **2026-07-24**：PR #2217 合并到 AgentScope 主线
+- **2026-07-24**：Issue #2166 + 推动 PR #2167 合并到 AgentScope 主线
 - **2026-05-XX**：算法 14 天计划启动
 - **2026-04-XX**：AI Agent 论文 11 篇全部完成
 
