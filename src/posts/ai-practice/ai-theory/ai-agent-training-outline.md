@@ -5,7 +5,7 @@ tags:
   - 培训
   - AgentScope
   - MCP
-  - HERO平台
+  - Agent Platform
 author: Mr.Sun
 icon: 🧠
 ---***
@@ -277,7 +277,7 @@ class Memory:
 
         return context
 
-# HERO 平台示例：存储用户环境配置
+# Agent Platform 示例：存储用户环境配置
 memory = Memory()
 memory.save_to_long_term(
     key='user_env_config',
@@ -365,12 +365,12 @@ def planning_react(task, tools, max_steps=5):
 
     return "任务未完成"
 
-# HERO 平台示例
-def plan_hero_task(user_request):
-    """HERO 平台的规划器"""
+# Agent Platform 示例
+def plan_agent_task(user_request):
+    """Agent Platform的规划器"""
     task = f"用户请求: {user_request}
 
-可用的 HERO 微服务:
+可用的 Agent Platform 微服务:
 - env_service: 环境配置管理
 - bbu_service: BBU 管理
 - rru_service: RRU 管理
@@ -378,7 +378,7 @@ def plan_hero_task(user_request):
 
 请规划完成任务的步骤。"
 
-    return planning_react(task, hero_tools)
+    return planning_react(task, agent_tools)
 ```
 
 ***
@@ -425,14 +425,14 @@ def plan_hero_task(user_request):
 **代码示例：**
 
 ```python
-# MCP Server 端：HERO 平台封装
+# MCP Server 端：Agent Platform封装
 from mcp.server import MCPServer
 from mcp.types import Tool, Resource
 
-hero_server = MCPServer(name="HERO Platform")
+agent_server = MCPServer(name="Agent Platform")
 
 # 定义工具：查询环境配置
-@hero_server.tool()
+@agent_server.tool()
 def query_env_config(user_id: str) -> dict:
     """查询用户的环境配置"""
     return {
@@ -442,7 +442,7 @@ def query_env_config(user_id: str) -> dict:
     }
 
 # 定义工具：设计环境配置
-@hero_server.tool()
+@agent_server.tool()
 def design_env_config(rrus: list, psi_switch: str) -> dict:
     """根据 RRU 和 PSI 开关设计环境配置"""
     return {
@@ -453,7 +453,7 @@ def design_env_config(rrus: list, psi_switch: str) -> dict:
     }
 
 # 定义工具：修改 BBU 地址
-@hero_server.tool()
+@agent_server.tool()
 def modify_bbu_address(bbu_id: str, new_address: str) -> dict:
     """修改 BBU 地址"""
     return {
@@ -463,15 +463,15 @@ def modify_bbu_address(bbu_id: str, new_address: str) -> dict:
         'status': 'success'
     }
 
-hero_server.run()
+agent_server.run()
 
 # ============================================
 
 # Agent 端：调用 MCP 工具
 from mcp.client import MCPClient
 
-async def agent_query_hero(user_request):
-    client = MCPClient("http://hero-platform:8080/mcp")
+async def agent_query_demo(user_request):
+    client = MCPClient("http://agent-platform:8080/mcp")
 
     # 发现可用工具
     tools = await client.list_tools()
@@ -549,7 +549,7 @@ async def agent_query_hero(user_request):
 
 **讲解文案：**
 
-> 接下来，我给大家演示 HERO 平台 AI Agent 的当前实现状态。
+> 接下来，我给大家演示 Agent Platform AI Agent 的当前实现状态。
 >
 > 环境说明：
 > - 框架：AgentScope（Python）
@@ -564,7 +564,7 @@ async def agent_query_hero(user_request):
 
 ```python
 """
-HERO Agent 基础演示
+Agent 基础演示
 展示：Agent Loop + MCP 调用
 """
 
@@ -572,20 +572,20 @@ from agentscope import Agent
 from agentscope.rag import MCPClient
 import json
 
-# 1. 初始化 MCP 客户端（连接到 HERO 平台）
-mcp_client = MCPClient("http://hero-platform:8080/mcp")
+# 1. 初始化 MCP 客户端（连接到 Agent Platform）
+mcp_client = MCPClient("http://agent-platform:8080/mcp")
 
 # 2. 定义可用工具（通过 MCP 发现）
 tools = mcp_client.discover_tools()
-print(f"发现 {len(tools)} 个 HERO 微服务工具")
+print(f"发现 {len(tools)} 个 Agent Platform 微服务工具")
 
 # 3. 创建 Agent
 agent = Agent(
-    name="HERO-Assistant",
+    name="Demo-Assistant",
     model="qwen3.5",  # 本地 Qwen3.5
     tools=tools,
     system_prompt="""
-你是一个专业的 HERO 平台助手。
+你是一个专业的 Agent Platform助手。
 你可以帮助用户：
 - 查询环境配置
 - 设计环境配置方案
@@ -620,7 +620,7 @@ print(f"Agent 输出: {response}")
 **运行结果：**
 
 ```
-发现 3 个 HERO 微服务工具
+发现 3 个 Agent Platform 微服务工具
 可用工具: ['query_env_config', 'design_env_config', 'modify_bbu_address']
 
 ==================================================
@@ -649,7 +649,7 @@ Agent 输出: 您当前的环境配置包含：
 
 ```python
 """
-HERO Agent Memory 演示
+Agent Memory 演示
 展示：短期记忆 + 长期记忆
 """
 
@@ -657,7 +657,7 @@ import json
 import time
 
 class HeroMemory:
-    """HERO 平台的 Memory 组件"""
+    """Agent Platform的 Memory 组件"""
 
     def __init__(self, user_id):
         self.user_id = user_id
@@ -779,34 +779,34 @@ print("（Agent 可以基于这个上下文理解对话连贯性）")
 
 ```python
 """
-HERO Agent 端到端演示
+Agent 端到端演示
 场景：用户说"帮我查找我的环境配置，帮我设计一个跑 RRU 的 PSI 开关下的环境配置，修改 BBU 的地址。"
 """
 
 from agentscope import Agent
 from agentscope.rag import MCPClient
-from hero_memory import HeroMemory
-from hero_planner import HeroPlanner
+from agent_memory import HeroMemory
+from agent_planner import HeroPlanner
 
 # 1. 初始化组件
-mcp_client = MCPClient("http://hero-platform:8080/mcp")
+mcp_client = MCPClient("http://agent-platform:8080/mcp")
 tools = mcp_client.discover_tools()
 memory = HeroMemory("sunrong")
 planner = HeroPlanner(tools)
 
 # 2. 创建 Agent
 agent = Agent(
-    name="HERO-Assistant",
+    name="Demo-Assistant",
     model="qwen3.5",
     tools=tools,
     memory=memory,
     planner=planner,
     system_prompt="""
-你是一个 HERO 平台助手。
+你是一个 Agent Platform助手。
 你具备以下能力：
 - 理解用户的自然语言请求
 - 规划完成任务的步骤
-- 调用 HERO 微服务
+- 调用 Agent Platform 微服务
 - 记住用户的偏好和历史操作
 
 当用户提出复杂请求时，先规划步骤，再逐步执行。
@@ -883,12 +883,12 @@ print(response)
 
 ```python
 """
-HERO Planning 组件（开发中）
+Agent Planning 组件（开发中）
 展示：如何让 Agent 学会规划
 """
 
 class HeroPlanner:
-    """HERO 平台的 Planning 组件"""
+    """Agent Platform的 Planning 组件"""
 
     def __init__(self, available_tools):
         self.tools = available_tools

@@ -26,7 +26,7 @@ author: Mr.Sun
 
 <!-- more -->
 
-> **TL;DR**：W6 = 记忆与上下文。**3 段联动** = 段 1 数据层（state 372 行） + 段 2 行为层（3 个 memory 实现 ~3700 行） + 段 3 调度层（compress 流程 ~700 行）。**核心 insight**："段1存，段2用，段3压，3 段 = 完整 Agent 记忆-上下文"。本文讲 **"为什么切模式"** + **"3 段整体架构"** + **"3 大跨段 insight"** + **"HERO 实战对应"** + **"W6 自评 50% 强率暴露的盲点"**。
+> **TL;DR**：W6 = 记忆与上下文。**3 段联动** = 段 1 数据层（state 372 行） + 段 2 行为层（3 个 memory 实现 ~3700 行） + 段 3 调度层（compress 流程 ~700 行）。**核心 insight**："段1存，段2用，段3压，3 段 = 完整 Agent 记忆-上下文"。本文讲 **"为什么切模式"** + **"3 段整体架构"** + **"3 大跨段 insight"** + **"AI Agent 项目实战对应"** + **"W6 自评 50% 强率暴露的盲点"**。
 
 ## 一、为什么 W6 切到"整体架构"模式
 
@@ -139,7 +139,7 @@ state/_state.py (372 行)
 ```
 src/agentscope/middleware/_longterm_memory/
 │
-├─ _mem0/ (1180 行)                    ← HERO 在用
+├─ _mem0/ (1180 行)                    ← AI Agent 项目在用
 │   ├─ _middleware.py (741)
 │   ├─ _tools.py (270)                 — search_memory + add_memory
 │   ├─ _agentscope_adapter.py (439)    — Msg ↔ Mem0 格式
@@ -198,7 +198,7 @@ agent = Agent(
 你的项目需要什么？
 │
 ├─ 跨实例 + 多用户 + 企业级
-│   └─ ✅ _mem0（HERO 选的就是这个）
+│   └─ ✅ _mem0（AI Agent 项目选的就是这个）
 │
 ├─ 单机 + 自动整理 + 零运维
 │   └─ ✅ _reme
@@ -272,14 +272,14 @@ src/agentscope/agent/
 
 #### Insight 3.1：双 Ratio = "压缩的两个边界"
 
-| 字段 | 含义 | 默认 | 你的 HERO | 作用 |
+| 字段 | 含义 | 默认 | 你的 AI Agent 项目 | 作用 |
 |---|---|---|---|---|
 | `trigger_ratio` | **超过**此比例触发 | 0.8 | **0.7** | 早压缩 = 省 token |
 | `reserve_ratio` | **保留**此比例不压缩 | 0.1 | 0.1 | 留新近 context |
 
 **PR #2396 修复**：`lt=0.9` → `le=0.9` —— 现在可以用 0.9 触发 = "极晚压缩"。
 
-**HERO 为什么 0.7？** 早期触发 = 避免 context 满 = 给 LLM 留足响应空间 = **买保险**（不是"提升效率"）。
+**AI Agent 项目为什么 0.7？** 早期触发 = 避免 context 满 = 给 LLM 留足响应空间 = **买保险**（不是"提升效率"）。
 
 #### Insight 3.2：3 层回退机制 = Robustness 实战
 
@@ -336,7 +336,7 @@ res = await self.model.generate_structured_output(
 - **context 满** = 看段 3（什么时候压）
 - **用户问过去** = 看段 2（记忆怎么用）
 
-## 六、HERO 实战对应
+## 六、AI Agent 项目实战对应
 
 我 H1 2026 的 9 个核心 Skill / 5 个生产在跑 / 月调用 100+ 次——**对应的就是这 3 段**：
 
@@ -350,11 +350,11 @@ res = await self.model.generate_structured_output(
 | "H1 完成 AgentScope 2.0 端到端 MVP" | 3 段 = MVP 全栈 |
 
 **关键对应**：
-- **HERO `trigger_ratio = 0.7`**（vs default 0.8） = **段 3 双 Ratio 配置**
-- **HERO 选 `_mem0`** = **段 2 选型决策**
-- **HERO 9 Skill 调用 ToolContext** = **段 1 ToolContext 实战**
+- **AI Agent 项目 `trigger_ratio = 0.7`**（vs default 0.8） = **段 3 双 Ratio 配置**
+- **AI Agent 项目选 `_mem0`** = **段 2 选型决策**
+- **AI Agent 项目 9 Skill 调用 ToolContext** = **段 1 ToolContext 实战**
 
-**3 段不是"读懂"**——**3 段是"HERO 实际跑起来"的 3 个组件**——**这才是"真懂"的标准**。
+**3 段不是"读懂"**——**3 段是"AI Agent 项目实际跑起来"的 3 个组件**——**这才是"真懂"的标准**。
 
 ## 七、W6 自评：50% 强率暴露的盲点
 
@@ -363,7 +363,7 @@ W6 段 1+2+3 完成后，我用 4 个 Q 测试自己：
 | Q | 主题 | 评分 | 评语 |
 |---|---|---|---|
 | Q1 | state 兼容性 | ✅✅ 强 | 答对 3 行 + 1 行没说（差 1 步满分）|
-| Q2 | HERO 选型复盘 | ⚠️ 浅 | "分阶段"对了但理由浅 |
+| Q2 | AI Agent 项目 选型复盘 | ⚠️ 浅 | "分阶段"对了但理由浅 |
 | Q3 | trigger_ratio 0.7 trade-off | ⚠️ 浅 | **逻辑反了**（短 context → 早压缩 = 错）|
 | Q4 | 3 段闭环 | ✅✅ 强 | 21 字精炼到位 |
 
