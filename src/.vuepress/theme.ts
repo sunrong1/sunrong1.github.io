@@ -92,6 +92,10 @@ export default hopeTheme({
         hint: "输入常用的password",
         password: "111",
       },
+      "/posts/career/candy-spot-positioning.html": {
+        hint: "输入常用的password",
+        password: "111",
+      },
     },
   },
 
