@@ -767,7 +767,6 @@ class PricingDomainService:
 
 ### 关联之前项目
 
-- **Harness 工程**(9-16/9-17/9-18/9-20)— Harness 治理 ≈ DDD 防腐层
 - **工单状态机 S0-S6** — 业务流 ≈ 限界上下文
 - **AgentScope 8 周源码深读** — `agent/` ≈ Agent 上下文,`pipeline/` ≈ 业务流上下文
 
@@ -795,39 +794,4 @@ DDD 系列完整矩阵:
 - 9-24 [DDD 基础](https://sunrong.site/posts/ai-practice/2026-09-24-ddd-foundations.html)— Day 1+Day 2 整合
 - **9-27 [DDD 进阶(本文)](https://sunrong.site/posts/ai-practice/2026-09-27-ddd-advanced.html)** — Day 3 实战
 
-***
-
-## 🛡️ 致良知 + 参考
-
-| 项 | 内容 |
-| :--- | :--- |
-| **写作动机** | DDD 3 天计划 Day 3 进阶篇(2 波素材整合),作为"实战篇" |
-| **致良知** | 所有洞察都来自公开学习材料 + 个人工程实践,无任何夸大 |
-| **隐私** | 工作单位 / 职级 / 团队规模 等敏感信息已脱敏 |
-| **个人经历** | 关联引用的是公开实践(AgentScope / 状态机化名),非内部信息 |
-
-### 参考与延伸
-
-- Eric Evans:**Domain-Driven Design**(2003)— DDD 圣经
-- Vaughn Vernon:**Implementing Domain-Driven Design**(2013)— 实战指南
-- Chris Richardson:**Microservices Patterns**(2018)— 微服务模式
-- **Kafka 官方文档**:https://kafka.apache.org/documentation/
-- **阿里 COLA 架构**:DDD + 六边形 + CQRS
-
-### 关联 blog
-
-- **9-16 [Harness 工程](https://sunrong.site/posts/ai-practice/2026-09-16-harness-engineering.html)** — 抽象层
-- **9-17 [AI Coding 工程](https://sunrong.site/posts/ai-practice/2026-09-17-ai-coding-engineering.html)** — 系统层
-- **9-18 [Agent Loop 5 大模式](https://sunrong.site/posts/ai-practice/2026-09-18-agent-loop-5-patterns.html)** — 算法层
-- **9-20 [Harness 全家福](https://sunrong.site/posts/ai-practice/2026-09-20-harness-complete-system.html)** — 综述
-- **9-22 [DDD 战略设计](https://sunrong.site/posts/ai-practice/2026-09-22-ddd-strategic-design.html)** — DDD Day 1
-- **9-24 [DDD 基础](https://sunrong.site/posts/ai-practice/2026-09-24-ddd-foundations.html)** — DDD 基础篇(Day 1+Day 2)
-- **9-27 [DDD 进阶(本文)](https://sunrong.site/posts/ai-practice/2026-09-27-ddd-advanced.html)** — DDD 进阶篇(Day 3)
-
-***
-
-**作者注**:本文是 DDD 3 天计划的进阶篇(Day 3)——从"领域事件"到"四层架构"到"误区防范"的完整实战体系。
-
-如果你是架构师,这一篇帮你把 DDD 用起来,知道怎么不踩坑;如果你是工程师,这一篇帮你识别自己项目里的"伪 DDD"。
-
-> 本文首发于 [sunrong.site](https://sunrong.site/),Mr.Sun,2026-09-27。
+DDD 进阶篇(Day 3)整合的核心目标:从"领域事件"到"四层架构"到"误区防范",把 DDD 用得起来,不踩坑。

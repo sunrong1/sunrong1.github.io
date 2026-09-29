@@ -13,15 +13,13 @@ tags:
   - 限界上下文
   - 通用语言
   - 子域划分
-  - Harness
-  - AI Coding
 author: Mr.Sun
 ---***
 # DDD Day 1 — 战略设计:从业务视角划分领域
 
 > 今天开始复习 DDD 领域驱动设计,预计 3 天。这是 Day 1(战略设计)。
 > 关键字:**战略设计 / 子域划分 / 通用语言 / 限界上下文 / 事件风暴 / 上下文协作**。
-> 关联:Harness 全家福 / AI Coding 工程 / AgentScope 4 PR 都跟 DDD 直接相关。
+> 关联:AgentScope 4 PR 等开源贡献 / 之前项目里大量 DDD 影子,都跟 DDD 直接相关。
 
 ***
 
@@ -35,9 +33,7 @@ author: Mr.Sun
 
 ## 📌 为什么写这篇
 
-最近 4 篇 Harness 系列(9-16 / 9-17 / 9-18 / 9-20)讲完了"AI Coding 怎么落地"——
-
-但**少了一个根本问题**:**这个领域应该怎么切**?
+最近几年 AI Coding 工程做得很多——但**少了一个根本问题**:**这个领域应该怎么切**?
 
 不是"用 Agent 怎么写代码",而是"业务应该怎么分"——**业务边界错了,Agent 写得越好,损失越大**。
 
@@ -508,15 +504,6 @@ terms:
 - [ ] 战略层领域模型(粗粒度,几个上下文)
 - [ ] 战术层领域模型(细粒度,聚合 + 实体 + 值对象)— Day 2
 
-### 跟 Harness 系列的关系
-
-| DDD 战略设计 | Harness 全家福 |
-| :--- | :--- |
-| **领域模型** | 4 组件 + 3 等级(理论层 + 系统层) |
-| **限界上下文** | 5 大子系统(每个子系统的边界) |
-| **通用语言** | 5 大子系统 + 4 大组件的标准化 |
-| **DDD 架构落地** | Harness 治理(防腐化 + 双保险) |
-
 ### 跟之前项目的关联
 
 - **8 周深读 AgentScope 2.0** — 代码里大量 DDD 影子(`agent/` = Agent 上下文,`pipeline/` = 业务流上下文)
@@ -544,45 +531,6 @@ terms:
 >
 > **"业务优先,技术其次。代码跟业务同构,才是 DDD 的灵魂。"**
 
-跟之前 4 篇 Harness 系列呼应——
-
-- 9-16 Harness 工程:工程化基础设施
-- 9-17 AI Coding 工程:Coding 落地
-- 9-18 Agent Loop 5 大模式:算法实现
-- 9-20 Harness 全家福:综述
-
-**9-22 DDD 战略设计:从"Harness 怎么做"上升到"领域怎么设计"**。
+DDD 战略设计的核心目标:把"领域怎么设计"这件事讲清楚——业务优先、技术其次。
 
 这是 AI 时代最稀缺的视角——**AI 让写代码变快,但没让"业务怎么切"变容易**。
-
-***
-
-## 🛡️ 致良知 + 参考
-
-| 项 | 内容 |
-| :--- | :--- |
-| **写作动机** | DDD 3 天学习 Day 1(战略设计),预计 Day 2 / Day 3 续 |
-| **致良知** | 所有洞察都来自公开学习材料 + 个人工程实践,无任何夸大 |
-| **隐私** | 所有工作单位 / 职级 / 团队规模 等敏感信息已脱敏 |
-| **个人经历** | "我的连接"段引用的是公开实践(AgentScope 4 PR / 数字化作战指挥中心),非内部信息 |
-
-### 参考与延伸
-
-- Eric Evans:**Domain-Driven Design**(2003)— DDD 圣经
-- Vaughn Vernon:**Implementing Domain-Driven Design**(2013)— 实战指南
-- Alberto Brandolini:**Event Storming**(2014)— 事件风暴方法
-- 阿里:**COLA 架构**(DDD + 六边形 + CQRS)
-
-### 关联 blog
-
-- **9-16 [Harness 工程](https://sunrong.site/posts/ai-practice/2026-09-16-harness-engineering.html)** — 抽象层
-- **9-17 [AI Coding 工程](https://sunrong.site/posts/ai-practice/2026-09-17-ai-coding-engineering.html)** — 系统层
-- **9-18 [Agent Loop 5 大模式](https://sunrong.site/posts/ai-practice/2026-09-18-agent-loop-5-patterns.html)** — 算法层
-- **9-20 [Harness 全家福](https://sunrong.site/posts/ai-practice/2026-09-20-harness-complete-system.html)** — 综述
-- **9-22 [DDD 战略设计](https://sunrong.site/posts/ai-practice/2026-09-22-ddd-strategic-design.html)** — 领域设计(Day 1)
-
-***
-
-**作者注**:本文是 DDD Day 1(战略设计)完整复盘,Day 2(战术设计)+ Day 3(实战)待续。如果你在做架构设计,这一篇应该读 2 遍;如果你在选技术路线,这一篇帮你理解"为什么业务优先"。
-
-> 本文首发于 [sunrong.site](https://sunrong.site/),Mr.Sun,2026-09-22。

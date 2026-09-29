@@ -525,8 +525,8 @@ class OrderApplicationService:
 
 | 架构模式 | 之前项目 |
 | :--- | :--- |
-| **整洁架构同心圆** | Harness 4 组件 = 4 层 |
-| **端口适配器** | Harness 的 Adapter 层 |
+| **整洁架构同心圆** | 多模块分层,核心在内,外层适配 |
+| **端口适配器** | 适配层设计,接口稳定 + 实现可换 |
 | **防腐层(ACL)** | 之前项目对接外部 API 时用过 |
 | **领域模型在中心** | 之前项目的核心业务逻辑都在内部包 |
 
@@ -585,47 +585,11 @@ class OrderApplicationService:
 >
 > **"领域层不知道外部模型长什么样——这是 DDD 的底线。"**
 
-DDD 系列完整矩阵(7 篇 blog):
+DDD 系列完整矩阵(4 篇 blog):
 
-- 9-16 [Harness 工程](https://sunrong.site/posts/ai-practice/2026-09-16-harness-engineering.html)
-- 9-17 [AI Coding 工程](https://sunrong.site/posts/ai-practice/2026-09-17-ai-coding-engineering.html)
-- 9-18 [Agent Loop 5 大模式](https://sunrong.site/posts/ai-practice/2026-09-18-agent-loop-5-patterns.html)
-- 9-20 [Harness 全家福](https://sunrong.site/posts/ai-practice/2026-09-20-harness-complete-system.html)
 - 9-22 [DDD 战略设计](https://sunrong.site/posts/ai-practice/2026-09-22-ddd-strategic-design.html)— Day 1
 - 9-24 [DDD 基础](https://sunrong.site/posts/ai-practice/2026-09-24-ddd-foundations.html)— Day 1+2
 - 9-27 上 [DDD 进阶](https://sunrong.site/posts/ai-practice/2026-09-27-ddd-advanced.html)— Day 3
 - **9-27 下 [DDD 架构模式(本文)](https://sunrong.site/posts/ai-practice/2026-09-27-ddd-architecture-patterns.html)**— Day 4
 
-***
-
-## 🛡️ 致良知 + 参考
-
-| 项 | 内容 |
-| :--- | :--- |
-| **写作动机** | DDD 4 天计划 Day 4 架构模式(2 波素材整合),统一视角看整洁 + 六边形 + ACL |
-| **致良知** | 所有洞察都来自公开学习材料 + 个人工程实践,无任何夸大 |
-| **隐私** | 工作单位 / 职级 / 团队规模 等敏感信息已脱敏 |
-| **个人经历** | 关联引用的是公开实践(AgentScope / 状态机化名),非内部信息 |
-
-### 参考与延伸
-
-- Robert C. Martin:**Clean Architecture**(2017)— 整洁架构
-- Alistair Cockburn:**Hexagonal Architecture**(2005)— 六边形架构
-- Vaughn Vernon:**Implementing Domain-Driven Design**(2013)— DDD 实战
-- Eric Evans:**Domain-Driven Design**(2003)— DDD 圣经
-- **阿里 COLA 架构**:DDD + 六边形 + CQRS
-
-### 关联 blog
-
-- **9-22 [DDD 战略设计](https://sunrong.site/posts/ai-practice/2026-09-22-ddd-strategic-design.html)** — Day 1
-- **9-24 [DDD 基础](https://sunrong.site/posts/ai-practice/2026-09-24-ddd-foundations.html)** — Day 1+2
-- **9-27 上 [DDD 进阶](https://sunrong.site/posts/ai-practice/2026-09-27-ddd-advanced.html)** — Day 3
-- **9-27 下 [DDD 架构模式(本文)](https://sunrong.site/posts/ai-practice/2026-09-27-ddd-architecture-patterns.html)** — Day 4
-
-***
-
-**作者注**:本文是 DDD 4 天计划的架构模式篇(Day 4)——从"整洁架构"到"六边形架构"到"防腐层(ACL)"的完整统一视角。
-
-如果你困惑于"DDD 分层 vs 整洁 vs 六边形到底什么关系",这一篇帮你彻底看清;如果你对接外部系统时不知道"怎么保护自己的领域模型",ACL 这一节帮你解惑。
-
-> 本文首发于 [sunrong.site](https://sunrong.site/),Mr.Sun,2026-09-27。
+DDD 架构模式篇(Day 4)整合的核心目标:从"整洁架构"到"六边形架构"到"防腐层(ACL)",给出统一视角。
