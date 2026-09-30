@@ -2,13 +2,15 @@
 title: 我给 AgentScope 报了 5 个"bug"，只有 1 个值得修
 icon: shield
 date: 2026-09-29
-update: 2026-09-29
+update: 2026-09-30
 categories:
   - AI 实践
 tags:
   - 开源协作
   - AgentScope
   - Code Review
+  - BMAD
+  - GLM
   - 致良知
   - 工程方法论
 author: Mr.Sun
@@ -18,7 +20,7 @@ star: true
 
 # 我给 AgentScope 报了 5 个"bug"，只有 1 个值得修
 
-> 今天下午，我用 GLM-5.2 帮我分析了 AgentScope 上游代码里的 5 个"疑似 bug"。
+> 今天下午，我用 **GLM-5.2 + BMAD Method** 做了一次"上游代码问题发掘"。
 >
 > 结果：**5 个里面，2 个是设计不是 bug，2 个是真 bug 但不值得修，只有 1 个我提了 PR。**
 >
@@ -26,25 +28,67 @@ star: true
 
 ***
 
+## 🧰 工具与方法：GLM-5.2 + BMAD Method
+
+### 用的什么
+
+| 层 | 选择 | 作用 |
+|---|---|---|
+| **模型** | GLM-5.2 | 承担"发现 + 初判"——读源码、推 bug 链条、给修复方案 |
+| **方法** | [BMAD Method](https://github.com/bmad-code-org/BMAD-METHOD)（Breakthrough Method of Agile AI-Driven Development） | 角色分工 + 阶段门禁，防止"发现即动手" |
+| **人工** | 我 | 承担 Architect + QA 的**交叉验证**职责 |
+
+### 这次实际用到的 BMAD 角色映射
+
+BMAD 的核心是**不让一个角色从"发现问题"一路干到"提交修复"**。这次的发掘过程刚好撞上了一个精简版：
+
+| BMAD 角色 | 这次谁演 | 产出 |
+|---|---|---|
+| **QA / Code Reviewer** | GLM-5.2 | 5 份"疑似 bug"报告，每份含：问题代码、bug 链条、修复方案、学习要点 |
+| **Architect** | 我 | 逐个裁定：是真 bug、是设计、还是撞车。给出裁定依据 |
+| **Developer** | 我 | 只对通过 Architect 裁定的 case 动手写代码 |
+| **Scrum Master（门禁）** | 5 道验证 | 搜重复 / 读 PR body / 找反例 / 查子类 / 跑真实调用链 |
+
+**关键收益：QA 提的 5 份报告，没有一份直接进入 Developer。** 每一份先过 Architect 裁定。
+
+### 为什么这个分工救了我
+
+GLM-5.2 的报告质量其实很高 —— 每份都包含完整的问题代码、逐步 bug 链条、甚至"学习要点"小节。**单看任何一份都很有说服力。**
+
+但如果 QA 直接连到 Developer（提 PR），今天会是 5 个 PR、4 个被拒。
+
+**BMAD 的角色分离在这里的价值不是"分工"，是"设了一道必须人工确认的门禁"。**
+
+> 这也回答了一个老问题：**"AI 找 bug 靠不靠谱？"**
+>
+> 靠谱的是**发现问题**，不靠谱的是**判断问题**。
+>
+> 而"判断"恰恰是 bug 报告和 PR 之间那道最贵的门槛。
+
+***
+
 ## 📊 先看战果
 
-| # | 疑似 bug | 裁定 | 我做了什么 |
-|---|---|---|---|
-| 1 | `UserInterruptEvent` 空闲时无终止事件 | ❌ **不是 bug** | 找到反例，推翻 |
-| 2 | `CancelledError` 被吞没 | ⚠️ **诊断对，方案错** | 读了 PR body，推翻方案 |
-| 3 | 瞬时 I/O 错误驱逐缓存 | ✅ **真 bug，但价值低** | 提了 PR（已 push） |
-| 4 | MCP `_cached_tools` 残留 | ✅ **真 bug，但撞车** | 放弃，搜到 2 个 PR 在修 |
-| 5 | `set_runtime_headers` 无 `await` | ❌ **不是 bug** | 查到子类覆写，推翻 |
+| # | 疑似 bug | QA（GLM-5.2）判定 | Architect（我）裁定 | 门禁动作 |
+|---|---|---|---|---|
+| 1 | `UserInterruptEvent` 空闲时无终止事件 | 协议被破坏 | ❌ **不是 bug** | 找反例，推翻 |
+| 2 | `CancelledError` 被吞没 | asyncio 协议被破坏 | ⚠️ **诊断对，方案错** | 读 PR body，推翻方案 |
+| 3 | 瞬时 I/O 错误驱逐缓存 | 状态泄漏 | ✅ **真 bug，但价值低** | 跑真实路径，降级后提 PR |
+| 4 | MCP `_cached_tools` 残留 | 状态泄漏 | ✅ **真 bug，但撞车** | 搜重复，放弃 |
+| 5 | `set_runtime_headers` 无 `await` | 误标 async | ❌ **不是 bug** | 查子类覆写，推翻 |
 
-**命中率：1/5。**
+**QA 命中率：5/5 找到了值得看的地方。**
+**Architect 放行率：1/5。**
 
-如果你不看这篇，直接按 GLM 的分析提 5 个 PR，会被拒 4 个 —— 而其中 2 个还带着"看起来很有道理"的错误方案。
+这两个数字放在一起才是真相：**AI 找问题的能力已经够用了，AI 判断问题的能力还差得远。**
+
+如果你不看这篇，直接把 GLM 的 5 份报告直接提 PR，会被拒 4 个 —— 而其中 2 个还带着"看起来很有道理"的错误方案。
 
 ***
 
 ## 🔍 Case 1：`UserInterruptEvent` 空闲时 0 事件
 
-### GLM 的诊断
+### QA 诊断（GLM-5.2）
 
 > 空闲中断时 `end_event` 保持 `None`，`finally` 块的 `if end_event is not None` 守卫导致不 emit `ReplyEndEvent`。这是**隐式契约被破坏** —— "agent 内部无需清理" ≠ "协议层无需发信号"。
 
@@ -123,7 +167,7 @@ has ReplyEndEvent? False        # ← 同样不发
 
 ## 🔍 Case 2：`CancelledError` 被吞没
 
-### GLM 的诊断（这次真的对了）
+### QA 诊断（这次真的对了）
 
 > `_base.py:219` 的 `except asyncio.CancelledError: return ChatResponse(INTERRUPTED)` —— `return` 而非 `raise`，`task.cancel()` 在 model 层变成 no-op。
 
@@ -433,35 +477,68 @@ grep -rn "get_cache(" src/agentscope/tool/
 
 ## 💭 更深一层：为什么 AI 辅助的 bug 分析这么容易错
 
-今天 5 个案例，GLM 的诊断能力其实很强：
+今天 5 个案例，GLM-5.2 在 **QA 角色**上的表现其实很强：
 
-| 案例 | GLM 的诊断 | 裁定 |
+| 案例 | QA（GLM-5.2）的诊断 | Architect 裁定 | 差在哪 |
+|---|---|---|---|
+| 1 | ✅ 找到 `finally` 的条件守卫 | ❌ 不是 bug | 没枚举同类路径，漏了反例 |
+| 2 | ✅ `task.cancelled()=False` | ⚠️ 方案错 | 没查 PR 历史，不知道有意的 normalize 设计 |
+| 3 | ✅ 完整 bug 链条 | ✅ 真 bug | — |
+| 4 | ✅ 完整 bug 链条 | ✅ 真 bug | — |
+| 5 | ✅ 函数体确实无 await | ❌ 不是 bug | 没查子类覆写，漏了 LSP 约束 |
+
+**5 次都"看起来很有道理"，5 次都缺一块外部事实才能判定。**
+
+### 根因：AI 的分析是"代码内推理"
+
+而 bug 的真伪往往取决于**代码外的事实**：
+
+| 需要什么 | 只能从哪来 | AI 能拿到吗 |
 |---|---|---|
-| 1 | ✅ 找到 `finally` 的条件守卫 | ❌ 但有反例 |
-| 2 | ✅ `task.cancelled()=False` | ❌ 但方案错 |
-| 3 | ✅ 完整 bug 链条 | ✅ 真 bug |
-| 4 | ✅ 完整 bug 链条 | ✅ 真 bug |
-| 5 | ✅ 函数体确实无 await | ❌ 但有子类 |
+| 这个设计是有意的吗 | PR body / issue 讨论 | ❌ 仓库里没有 |
+| 有人已经修了吗 | GitHub search | ❌ 超出代码库 |
+| 别人怎么被这个 bug 坑过 | issue timeline | ❌ 超出代码库 |
+| 子类有没有覆写 | grep 全仓 | ⚠️ 上下文窗口可能截断 |
+| 真实后果是什么 | 跑一遍调用链 | ⚠️ 只能猜 |
 
-**5 次都"看起来很有道理"，5 次都需要外部信息才能推翻。**
+**这不是 GLM-5.2 的问题，是任何"只读代码"的 Agent 的结构性天花板。**
 
-**AI 的分析是"代码内推理"，而 bug 的真伪往往取决于"代码外的事实"：**
+BMAD 之所以有效，正是因为它**承认这个天花板，并强制在 QA 和 Developer 之间插一道 Architect 门禁**。
 
-| 需要什么 | 只能从哪来 |
-|---|---|
-| 这个设计是有意的吗 | PR body / issue 讨论 |
-| 有人已经修了吗 | GitHub search |
-| 别人怎么被这个 bug 坑过 | issue timeline |
-| 子类有没有覆写 | grep |
-| 真实后果是什么 | 跑一遍调用链 |
+### 心法：门禁不是官僚，是把"心"和"行"分开
 
-**这正好对应我 11 年工程经验里最值钱的那条心法：**
+我 11 年工程经验里最值钱的一条是 **"心 × 行"**：
 
 > **"心 × 行"里的"行"，是代码之外的验证动作。**
 >
 > **AI 帮你把"心"（代码内推理）做到极致，但"行"必须自己走。**
 
 今天这 5 个 case，如果我不去 `curl` GitHub API、不去 `git log -S`、不去 `grep` 子类、不去跑探针脚本 —— **全都会提错 PR。**
+
+### BMAD Method 的真正价值
+
+很多团队用 BMAD 是为了"提效"—— 让 AI 写更多代码。
+
+**但今天这次用下来，我觉得它最大的价值不是提效，是"止损"。**
+
+| 环节 | 没有 BMAD | 有 BMAD |
+|---|---|---|
+| QA 产出 | 5 份报告 | 5 份报告（一样）|
+| 直接提 PR | **5 个** | — |
+| 门禁拦截 | — | **4 个被拦下** |
+| 最终产出 | 5 个 PR，4 个被拒（消耗社区可信度）| 1 个 PR，2 个观察 |
+
+**AI 让"发现"这一步几乎免费，于是"发现"不再是瓶颈。瓶颈整体后移到了"判断"。**
+
+BMAD 的角色门禁，本质上是在**瓶颈位置**加了一道人工确认。
+
+> 这也让我重新理解了 BMAD 里的 **"Agentic Trio"**（Analyst / PM / Architect）：
+>
+> 它的价值不是"三个 Agent 并行更快"，而是**"三个不同视角互相否决"**。
+>
+> 今天就是 Analyst 提问题、Architect 提反对意见、我做最终裁决。
+>
+> **单一 Agent 跑得再快，也跑不出一个"反例"。**
 
 ***
 
@@ -508,19 +585,72 @@ grep -rn "被调方法(" src/ | grep -v "def "
 
 ## 🎯 最后
 
-今天最实在的收获不是"我找到了 5 个 bug"，而是：
+今天最实在的收获不是"我找到了 5 个 bug"，而是两个数字：
 
+| 指标 | 结果 |
+|---|---|
+| **QA（GLM-5.2）找到值得看的地方** | 5 / 5 |
+| **Architect 门禁放行的** | 1 / 5 |
+
+> **AI 找问题的能力已经够用了，AI 判断问题的能力还差得远。**
+>
 > **"看起来像 bug" 和 "是 bug" 之间，隔着五道验证。**
 >
 > **这五道验证，没有一道是读代码能得到的。**
 
 提交给上游的 PR 数量不重要，**被拒的 PR 数量才重要** —— 因为每一个被拒的 PR 都在消耗你在社区里的可信度。
 
+**BMAD Method 在这里的价值不是"让 AI 写更多代码"，是"在发现和提交之间，强制插入一道必须人工确认的门禁"。**
+
 **先跑完那五道验证，再按回车。**
+
+***
+
+## 🔁 如果要复制这个流程
+
+用 BMAD Method 做上游问题发掘，我这次的实际配置：
+
+**第一步：让 QA 角色批量产出报告**
+
+给 QA 的 prompt 模板（我这次用的）：
+
+```markdown
+请以资深 QA / Code Reviewer 的身份审查这个仓库的 <模块>，
+按以下格式输出，每份独立成段：
+
+## Bug N — <一句话概括>
+- 问题代码（file:line）
+- Bug 链条（逐步，每步说明为什么必然走到下一步）
+- 修复方案（具体到 diff）
+- 学习要点
+- 严重度（high / medium / low）+ 理由
+
+重点关注：状态泄漏、异常吞噬、资源未释放、边界条件。
+一次输出 3-5 个候选。
+```
+
+**关键**：要求它"逐份独立成段" + "给严重度和理由"。这样后续裁定可以逐个进行，不用被它的整体结论绑架。
+
+**第二步：Architect 角色逐个裁定（这是最重要的一步）**
+
+对每个候选，强制回答 5 个问题：
+
+1. GitHub 上有没有人已经报了 / 修了？（用符号名 search）
+2. 这段代码是哪个 PR 引入的？那个 PR 的 body 说了什么？
+3. 同样的模式在别处也成立吗？如果成立，我的"理论"可能就错了
+4. 有没有子类覆写 / 协议约束？
+5. 真实调用链上，这个 miss/exception 之后调用方会做什么？
+
+**任何一问答不上来，就不要往下走。**
+
+**第三步：只对放行的 case 动手**
+
+而且改完要**自己写测试来抓自己的 bug** —— 我这次的 `test_deleted_file_still_evicts_cache_entry` 就是这么来的，第一个版本的 fix 差点把"文件真被删"也当成瞬时错误。
 
 ***
 
 ## 相关阅读
 
-- [AgentScope 8 周学习笔记](/posts/ai-practice/) —— 我是怎么从使用者变成 contributor 的
-- [开源贡献的第一次 PR](/posts/ai-practice/) —— 从 Issue 到 merge 的完整流程
+- [BMAD Method（GitHub）](https://github.com/bmad-code-org/BMAD-METHOD) —— Breakthrough Method of Agile AI-Driven Development
+- [AgentScope 上游仓库](https://github.com/agentscope-ai/agentscope) —— 我这次发掘问题的地方
+- [我的开源贡献记录](/posts/ai-practice/) —— 从第一次 PR 到被 merge 的过程
