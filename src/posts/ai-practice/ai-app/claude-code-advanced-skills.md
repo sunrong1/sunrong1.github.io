@@ -11,7 +11,7 @@ tags:
   - 架构设计
   - Claude Code
 public-safe: true
-  - 面试总结
+  - 沟通总结
 author: Mr.Sun
 star: true
 ---***
@@ -19,7 +19,7 @@ star: true
 
 本文是 Claude Code 学习两周实战总结的续篇。在[上篇文章](https://sunrong1.github.io/ai-practice/claude-code/claude-code-weekly-summary/)中，我记录了 Agent Loop、Context Management、Planning、Hooks、Memory 等核心基础知识的学习。
 
-**这篇文章聚焦于 AI Agent 的高级技能核心：多 Agent 协作。** 多 Agent 是现代 AI Agent 系统的主流架构模式，也是面试中高级/专家岗位的必考内容。
+**这篇文章聚焦于 AI Agent 的高级技能核心：多 Agent 协作。** 多 Agent 是现代 AI Agent 系统的主流架构模式，也是沟通中高级/专家岗位的必考内容。
 
 ***
 <!-- more -->
@@ -268,7 +268,7 @@ class SearchWriteOrchestrator:
 ```
 
 ***
-## 7. 面试核心知识点
+## 7. 核心知识点
 
 ### 7.1 一句话速记
 
@@ -280,7 +280,7 @@ class SearchWriteOrchestrator:
 | **上下文管理** | 独立上下文 + 选择性共享 |
 | **Swarm Tax** | 多 Agent 不一定更好，同等预算下单 Agent often wins |
 
-### 7.2 面试高频问题
+### 7.2 高频问题
 
 | Q | A |
 |---|---|
@@ -301,7 +301,7 @@ class SearchWriteOrchestrator:
 ***
 ## 结语
 
-多 Agent 协作是 AI Agent 高级技能的核心，也是面试中高级/专家岗位的必考内容。理解多 Agent 的架构模式、通信机制、上下文管理，以及何时使用多 Agent，是成为 AI Agent 专家的关键。
+多 Agent 协作是 AI Agent 高级技能的核心，也是沟通中高级/专家岗位的必考内容。理解多 Agent 的架构模式、通信机制、上下文管理，以及何时使用多 Agent，是成为 AI Agent 专家的关键。
 
 **核心认知：**
 ```
