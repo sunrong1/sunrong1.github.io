@@ -22,7 +22,7 @@ public-safe: true
 
 > **让 AI 帮你学习** = **从 L1 看过到 L5 精通的自动化路径**
 
-我做了 11 年技术，5 年 AI 转型，14 篇论文精读 + 95+ 博客。
+我做了 十几年技术，几年 AI 转型，14 篇论文精读 + 95+ 博客。
 **今天这篇博客，是我把"元认知学习系统"从"概念"变成"可运行的 Hermes 多 Agent 系统"的完整方案**。
 
 我用 **4 个 Agent**（Content / Exam / Error / Meta）构建了一个完整的学习闭环：
@@ -1169,7 +1169,7 @@ Content → Exam → Error → Meta
 ├─ 评估器（Exam Agent = LLM-as-a-Judge）
 ├─ 优化器（Meta Agent = 自动追踪）
 ├─ 配置空间（Content Agent = 知识结构）
-└─ → 你的 11 年测试经验 = 直接应用
+└─ → 你的 十几年测试经验 = 直接应用
 ```
 
 ***
@@ -1194,7 +1194,7 @@ Content → Exam → Error → Meta
 ### 13.2 4 Agent 与你的双线策略
 
 ```
-【输出线】V5 硬件版 + V5 Harness 版
+【输出线】历史版本 硬件版 + 历史版本 Harness 版
 【学习线】Content + Exam + Error + Meta
 
 二者都是：

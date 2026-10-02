@@ -313,10 +313,10 @@ V3/V4 重构最深的体会，是把"少即是多，职责分离"做到了极致
 ***
 ## 🔭 接下来的计划
 
-V5（接下来的）：
+历史版本（接下来的）：
 
 - **更强的 Vibe Coding 集成** — 不是 4 Agent 编排，是"Vibe Coding + 4 Agent"
-- **Plant 项目完整闭环** — 用 4 Agent 学 PlantsGame，**反向输出学习系统**
+- **Plant 项目完整闭环** — 用 4 Agent 学 完整 AI 项目，**反向输出学习系统**
 - **跨代码库迁移** — Runtime 抽象后，从 AgentScope 迁移到 LangChain/AutoGen 应该很简单
 - **公开 wiki** — 把所有 Prompt/State/思维文件变成可读的 markdown wiki
 

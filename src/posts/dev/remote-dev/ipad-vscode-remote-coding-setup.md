@@ -15,7 +15,7 @@ icon: 🌐
 
 每天地铁通勤 2 小时，以前这部分时间基本浪费了——看看文章、刷刷手机，到公司后人已经很累。
 
-最近在研究 AI Agent 框架的源码，想找一个能在 iPad 上直接阅读和编辑代码的方案。经过两天折腾，终于把整个环境搭好了：**华为平板 + VSCode 网页版 + 远程 code-server**，体验接近本地 IDE。
+最近在研究 AI Agent 框架的源码，想找一个能在 iPad 上直接阅读和编辑代码的方案。经过两天折腾，终于把整个环境搭好了：**多年大厂平板 + VSCode 网页版 + 远程 code-server**，体验接近本地 IDE。
 
 ## 第一天：code-server 安装（踩坑）
 
@@ -294,9 +294,9 @@ wget https://gh-proxy.com/https://github.com/xxx/yyy/releases/download/v1.0/yyy.
 | **Microsoft Edge** | ✅ 完美 | ✅ | ✅ | ⭐⭐⭐⭐⭐ |
 | Safari | ✅ 基本可用 | ✅ | ⚠️ 部分插件报错 | ⭐⭐⭐ |
 | QQ 浏览器 | ❌ 插件报错 | ⚠️ | ❌ 经常崩 | 不推荐 |
-| 华为浏览器 | ❌ 插件报错 | ⚠️ | ❌ VSCode 插件不兼容 | 不推荐 |
+| 多年大厂浏览器 | ❌ 插件报错 | ⚠️ | ❌ VSCode 插件不兼容 | 不推荐 |
 
-**关键问题**：国产浏览器（QQ / 华为）对 VSCode Web 版的插件兼容性较差，会出现：
+**关键问题**：国产浏览器（QQ / 多年大厂）对 VSCode Web 版的插件兼容性较差，会出现：
 - Service Worker 注册失败 → 离线功能不可用
 - 部分扩展报错 → Terminal/扩展市场不能用
 - 触屏手势冲突 → 编辑体验差
@@ -339,9 +339,9 @@ wget https://gh-proxy.com/https://github.com/xxx/yyy/releases/download/v1.0/yyy.
 
 **性价比原则**：在工具链上的过度投入 = 给焦虑买单，不如把预算花在订阅更强的 AI 模型。
 
-### AI 编程助手：腾讯 Code Buddy 实测
+### AI 编程助手：某大厂 Code Buddy 实测
 
-试用了一款意外的宝藏工具：**腾讯云 Code Buddy**（https://codebuddy.tencent.com/）。
+试用了一款意外的宝藏工具：**某大厂 Code Buddy**（https://codebuddy.tencent.com/）。
 
 **亮点**：
 
@@ -399,7 +399,7 @@ iPad (Edge) → code-server (远程容器) → Code Buddy AI 助手
 - ✅ iPad 通勤 2h 100% 利用（每天多出 2h 学习/开发时间）
 - ✅ 完整 AI 编程工具链（code-server + Code Buddy + GLM 5.2）
 - ✅ 全球 GitHub 高速访问（gh-proxy.com 加速）
-- ✅ 5 年 Max 锚：让 Max 看到"爸爸一直在用最新工具学习"的智慧形象
+- ✅ 几年 Max 锚：让 Max 看到"爸爸一直在用最新工具学习"的智慧形象
 
 **结论**：40 元/月 = 别人买 1 杯咖啡的钱，换整套远程 AI 开发环境。这是性价比最高的自我投资。
 
@@ -421,7 +421,7 @@ iPad (Edge) → code-server (远程容器) → Code Buddy AI 助手
 
 ### 1. 设备升级：iPad → 14 寸小本
 
-从最初的 **华为平板 + code-server** 升级到 **14 寸小本 + code-server**：
+从最初的 **多年大厂平板 + code-server** 升级到 **14 寸小本 + code-server**：
 - 屏幕更大 = 代码阅读更舒服
 - 实体键盘 = 输入体验更好
 - iPad 仍保留作为轻便阅读工具

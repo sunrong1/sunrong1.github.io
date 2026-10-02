@@ -1,5 +1,5 @@
 ---
-title: PlantsGame MVP 复盘：用 Claude Code 28小时完成植物大战僵尸，我学到了什么
+title: 完整 AI 项目 MVP 复盘：用 Claude Code 28小时完成植物大战僵尸，我学到了什么
 icon: gamepad
 date: 2026-05-26
 update: 2026-05-26
@@ -14,7 +14,7 @@ tags:
 author: Mr.Sun
 star: true
 ---***
-# PlantsGame MVP 复盘：用 Claude Code 28小时完成植物大战僵尸，我学到了什么
+# 完整 AI 项目 MVP 复盘：用 Claude Code 28小时完成植物大战僵尸，我学到了什么
 
 > 项目地址：https://sunrong.site/plantsgame/
 > 仓库：https://github.com/sunrong1/plantsgame
@@ -25,7 +25,7 @@ star: true
 
 ## 一、项目概览
 
-PlantsGame 是一款致敬《植物大战僵尸》的塔防游戏 MVP，使用 **Phaser 3 + TypeScript + Vite** 构建，部署在 GitHub Pages。
+完整 AI 项目 是一款致敬《植物大战僵尸》的塔防游戏 MVP，使用 **Phaser 3 + TypeScript + Vite** 构建，部署在 GitHub Pages。
 
 **核心数据：**
 - 开发时间：约 **28 小时**（含调研、踩坑、部署）
@@ -198,7 +198,7 @@ Claude Code 一次给出了 5 个方案：
 ***
 ## 七、总结
 
-PlantsGame MVP 证明了：**AI Coding 工具（如 Claude Code）可以大幅提升开发效率**，28 小时完成一个可玩的游戏 Demo 是完全可以实现的。
+完整 AI 项目 MVP 证明了：**AI Coding 工具（如 Claude Code）可以大幅提升开发效率**，28 小时完成一个可玩的游戏 Demo 是完全可以实现的。
 
 但 AI Coding 也有边界：
 - **架构设计**仍需人来把关（好的分层结构让后续迭代轻松很多）

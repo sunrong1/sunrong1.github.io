@@ -29,7 +29,7 @@ author: Mr.Sun
 - **Devin / Codex Agent** —— 整个 issue 自动闭环
 - **v0 / Bolt / Lovable** —— 自然语言直接生成完整应用
 
-但作为有 10+ 年经验的工程师，我**亲手踩过这些坑**：
+但作为有 十几年经验的工程师，我**亲手踩过这些坑**：
 
 1. **AI 写出来跟我想的不一样** —— 不是工具不行，是"我想的"根本没被结构化记录
 2. **上下文丢失** —— 第 3 轮对话后，AI 已经忘了第 1 轮我说的业务约束
@@ -59,7 +59,7 @@ author: Mr.Sun
 2. AI / 工程师照着规格实现
 3. 规格变了，代码跟着变
 
-GitHub 2025 年发布的 [Spec Kit](https://github.com/github/spec-kit) 是 SDD 的代表性实现，包含：
+GitHub 202几年发布的 [Spec Kit](https://github.com/github/spec-kit) 是 SDD 的代表性实现，包含：
 
 - `specify` 命令 —— 生成 SPEC.md
 - `plan` 命令 —— 把 SPEC 拆成实现计划
@@ -572,6 +572,6 @@ BMAD 官方支持 **48 个 IDE**，4 个 preferred（深度优化）：
 ***
 **作者：Mr.Sun
 
-**关于我**：10+ 年研发经验，资深技术专家 + 团队负责人。专注于 AI Agent 平台研发，最近在生产环境融合 AgentScope 2.0，给 BMAD-METHOD 等开源项目贡献 PR。个人 blog：[sunrong.site](https://sunrong.site/)
+**关于我**：十几年研发经验，资深技术专家 + 团队负责人。专注于 AI Agent 平台研发，最近在生产环境融合 AgentScope 2.0，给 BMAD-METHOD 等开源项目贡献 PR。个人 blog：[sunrong.site](https://sunrong.site/)
 
 **版权声明**：本文采用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 协议，转载请保留作者信息和原文链接。

@@ -103,7 +103,7 @@ state/_state.py (372 行)
 `ToolContext` 是 W6 段 1 的"完整教学案例"：
 
 ```
-双限制 LRU 缓存 = 数量 + 字节
+双限制 LRU 缓存 = 数量 + 某大厂
 ├─ max_cache_files=100        — 防止"小文件过多"
 ├─ max_cache_bytes=25000 KB   — 防止"单文件过大"
 ├─ mtime 校验                — 不读文件，性能 O(1)
@@ -112,7 +112,7 @@ state/_state.py (372 行)
 ```
 
 **4 个 trade-off**：
-- **双限制 vs 单限制** = 数量 + 字节互补
+- **双限制 vs 单限制** = 数量 + 某大厂互补
 - **mtime vs content hash** = 性能 O(1) vs 正确性 O(n)
 - **silent failure vs raise** = Robustness ≠ Strictness
 - **list vs dict** = Pydantic 限制 + LRU 语义天然

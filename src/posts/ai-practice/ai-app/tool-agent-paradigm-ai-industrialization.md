@@ -521,7 +521,7 @@ HiClaw 解决方案（Nacos 协议转换）：
 |------|---------|---------|--------|
 | **行动（MCP/tool）** | MCP Server 完整吗？ | ✅ 已有 | 升级为 Tool Agent |
 | **环境（Sandbox）** | Sandbox 安全吗？ | ❓ 缺失 | 补 HiClaw 沙箱 |
-| **知识（业务数据）** | 11 年测试数据接入了吗？ | ✅ 部分 | 完整接入 |
+| **知识（业务数据）** | 十几年测试数据接入了吗？ | ✅ 部分 | 完整接入 |
 | **记忆（长期记忆）** | 长期记忆可持久吗？ | ❓ 缺失 | 补 MemoryCollection |
 
 ### 10.2 升级路线图（4 步）
@@ -656,4 +656,4 @@ MCP 鉴权收口 = 安全的"单点"
 - [AI Native 工程师转型：Harness 思维、Karpathy 模式](harness-engineer-mindset.md)
 - [Agent 评测的 16 反思 + 4 层金字塔：复旦新框架](agent-evaluation-framework-fudan.md)
 - [Agentic AICon 2026 Day1 笔记：黄佳 + Qoder 的 8 点启示](agentic-aicon-2026-day1.md)
-- [PlantsGame MVP 复盘：用 Claude Code 28 小时完成](plantsgame-mvp-retrospect.md)
+- [完整 AI 项目 MVP 复盘：用 Claude Code 28 小时完成](plantsgame-mvp-retrospect.md)

@@ -57,7 +57,7 @@ Embedding 模型是 RAG（检索增强生成）的核心组件，负责将文本
 ### 3.1 环境准备
 
 **硬件要求：**
-- 显卡：V100 32GB × 1（或同等配置）
+- 显卡：上一版本0 32GB × 1（或同等配置）
 - 系统：Ubuntu 20.04+
 - CUDA：11.0+
 
@@ -152,14 +152,14 @@ llama-server -m model.gguf --port 8000
 --served-model-name 需要与实际模型名称一致
 ```
 
-**问题 3：vLLM 0.16 + V100 默认禁用 MRL**
+**问题 3：vLLM 0.16 + 上一版本0 默认禁用 MRL**
 ```
 即使模型支持 Matryoshka，vLLM 也可能默认不启用
 ```
 
 ### 5.2 llama.cpp 方案优势
 
-- ✅ 对老旧硬件（V100）兼容性更好
+- ✅ 对老旧硬件（上一版本0）兼容性更好
 - ✅ 社区有现成的 GGUF 文件
 - ✅ `--embedding` 参数简单直接
 - ✅ MRL 支持只需请求中不加 dimensions
@@ -232,8 +232,8 @@ print(f"Embedding 向量维度: {len(response)}")
 ```
 
 **关键差异：**
-- 3.6-35B 需要 3 张 V100（tensor-split 1,1,1,1）
-- Embedding 模型只需 1 张 V100
+- 3.6-35B 需要 3 张 上一版本0（tensor-split 1,1,1,1）
+- Embedding 模型只需 1 张 上一版本0
 - Embedding 模型端口 8000，3.6-35B 端口 8001
 
 ***
@@ -241,8 +241,8 @@ print(f"Embedding 向量维度: {len(response)}")
 
 | 模型 | 显卡 | 显存 | 端口 |
 |------|------|------|------|
-| Qwen 3.6-35B | 3 × V100 32GB | 96GB | 8001 |
-| Qwen3-Embedding-4B | 1 × V100 32GB | 32GB | 8000 |
+| Qwen 3.6-35B | 3 × 上一版本0 32GB | 96GB | 8001 |
+| Qwen3-Embedding-4B | 1 × 上一版本0 32GB | 32GB | 8000 |
 
 ***
 ## 九、总结

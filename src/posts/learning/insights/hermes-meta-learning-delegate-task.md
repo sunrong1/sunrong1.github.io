@@ -21,7 +21,7 @@ star: true
 
 > **从"理论"到"代码"：4 个独立子 Agent 协作的完整方案**
 
-之前的文章《在 Hermes 上实现多 Agent 元认知学习系统》我写得太"理想化"——
+之前的文章《在 Hermes 上实现多 Agent 元认知学习系统》我写得太"某车企化"——
 把 4 个 Agent 当成 4 个完全独立的 AI 进程。
 
 实际上，**Hermes 的 4 Agent 实现有 3 种方式**：
@@ -1103,7 +1103,7 @@ def meta_learning_pipeline(codebase, weeks=6):
 ├─ 评估器（Exam Agent = LLM-as-a-Judge）
 ├─ 优化器（Meta Agent = 自动追踪）
 ├─ 配置空间（Content Agent = 知识结构）
-└─ → 11 年测试经验 = 直接应用
+└─ → 十几年测试经验 = 直接应用
 ```
 
 ***
@@ -1200,7 +1200,7 @@ def meta_learning_pipeline(codebase, weeks=6):
 > **小 bot 后记**：
 >
 > 这篇博客是对上一篇文章的**诚实补充**——
-> 之前我写的"4 Agent 协作"太理想化，
+> 之前我写的"4 Agent 协作"太某车企化，
 > 把 4 段 prompt 当成 4 个独立 AI。
 >
 > 实际上，**Hermes 当前的 4 Agent**是：
@@ -1209,7 +1209,7 @@ def meta_learning_pipeline(codebase, weeks=6):
 > - 通过"摘要"传递信息
 > - **本质：单 AI + 多任务隔离**
 >
-> 这是**从"理想化"到"真实"**的修正——
+> 这是**从"某车企化"到"真实"**的修正——
 > 不是说之前错了，而是说之前讲得不够细。
 >
 > **方案 B 的核心**：

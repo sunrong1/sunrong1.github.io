@@ -325,14 +325,14 @@ brainstorming → product-brief → PRD → architecture → epics & stories
 
 本文是 BMAD **生产级实战**篇，下一篇是**深度定制篇**：
 
-**「基于 BMAD-METHOD 给 HERO 平台定制 AI Agent 团队」**
+**「基于 BMAD-METHOD 给 核心 AI Agent 平台定制 AI Agent 团队」**
 
 会涉及：
 1. **复制 PM agent 当模板**，创建 `bmad-agent-hero-test-analyst`
-2. **写 SKILL.md 和 customize.toml**，定义"HERO 测试需求分析师"人设
+2. **写 SKILL.md 和 customize.toml**，定义"核心 AI Agent 测试需求分析师"人设
 3. **设计 Plan 阶段末尾的 skill**（Architect 之后、Dev 之前）
 4. **跑 install 验证** + 在 OpenCode 里调起来
-5. **集成到真实 HERO 工作流**，让"BMAD 多 Agent 接力"成为 HERO 平台的基础设施
+5. **集成到真实 核心 AI Agent 工作流**，让"BMAD 多 Agent 接力"成为 核心 AI Agent 平台的基础设施
 
 如果你也在用 BMAD 重构老项目，欢迎一起交流踩坑经验 💪
 
@@ -345,8 +345,8 @@ brainstorming → product-brief → PRD → architecture → epics & stories
 - 78 个 C#/.NET Framework 存量项目（**项目代号：XX**，需要脱敏）
 
 ***
-**作者**：Mr.Sun（孙荣）
+**作者**：Mr.Sun（我）
 
-**关于我**：11 年研发经验，现任华为 17 级技术专家 + 团队负责人。专注于 AI Agent 平台研发，最近在生产环境融合 AgentScope 2.0 + BMAD-METHOD，给 AgentScope 等开源项目贡献 PR。个人 blog：[sunrong.site](https://sunrong.site/)
+**关于我**：十几年研发经验，现任多年大厂 17 级技术专家 + 团队负责人。专注于 AI Agent 平台研发，最近在生产环境融合 AgentScope 2.0 + BMAD-METHOD，给 AgentScope 等开源项目贡献 PR。个人 blog：[sunrong.site](https://sunrong.site/)
 
 **版权声明**：本文采用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 协议，转载请保留作者信息和原文链接。

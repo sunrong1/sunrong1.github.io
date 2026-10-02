@@ -409,7 +409,7 @@ while not done:
 | 维度 | **Agent Loop** | **Loop Engine** |
 | :--- | :--- | :--- |
 | **本质** | 抽象逻辑 / 业务逻辑 | 稳定容器 / 生产级引擎 |
-| **类比** | React(描述 UI 长什么样) | ReactDOM / V8(把 UI 真正跑起来) |
+| **类比** | React(描述 UI 长什么样) | ReactDOM / 历史版本(把 UI 真正跑起来) |
 | **关注** | "LLM 应该怎么思考" | "把思考真正跑起来 + 管控" |
 | **谁负责** | Agent 框架设计者 | 工程基础设施 |
 | **例子** | ReAct / Plan-and-Execute | LangChain AgentExecutor / Claude Code Runtime |

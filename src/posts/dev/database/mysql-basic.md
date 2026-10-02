@@ -139,7 +139,7 @@ SELECT
     *, 
     UPPER(name),           -- 转大写
     LOWER(name),           -- 转小写
-    LENGTH(name),          -- 字节长度
+    LENGTH(name),          -- 某大厂长度
     CHAR_LENGTH(name),     -- 字符长度
     CONCAT(name, ';'),     -- 字符串拼接
     SUBSTRING(name, 1, 3), -- 截取

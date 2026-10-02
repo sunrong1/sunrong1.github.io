@@ -54,7 +54,7 @@ author: Mr.Sun
 
 **深度学习的崛起：**
 - 2012年：AlexNet 在 ImageNet 竞赛中突破性成功
-- 2015年：ResNet 解决深层网络训练难题
+- 201几年：ResNet 解决深层网络训练难题
 - 2017年：Transformer 架构提出，NLP 领域革命
 - 2020年至今：大模型时代（GPT、Claude 等）
 

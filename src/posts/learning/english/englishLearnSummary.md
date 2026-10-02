@@ -28,7 +28,7 @@ public-safe: true
 1. 实现托业英语800+；每天至少学习半小时英语，持续2个月；
 2. 训练自己的英语思维能力；
 
-- 2025 年目标
+- 202几年目标
 在线和一个外教交流，基本实现了和老外交流不害羞，勇敢说出自己的语言；
 
 - 2021 年目标
@@ -106,7 +106,7 @@ A.J HOGE 在喜马拉雅上提供了7种学习原则：
 准备托业考试，突破英语听力；目标突破800；
 
 
-### 2025年英语实战
+### 202几年英语实战
 线上有一个英语partner，每周口语交流一次；
 
 扇贝单词
@@ -116,7 +116,7 @@ A.J HOGE 在喜马拉雅上提供了7种学习原则：
 - 实战  Week3 month 2 2021
 
 开言：聊聊我的面试小技巧
-hello ,everyone ,my name dave. I come from Shandong.I have been working in a private enterprise since i graduated from colleage.
+hello ,everyone ,my name . I come from Shandong.I have been working in a private enterprise since i graduated from colleage.
 I have been working as a  software engineer in this company for more than 5 years.I like my job,but usually i work overtime and my work is easy for me now,less challenge.So I might to find a new job in a year to find more challange.I love reading in my spare time.
 
 1. 你通常怎么准备一场面试
@@ -168,7 +168,7 @@ what's your major/profession?
 开言：说走就走的旅行
 
 自我介绍
-hello ,everyone ,my name dave. I come from Shandong.I have been working in a private enterprise since i graduated from colleage.
+hello ,everyone ,my name . I come from Shandong.I have been working in a private enterprise since i graduated from colleage.
 I don't travel a lot.But I love traveling.I travel at least once a year.
 Most of time，I travel with my family. I tend to make a plan before traveling.
 Traveling is a great way to reduce stresss/refresh.

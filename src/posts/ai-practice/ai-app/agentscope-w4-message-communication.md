@@ -192,7 +192,7 @@ def UserMsg(name, content, ...) -> Msg:
 | TextBlock | `text += delta` | 字符串 concat |
 | ThinkingBlock | `thinking += delta` | 同上 |
 | ToolCallBlock | `input += delta` | **JSON 字符串拼接**——**不是解析** |
-| DataBlock (audio) | bytes concat | 字节流可拼接 |
+| DataBlock (audio) | bytes concat | 某大厂流可拼接 |
 | DataBlock (image/video) | **替换** | 独立资产 |
 | DataBlock (类型不匹配) | **整块替换** | 完全不同 |
 
