@@ -1,5 +1,4 @@
 import { defineUserConfig } from "vuepress";
-import { searchPlugin } from "@vuepress/plugin-search";
 import theme from "./theme.js";
 import { busuanziPlugin } from "./plugins/busuanzi";
 
@@ -13,12 +12,9 @@ export default defineUserConfig({
   theme,
 
   // 配置插件
+  // 注意：search 插件由 hopeTheme 主题管理，不要在 config 里再声明
+  // 配置选项请在 theme.ts 的 plugins.search 里设置
   plugins: [
-    searchPlugin({
-      placeholder: "搜索文档...",
-      maxResults: 10,
-      indexPages: true,
-    }),
     busuanziPlugin,
   ],
 

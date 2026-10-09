@@ -15,7 +15,6 @@ tags:
   - ISTJ
 author: Mr.Sun
 star: true
-password: 111
 ---
 
 # 我是如何把一个部门内部工具做成公司级平台的
