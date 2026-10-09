@@ -654,6 +654,6 @@ MCP 鉴权收口 = 安全的"单点"
 
 **相关阅读：**
 - [AI Native 工程师转型：Harness 思维、Karpathy 模式](harness-engineer-mindset.md)
-- [Agent 评测的 16 反思 + 4 层金字塔：复旦新框架](agent-evaluation-framework-fudan.md)
+- [Agent 评测的 16 反思 + 4 层金字塔：复旦新框架](../ai-theory/agent-evaluation-framework-fudan.md)
 - [Agentic AICon 2026 Day1 笔记：黄佳 + Qoder 的 8 点启示](agentic-aicon-2026-day1.md)
 - [完整 AI 项目 MVP 复盘：用 Claude Code 28 小时完成](plantsgame-mvp-retrospect.md)

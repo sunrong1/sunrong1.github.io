@@ -397,12 +397,12 @@ star: true
 
 | # | 博客 | 主题 |
 |---|------|------|
-| 1 | [agentic-aicon-2026-day1](agentic-aicon-2026-day1.md) | Day1 综合笔记 |
+| 1 | [agentic-aicon-2026-day1](ai-app/agentic-aicon-2026-day1.md) | Day1 综合笔记 |
 | 2 | [agent-evaluation-framework-fudan](ai-theory/agent-evaluation-framework-fudan.md) | 复旦 16 反思 + 4 层金字塔 |
-| 3 | [plantsgame-mvp-retrospect](plantsgame-mvp-retrospect.md) | PVZ MVP 复盘 |
-| 4 | [harness-engineer-mindset](harness-engineer-mindset.md) | Harness 思维、Karpathy 模式 |
-| 5 | [tool-agent-paradigm-ai-industrialization](tool-agent-paradigm-ai-industrialization.md) | 5 万工具 MCP 化 |
-| 6 | [ai-era-pi-shaped-talent](ai-era-pi-shaped-talent.md) | π 型人才 |
+| 3 | [plantsgame-mvp-retrospect](ai-app/plantsgame-mvp-retrospect.md) | PVZ MVP 复盘 |
+| 4 | [harness-engineer-mindset](ai-app/harness-engineer-mindset.md) | Harness 思维、Karpathy 模式 |
+| 5 | [tool-agent-paradigm-ai-industrialization](ai-app/tool-agent-paradigm-ai-industrialization.md) | 5 万工具 MCP 化 |
+| 6 | [ai-era-pi-shaped-talent](ai-app/ai-era-pi-shaped-talent.md) | π 型人才 |
 | 7 | [2026-conf-zhanggang-software-is-exploration](2026-conf-zhanggang-software-is-exploration.md) | 张刚 talk 6 个核心观点 |
 
 ### 6-6 战报（4 篇）

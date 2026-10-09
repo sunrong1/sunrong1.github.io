@@ -510,6 +510,6 @@ AI Native 评测：Agent 生成测试 → Agent 跑 → Agent 评分 → Agent �
 **欢迎交流讨论，我的 blog**：[sunrong.site](https://sunrong.site)
 
 **相关阅读：**
-- [Agentic AICon 2026 Day1 笔记：黄佳 + Qoder 的 8 点启示](agentic-aicon-2026-day1.md)
+- [Agentic AICon 2026 Day1 笔记：黄佳 + Qoder 的 8 点启示](../ai-app/agentic-aicon-2026-day1.md)
 - [AgentBench 论文深度解读](agentbench-paper-learning.md)
 - [Reflexion 论文深度解读](reflexion-paper-learning.md)

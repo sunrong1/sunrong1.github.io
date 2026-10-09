@@ -639,6 +639,6 @@ AI Native 角色：
 
 **相关阅读：**
 - [Agentic AICon 2026 Day1 笔记：黄佳 + Qoder 的 8 点启示](agentic-aicon-2026-day1.md)
-- [Agent 评测的 16 反思 + 4 层金字塔：复旦新框架](agent-evaluation-framework-fudan.md)
+- [Agent 评测的 16 反思 + 4 层金字塔：复旦新框架](../ai-theory/agent-evaluation-framework-fudan.md)
 - [完整 AI 项目 MVP 复盘：用 Claude Code 28 小时完成](plantsgame-mvp-retrospect.md)
-- [Reflexion 论文深度解读](reflexion-paper-learning.md)
+- [Reflexion 论文深度解读](../ai-theory/reflexion-paper-learning.md)

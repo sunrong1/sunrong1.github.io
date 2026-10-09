@@ -463,7 +463,7 @@ Actor（行动）→ Evaluator（评估）→ Self-Reflection（反思）→ Mem
 
 - [ReAct 论文解读：让大模型学会"边想边做"](react-paper-learning.md)
 - [CoT 论文解读：思维链激发推理能力](chain-of-thought-paper-learning.md)
-- [AgentScope 多智能体协作实战](../ai-app/mem0-agentscope-comparison.md)
+- [AgentScope 多智能体协作实战](mem0-agentscope-comparison.md)
 
 ***
 欢迎交流讨论，我的 blog：[sunrong.site](https://sunrong.site)
