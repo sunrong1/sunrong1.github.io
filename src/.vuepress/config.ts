@@ -1,6 +1,5 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
-import { busuanziPlugin } from "./plugins/busuanzi";
 
 export default defineUserConfig({
   base: "/",
@@ -10,13 +9,6 @@ export default defineUserConfig({
   description: "Dev together, innovate, fun! 一个开发人的自我修养",
 
   theme,
-
-  // 配置插件
-  // 注意：search 插件由 hopeTheme 主题管理，不要在 config 里再声明
-  // 配置选项请在 theme.ts 的 plugins.search 里设置
-  plugins: [
-    busuanziPlugin,
-  ],
 
   // 添加 SEO 和统计脚本
   head: [
@@ -60,14 +52,6 @@ var _hmt = _hmt || [];
         defer: "",
         src: "https://cloud.umami.is/script.js",
         "data-website-id": "289eed61-a26d-4cd6-8ff8-214f51d0e7f2",
-      },
-    ],
-    // 不蒜子阅读数统计
-    [
-      "script",
-      {
-        defer: "",
-        src: "https://busuanzi.42du.cn/static/js/bsz.js",
       },
     ],
     // 站点验证
