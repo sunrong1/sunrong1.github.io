@@ -39,8 +39,9 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-          # 150+ 篇文章构建会吃满 Node 默认堆（~1.7GB），提高到 4GB
-          NODE_OPTIONS: --max-old-space-size=4096
+          # 151 篇文章构建时 vuepress-vite 会吃满 Node 堆
+          # GitHub runner 约 7GB 内存，堆设 6144MB 留出系统余量
+          NODE_OPTIONS: --max-old-space-size=6144
 
       - name: Copy CNAME
         run: cp CNAME src/.vuepress/dist/
