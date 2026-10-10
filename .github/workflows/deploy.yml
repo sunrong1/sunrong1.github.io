@@ -39,6 +39,8 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          # 150+ 篇文章构建会吃满 Node 默认堆（~1.7GB），提高到 4GB
+          NODE_OPTIONS: --max-old-space-size=4096
 
       - name: Copy CNAME
         run: cp CNAME src/.vuepress/dist/
