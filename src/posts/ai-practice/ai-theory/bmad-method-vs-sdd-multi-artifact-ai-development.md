@@ -572,6 +572,6 @@ BMAD 官方支持 **48 个 IDE**，4 个 preferred（深度优化）：
 ***
 **作者：Mr.Sun
 
-**关于我**：十几年研发经验，资深技术专家 + 团队负责人。专注于 AI Agent 平台研发，最近在生产环境融合 AgentScope 2.0，给 BMAD-METHOD 等开源项目贡献 PR。个人 blog：[sunrong.site](https://sunrong.site/)
+**关于我**：十几年研发经验，主要做 AI Agent 平台相关的工作。AgentScope 上游有 PR，BMAD-METHOD 是这个系列三篇文章的原型——本文是入门篇，后面还有实战篇（78 子项目 C# 重构）和学习篇（6 小时路线图）。个人 blog：[sunrong.site](https://sunrong.site/)
 
 **版权声明**：本文采用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 协议，转载请保留作者信息和原文链接。
