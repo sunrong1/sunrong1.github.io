@@ -347,6 +347,6 @@ brainstorming → product-brief → PRD → architecture → epics & stories
 ***
 **作者**：Mr.Sun（我）
 
-**关于我**：十几年研发经验，现任多年大厂 17 级技术专家 + 团队负责人。专注于 AI Agent 平台研发，最近在生产环境融合 AgentScope 2.0 + BMAD-METHOD，给 AgentScope 等开源项目贡献 PR。个人 blog：[sunrong.site](https://sunrong.site/)
+**关于我**：十几年研发经验，主要做 AI Agent 平台相关的工作。AgentScope 上游有 PR，本文这个 78 子项目的 C# 重构就是用 BMAD-METHOD 跑的。个人 blog：[sunrong.site](https://sunrong.site/)
 
 **版权声明**：本文采用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 协议，转载请保留作者信息和原文链接。

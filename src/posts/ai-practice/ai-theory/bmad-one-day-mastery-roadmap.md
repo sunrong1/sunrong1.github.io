@@ -454,8 +454,10 @@ BMAD 的 prompt 写得再好，那都是实现细节。**真正的架构是 `spr
   - `tools/installer/ide/platform-codes.yaml` —— 48 平台注册表
 
 ***
-**作者**：Mr.Sun（孙荣）
+**作者**：Mr.Sun
 
-11 年研发经验，华为 17 级技术专家。AI Agent 平台研发 + AgentScope / BMAD-METHOD 双上游 contributor。个人 blog：[sunrong.site](https://sunrong.site/)
+11 年研发经验，主要做 AI Agent 平台相关的工作。AgentScope 上游有 PR，也是 BMAD-METHOD 的长期使用者（本文所有数字来自 v6.11.0 源码实测）。
+
+这三篇的方法论是同一套：**先跑通 → 读源码 → 改源码**。个人 blog：[sunrong.site](https://sunrong.site/)
 
 **版权**：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)，转载请保留作者信息与原文链接。
