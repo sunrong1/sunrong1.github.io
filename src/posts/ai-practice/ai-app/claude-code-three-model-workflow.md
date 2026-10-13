@@ -19,7 +19,7 @@ author: Mr.Sun
 
 > 一周内把三个模型接进 Claude Code，踩了 6 个坑，烧掉 70% 月额度，换来一套能算账的分工方法。
 >
-> 这篇记的不是"怎么配置"，是"**配置之后怎么不烧钱**"。
+> 重点在配额消耗和分工决策，配置步骤网上都有。
 
 ***
 ## 💡 起因
@@ -109,7 +109,9 @@ MiniMax 官方文档其实给了答案，只是我跳过了：
 > 在 ProgramBench 对比中，512K 和 1M 窗口**模型表现无明显差异**，但 512K 的预估成本**低约 20%**。
 > 实测：1M 平均每任务 136.76M tokens，512K 是 111.42M（**少 18.5%**）。
 
-**512K 不是"保守"，是官方推荐的性价比拐点。**
+**MiniMax 官方文档给的建议是 512K，不是 1M。**
+
+我第一次跳过了这段，直接按支持的最大值配。
 
 ### 坑 2：忽略了压缩线才是真正的开关
 
@@ -134,7 +136,9 @@ BMAD 的 `bmad-help` 有一条硬约束，写在 SKILL.md 的 Constraints 段：
 - Recommend running each skill in a **fresh context window**
 ```
 
-**不是建议，是约束。** 但我的一次 code review 是在 **127 轮的老会话**里跑的，上下文滚到 166K 后，每一轮都在重发这 166K。
+这条写在 BMAD `bmad-help` 的 SKILL.md 里，Constraints 段落。BMAD 承诺的是 **artifact-driven**——文件里有一切。上下文里残留的历史对话会削弱这个前提。
+
+我的一次 code review 就是在 **127 轮的老会话**里跑的，上下文滚到 166K 后，每一轮都在重发这 166K。
 
 BMAD 承诺的是 **artifact-driven**——文件里有一切。上下文里残留的历史对话**恰恰是对这个承诺的破坏**。
 
@@ -339,8 +343,8 @@ cc-model qwen             # 显式切千问
 - 本系列前文：《一天掌握 BMAD-METHOD：从装到改的 6 小时路线图》
 
 ***
-**作者**：Mr.Sun（孙荣）
+**作者**：Mr.Sun
 
-11 年研发经验，华为 17 级技术专家。AI Agent 平台研发 + AgentScope / BMAD-METHOD 双上游 contributor。个人 blog：[sunrong.site](https://sunrong.site/)
+11 年研发经验，主要做 AI Agent 平台相关的工作。AgentScope 上游有 PR，也长期在用 BMAD-METHOD 做开发（本文提到的所有数字都来自我这台机器的真实会话记录）。个人 blog：[sunrong.site](https://sunrong.site/)
 
 **版权**：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)，转载请保留作者信息与原文链接。
