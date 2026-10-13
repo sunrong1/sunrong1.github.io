@@ -40,9 +40,9 @@ quadrantChart
     quadrant-2 "拓展技能"
     quadrant-3 "基础技能"
     quadrant-4 "新兴技能"
+    "AI/LLM 应用": [0.9, 0.9]
     "研发效能工程": [0.9, 0.9]
-    "AI/LLM 应用": [0.9, 0.85]
-    "Java/SpringBoot": [0.85, 0.9]
+    "Java/SpringBoot": [0.85, 0.85]
     "Python": [0.9, 0.8]
     "DDD/架构方法": [0.7, 0.75]
     "CI/CD 与 DevOps": [0.85, 0.8]
@@ -53,12 +53,11 @@ quadrantChart
 
 | 领域 | 技能 | 熟练度 |
 |------|------|--------|
-| **研发效能** | 平台架构、流水线、质量门禁、度量体系 | ⭐⭐⭐⭐⭐ |
 | **AI 应用** | AI Agent、大模型应用、Prompt 工程 | ⭐⭐⭐⭐⭐ |
+| **研发效能** | 平台架构、流水线、度量体系、自动化测试 | ⭐⭐⭐⭐⭐ |
 | **编程语言** | Java, Python, JavaScript/TypeScript | ⭐⭐⭐⭐ |
 | **DevOps** | Jenkins, GitLab CI, Docker, K8s | ⭐⭐⭐⭐ |
 | **架构方法** | DDD、微服务拆分、领域建模 | ⭐⭐⭐⭐ |
-| **测试技术** | 自动化测试、性能测试、可靠性测试 | ⭐⭐⭐⭐ |
 | **前端开发** | Vue.js | ⭐⭐⭐ |
 
 ## 📦 内容与作品
