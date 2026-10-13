@@ -13,17 +13,16 @@ tags:
 
 ## 👨‍💻 我是谁
 
-**孙荣（Mr.Sun）**，平台研发工程师，AI Agent 实践者，程序员爸爸。
+**Dave（Mr.Sun）**，平台研发工程师，AI Agent 实践者，程序员爸爸。
 
 - 📍 **坐标**：上海
 - 🎓 **专业**：计算机科学与技术
-- 📧 **邮箱**：sunrong1990@126.com
 
 ## 🧠 我关注什么
 
-**把 AI Agent 真正用进日常研发，而不只是调 API。**
+**让 Agent 从 demo 变成能长期跑的生产系统。**
 
-我在测试工具与平台方向做了十一年。这个领域教会我一件事——**系统能不能落地，取决于它是否可观测、可干预、可闭环**。现在我把同一套方法论搬到 AI Agent 上：让 Agent 从 demo 变成能长期跑的生产系统。
+我在测试工具与平台方向做了十一年。这个领域教会我一件事——**系统能不能落地，取决于它是否可观测、可干预、可闭环**。现在我把同一套方法论用到 AI Agent 上。
 
 - **AI Agent 工程化**：从 0 到 1 搭建部门级 Agent 平台，把 AI 代码占比从 10% 推到 70%
 - **质量与可观测**：决策链路追踪、Token 成本监控、BadCase 归因告警
@@ -100,9 +99,9 @@ quadrantChart
 - **GitHub**：[sunrong1](https://github.com/sunrong1)
 - **知乎**：[sunrong1](https://www.zhihu.com/people/sunrong1)
 - **B 站**：[Dave_Dev_Road](https://space.bilibili.com/569121037)
-- **邮箱**：sunrong1990@126.com
+- **邮箱**：sunrong1\*\*\*@126.com
 
-技术问题讨论、商务合作、技术交流，都欢迎直接联系。
+技术问题讨论、商务合作、技术交流，都欢迎通过 GitHub 或邮件联系。
 
 ---
 
