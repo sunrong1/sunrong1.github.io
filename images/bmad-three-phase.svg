@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="820" viewBox="0 0 960 820" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7a8fa6"/>
+    </marker>
+    <marker id="arw2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff9d5c"/>
+    </marker>
+    <style>
+      .box { rx: 8; ry: 8; stroke-width: 2; }
+      .num { font-size: 14px; font-weight: 700; fill: #e8f0f8; }
+      .h { font-size: 12.5px; font-weight: 600; fill: #dce8f5; }
+      .s { font-size: 10.5px; fill: #b0c4d8; }
+      .mono { font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 10px; fill: #8fb0c8; }
+      .edge { stroke: #7a8fa6; stroke-width: 1.8; fill: none; marker-end: url(#arw); }
+      .loop { stroke: #ff9d5c; stroke-width: 2; fill: none; marker-end: url(#arw2); stroke-dasharray: 6 4; }
+      .wgt { font-size: 10.5px; fill: #9fb4c8; font-style: italic; }
+      .big { font-size: 20px; font-weight: 700; fill: #e8f0f8; }
+    </style>
+  </defs>
+
+  <rect width="960" height="820" fill="#0f1620"/>
+  <text x="480" y="34" class="big" text-anchor="middle">BMAD-METHOD · 三阶段闭环</text>
+  <text x="480" y="54" font-size="11.5" fill="#8fa6bd" text-anchor="middle">artifact-driven：文件里有一切，对话可以随时丢弃</text>
+
+  <!-- 三阶段主环 -->
+  <!-- PLAN -->
+  <rect x="230" y="85" width="500" height="185" class="box" fill="#132a42" stroke="#3a7fc4"/>
+  <text x="480" y="108" class="num" text-anchor="middle">Plan · 规划</text>
+  <text x="480" y="125" font-size="10.5" fill="#7fa8cc" text-anchor="middle">Agent 主动触发 · 读规划全量上下文</text>
+
+  <rect x="248" y="138" width="146" height="52" class="box" fill="#1a3d5c" stroke="#4a9eff"/>
+  <text x="321" y="155" class="h" text-anchor="middle">PM</text>
+  <text x="321" y="170" class="s" text-anchor="middle">bmad-prd</text>
+  <text x="321" y="183" class="mono" text-anchor="middle">→ PRD.md</text>
+
+  <rect x="407" y="138" width="146" height="52" class="box" fill="#1a3d5c" stroke="#4a9eff"/>
+  <text x="480" y="155" class="h" text-anchor="middle">Architect</text>
+  <text x="480" y="170" class="s" text-anchor="middle">bmad-architecture</text>
+  <text x="480" y="183" class="mono" text-anchor="middle">→ architecture.md</text>
+
+  <rect x="566" y="138" width="146" height="52" class="box" fill="#1a3d5c" stroke="#4a9eff"/>
+  <text x="639" y="155" class="h" text-anchor="middle">SM</text>
+  <text x="639" y="170" class="s" text-anchor="middle">create-epics-stories</text>
+  <text x="639" y="183" class="mono" text-anchor="middle">→ story spec + status</text>
+
+  <rect x="248" y="200" width="464" height="56" class="box" fill="#1a3d5c" stroke="#4a9eff"/>
+  <text x="480" y="217" class="s" text-anchor="middle">读：GDD + 架构 + UX + epics + sprint-status（全量，约 60K token）</text>
+  <text x="480" y="234" class="s" text-anchor="middle">写：PRD.md · architecture.md · epics.md · sprint-status.yaml</text>
+  <text x="480" y="249" class="wgt" text-anchor="middle">状态在 YAML 里，可提交 git，可换人接手</text>
+
+  <!-- SHIP -->
+  <rect x="600" y="305" width="330" height="175" class="box" fill="#3a2614" stroke="#c47f3a"/>
+  <text x="765" y="328" class="num" text-anchor="middle">Ship · 交付</text>
+  <text x="765" y="345" font-size="10.5" fill="#d3a06a" text-anchor="middle">Artifact 主动触发 · 只读切片</text>
+
+  <rect x="618" y="358" width="294" height="46" class="box" fill="#4a3018" stroke="#ffa04a"/>
+  <text x="765" y="375" class="h" text-anchor="middle">bmad-build</text>
+  <text x="765" y="390" class="s" text-anchor="middle">读单个 story spec（约 20K），写代码 + 跑测试</text>
+
+  <rect x="618" y="412" width="294" height="34" class="box" fill="#4a3018" stroke="#ffa04a"/>
+  <text x="765" y="433" class="s" text-anchor="middle">bmad-code-review · 三层对抗审查</text>
+
+  <rect x="618" y="452" width="294" height="20" class="box" fill="#4a3018" stroke="#ffa04a"/>
+  <text x="765" y="466" class="wgt" text-anchor="middle">BMad Loop 可无人值守跑完整个 epic</text>
+
+  <!-- CORRECT -->
+  <rect x="30" y="305" width="330" height="167" class="box" fill="#2d1a42" stroke="#8f4ac4"/>
+  <text x="195" y="328" class="num" text-anchor="middle">Correct · 纠偏</text>
+  <text x="195" y="345" font-size="10.5" fill="#c49ae0" text-anchor="middle">人触发 · 评估变更影响</text>
+
+  <rect x="48" y="358" width="294" height="34" class="box" fill="#3a2255" stroke="#c46fff"/>
+  <text x="195" y="379" class="s" text-anchor="middle">bmad-correct-course</text>
+
+  <rect x="48" y="400" width="294" height="60" class="box" fill="#3a2255" stroke="#c46fff"/>
+  <text x="195" y="416" class="s" text-anchor="middle">产出 Sprint Change Proposal</text>
+  <text x="195" y="432" class="s" text-anchor="middle">回写上游：PRD / epics / 架构 / UX</text>
+  <text x="195" y="452" class="wgt" text-anchor="middle">变更不是口头约定，是可审计的文档</text>
+
+  <!-- 箭头 -->
+  <path d="M 730 270 L 765 303" class="edge"/>
+  <text x="762" y="288" class="wgt" text-anchor="middle">文档就绪</text>
+
+  <path d="M 600 390 L 480 390 L 480 272" class="loop"/>
+  <text x="250" y="382" class="wgt" fill="#ff9d5c">发现设计问题 → 回到 Plan 重规划</text>
+
+  <path d="M 195 305 L 195 272" class="edge"/>
+  <text x="205" y="292" class="wgt" text-anchor="middle">影响上游</text>
+
+  <!-- 底部：为什么这样设计 -->
+  <rect x="30" y="520" width="900" height="152" class="box" fill="#16301f" stroke="#4e9c5c"/>
+  <text x="480" y="542" class="num" text-anchor="middle">为什么是「闭环」而不是「瀑布」</text>
+
+  <text x="52" y="565" class="s">· 软件项目的真正难题不是初始规划，是变更管理。Correct 是唯一显式建模「改主意」的阶段。</text>
+  <text x="52" y="585" class="s">· 三个阶段读写不同的 artifact：Plan 写规划、Ship 写代码与状态、Correct 回写规划文档。文件即交接契约。</text>
+  <text x="52" y="605" class="s">· 状态外置到 sprint-status.yaml（5 个 story 状态 + 3 个 action item 状态），对话断了、换人接手，流程从磁盘恢复。</text>
+  <text x="52" y="625" class="s">· 对话历史里残留的旧假设会覆盖文件里的新决策——所以 bmad-help 硬约束：每个 skill 开全新上下文窗口。</text>
+
+  <rect x="52" y="638" width="856" height="24" class="box" fill="#1d4028" stroke="#6fcf6f"/>
+  <text x="480" y="654" class="s" text-anchor="middle">8 小时实战：BMAD 跑了 78 个子项目的 C# 重构，产出 22 条自动修复</text>
+
+  <!-- footer -->
+  <text x="480" y="700" class="wgt" text-anchor="middle">▼ 源码导航：src/core-skills（9 个通用）· src/bmm-skills（5 agent + 10 plan + 7 ship）· tools/installer/ide（48 平台）</text>
+  <text x="480" y="722" class="wgt" text-anchor="middle">▼ 硬数据：v6.11.0 / 2088 commits / 50 个 SKILL.md / 35 个 customize.toml / 4 个 preferred IDE</text>
+  <text x="480" y="750" class="wgt" text-anchor="middle">Mr.Sun · sunrong.site</text>
+</svg>
