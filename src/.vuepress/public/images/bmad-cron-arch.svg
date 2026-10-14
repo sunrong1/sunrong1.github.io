@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="880" viewBox="0 0 980 880" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7a8fa6"/>
+    </marker>
+    <style>
+      .box { rx: 8; ry: 8; stroke-width: 2; }
+      .ttl { font-size: 14px; font-weight: 700; fill: #dce8f5; }
+      .lbl { font-size: 11.5px; fill: #c8d8e8; }
+      .num { font-size: 13px; font-weight: 700; fill: #dce8f5; }
+      .small { font-size: 10.5px; fill: #b0c4d8; }
+      .edge { stroke: #7a8fa6; stroke-width: 1.6; fill: none; marker-end: url(#arw); }
+      .edge-dash { stroke: #7a8fa6; stroke-width: 1.4; fill: none; stroke-dasharray: 4 3; marker-end: url(#arw); }
+      .wgt { font-size: 10.5px; fill: #9fb4c8; font-style: italic; }
+    </style>
+  </defs>
+
+  <rect width="980" height="880" fill="#0f1620"/>
+
+  <text x="490" y="34" font-size="20" font-weight="700" fill="#e8f0f8" text-anchor="middle">夜间无人值守开发 · 四层架构</text>
+  <text x="490" y="54" font-size="11.5" fill="#8fa6bd" text-anchor="middle">plants-game · BMAD-METHOD · cron + tmux + Claude Code</text>
+
+  <!-- ① CRON -->
+  <rect x="40" y="80" width="270" height="150" class="box" fill="#132a42" stroke="#3a7fc4"/>
+  <text x="56" y="102" class="num">① cron — 何时跑</text>
+  <rect x="58" y="114" width="110" height="42" class="box" fill="#1a3d5c" stroke="#4a9eff"/>
+  <text x="113" y="132" class="lbl" text-anchor="middle">02:00</text>
+  <text x="113" y="147" class="small" text-anchor="middle">新建会话</text>
+  <rect x="182" y="114" width="110" height="42" class="box" fill="#1a3d5c" stroke="#4a9eff"/>
+  <text x="237" y="132" class="lbl" text-anchor="middle">07:00</text>
+  <text x="237" y="147" class="small" text-anchor="middle">新建会话</text>
+  <rect x="58" y="166" width="234" height="42" class="box" fill="#1a3d5c" stroke="#4a9eff"/>
+  <text x="175" y="184" class="lbl" text-anchor="middle">08:30</text>
+  <text x="175" y="199" class="small" text-anchor="middle">check-done.sh 状态汇报</text>
+  <text x="56" y="222" class="wgt">每次独立新建，不复用</text>
+
+  <!-- 配置分离 -->
+  <rect x="40" y="255" width="270" height="132" class="box" fill="#16301f" stroke="#4e9c5c"/>
+  <text x="56" y="277" class="num">配置分离</text>
+  <rect x="58" y="289" width="234" height="26" class="box" fill="#1d4028" stroke="#6fcf6f"/>
+  <text x="175" y="306" class="small" text-anchor="middle">schedule.conf — 时间点</text>
+  <rect x="58" y="321" width="234" height="26" class="box" fill="#1d4028" stroke="#6fcf6f"/>
+  <text x="175" y="338" class="small" text-anchor="middle">job.conf — 项目 / 后端 / 模型</text>
+  <rect x="58" y="353" width="234" height="26" class="box" fill="#1d4028" stroke="#6fcf6f"/>
+  <text x="175" y="370" class="small" text-anchor="middle">task.txt — 任务内容</text>
+
+  <!-- ② SCRIPT -->
+  <rect x="355" y="80" width="280" height="175" class="box" fill="#3a2614" stroke="#c47f3a"/>
+  <text x="371" y="102" class="num">② nightly-build.sh — 跑什么</text>
+  <rect x="373" y="114" width="244" height="38" class="box" fill="#4a3018" stroke="#ffa04a"/>
+  <text x="495" y="130" class="small" text-anchor="middle">轮询等 Claude 就绪（最多 120s）</text>
+  <text x="495" y="145" class="small" text-anchor="middle">看画面有没有 ❯ 提示符</text>
+  <rect x="373" y="160" width="244" height="38" class="box" fill="#4a3018" stroke="#ffa04a"/>
+  <text x="495" y="176" class="small" text-anchor="middle">两步确认发送</text>
+  <text x="495" y="191" class="small" text-anchor="middle">文本就位才回车 · literal 兜底</text>
+  <rect x="373" y="206" width="244" height="38" class="box" fill="#4a3018" stroke="#ffa04a"/>
+  <text x="495" y="222" class="small" text-anchor="middle">tmux 会话 nightly-HHMMSS</text>
+  <text x="495" y="237" class="small" text-anchor="middle">进程独立，cron 退出不影响</text>
+
+  <!-- 防误伤 -->
+  <rect x="355" y="280" width="280" height="107" class="box" fill="#3a1a1a" stroke="#c44a4a"/>
+  <text x="371" y="302" class="num">防误伤机制</text>
+  <rect x="373" y="314" width="244" height="34" class="box" fill="#4a2222" stroke="#ff6b6b"/>
+  <text x="495" y="329" class="small" text-anchor="middle">crontab 用标记对包裹</text>
+  <text x="495" y="343" class="small" text-anchor="middle">stop/start 只剥自己那段</text>
+  <rect x="373" y="353" width="244" height="26" class="box" fill="#4a2222" stroke="#ff6b6b"/>
+  <text x="495" y="370" class="small" text-anchor="middle">腾讯云 stargate 保活不受影响</text>
+
+  <!-- ③ 看门狗 -->
+  <rect x="680" y="80" width="262" height="230" class="box" fill="#2d1a42" stroke="#8f4ac4"/>
+  <text x="696" y="102" class="num">③ 看门狗 — 卡住了怎么办</text>
+  <rect x="698" y="114" width="226" height="30" class="box" fill="#3a2255" stroke="#c46fff"/>
+  <text x="811" y="133" class="small" text-anchor="middle">每 2 分钟调 stuck-detect.sh</text>
+  <rect x="698" y="152" width="226" height="30" class="box" fill="#3a2255" stroke="#c46fff"/>
+  <text x="811" y="171" class="small" text-anchor="middle">判定用 AND 关系</text>
+  <rect x="698" y="190" width="226" height="30" class="box" fill="#3a2255" stroke="#c46fff"/>
+  <text x="811" y="209" class="small" text-anchor="middle">jsonl 静默 &gt; 600s ?</text>
+  <rect x="698" y="226" width="226" height="30" class="box" fill="#3a2255" stroke="#c46fff"/>
+  <text x="811" y="245" class="small" text-anchor="middle">file mtime 静默 &gt; 600s ?</text>
+  <rect x="698" y="264" width="226" height="34" class="box" fill="#5c3a1a" stroke="#ffa04a"/>
+  <text x="811" y="280" class="small" text-anchor="middle">两者都静默 → 发 Enter 放行</text>
+  <text x="811" y="293" class="small" text-anchor="middle">否则不干预（宁可迟钝不可误伤）</text>
+
+  <!-- ④ CLAUDE -->
+  <rect x="40" y="425" width="902" height="290" class="box" fill="#0f3d3d" stroke="#2aa89c"/>
+  <text x="56" y="447" class="num">④ Claude Code — 真正干活</text>
+
+  <rect x="58" y="459" width="200" height="36" class="box" fill="#124f4f" stroke="#4affd4"/>
+  <text x="158" y="474" class="small" text-anchor="middle">--permission-mode auto</text>
+  <text x="158" y="489" class="small" text-anchor="middle">工具调用全部自动放行</text>
+
+  <rect x="272" y="459" width="200" height="36" class="box" fill="#124f4f" stroke="#4affd4"/>
+  <text x="372" y="474" class="small" text-anchor="middle">读 sprint-status.yaml</text>
+  <text x="372" y="489" class="small" text-anchor="middle">状态是唯一事实源</text>
+
+  <rect x="486" y="459" width="200" height="36" class="box" fill="#124f4f" stroke="#4affd4"/>
+  <text x="586" y="474" class="small" text-anchor="middle">按 status 路由</text>
+  <text x="586" y="489" class="small" text-anchor="middle">不需要外部告诉它做什么</text>
+
+  <rect x="700" y="459" width="224" height="36" class="box" fill="#124f4f" stroke="#4affd4"/>
+  <text x="812" y="474" class="small" text-anchor="middle">绝不 git commit</text>
+  <text x="812" y="489" class="small" text-anchor="middle">数值参数改动必须问人</text>
+
+  <!-- 三条分支 -->
+  <rect x="58" y="530" width="270" height="80" class="box" fill="#154a52" stroke="#4affd4"/>
+  <text x="193" y="550" class="lbl" text-anchor="middle">规则 1 · status: review</text>
+  <text x="193" y="570" class="small" text-anchor="middle">gds-code-review 三层审查</text>
+  <text x="193" y="587" class="small" text-anchor="middle">出报告 → 停（不自动修）</text>
+  <text x="193" y="602" class="small" text-anchor="middle">CR 独立上下文，避免自我确认</text>
+
+  <rect x="355" y="530" width="270" height="80" class="box" fill="#154a52" stroke="#4affd4"/>
+  <text x="490" y="550" class="lbl" text-anchor="middle">规则 2 · ready-for-dev / in-progress</text>
+  <text x="490" y="570" class="small" text-anchor="middle">gds-dev-story 继续实现</text>
+  <text x="490" y="587" class="small" text-anchor="middle">跑测试 → 改 review → 停</text>
+  <text x="490" y="602" class="small" text-anchor="middle">不 commit</text>
+
+  <rect x="652" y="530" width="272" height="80" class="box" fill="#154a52" stroke="#4affd4"/>
+  <text x="788" y="550" class="lbl" text-anchor="middle">规则 3 · backlog</text>
+  <text x="788" y="570" class="small" text-anchor="middle">gds-create-story 生成上下文</text>
+  <text x="788" y="587" class="small" text-anchor="middle">同 session 直接跑 gds-dev-story</text>
+  <text x="788" y="602" class="small" text-anchor="middle">零成本传递，不用重读规划文件</text>
+
+  <text x="490" y="640" class="wgt" text-anchor="middle">一次只跑一个 story · 不批量 · 不并行</text>
+
+  <rect x="58" y="660" width="866" height="42" class="box" fill="#3a2255" stroke="#c46fff"/>
+  <text x="491" y="678" class="lbl" text-anchor="middle">上下文控制是省 token 的关键</text>
+  <text x="491" y="694" class="small" text-anchor="middle">CLAUDE.md 常驻速查（省 epics.md 重复读）· Edit 替代 Bash 改文件（1302→151 次）· CS+DS 同 session · 上下文压到 100K / 200K</text>
+
+  <!-- 连线 -->
+  <path d="M 175 230 L 175 255" class="edge-dash"/>
+  <path d="M 310 320 L 355 320" class="edge"/>
+  <path d="M 495 255 L 495 180" class="edge" />
+  <path d="M 310 175 L 355 175" class="edge"/>
+  <path d="M 635 200 L 680 200" class="edge-dash"/>
+  <text x="655" y="190" class="wgt" text-anchor="middle">后台</text>
+  <text x="655" y="212" class="wgt" text-anchor="middle">子进程</text>
+
+  <path d="M 495 255 L 490 425" class="edge"/>
+  <text x="520" y="350" class="wgt">② 装配完 → 启动 ④</text>
+
+  <path d="M 811 310 L 811 380 L 490 380 L 490 425" class="edge-dash"/>
+  <text x="650" y="372" class="wgt">检测卡住 → 发 Enter</text>
+
+  <!-- 底部关键 -->
+  <text x="490" y="740" class="wgt" text-anchor="middle">▼ 实测：单夜产出 2 个 commit + 22 条自动修复（三层审查的 fake-green 坐实）</text>
+  <text x="490" y="762" class="wgt" text-anchor="middle">▼ 看门狗迭代四版：屏幕截取 → CPU 采样 → 读 jsonl → jsonl + mtime（AND）</text>
+  <text x="490" y="784" class="wgt" text-anchor="middle">▼ 阈值 180s → 误判 12 次 → 600s</text>
+  <text x="490" y="806" class="wgt" text-anchor="middle">▼ 配额：5h 窗口边界 20:49 / 01:49 / 06:49 / 11:49 / 16:49</text>
+  <text x="490" y="832" class="wgt" text-anchor="middle">Mr.Sun · sunrong.site</text>
+</svg>
