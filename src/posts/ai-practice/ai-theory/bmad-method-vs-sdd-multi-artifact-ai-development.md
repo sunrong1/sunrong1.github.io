@@ -233,6 +233,15 @@ BMAD 把软件开发分成 3 个阶段，**且形成闭环**：
       反馈回来
 ```
 
+![BMAD 三阶段闭环：Plan → Ship → Correct](/images/bmad-three-phase.svg)
+
+关键在于每个阶段读写**不同的 artifact**：
+Plan 读全部规划文档、写规划产物；
+Ship 只读单个 story spec、写代码与状态；
+Correct 读变更影响、回写上游规划文档。
+
+**文件即交接契约**，这也是为什么对话历史可以随时丢弃。
+
 ### 3.1 Plan 阶段（做什么、怎么做）
 
 **核心问题**：从模糊需求到可执行的 story 文件
