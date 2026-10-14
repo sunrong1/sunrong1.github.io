@@ -177,206 +177,286 @@ nightly-001021: 1 windows    ← 一眼看出哪次跑的
 ```
 
 ***
-## 四、第三层：多时间点 + 接力
+## 四、第三层：多时间点（每班独立会话）
 
-### 为什么需要接力
+### 为什么要多时间点
 
-MiniMax Token Plan 的 5 小时窗口固定在 `00/05/10/15/20` 整点重置。
+一个时间点跑不透。MiniMax Token Plan 的 5 小时窗口固定在 `00/05/10/15/20` 整点重置——00:10 起跑，05:00 窗口重置，**最长只能跑 4 小时 50 分**。
 
-假设 00:10 起跑，05:00 窗口重置——**任务最长只能跑 4 小时 50 分**。
-
-长任务（比如全仓库重构）跑不完就撞墙。
-
-### 接力怎么工作
-
-在 05:00 窗口重置后再跑一次，但**不是新建会话，是复用**：
+拆成三班，每班独立跑：
 
 ```cron
-10 0 * * * /root/.claude/jobs/nightly-build.sh ...          # 新建会话
-5  5 * * * CONTINUE=1 /root/.claude/jobs/nightly-build.sh ... # 接力续跑
+10 0 * * *  nightly-build.sh ...   # 00:10
+5  5 * * *  nightly-build.sh ...   # 05:05
+0  20 * * *  nightly-build.sh ...  # 20:00
 ```
 
-`CONTINUE=1` 的逻辑：
+### 我一开始写了"接力"，后来删掉了
+
+最初的设计是**接力**：05:05 那一班不新建会话，复用 00:10 那个继续跑（上下文还在，不用重读代码）。
+
+```cron
+5 5 * * * CONTINUE=1 nightly-build.sh ...   # ← 这行删了
+```
+
+**实测跑了一晚，发现两个问题**：
+
+**问题 1：信号会跨会话累积**
+
+看门狗判断"卡没卡"靠两个信号：session jsonl 的修改时间 + 项目文件 mtime。接力模式下，05:05 的班次复用了旧会话，**jsonl 是同一个文件**（一直在涨），但 `file` 时间是全局的。两次运行的信号混在一起，判定结果不可信。
+
+**问题 2：旧会话的上下文会干扰判定**
+
+接力模式下要等上一轮跑完，逻辑变成"轮询旧会话的画面 → 等它空闲 → 发新任务"。这套等待逻辑比"直接新建"复杂得多，还多了一类失败点。
+
+**改成每班独立新建后，逻辑简单了一截**：
 
 ```bash
-if [[ "$CONTINUE" == "1" && -f "$JOBDIR/current-session" ]]; then
-  PREV=$(cat "$JOBDIR/current-session")
-  if tmux has-session -t "$PREV" 2>/dev/null; then
-    SESSION="$PREV"        # 复用，不新建
-    # 等上一轮跑完再发新任务
-    ...
-    exit 0
-  fi
+# 每次都是新会话，信号独立，判定干净
+tmux new-session -d -s "$SESSION" -c "$PROJECT_DIR"
+```
+
+**三个时间点的会话名**（带时分秒，方便早上分辨）：
+
+```
+nightly-001021    ← 00:10 那班
+nightly-050508    ← 05:05 那班
+nightly-200003    ← 20:00 那班
+```
+
+### 配置分离
+
+时间、任务、模型拆成三个文件：
+
+```
+schedule.conf   # 时间点（每行一个 HH:MM）
+job.conf        # 项目 + 后端 + 模型
+task.txt        # 任务内容（多行，随便写）
+```
+
+改任务只编辑 `task.txt`，不用碰脚本：
+
+```bash
+vim /root/.claude/jobs/task.txt
+bmad-job start     # 同步到 crontab
+```
+
+`bmad-job` 的四个子命令：
+
+```bash
+bmad-job status    # 看当前状态（跑哪些时间点 + 配置在哪 + 最近运行）
+bmad-job stop      # 停用（配置保留，随时 start 恢复）
+bmad-job start     # 启用
+bmad-job edit      # 编辑时间点 → 保存后自动同步
+bmad-job job       # 编辑任务配置 → 保存后自动同步
+```
+
+**`stop` 是只删 crontab 里带标记的那一段，不是清空整个 crontab。**
+
+***
+## 五、看门狗迭代了四版（本文最长的部分）
+
+看门狗的任务很简单：**发现 Claude 卡住了，按一下 Enter**。
+
+但"怎么判断卡住了"这件事，我改了三版。前两版都误判。
+
+***
+### 第一版：看屏幕
+
+最直觉的做法——截图两次，对比：
+
+```bash
+SNAP1=$(tmux capture-pane -p -t "$SESSION" | tail -8)
+sleep 8
+SNAP2=$(tmux capture-pane -p -t "$SESSION" | tail -8)
+if [[ "$SNAP1" == "$SNAP2" ]] && echo "$SNAP1" | grep -qE "❯|Yes"; then
+  tmux send-keys -t "$SESSION" Enter
 fi
 ```
 
-**关键点**：接力不是"重开一轮"，而是**在原会话里继续**——上下文还在，不用重读代码。
+**问题**：画面静止 ≠ 卡住。Claude 跑长任务时画面也不动（它在等 LLM 返回，或者在跑 npm install）。第一版把"正常干活"判成了"卡住"，疯狂发 Enter。
 
-**而且不会重复劳动**：如果 00:10 那班已经跑完退出了，接力会检测到会话不存在，**自动新建**。
+**而且屏幕是渲染结果，会骗人**：终端重绘、光标闪烁、fullscreen TUI 切换都可能让对比逻辑误判。
 
-### 时间点配置分离
+***
+### 第二版：加 CPU 采样
 
-我把配置拆成两个文件：
-
-```
-# schedule.conf — 只管时间
-00:10
-05:05
-21:10
-```
-
-```
-# job.conf — 只管任务
-PROJECT_DIR=/root/repos/plants-game
-BACKEND=minimax
-MODEL=
-TASK=
-```
-
-改时间不会碰任务配置，改模型不会碰时间点。
-
-`sync-crontab.sh` 读这两个文件生成 crontab，还自动处理"第一个时间点新建 / 后续时间点接力"的逻辑：
+想补一个"进程是否在动"的信号：
 
 ```bash
-if (( FIRST )); then
-  printf "%d %d * * * %s/nightly-build.sh %s\n" "$M" "$H" ...
-  FIRST=0
-else
-  printf "%d %d * * * CONTINUE=1 %s/nightly-build.sh %s\n" "$M" "$H" ...
-fi
+C1=$(awk '{print $14+$15}' /proc/$PID/stat)
+sleep 6
+C2=$(awk '{print $14+$15}' /proc/$PID/stat)
+CPU_DELTA=$(( C2 - C1 ))
+```
+
+**问题**：LLM 调用期间 Claude 进程**几乎不烧 CPU**（在等网络）。所以"CPU 没涨"恰恰是常态，跟卡没卡没关系。而且每轮检测要多 sleep 6 秒，三倍拖慢。
+
+**这版我实测跑了一次，检测耗时从 0.085 秒变成 6 秒。**
+
+***
+### 第三版：读 session jsonl（关键突破）
+
+Claude Code 会把**每一句话、每一次工具调用、每一份 token 用量**都写进一个 jsonl 文件：
+
+```
+~/.claude/projects/-root-repos-plants-game/<session-uuid>.jsonl
+```
+
+**这个文件每做一步就 append 一行**，格式是 JSON Lines（一行一个 JSON 对象）。这是硬信号，不是渲染结果。
+
+我实测过任务完成时发空 Enter 的效果：
+
+```
+发之前 jsonl: 1244233 字节
+发之后 jsonl: 1244233 字节   ← 完全没变
+画面：无变化
+```
+
+**Claude Code 会忽略空 Enter**。所以误判的代价是零。
+
+一个真实条目的样子：
+
+```json
+{
+  "type": "assistant",
+  "timestamp": "2026-10-13T07:34:56.982Z",
+  "message": {
+    "model": "MiniMax-M3.1-Flash-Preview",
+    "content": [{"type": "tool_use", "name": "Skill",
+                 "input": {"skill": "gds-dev-story"}}],
+    "usage": {"input_tokens": 22683, "output_tokens": 92}
+  },
+  "cwd": "/root/repos/plants-game",
+  "gitBranch": "main"
+}
 ```
 
 ***
-## 五、四个避坑点（都是翻车换来的）
-
-### 坑 2：任务发不出去（最隐蔽的一个）
-
-我第一版脚本是这样：
+### 第四版（当前）：jsonl + 文件 mtime，AND 关系
 
 ```bash
-tmux send-keys -t "$SESSION" "cc-model minimax" Enter
-sleep 25
-tmux send-keys -t "$SESSION" "用 bmad-build-auto 实现 story 1-1" Enter
+#!/usr/bin/env bash
+# stuck-detect.sh <session> <project_dir>
+# 退出码: 0=WORKING  1=STUCK  2=EXITED
+
+tmux has-session -t "$SESSION" || { echo "EXITED"; exit 2; }
+
+# 信号 1：session jsonl 最后修改时间（最强）
+PROJ_SLUG=$(echo "$PROJ" | sed 's|/|-|g')     # /root/repos/x → -root-repos-x
+JSONL=$(ls -t "$HOME/.claude/projects/${PROJ_SLUG}"/*.jsonl | head -1)
+JSONL_AGE=$(( $(date +%s) - $(stat -c %Y "$JSONL") ))
+
+# 信号 2：项目源文件最近修改时间
+NEWEST=$(find "$PROJ" -type f \( -name "*.ts" -o -name "*.py" -o ... \) \
+         -not -path "*/node_modules/*" -not -path "*/.git/*" \
+         -newermt "-6 hours" | head -1)
+FILE_AGE=$(( $(date +%s) - $(stat -c %Y "$NEWEST") ))
+
+# 判定：AND —— 两个都静默才判卡住
+THRESHOLD="${STUCK_THRESHOLD:-300}"
+if [[ $JSONL_AGE -gt $THRESHOLD && $FILE_AGE -gt $THRESHOLD ]]; then
+  echo "STUCK jsonl=${JSONL_AGE}s file=${FILE_AGE}s"; exit 1
+fi
+echo "WORKING jsonl=${JSONL_AGE}s file=${FILE_AGE}s"; exit 0
 ```
 
-看起来没问题，但实测发现**任务消息发进去了，回车没生效**——Claude 界面显示了任务文本，但一直不处理。
+**为什么是 AND 不是 OR**：
 
-**原因**：`sleep 25` 是瞎猜的。Claude 启动有时 8 秒，有时 40 秒（要拉插件、读 CLAUDE.md、初始化 MCP）。**发早了，Enter 就打在启动画面上。**
+| 场景 | jsonl | file | 判定 |
+|---|---|---|---|
+| 正在写代码 | 动 | 动 | WORKING ✅ |
+| **正在做 CR（只读代码）** | 动 | **不动** | **WORKING** ✅ |
+| 正在长思考（subagent 跑批）| 不动 | 不动 | STUCK ❌ |
+| 真卡在菜单 | 不动 | 不动 | STUCK ✅ |
 
-**修法：轮询就绪 + 两步确认**。
+**第二列是关键**：code review 阶段只读代码不改文件，`file` 天然不动。如果用 OR 判定，"正在审查但没改文件"会被立刻误判成卡住。
+
+***
+### 阈值调了三次：180 → 600 → 300
+
+**180 秒（第一版设定）严重误判**。实测日志：
+
+```
+02:50:20  STUCK jsonl=218s file=241s   size=1195099B
+02:54:23  STUCK jsonl=239s file=484s   size=1198740B   ← 涨了 3641 字节
+02:58:27  STUCK jsonl=192s file=207s   size=1312902B   ← 涨了 114162 字节
+```
+
+**jsonl 明明在涨**，只是单次动作间隔 3-4 分钟。原因很清楚：**gds-code-review 的三层审查（Blind Hunter / Edge Case Hunter / Acceptance Auditor）会起 3 个并行 subagent，每个跑完才写一次 jsonl**。
+
+**一晚上触发 12 次**，每次还补发一个 Enter 和选项 1，把 Claude 从审查流程里拽出来。
+
+**中间试过 600 秒**，但那样真卡住时要等 10 分钟才被发现。
+
+**最终定 300 秒**（5 分钟）：
+
+| 阈值 | 误判风险 | 卡住发现延迟 |
+|---|---|---|
+| 180s | 高（昨晚 12 次误判）| ≤3 分钟 |
+| 600s | 低 | ≤10 分钟 |
+| **300s** | **中** | **≤5 分钟** |
+
+**而且把"补发选项 1"整个删掉了**。原来逻辑是"发 Enter → 再测一次 → 还卡就发 1"，那是在乱选菜单。改成只发 Enter（Claude 能自己消化就消化，吃不下就停着等你早上看）。
+
+***
+### 第三版加过一次"抖动过滤"，也删了
+
+因为误判太多，我加了一层"连续 2 次静默才判卡住"：
 
 ```bash
-# ① 轮询等就绪（最多 120 秒）
-READY=0
-for i in $(seq 1 60); do
-  sleep 2
-  PANE=$(tmux capture-pane -p -t "$SESSION" | tail -6)
-  if echo "$PANE" | grep -qE "❯" && ! echo "$PANE" | grep -qE "Retrying|用量上限"; then
-    READY=1; break
-  fi
+CNT=$(cat "$STATE_FILE" 2>/dev/null || echo 0)
+CNT=$((CNT+1))
+if [[ $CNT -ge 2 ]]; then echo "STUCK"; exit 1; fi
+echo "MAYBE (1/2)"; exit 3
+```
+
+**这个设计是对的，但属于给错误的阈值打补丁。** 阈值本身错了（180s），加过滤层只是让它慢一倍触发，错还是错。
+
+**根因修好之后（300s），抖动过滤就没必要了**——删掉，逻辑简单。
+
+***
+### 一个附带发现：jsonl 是完整的对话备份
+
+既然每次都读这个文件，我顺手把它用起来了：
+
+```bash
+# 某次会话总共烧了多少 token
+python3 -c "
+import json, glob
+f = sorted(glob.glob('/root/.claude/projects/-root-repos-plants-game/*.jsonl'))[-1]
+ti = to = tc = 0
+for line in open(f):
+    u = (json.loads(line).get('message') or {}).get('usage') or {}
+    ti += u.get('input_tokens', 0)
+    to += u.get('output_tokens', 0)
+    tc += u.get('cache_read_input_tokens', 0)
+print(f'输入 {ti:,}  输出 {to:,}  缓存读 {tc:,}')
+"
+```
+
+**我后来所有的 token 成本分析，数据源全是这个文件。** 比 Claude Code UI 里的 "Usage" 面板更准，因为它包含所有历史会话，不只是当前一次。
+
+***
+### 看门狗最后一版
+
+```bash
+# 每 2 分钟检测一次，最长 180 分钟
+while [[ $ELAPSED -lt $MAX_MINUTES ]]; do
+  sleep 120
+  RESULT=$("$DETECT" "$SESSION" "$PROJECT_DIR"); RC=$?
+  case $RC in
+    2) exit 0 ;;                      # 会话退出
+    1) tmux send-keys -t "$SESSION" Enter ;;   # 卡住 → Enter
+    0) ;;                             # 工作中 → 不动
+  esac
 done
-
-# ② 文本分两步发：先粘文本，确认到了才回车
-tmux send-keys -t "$SESSION" "$TASK"
-sleep 1
-CHECK=$(tmux capture-pane -p -t "$SESSION" | tail -4)
-if echo "$CHECK" | grep -qF "${TASK:0:20}"; then
-  tmux send-keys -t "$SESSION" Enter
-else
-  tmux send-keys -t "$SESSION" -l "$TASK"    # literal 模式兜底
-  sleep 1
-  tmux send-keys -t "$SESSION" Enter
-fi
-
-# ③ 再确认真的提交了
-SENT=$(tmux capture-pane -p -t "$SESSION" | tail -6)
-if echo "$SENT" | grep -qE "✻|Cooked|Thought"; then
-  log "✅ 任务已提交"
-fi
 ```
 
-**修完之后的日志**：
-
-```
-[19:35:25] 启动: cc-model minimax --permission-mode auto --add-dir ...
-[19:35:25] 等待 Claude 就绪...
-[19:35:27] ✅ Claude 就绪（等待 1x2 秒）
-[19:35:30] ✓ 任务文本已就位，回车提交
-[19:35:33] ✅ 任务已提交，Claude 开始处理
-```
-
-**14 秒完成，每一步都有确认。**
-
-### 坑 3：权限模式选错
-
-无人值守场景下，Claude 会在这些地方停下来等你：
-
-| 卡点 | 解决 |
-|---|---|
-| 文件编辑确认 | `--permission-mode auto` |
-| 工具调用确认 | 同上 |
-| BMAD 的菜单选择 | 看门狗（下面讲） |
-| 429 配额满 | Claude Code 自动重试 10 次 |
-
-`--permission-mode` 的可选值我查了二进制：
-
-```
-choices: "acceptEdits", "auto", "default", "plan"
-```
-
-**`auto` 是完全自动模式**，比 `acceptEdits` 更彻底——所有工具调用都不问。
-
-启动后界面显示：
-
-```
-⛶⛶ auto mode on (shift+tab to cycle)
-```
-
-### 坑 4：卡在菜单选择
-
-BMAD 的 skill 大量用菜单（"选 1 写 PRD / 2 拆 epics / 3 检查"）。`auto` 模式救不了这个——**菜单是要人做决策的**。
-
-两个办法：
-
-**A. 用 `bmad-build-auto`** —— BMAD 自带的无人值守版。
-
-它跟普通 `build` 的差别在文件层面：
-
-```
-build:       step-01 → step-02 → step-03 → step-04 → step-05 + sync-sprint-status
-build-auto:  step-01 → step-02 → step-03 → step-04
-                                        ↑ 砍掉 step-05（交付给你看）和 sprint 回写
-```
-
-**B. 看门狗自动放行**
-
-```bash
-(
-  ELAPSED=0
-  while [[ $ELAPSED -lt $MAX_MINUTES ]]; do
-    sleep 120
-    tmux has-session -t "$SESSION" || exit 0
-
-    SNAP1=$(tmux capture-pane -p -t "$SESSION" | tail -8)
-    sleep 8
-    SNAP2=$(tmux capture-pane -p -t "$SESSION" | tail -8)
-
-    # 画面 8 秒完全没变 + 有光标 = 卡在确认框了
-    if [[ "$SNAP1" == "$SNAP2" ]] && echo "$SNAP1" | grep -qE "❯|Yes|yes"; then
-      tmux send-keys -t "$SESSION" Enter
-      sleep 3
-      # 还卡着就选 1
-      if tmux capture-pane -p -t "$SESSION" | grep -qE "❯.*1\."; then
-        tmux send-keys -t "$SESSION" "1" Enter
-      fi
-    fi
-  done
-) &
-```
-
-**为什么用"画面变化"判断卡住**：因为 LLM 思考时画面也不变，但**它会自己继续**。真正卡住的标志是画面长时间静止**且有选择提示符**。
+**代码不到 30 行，但里面的判断逻辑是四版迭代出来的。**
 
 ***
+
 ## 六、多后端：让夜间任务有兜底
 
 夜间跑任务的最大风险是**撞配额**。
@@ -422,32 +502,89 @@ $ cc-model deepseek
 **夜间跑任务时，这个提示告诉你"现在是空闲时段，半价生效中"。**
 
 ***
-## 七、最终形态
+## 七、最终形态 + 实战结果
+
+### 文件清单
 
 ```
 /root/.claude/jobs/
 ├── schedule.conf       # 时间点（每行 HH:MM）
-├── job.conf            # 任务配置
+├── job.conf            # 项目 + 后端 + 模型
+├── task.txt            # 任务内容（多行）
 ├── sync-crontab.sh     # 同步 + status/stop/start/edit/job
-├── nightly-build.sh    # 主启动器（含接力 + 看门狗）
+├── nightly-build.sh    # 主启动器（含看门狗）
+├── stuck-detect.sh     # 卡住检测（jsonl + file mtime）
 ├── check-done.sh       # 早上汇报
-├── cron.log            # cron 触发记录
 └── run-*.log           # 每次运行详情
 ```
 
-**crontab：**
+### crontab
 
 ```cron
 */5 * * * *  腾讯云 stargate 保活（原有的，别动）
 
 # ===== BMAD nightly build =====
-10 0 * * *  nightly-build.sh ...            # 00:10 新建
-5  5 * * *  CONTINUE=1 nightly-build.sh ...  # 05:05 接力
-30 8 * * *  check-done.sh ...                # 08:30 汇报
+10 0 * * *  nightly-build.sh /root/.claude/jobs/task.txt >> cron.log 2>&1
+5  5 * * *  nightly-build.sh /root/.claude/jobs/task.txt >> cron.log 2>&1
+0 20 * * *  nightly-build.sh /root/.claude/jobs/task.txt >> cron.log 2>&1
+30 8 * * *  check-done.sh >> cron.log 2>&1
 # ===== end BMAD =====
 ```
 
-**早上 08:30 你会看到：**
+***
+### 任务消息：状态机驱动，不写死步骤
+
+我第一版任务消息写的是"用 build-auto 实现下一个 ready-for-dev 的 story"，跑完发现**它绕过了 create-story 环节**——因为那是 bmm 模块的 skill，跟 gds 模块完全两套。
+
+**改成让 Claude 自己读 `sprint-status.yaml` 决定下一步**：
+
+```
+读 _bmad-output/implementation-artifacts/sprint-status.yaml，
+按其中每个 story 的 status 决定下一步做什么。
+
+【规则 1】如果存在 status: review 的 story
+  → 对它跑 gds-code-review（CR）做三层审查
+  → 审查报告写完后停下来，不要自动修复，不要 git commit
+
+【规则 2】如果没有 review 但有 ready-for-dev 或 in-progress
+  → 跑 gds-dev-story（DS）继续实现，测试通过后改成 review，停下来报告
+
+【规则 3】如果只有 backlog
+  → 跑 gds-create-story（CS）生成上下文文件，停下来报告
+
+【规则 4】如果全部 done
+  → 停下来告诉我，问我要不要开新的 epic
+
+一次只跑一个 story，不要并行。
+硬约束：绝不执行 git commit；绝不擅自改数值平衡参数；需要产品决策就停。
+```
+
+**这个写法的关键**：脚本不需要知道 BMAD 流程长什么样，它只知道"读状态 → 跑对应 skill"。**BMAD 的 `sprint-status.yaml` 就是状态机的载体，任务消息只负责触发。**
+
+***
+### 第一次整夜运行的结果
+
+配置：`minimax` 后端 / `acceptEdits` 权限 / 00:10 那一班。
+
+```
+启动  00:10:01  →  Claude 就绪（2 秒）→  任务已提交
+……
+跑到  03:12:30  →  看门狗达 180 分钟上限，会话保留
+```
+
+**产出的 commit**：
+
+```
+114f453  feat: [1-5] 回合状态机与题单 —— 三模块 + 116 条测试 + 10 项变异验证 + 门槛 7→4 更正
+2e4e89b  fix: [CR] Story 1.5 三层审查 —— 4 条变异验证坐实的假绿 + 22 条 patch
+```
+
+**一夜之间跑完了 CS → DS → CR 三段式，还自动修了 22 条 patch。**
+
+**但看门狗误报了 12 次**——就是第五节写的那个问题，阈值 180 秒太短。
+
+***
+### 早上 08:30 的汇报长这样
 
 ```
 ═══════════ BMAD nightly build 状态检查 2026-10-15 08:30:00 ═══════════
@@ -460,34 +597,48 @@ $ cc-model deepseek
 ...
 
 ═══════════ 本次运行产生的 commit ═══════════
-a1b2c3d  feat: story 1-1 消除吞异常
-d4e5f6a  test: story 2-1 添加单元测试
+2e4e89b  fix: [CR] Story 1.5 三层审查 —— 4 条变异验证坐实的假绿 + 22 条 patch
+114f453  feat: [1-5] 回合状态机与题单 —— 三模块 + 116 条测试
 
 ═══════════ 所有历史日志 ═══════════
-  Oct 15 00:10  run-20261015-001035.log
-  Oct 14 00:10  run-20261014-001021.log
+  Oct 15 00:10  run-20261015-001021.log
+  Oct 14 00:10  run-20261014-001001.log
 ```
 
-**没有 commit 就是没跑成功，有 commit 就是有效产出。** 这个判断标准比读日志快十倍。
+**"有没有 commit"是判断夜间任务是否有效的最快标准**，比读日志快十倍。
 
 ***
 ## 八、如果让我重来
 
 **第一天就该做的三件事**：
 
-1. **先读 `man crontab`，别直接覆盖**。服务器上的 crontab 往往有别人的东西。
+1. **先读 `crontab -l`，别直接覆盖**。服务器上的 crontab 往往有别人的东西（比如腾讯云的保活任务）。
 
-2. **不要用 `sleep` 等异步进程就绪**。用轮询 + 确认——我在这上面卡了两天。
+2. **卡住检测直接用 session jsonl，别从屏幕截取开始**。屏幕是渲染结果，会骗人；jsonl 是事件日志，不会。中间的 CPU 采样是弯路——LLM 调用时进程本来就不烧 CPU。
 
-3. **第一版就写日志**。我的脚本每次都 tee 到 `run-*.log`，调试时全靠它。如果没有日志，那两个 bug 我得重装一遍才能定位。
+3. **阈值别拍脑袋定**。我第一版随手写了 180 秒，结果整晚误判 12 次。**应该先跑一晚看真实间隔**再定值。
 
 **最花时间的一件事**：
 
-> 排查「任务发不出去」那个问题。表现是界面显示了任务但不处理，看起来像 Claude 挂了，实际是回车发早了。
+> 排查看门狗为什么一直发 Enter。表面现象是"日志里刷屏 STUCK"，实际是 CR 三层审查的 subagent 间隔 3-4 分钟超过了我的阈值。
+>
+> 而这类问题的排查方法只有一个：**把当时的 jsonl 大小变化打出来**。
 
-**这种问题的排查方法**：`tmux capture-pane -p` 截屏看画面，比任何猜测都快。**能看见的东西不用推理。**
+那一晚的数据摆在那儿：
+
+```
+02:50  size=1195099B
+02:54  size=1198740B   ← 涨了 3.6KB
+02:58  size=1312902B   ← 涨了 114KB
+```
+
+**文件在涨，说明它一直在干活。** 我要是第一版就把 jsonl 大小记进日志，能省两小时。
 
 ***
+**一个数据点**：那晚夜间任务跑 3 小时，产出 **2 个 commit + 22 条自动修复**。相当于一个人类工程师两三天的工作量。
+
+**但我更在意的是另一件事**：第二天早上我看到的是**可审计的 commit + 完整的运行日志**，而不是"AI 说它做完了"。这两者在工程上的差别，比省的那点时间重要得多。
+
 ## 📚 参考
 
 - [BMAD-METHOD 文档](https://docs.bmad-method.org/)
