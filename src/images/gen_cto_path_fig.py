@@ -37,7 +37,7 @@ def sg(ax,x,y,s,color,fs=12):
 fig, ax = plt.subplots(figsize=(17.5, 12.4), dpi=150)
 ax.set_xlim(0, 150); ax.set_ylim(0, 96); ax.axis("off")
 
-ax.text(75, 84, "CTO 路径：三种走法，同一个起点", ha="center",
+ax.text(75, 84, "职业诊断：三种走法，同一个起点", ha="center",
         fontsize=19, fontweight="bold", color="#2D3748")
 
 PW, PH, Y0 = 46, 58, 16
@@ -64,11 +64,11 @@ Y = [54, 39.5, 25.5, 12]   # 四个节点的高度
 
 # ═════ ① 现状 ═════
 x=2; cx=x+PW/2
-panel(x,"①","现状：越优秀，越难离开",PU,BW,"基模：富者愈富 + 目标侵蚀",BW)
-box(ax,cx,Y[0],30,6.2,"现有位置好\n（17 级 · 标杆项目 · 党支书）",BR,C_R)
+panel(x,"①","现状：越优秀，越难动",PU,BW,"基模：富者愈富 + 目标侵蚀",BW)
+box(ax,cx,Y[0],30,6.2,"当前位置不错\n（专家 · 核心项目 · 带队）",BR,C_R)
 box(ax,cx,Y[1],27,6,"资源和关注\n持续流向这里",BR,C_R)
 box(ax,cx,Y[2],28,6,"方向决策机会\n基本没有",BY,"#DD6B20")
-box(ax,cx,Y[3],30,6,"「CTO 做不了」\n→ 目标下移",BW,PU)
+box(ax,cx,Y[3],30,6,"「我上不去」\n→ 目标下移",BW,PU)
 link(ax,(cx,Y[0]-3.4),(cx,Y[1]+3.4),C_POS); sg(ax,cx+4.5,(Y[0]+Y[1])/2,"+",C_POS)
 link(ax,(cx,Y[1]-3.4),(cx,Y[2]+3.4),C_POS); sg(ax,cx+4.5,(Y[1]+Y[2])/2,"+",C_POS)
 link(ax,(cx,Y[2]-3.4),(cx,Y[3]+3.4),C_NEG); sg(ax,cx+4.5,(Y[2]+Y[3])/2,"-",C_NEG)
@@ -79,9 +79,9 @@ link(ax,(cx+11,Y[3]),(cx+11,Y[0]),C_NEG,rad=0.5); sg(ax,cx+17,(Y[2]+Y[0])/2,"+",
 x=52; cx=x+PW/2
 panel(x,"②","加大力度：做更多同类的事",C_MUT,"#F7FAFC","基模：转移负担","#F7FAFC")
 box(ax,cx,Y[0],30,6.2,"焦虑：「我还不够格」","#F7FAFC",C_MUT,10)
-box(ax,cx,Y[1],31,6.2,"补技术 · 考证 · 多写 blog","#F7FAFC",C_MUT)
-box(ax,cx,Y[2],29,6,"技术能力提升\n（这是「因」的一部分）",BB,C_B)
-box(ax,cx,Y[3],31,6,"但「方向证据」\n还是 0",BR,C_R)
+box(ax,cx,Y[1],31,6.2,"补技术 · 考证 · 多写文章","#F7FAFC",C_MUT)
+box(ax,cx,Y[2],29,6,"专业能力提升\n（这是「因」的一部分）",BB,C_B)
+box(ax,cx,Y[3],31,6,"但「决策证据」\n还是 0",BR,C_R)
 link(ax,(cx,Y[0]-3.4),(cx,Y[1]+3.4),C_POS); sg(ax,cx+4.5,(Y[0]+Y[1])/2,"+",C_POS)
 link(ax,(cx,Y[1]-3.4),(cx,Y[2]+3.4),C_POS); sg(ax,cx+4.5,(Y[1]+Y[2])/2,"+",C_POS)
 link(ax,(cx,Y[2]-3.4),(cx,Y[3]+3.4),C_NEG); sg(ax,cx+4.5,(Y[2]+Y[3])/2,"-",C_NEG)
@@ -92,8 +92,8 @@ x=102; cx=x+PW/2
 panel(x,"③","换杠杆：改变目标的定义",C_B,BG,"Meadows：改变目标 = 最强杠杆点",BG)
 box(ax,cx,Y[0],32,6.2,"主动要一个「小方向」\n3-5 人 + 定义方向",BG,C_B)
 box(ax,cx,Y[1],30,6,"在不确定中做 1-2 次\n方向性判断",BG,C_B)
-box(ax,cx,Y[2],29,6,"判断被验证\n→ 拿到「方向证据」",BG,C_B)
-box(ax,cx,Y[3],32,6,"CTO 路径变得可信\n→ 目标不再需要下移",BG,C_B)
+box(ax,cx,Y[2],29,6,"判断被验证\n→ 拿到「决策证据」",BG,C_B)
+box(ax,cx,Y[3],32,6,"上升路径变得可信\n→ 目标不再下移",BG,C_B)
 link(ax,(cx,Y[0]-3.4),(cx,Y[1]+3.4),C_POS); sg(ax,cx+4.5,(Y[0]+Y[1])/2,"+",C_POS)
 link(ax,(cx,Y[1]-3.4),(cx,Y[2]+3.4),C_POS); sg(ax,cx+4.5,(Y[1]+Y[2])/2,"+",C_POS)
 link(ax,(cx,Y[2]-3.4),(cx,Y[3]+3.4),C_POS); sg(ax,cx+4.5,(Y[2]+Y[3])/2,"+",C_POS)
@@ -105,9 +105,9 @@ link(ax,(48.8,38),(51.2,38),C_EDGE,lw=2.4,mut=16)
 link(ax,(98.8,38),(101.2,38),C_B,lw=2.8,mut=18)
 
 # 副注
-ax.text(25, 5.2, "把结构问题换成了个人努力", ha="center", fontsize=9.0,
+ax.text(25, 5.2, "把结构问题换成个人努力", ha="center", fontsize=9.0,
         color=C_MUT, style="italic")
-ax.text(125, 5.2, "不是「CTO 岗」，是「方向负责人位」", ha="center", fontsize=9.0,
+ax.text(125, 5.2, "不是「头衔」，是「可操作的位置」", ha="center", fontsize=9.0,
         color=C_B, style="italic")
 
 ax.text(75, 1.2, "关键区别：② 改的是「我」 —— ③ 改的是「位置」",
