@@ -187,6 +187,19 @@ export default hopeTheme({
   plugins: {
     blog: true,
 
+    // 本地全文搜索
+    // 注意: hopeTheme 不会自动启用搜索，必须在 plugins.search 里显式配置
+    // 2026-08-05 曾把 config.ts 里的 searchPlugin 删掉但没在 theme 里补回，
+    // 导致搜索框从导航栏消失（2026-10-20 修复）
+    search: {
+      maxSuggestions: 10,
+      locales: {
+        "/": {
+          placeholder: "搜索文章...",
+        },
+      },
+    },
+
     // 启用之前需安装 @waline/client
     // 警告: 这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
     comment: {
