@@ -2,7 +2,7 @@
 title: 我的 Dev 之路
 icon: code
 date: 2025-07-14
-update: 2026-08-28
+update: 2026-10-21
 categories:
   - 生活
 tags:
@@ -21,13 +21,37 @@ public-safe: true
 
 # 我的 Dev 之路
 
-> 在 35+ 这个节点，选择 All in AI Agent。
+> 在 36 岁这个节点，选择 All in AI Agent。
 
 <!-- more -->
 
+## ⚡ 30 秒速览
+
+如果你只有 30 秒，这一节就够了。
+
+| 维度 | 结论 |
+|---|---|
+| **我是谁** | 11 年软件工程化 + 2 年 AI Agent 平台落地 |
+| **做过什么** | AI Agent 平台 0→1（10+ 项目落地）· AI Coding 改造（占比 10%→70%）|
+| **硬证据** | AgentScope 上游 **18 条 PR/Issue，3 个 PR 已合并主干** |
+| **带过多大团队** | 50 人+ AI 方向技术规划 + 带教 5 名技术新人 |
+| **在找什么** | AI Agent 应用 / Agent 平台工程师（上海）|
+
+**两个主线项目的数字**：
+
+| | AI Agent 数字员工平台 | 代码仓库 AI Native 改造 |
+|---|---|---|
+| **规模** | 10+ 业务项目落地 | 覆盖 50+ 人团队 |
+| **效率** | 单项目平均节省 8 人时 | AI 生成代码占比 10% → 70% |
+| **质量** | 架构方案被多产品线复用 | Review 一次性通过率 80%+，线上缺陷密度持平 |
+
+> ⭐ **一句话**：我不是在做 AI demo，我是在**把 AI 变成能在生产环境长期跑的系统**。
+
+---
+
 ## 🧭 我的核心方法论：心 × 行
 
-十几年技术 + 几年 AI 转型，让我沉淀出一套**"心 × 行"乘法公式**：
+11 年工程化 + 2 年 AI Agent，让我沉淀出一套**"心 × 行"乘法公式**：
 
 ```
 心 × 行 = 成果
@@ -38,74 +62,113 @@ public-safe: true
 
 **心** = 心即理 → 致良知 + 知行合一（阳明心学 + AI 时代）
 
-**行** = 8 周 AgentScope 深潜 + 4 大上游贡献 + 9 个 AI Skill
+**行** = 8 周 AgentScope 深潜 + 18 条上游贡献（3 PR 已合并）+ 2 个主线项目从 0 到 1
 
-**成果** = 十几年技术专家 + AI Agent 项目实战者
+**成果** = 11 年工程化 + AI Agent 平台落地者
 
 ---
 
-## 📍 我是谁（2026-08 现状）
+## 📍 我是谁（2026-10 现状）
 
 | 维度 | 详情 |
 |---|---|
 | **姓名** | 笔名 Mr.Sun（Dave）|
-| **职级** | 十几年技术专家（测试平台 → AI Agent 方向）|
-| **工龄** | 十几年|
-| **教育** | 家乡 → 上海大学通信系统硕士 |
-| **团队** | 多年团队管理 + 党支书（团队规模较大） |
-| **方向** | AI Agent / AI Coding 工程师（6 个月试水 → SA 路径）|
+| **定位** | AI Agent 应用 / Agent 平台工程师 |
+| **工龄** | 11 年软件工程化 + 2 年 AI Agent 平台落地 |
+| **教育** | 家乡 → 上海大学通信系统硕士（优秀毕业生）|
+| **团队** | 50 人+ 团队 AI 方向技术规划与产品落地 + 带教 5 名技术新人 |
+| **方向** | AI Agent 平台 + AI Coding 研发模式变革 |
 | **位置** | 上海区（硬约束）|
-| **博客** | sunrong.site（105+ 篇 / 6 万字+）|
+| **博客** | sunrong.site（160 篇 / 30 万字+）|
 | **GitHub** | sunrong1 |
+| **资质** | PMP + CET-6 + 托业 |
+
+### 工作经历
+
+| 时间 | 角色 | 关键产出 |
+|---|---|---|
+| 2025.2–至今 | **技术专家** | AI Agent 平台 0→1 上线 + AI Coding 占比 10%→70% + 50 人+ 团队技术规划 |
+| 2023.3–2025.1 | **平台架构师** | 研发工具链建设 + 研发效率平台架构升级 + AI 培训体系 |
+| 2018.3–2023.2 | **高级开发工程师** | 研发效率平台 0→1（微服务/DDD/Vue3）+ 环境治理 AI 化 |
 
 ---
 
-## 🚀 2026 年时间线（AI Agent 元年）
+## 🚀 2026 年时间线（AI Agent 突破年）
 
-### H1 2026（5 大核心项目）
+### 两个主线项目（贯穿全年）
 
 | 时间 | 项目 | 角色 | 成果 |
 |---|---|---|---|
-| 2026.01–至今 | **AI Agent 项目端到端数字员工** | 项目负责人 | 9 个核心 Skill + **5 个生产在跑 + 月调用 100+ 次** |
+| 2025.12–至今 | **HERO AI Agent 数字员工平台** | 项目负责人 | 10+ 业务项目落地 + 单项目平均节省 8 人时 + 2026.07 正式上线 |
+| 2025.02–至今 | **代码仓库 AI Native 改造** | 项目负责人 | 部门 AI 生成代码占比 **10% → 70%** + Review 一次性通过率 **80%+** |
+
+### 其他并行项目
+
+| 时间 | 项目 | 角色 | 成果 |
+|---|---|---|---|
 | 2026 H1 | **测试指挥中心 2.0** | 主导方案 | 5 大核心建设 + 跨 BU 协作 |
 | 2026.05 | **完整 AI 项目 游戏 MVP** | 个人项目 | 28 小时完成 + 54 个 Vitest 单元测试 |
 | 2026.01–2026.06 | **AI 驱动的环境管理平台 V3.0** | 技术负责人 | 100w+ 数据 + AI 3 秒内响应 |
-| 2026.08 | **AgentScope 2.0 端到端上线** | 主导 | 8 周深读源码 6308+ 行 |
 
-### H2 2026（8 周 AgentScope 深潜 + 转型冲刺）
+> ⭐ **AI 负责生成，人负责兜底** —— 这是我在推广中验证过的前提。
+>
+> AI Coding 改造最容易被质疑的是"AI 写的代码质量行不行"。我的答案不看主观感觉，看两个数：
+> **Review 一次性通过率 80%+** 和 **线上缺陷密度与改造前基线持平**。
+
+### H2 2026（8 周 AgentScope 深潜 + 升级冲刺）
 
 | 时间 | 事件 | 状态 |
 |---|---|---|
-| 2026.07–09 | **8 周 AgentScope 2.0 深潜** | 🟢 W2-W6 完成 / W7-W8 进行中 |
-| 2026.07 | **Issue #2166 + 推动 PR #2167 合并** | ✅ merged |
-| 2026.08 | **PR #2343 提交上游** | 🟡 待 review |
+| 2026.07–09 | **8 周 AgentScope 2.0 深潜** | ✅ 完结 |
+| 2026.07 | **Issue #2166 提交上游**（重复 ToolResultStartEvent）| ✅ 上游已修 |
+| 2026.08 | **PR #2343 + Issue #2344 提交上游** | 🟡 评审中 |
 | 2026.08 | **3 段 W6 blog 发布** | ✅ W4 + W6 上线 |
 | 2026.08 | **Phoenix + AI Agent 监控 blog** | ✅ 上线 |
 | 2026.09.12 | **8 周计划收官** | 🎯 终极 PR + 复盘 |
+| 2026.09–10 | **3 个 PR 合并主干**（#2502 / #2903 / #3033）| ✅ 已合并 |
 | 2026.09–10 | **4 周能力提升冲刺** | 📋 4 周计划已就绪 |
 
 ---
 
 ## 🏆 上游开源贡献（公开可查证）
 
-> **我的 AgentScope 2.0 实战：4 项上游贡献**。所有贡献均在 [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) 主线仓库，HR 可查证。
+> **AgentScope 上游累计 18 条贡献（8 PR + 10 Issue），其中 3 个 PR 已合并主干**。
+> 全部在 [agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope) 主线仓库，可逐条查证。
 
-### ① Issue #2166 + 推动 PR #2167 合并 ✅
-- 报告 `_acting_impl` 状态机 bug + 推动社区开发者基于报告提交 PR
-- **链接**：https://github.com/agentscope-ai/agentscope/issues/2166
+### ✅ 已合并主干的 3 个 PR
 
-### ② PR #2343 🟡【待 review】fix(rag): matryoshka embedding dimensions
-- **修复**：BGE/M3E 等非 matryoshka 模型不传 dimensions
-- **CI 状态**：mypy/flake8/pylint/black 全绿 + 7/7 tests pass
-- **链接**：https://github.com/agentscope-ai/agentscope/pull/2343
+| PR | 内容 | 合并时间 |
+|---|---|---|
+| [#2502](https://github.com/agentscope-ai/agentscope/pull/2502) | fix: correct misleading docstring | 2026-09-04 |
+| [#2903](https://github.com/agentscope-ai/agentscope/pull/2903) | fix(formatter): route Moonshot tool_sequence | 2026-09-29 |
+| [#3033](https://github.com/agentscope-ai/agentscope/pull/3033) | fix(tool): resolve symlinks before dangerous-path check | 2026-10-08 |
 
-### ③ Issue #2344（PR #2343 配套）
-- 详细 bug 描述 + 复现代码
-- **链接**：https://github.com/agentscope-ai/agentscope/issues/2344
+#3033 是安全相关的路径校验修复 —— 软链接绕过危险路径检查，改完直接进了主干。
 
-### ④ 阅读上游 PR（持续）
-- 持续阅读 + 学习 + 评论上游 PR（如 #2217 等）
-- 提升架构视野，转化为自己的设计参考
+### 🟡 评审中的 PR
+
+| PR | 内容 |
+|---|---|
+| [#2343](https://github.com/agentscope-ai/agentscope/pull/2343) | fix(rag): restrict OpenAI embedding `dimensions` forwarding |
+| [#2910](https://github.com/agentscope-ai/agentscope/pull/2910) | fix(state): check entry size before removing existing cache |
+
+#2343 的价值在于：**非 matryoshka 模型（BGE/M3E 等）不该被转发 dimensions 参数**。CI 全绿 + 7/7 tests pass。
+
+### 🐛 典型 Issue
+
+[#2166](https://github.com/agentscope-ai/agentscope/issues/2166) —— `_agent.py` 重复发出 `ToolResultStartEvent`。
+
+这个 Issue 我写得比较细，**包括最小复现代码和日志时序**。后来社区基于这个报告提交了修复。
+
+> ⭐ **这类 Issue 是我在上游最有价值的贡献形态。**
+>
+> 报告 bug 的人多，能把「怎么复现、为什么复现、日志长什么样」讲清楚的人少。
+>
+> 我的做法是：**先自己跑出稳定复现，再写 Issue**。否则提上去大概率被 close。
+
+### 📖 持续阅读与学习
+
+持续阅读上游 PR 与设计讨论，把架构判断转化为自己的设计参考。
 
 ---
 
@@ -123,10 +186,10 @@ public-safe: true
 
 3. 超级个体 + 团队领袖（应用）
    └─ 用工程放大方法把个人经验变成可复用框架
-   └─ 几年团队管理 + AI Agent 转型
+   └─ 50 人+ 团队技术规划 + AI Agent 平台落地
 
 4. 龙骑士觉醒 ✨（目标）
-   └─ 35+ 不焦虑，因为相信"心 × 行"复利
+   └─ 36 岁不焦虑，因为相信"心 × 行"复利
    └─ 几年后希望听到儿子说："是爸爸有智慧，教育了我很多"
 ```
 
@@ -135,50 +198,55 @@ public-safe: true
 | 方法论 | 实战案例 |
 |---|---|
 | **3 档反馈**（✅✅强 / ⚠️浅 / ❌缺）| 8 周 AgentScope 笔记 89 强 |
-| **双线并行**（学习 ∥ 行动）| 历史版本/历史版本 总结 + 内外部并行 |
-| **动力三角**（心 × 行 × 反馈）| H1 2026 5 大项目并行 |
+| **双线并行**（学习 ∥ 行动）| 学习线（源码深读）∥ 行动线（上游贡献）并行 |
+| **动力三角**（心 × 行 × 反馈）| 2 个主线项目 + 18 条上游贡献并行 |
 | **30 天行动清单** | 8 周计划 = 8 个 7 天迭代 |
-| **Harness 优化** | 十几年测试平台 + 多年 AI Harness |
+| **Harness 优化** | 11 年研发效能平台 + AI Agent 平台 Harness |
 
 ---
 
-## 📊 能力雷达图（2026-08 更新）
+## 📊 能力雷达图（2026-10 更新）
 
-| 能力 | 评分 | 说明 |
+> 评分为个人自评，5 分制。**有项目成果背书的项才是 5 分。**
+
+| 能力 | 评分 | 背书 |
 |---|---|---|
-| **AI Agent 实战** | ⭐⭐⭐⭐⭐ | 9 Skill 5 生产 + 100+ 月调用 |
-| **AI Infra** | ⭐⭐⭐⭐⭐ | AgentScope + MCP + Mem0 + RAG |
-| **上游开源贡献** | ⭐⭐⭐⭐⭐ | 4 项 PR/Issue，1 个已合并 |
-| **系统设计** | ⭐⭐⭐⭐⭐ | 十几年测试架构 + 复杂系统设计 |
-| **团队管理** | ⭐⭐⭐⭐ | 多年带团队 + 党支书（团队规模较大） |
-| **博客 / 公开输出** | ⭐⭐⭐⭐⭐ | 105+ 篇 / 6 万字+ |
-| **算法 / LeetCode** | ⭐⭐⭐ | 2026 重点突破中（DP + 回溯）|
-| **产品思维** | ⭐⭐⭐⭐ | 5 大项目从 0 到 1 |
+| **AI Agent 平台落地** | 5.0 | HERO 平台 10+ 项目落地 + 单项目省 8 人时 |
+| **AI Infra** | 5.0 | AgentScope + MCP + Agentic Memory + RAG + Phoenix |
+| **上游开源贡献** | 5.0 | 18 条 PR/Issue，**3 个 PR 已合并主干** |
+| **AI Coding 推广** | 5.0 | 占比 10%→70% + Review 通过率 80%+ |
+| **系统设计** | 5.0 | 11 年研发效能平台 + 微服务/DDD 复杂系统 |
+| **博客 / 公开输出** | 5.0 | 160 篇 / 30 万字+ |
+| **团队管理与布道** | 4.0 | 50 人+ 团队 + 带教 5 人 + 公司技术大会分享 |
+| **产品思维** | 4.0 | 2 个主线项目从 0 到 1 |
+| **算法 / LeetCode** | 3.0 | DP + 回溯持续训练中 |
 
 ---
 
-## 🔧 技术栈（2026-08 更新）
+## 🔧 技术栈（2026-10 更新）
 
 ### 🤖 AI Agent 核心
 
 | 分类 | 技术 |
 |---|---|
-| **框架** | **AgentScope 2.0**（**8 周深读 6308+ 行** + 4 大贡献）|
-| **集成** | Spring AI MCP Server（生产部署）|
-| **记忆** | Mem0 + RAG（pgvector）+ MemGPT |
-| **编排** | Pipeline + MsgHub + LangChain |
-| **可观测性** | OpenTelemetry + Arize Phoenix |
+| **框架与编排** | **AgentScope 2.0**（**8 周深读源码** + **18 条上游贡献 / 3 PR 合并**）· Multi-Agent · ReAct · Pipeline 编排 |
+| **协议与集成** | **MCP 协议** · Spring AI MCP Server（生产部署）· Tool Calling |
+| **记忆与检索** | **Agentic Memory** · RAG（pgvector）· Mem0 · Qdrant |
+| **可观测性** | OpenTelemetry · Arize Phoenix · 三层可观测体系（决策链路 / Token 成本 / BadCase 告警）|
 | **LLM** | 公有云 API（流量治理 + 网关）|
 
 ### 💻 传统栈
 
 | 分类 | 技术 |
 |---|---|
-| **编程语言** | Java（精通）、Python（精通 + 补齐中）、JavaScript |
-| **后端** | SpringBoot 3.5、Django、VUE3、DDD |
-| **存储** | Qdrant、Redis、PostgreSQL、MySQL |
-| **DevOps** | Docker、K8s、Jenkins、GitLab CI |
-| **工具** | Claude Code、Cline、Cursor |
+| **编程语言** | Python（精通）· Java（熟练）· C#（熟练）· TypeScript（熟悉）|
+| **后端** | SpringBoot · Django · Vue3 · DDD 领域建模 |
+| **存储** | PostgreSQL · MySQL · Redis · Qdrant · Elasticsearch |
+| **工程化** | Docker · K8s · Jenkins · GitLab CI / CD |
+| **AI Coding 工具** | Claude Code · bmad-method（Spec-Driven Development）· Cursor |
+
+> **语言熟练度说明**：Python 是主力（AgentScope 上游贡献者），
+> Java 是 11 年工程化积累（微服务 / DDD），C# 与 TypeScript 视项目而定。
 
 ---
 
@@ -197,47 +265,53 @@ public-safe: true
 
 | 系列 | 主题 | 状态 |
 |---|---|---|
+| **系统思维系列** | 入门框架 + 8 大基模 + 实战复盘 | ✅ 3 篇 |
+| **AI Coding 方法论** | 5 大心法 + Harness 思维 + SDD 实战 | ✅ 3 篇 |
 | **W2-W4 AgentScope** | ReAct 协议 + Agent 模块 + 消息通信 | ✅ 完结 |
 | **W5-D2 工具与插件** | 3 大方法论 + Skill/Response 实战 | ✅ 完结 |
 | **W6 记忆与上下文** | state + 3 个 memory + compress | ✅ 完结 |
-| **W7 分布式部署** | scheduler + workspace pool | 🔄 进行中 |
+| **W7 分布式部署** | scheduler + workspace pool | ✅ 完结 |
 | **Phoenix 实战** | AI Agent 行为监控 + 4 级 Evaluation | ✅ 已发布 |
 | **心学体系** | 王阳明 AI 时代应用 | 🔄 系列中 |
 
 ---
 
-## 🎯 未来 6 个月路径（AI Coding 试水 → SA）
+## 🎯 下一阶段方向
 
 ```
-0 ── 6 月 ─────── 12 月 ─── 18 月 ── 24 月
-│     │            │         │       │
-▼     ▼            ▼         ▼       ▼
-申请  AI Coding   评估点   转 SA   18 级
-     工程师      ↑        申请    准备
-     试水        决策
+现在 ──────→ 3 个月 ──────→ 6 个月 ──────→ 1 年
+  │              │              │            │
+  ▼              ▼              ▼            ▼
+Agent 平台     从能用到        规模化        行业级
+从 0 到 1      规模化推广      复制到更多    可复用范式
 ```
 
-### 6 个月试水的 4 大评估维度
+### 3 个判断维度
 
-| 维度 | 评估问题 | 如果 YES | 如果 NO |
-|---|---|---|---|
-| **兴趣** | 想继续"做"AI Infra 吗？ | 继续 AI Coding | 转 SA |
-| **能力** | 能用 LLM 网关/Skills 解决真实问题？ | 继续 | 转 SA |
-| **影响** | 工作在 BU 级别有人知道吗？ | 继续 | 转 SA |
-| **天花板** | 几年后能到 18 级吗？ | 继续 | **转 SA**（更快）|
+| 维度 | 判断问题 | 说明 |
+|---|---|---|
+| **兴趣** | 想继续做 AI Infra 吗？ | 这是最诚实的一维，也是唯一不能骗自己的 |
+| **能力** | 能用 Agent / Skills 解决真实业务问题吗？ | 不是 demo，是生产在跑 |
+| **影响** | 方案有没有被别的团队复用？ | 复用比"我自己做成了"更有说服力 |
+
+> ⭐ **Agent 平台已经从 0 到 1 跑通了。**
+>
+> 下一阶段的问题不再是"能不能做出来"，而是**"能不能被复制"**。
+>
+> ——这也是我选择 AI Agent 应用方向，而不是继续深挖单一技术栈的原因。
 
 ---
 
 ## 🔧 2026 学习计划
 
-### 当前专注（4 周冲刺 9-12 截止）
+### 当前专注
 
 | 领域 | 目标 | 进度 |
 |---|---|---|
-| **AgentScope 2.0** | 8 周深读（W6 完成）| 🟢 6/8 周 |
-| **4 周能力提升冲刺** | 总结 + 投递 + 30 高频题 | 🟡 1/4 周 |
+| **AgentScope 2.0** | 8 周深读 | ✅ 完结 |
+| **上游贡献** | 持续提 Issue/PR | ✅ 18 条（3 PR 已合并）|
+| **能力冲刺** | 总结 + 投递 + 高频题准备 | 🟡 进行中 |
 | **LeetCode** | DP + 回溯 20+ 题 | 🟢 持续中 |
-| **历史版本/历史版本 总结** | 内部 + 外部冲高 | ✅ 已完成 |
 
 ### 每日时间分配
 
@@ -279,24 +353,24 @@ public-safe: true
 - 互相切磋，共同提升
 
 **联系我：**
-- 📧 邮箱：
 - 🌐 博客：sunrong.site
 - 🔗 GitHub：sunrong1
-- 
+- 📮 邮箱见简历 / 评论区
 
 ---
 
 ## 📅 最近更新
 
+- **2026-10-20**：PR #3033 合并 AgentScope 主干（symlink 路径校验修复）
+- **2026-10-16**：系统思维 3+4+5+2 完整框架 + AI Coding 5 大心法两篇上线
+- **2026-09-29**：PR #2903 合并（Moonshot tool_sequence 格式化路由）
+- **2026-09-12**：8 周 AgentScope 深潜计划收官
+- **2026-09-04**：PR #2502 合并（docstring 修正）
 - **2026-08-28**：W7 段 2 Tracing + Phoenix 监控 blog 上线
 - **2026-08-26**：W6 记忆与上下文 blog 上线
-- **2026-08-24**：AgentScope 2.0 拉取最新代码（415 commits）
-- **2026-08-22**：历史版本 AI Coding 工程师总结创建
-- **2026-08-08**：W5-D2 工具与插件学习（tool/_response.py 205 行）
 - **2026-08-04**：PR #2343 + Issue #2344 提交上游
-- **2026-07-24**：Issue #2166 + 推动 PR #2167 合并到 AgentScope 主线
-- **2026-05-XX**：算法 14 天计划启动
-- **2026-04-XX**：AI Agent 论文 11 篇全部完成
+- **2026-07-24**：Issue #2166 提交 AgentScope 上游
+- **2026-07-01**：AI Agent 数字员工平台正式上线
 
 ---
 
@@ -304,7 +378,7 @@ public-safe: true
 
 这是我持续前进的本钱。
 
-35+ 不焦虑，因为相信**"心 × 行"复利**。技术这条路，不是选对方向的人赢——是**持续做对的事**的人赢。
+36 岁不焦虑，因为相信**"心 × 行"复利**。技术这条路，不是选对方向的人赢——是**持续做对的事**的人赢。
 
 **几年后希望听到儿子说**："是爸爸有智慧，教育了我很多。"
 
