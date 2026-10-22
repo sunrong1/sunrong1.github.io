@@ -18,7 +18,80 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # ──────────────────────────────────────────────────────────────────
+  # 游戏构建（独立 job）
+  #
+  # 为什么拆成两个 job：
+  #   plantsgame 的 engines 要求 node ^22.13.0 || ^24.0.0 || >=26.0.0，
+  #   博客原本用的 node 20 满足不了。两个项目各自用自己的 node 版本，
+  #   互不牵连。
+  #
+  # 为什么游戏构建失败**不阻塞**博客发布：
+  #   博客是日常写作的发布通道，而 plantsgame 的 main 由夜间任务持续推送，
+  #   出现半成品状态的概率不低。文章不该被游戏拖住。
+  #   ⇒ build-game 允许失败，deploy job 用 `if: always()` 照常发博客，
+  #     而线上已有的 /plantsgame/ 由 deploy 步骤的 `keep_files: true` 保住
+  #     （peaceiris 默认会清空 publish_dir，不加这个参数游戏会被抹掉）。
+  # ──────────────────────────────────────────────────────────────────
+  build-game:
+    name: Build plantsgame
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout plantsgame
+        uses: actions/checkout@v4
+        with:
+          repository: sunrong1/plantsgame
+          path: plantsgame
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          # plantsgame 的 engines 要求 ^22.13.0 || ^24.0.0 || >=26.0.0
+          node-version: 22
+          cache: npm
+          cache-dependency-path: plantsgame/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: plantsgame
+
+      - name: Build game
+        run: npm run build
+        working-directory: plantsgame
+        # prebuild = validate:content（37 词条 + 词图存在性/命名校验）
+        # build    = vue-tsc -b --force && vite build
+        # postbuild= verify:deploy（62 项产物自检）
+        #
+        # base 用仓库默认的 '/plantsgame/'，与线上路径 sunrong.site/plantsgame/ 一致。
+        # ⚠️ 改 base 必须同时改 manifest 的 scope/start_url 和 sw.js 的注册 scope，
+        #    否则子路径部署会全站 404 —— 下面的 Verify deploy base 就是守这一条。
+
+      - name: Verify deploy base
+        run: |
+          set -euo pipefail
+          test -f plantsgame/dist/index.html
+          # 资源引用必须带 /plantsgame/ 前缀（带 base 的子路径部署）
+          grep -q '/plantsgame/assets/index-' plantsgame/dist/index.html
+          # manifest 的 scope/start_url 必须锁在子路径，否则 Service Worker
+          # 会去根目录注册，抢博客站点的 /sw.js
+          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('plantsgame/dist/manifest.webmanifest','utf8'));if(m.scope!=='/plantsgame/'||m.start_url!=='/plantsgame/'){console.error('manifest scope/start_url 不对:',m.scope,m.start_url);process.exit(1)}console.log('  manifest scope =',m.scope,'start_url =',m.start_url)"
+          echo "  产物文件数: $(find plantsgame/dist -type f | wc -l)"
+
+      - name: Upload game dist
+        uses: actions/upload-artifact@v4
+        with:
+          name: plantsgame-dist
+          path: plantsgame/dist
+          retention-days: 7
+          if-no-files-found: error
+
   build-and-deploy:
+    name: Build and deploy
+    needs: build-game
+    # 游戏构建失败也要发博客 —— 理由见 build-game 的注释
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,6 +102,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
+          # node 20 已于 2026-04-30 EOL，但**先不动**：升级需要单独验证
+          # （构建 672 页要 6GB 堆，本地 3GB 沙箱复现不了，线上试错代价太高）。
+          # 待办：博客升 node 22/24，单独一次提交验证。
           node-version: 20
           cache: npm
 
@@ -39,12 +115,27 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-          # 151 篇文章构建时 vuepress-vite 会吃满 Node 堆
+          # 160 篇文章构建时 vuepress-vite 会吃满 Node 堆
           # GitHub runner 约 7GB 内存，堆设 6144MB 留出系统余量
           NODE_OPTIONS: --max-old-space-size=6144
 
       - name: Copy CNAME
         run: cp CNAME src/.vuepress/dist/
+
+      - name: Download game dist
+        uses: actions/download-artifact@v4
+        with:
+          name: plantsgame-dist
+          path: src/.vuepress/dist/plantsgame
+        continue-on-error: true  # 游戏构建失败时没有产物，跳过
+
+      - name: Check game dist
+        run: |
+          if [ -f src/.vuepress/dist/plantsgame/index.html ]; then
+            echo "  ✅ 游戏产物就位：$(find src/.vuepress/dist/plantsgame -type f | wc -l) 个文件"
+          else
+            echo "::warning::游戏产物缺失，本次部署不含 /plantsgame/（build-game job 失败）。线上已有的 /plantsgame/ 由 keep_files 保住。"
+          fi
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
@@ -55,3 +146,6 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: 'chore: auto deploy from master branch'
+          # ⚠️ 默认会清空 publish_dir 之外的所有文件 ⇒ 游戏构建失败时
+          #    线上已有的 /plantsgame/ 会被抹掉。keep_files 让它活下来。
+          keep_files: true
