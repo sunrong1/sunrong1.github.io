@@ -23,6 +23,12 @@ public-safe: true
 >
 > 这篇把 Andrej Karpathy 的 LLM Wiki 模式拆开讲，配三个已经跑起来的开源实现。
 
+**知识工程系列**
+| 篇 | 内容 |
+|---|---|
+| **第 1 篇（本文）** | LLM Wiki 是什么 · 三层架构 · 三大核心引擎 · 三个开源实现 |
+| [第 2 篇 · RAG 还是 LLM Wiki](/posts/ai-practice/ai-theory/knowledge-engineering-rag-vs-wiki.html) | 一张决策表 · 三个判断维度 · 混合方案 · 落地路径 |
+
 <!-- more -->
 
 ## 一、先说清楚：问题不在检索能力
@@ -418,6 +424,8 @@ cw setup qmd             # 注册成 QMD 检索集合
 
 ### 三个实现的对照
 
+![Karpathy LLM Wiki 原始架构 vs 三个开源实现](/images/knowledge-engineering-implementations.png)
+
 | | Karpathy gist | Code Wiki | wiki-init-skill |
 |---|---|---|---|
 | **定位** | 原始 idea | 代码库 | 通用知识库 |
@@ -427,8 +435,8 @@ cw setup qmd             # 注册成 QMD 检索集合
 | **L3** | schema 概念 | `AGENTS.md` / skill | `AGENTS.md` + templates/ + prompts/ |
 | **Ingest** | 描述 | Agent 自动 | `prompts/ingest.md` |
 | **Query** | 描述 | Agent + QMD | `prompts/query.md` |
-| **Lint** | 描述 | ❌ 未实现 | ✅ 8 项检查 |
-| **Obsidian** | 核心用法 | ✅ vault 打开 | ✅ 双链原生 |
+| **Lint** | 描述 | **未实现** | **8 项检查已做实** |
+| **Obsidian** | 核心用法 | vault 打开 | 双链原生 |
 | **产出形态** | markdown | markdown | markdown |
 
 > ⭐ **三个实现都坚持"纯 markdown、没有数据库"。**
