@@ -28,6 +28,7 @@ public-safe: true
 |---|---|
 | **第 1 篇（本文）** | LLM Wiki 是什么 · 三层架构 · 三大核心引擎 · 三个开源实现 |
 | [第 2 篇 · RAG 还是 LLM Wiki](/posts/ai-practice/ai-theory/knowledge-engineering-rag-vs-wiki.html) | 一张决策表 · 三个判断维度 · 混合方案 · 落地路径 |
+| [第 3 篇 · 确定性冷启动](/posts/ai-practice/ai-theory/cold-start-ast-vs-llm.html) | AST 能给你什么，给不了你什么 · 真实仓库实测 |
 
 <!-- more -->
 

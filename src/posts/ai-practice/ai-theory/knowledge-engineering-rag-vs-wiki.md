@@ -25,7 +25,12 @@ public-safe: true
 
 <!-- more -->
 
-这是[知识工程系列](/posts/ai-practice/ai-theory/knowledge-engineering-llm-wiki.html)的第 2 篇。
+**知识工程系列**
+| 篇 | 内容 |
+|---|---|
+| [第 1 篇 · LLM Wiki 模式](/posts/ai-practice/ai-theory/knowledge-engineering-llm-wiki.html) | 三层架构 · 三大核心引擎 · 三个开源实现 |
+| **第 2 篇（本文）** | 选型决策 · 三个判断维度 · 混合方案 |
+| [第 3 篇 · 确定性冷启动](/posts/ai-practice/ai-theory/cold-start-ast-vs-llm.html) | AST 的能力边界 · 真实仓库实测 |
 
 上一篇讲了 LLM Wiki 是什么、怎么分层、三个引擎怎么转。这篇解决一个更实际的问题：
 
