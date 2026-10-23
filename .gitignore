@@ -38,3 +38,7 @@ node_modules/
 
 # Typescript build info
 *.tsbuildinfo
+
+# Python 脚本的字节码缓存（src/images/ 下的 matplotlib 生成脚本会产出）
+__pycache__/
+*.pyc

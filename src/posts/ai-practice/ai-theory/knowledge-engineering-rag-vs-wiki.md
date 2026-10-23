@@ -310,6 +310,8 @@ Karpathy 自己都说，摄入时他倾向**一份一份来并且全程参与** 
 
 **本系列：**
 - [从 RAG 到 LLM Wiki：知识工程的三层架构与三大核心引擎](/posts/ai-practice/ai-theory/knowledge-engineering-llm-wiki.html) —— 第 1 篇，模式本身
+- [代码知识库的确定性冷启动](/posts/ai-practice/ai-theory/cold-start-ast-vs-llm.html) —— 第 3 篇，存量仓库怎么建
+- [第 4 篇 · BMAD × 知识库：两套状态机怎么不打架](/posts/ai-practice/ai-theory/bmad-vs-knowledge-base-state-machines.html) —— 知识层与流程层的状态边界
 
 **已有的 RAG 基础：**
 - [RAG 基础与五种范式演进](/posts/ai-practice/2026-10-14-rag-fundamentals.html) —— 五种范式怎么选

@@ -527,5 +527,8 @@ Karpathy 明确说：他喜欢**一份一份摄入并全程参与**。批量摄�
 - **[liuly66/wiki-init-skill](https://github.com/liuly66/wiki-init-skill)** —— 中文版 Karpathy 模式实现，lint 已做实
 - **[atomicstrata/llm-wiki-compiler](https://github.com/atomicstrata/llm-wiki-compiler)** —— "The knowledge compiler"，讲清了 compile-time vs query-time 的位移
 - **[izzzzzi/codewiki-mcp](https://github.com/izzzzzi/codewiki-mcp)** —— codewiki.google 的 MCP 封装
+- [知识工程系列索引](/posts/ai-practice/ai-theory/knowledge-engineering-series.html) —— 四篇总览
+- **[代码知识库的确定性冷启动](/posts/ai-practice/ai-theory/cold-start-ast-vs-llm.html)** —— 第 3 篇，模式落到真实仓库
+- **[BMAD × 知识库：两套状态机怎么不打架](/posts/ai-practice/ai-theory/bmad-vs-knowledge-base-state-machines.html)** —— 第 4 篇，知识层怎么跟流程层共处
 - **[Agentic RAG 论文笔记](/posts/ai-practice/ai-theory/agentic-rag-paper-learning.html)** —— 同一问题的另一条解法路线：把 RAG 本身做 Agent 化
 - **[AI 上下文工程笔记](/posts/ai-practice/ai-theory/context-engineering-lihongyi-notes.html)** —— 上下文是另一个维度的问题

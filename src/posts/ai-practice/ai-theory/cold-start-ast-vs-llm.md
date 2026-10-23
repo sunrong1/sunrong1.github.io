@@ -507,6 +507,7 @@ _bmad-output/
 - [第 1 篇 · 从 RAG 到 LLM Wiki](/posts/ai-practice/ai-theory/knowledge-engineering-llm-wiki.html) —— 三层架构与三大核心引擎
 - [第 2 篇 · RAG 还是 LLM Wiki](/posts/ai-practice/ai-theory/knowledge-engineering-rag-vs-wiki.html) —— 选型决策表
 - [第 3 篇（本文）· 确定性冷启动](/posts/ai-practice/ai-theory/cold-start-ast-vs-llm.html) —— AST 的能力边界
+- [第 4 篇 · BMAD × 知识库：两套状态机怎么不打架](/posts/ai-practice/ai-theory/bmad-vs-knowledge-base-state-machines.html) —— 知识层与流程层的状态边界
 
 **工具与实现：**
 - [aider repo map 文档](https://aider.chat/docs/repomap.html) —— 官方说明 PageRank 与 token 预算
