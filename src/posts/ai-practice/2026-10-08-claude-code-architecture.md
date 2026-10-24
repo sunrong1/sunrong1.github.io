@@ -1273,3 +1273,4 @@ s16 - s17     收口:编排(脚本定顺序) + 判断(独立验收)
   - 9-17 [AI Coding 工程](https://sunrong.site/posts/ai-practice/2026-09-17-ai-coding-engineering.html) — 系统层
   - 9-18 [Agent Loop 5 大模式](https://sunrong.site/posts/ai-practice/2026-09-18-agent-loop-5-patterns.html) — 算法层
   - 9-20 [Harness 全家福](https://sunrong.site/posts/ai-practice/2026-09-20-harness-complete-system.html) — 综述
+  - [Claude Code 上下文机制拆解](/posts/ai-practice/ai-app/claude-code-best-practice-week1.html) — 真实实现的上下文层：/init、压缩三档、源码常量
