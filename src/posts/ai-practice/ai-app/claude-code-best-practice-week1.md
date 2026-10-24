@@ -20,8 +20,10 @@ public-safe: true
 
 > 这篇是学习笔记的**修订版**。
 >
-> 原版（2026-04-04）是一份「六大模块速览」，讲的是 Subagents / Commands / Skills / Memory / MCP 怎么配。
+> 原版（2026-04-04）是一份「六大模块速览」，讲的是 Subagents / Commands / Skills / Memory / MCP 怎么配 —— 素材来自 [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) 这个汇总仓库。
 > 这一版把重心换到**机制层**：`/init` 到底做了什么、上下文满了会发生什么、以及如果要自己写一个 Agent，该分成哪几层。
+>
+> 原文中的配置速查没有丢，收进了第 3.8 节，并按官方文档当前版本校正过。
 >
 > 文中所有数字都标了来源：**官方文档**能查到的写文档，**源码里读到的**写版本号，两边都没有的我不写。
 
@@ -372,6 +374,212 @@ Subagent 这条值得单说：官方文档讲得很清楚，
 
 ---
 
+### 3.8 配置速查：把上面的机制落到文件里
+
+前面讲的是「为什么」，这一节是「怎么配」。字段全部来自官方文档当前版本。
+
+#### Memory —— 多层 CLAUDE.md 怎么组织
+
+官方文档给的加载规则：
+
+- **祖先目录**的 `CLAUDE.md` 在启动时加载 —— 当前目录往上每一层都算
+- **子目录**的 `CLAUDE.md` 懒加载 —— Claude 读/写/编辑那个目录里的文件时才进来
+- 所有文件是**拼接**进上下文，不是覆盖。顺序从文件系统根目录往下，离你启动位置近的**最后读**
+- 同一目录里，`CLAUDE.local.md` 排在 `CLAUDE.md` 之后 —— 你的个人笔记是这一层**最后读到**的
+
+```markdown
+# 根目录 CLAUDE.md —— 共享规范
+## 提交规范
+- feat: 新功能
+- fix: 修复 bug
+- docs: 文档更新
+
+# frontend/CLAUDE.md —— 组件规范
+## React 组件
+- 使用函数组件 + Hooks
+- 命名：PascalCase
+
+# backend/CLAUDE.md —— API 规范
+## REST API
+- 使用 RESTful 风格
+- 统一错误响应格式
+```
+
+⚠️ **子目录的 `CLAUDE.md` 有个上下文代价**：它是懒加载的（好事，省 token），但**会随压缩被总结掉**（见 3.4）。
+
+要把一条规矩跨压缩保住，放根目录。
+
+#### Subagents —— 独立上下文窗口
+
+**什么时候用**：活很脏但结论很短。比如「读 10 个文件找出所有调用方」—— 让子代理去读，你的窗口只收摘要。
+
+文件位置：`.claude/agents/<name>.md`（项目）或 `~/.claude/agents/<name>.md`（个人）
+
+官方支持 16 个 frontmatter 字段，与上下文管理直接相关的这几个：
+
+| 字段 | 作用 |
+|---|---|
+| `description` | Claude 靠它决定什么时候自动调用。写 `PROACTIVELY` 可让它主动触发 |
+| `tools` / `disallowedTools` | 白名单 / 黑名单。子代理权限就该在这里收窄 |
+| `model` | `inherit` 继承主会话，或指定 `haiku` / `sonnet` / `opus` |
+| `permissionMode` | 权限模式 |
+| `maxTurns` | 轮次上限，防止子代理无限跑 |
+| `isolation: worktree` | 在独立 git worktree 里跑，可安全改文件 |
+| `memory` | 让子代理带上项目记忆 |
+
+最小示例：
+
+```yaml
+# .claude/agents/code-reviewer.md
+---
+name: code-reviewer
+description: 审查改动范围内的代码风格与正确性
+model: sonnet
+tools: [Read, Grep, Glob, Bash]
+maxTurns: 15
+---
+你是代码审查员。只报告问题，不要修改文件。
+```
+
+**内置子代理，以及它们省上下文的两个设计：**
+
+| 子代理 | 模型 | 权限 | 什么时候用 |
+|---|---|---|---|
+| `Explore` | 跟随主会话 | 只读（拒 Write / Edit） | 文件发现、代码搜索、代码库探索 |
+| `Plan` | 跟随主会话 | 只读 | Plan 模式的只读探索 |
+| `general-purpose` | 继承 | 全部 | 复杂多步任务（兜底类型） |
+| `statusline-setup` | Sonnet | 读写 | 配状态栏 |
+| `claude-code-guide` | Haiku | Web 搜索 | 问 Claude Code 本身的功能 |
+
+⭐ **Explore 和 Plan 启动时故意不加载 CLAUDE.md，也不加载 git 状态快照。**
+
+官方给的理由是「keep research fast and inexpensive」—— 探索代码不需要知道你的提交规范和当前分支，带着走纯属浪费。
+
+**这是上下文预算的一个精细化用法**：不是所有子代理都需要同一份背景。自定义子代理可以用 `omitClaudeMd` 达到同样效果。
+
+还有一条硬限制：**所有自定义子代理的 `description` 加起来超过 15,000 token，启动时会警告并报出总数。**
+
+官方给的处理办法是「缩短 description，把细节挪进子代理的 system prompt」—— 因为 system prompt 只在这个子代理真正跑的时候才加载。
+
+#### Skills —— 按需加载的知识单元
+
+**什么时候用**：专项流程，不该占常驻预算。这是 3.6 里说的「把 CLAUDE.md 里的专项流程拆出来」。
+
+文件位置：`.claude/skills/<name>/SKILL.md`（项目）或 `~/.claude/skills/<name>/SKILL.md`（个人）
+
+| 字段 | 作用 |
+|---|---|
+| `description` | 启动时进上下文的那行描述。**决定 Claude 会不会找到它** |
+| `paths` | glob 限制激活范围。格式跟 path-specific rules 相同 |
+| `disable-model-invocation` | 设 `true` 禁止 Claude 自动加载，只允许手动 `/name` 调用 |
+| `user-invocable` | 设 `false` 则从 `/` 菜单隐藏，只给 Claude 用 |
+| `context: fork` | 在 forked 子代理上下文里跑 —— **正文不占主上下文** |
+| `agent` | 配合 `context: fork`，指定用哪个子代理类型 |
+| `background` | 配合 `context: fork`，默认后台跑；设 `false` 则等结果 |
+| `allowed-tools` | 本轮调用内免确认的工具 |
+| `model` | 激活期间用的模型 |
+
+最小示例：
+
+```yaml
+# .claude/skills/deploy/SKILL.md
+---
+name: deploy
+description: 按项目发布流程构建并部署到预发环境
+disable-model-invocation: true
+allowed-tools: Bash
+---
+1. 运行 `npm run build`
+2. 运行 `npm run deploy:staging`
+3. 输出部署的 commit sha
+```
+
+⚠️ **`paths` 有个上下文代价**：带 `paths` 的 skill 正文是在匹配文件被读时进的上下文，所以**它和 path-scoped rules 一样，会随压缩被总结掉**。要跨压缩存活就别用 `paths`，或者把关键约束复制进项目根 CLAUDE.md。
+
+⚠️ **`SKILL.md` 的重要指令放最前面。** 官方说压缩后重新注入 skill 时会截断以适配上限，**截断保留文件开头**。
+
+#### Commands —— 插入当前对话的模板
+
+文件位置：`.claude/commands/<name>.md`
+
+Command 和 Skill 的区别只有一个关键点：**Command 展开进当前对话，Skill 的正文按需加载。**
+
+```yaml
+# .claude/commands/code-review.md
+---
+description: 审查当前分支的改动
+argument-hint: "[pr-number]"
+allowed-tools: [Bash, WebFetch]
+---
+审查 PR #$1 的改动。
+```
+
+| 字段 | 作用 |
+|---|---|
+| `disable-model-invocation` | 设 `true` 禁止 Claude 自动调用 |
+| `user-invocable` | 设 `false` 从 `/` 菜单隐藏，仅作背景知识 |
+| `context: fork` | 在独立子代理中运行 |
+
+**怎么选**：一个动作、几步就完 → Command；一套有分支的流程、需要领域知识 → Skill；要独立上下文 + 独立权限 → Subagent。
+
+| | Command | Skill | Subagent |
+|---|---|---|---|
+| 正文进哪个上下文 | 当前对话 | 调用时进（可 fork 到子代理） | 它自己的窗口 |
+| 能否独立设权限 | 否 | 有限 | 是 |
+| 典型用途 | 固定动作模板 | 领域流程 | 脏活 / 探索 |
+
+#### MCP —— 工具从哪来
+
+**这不是上下文载体，但它是上下文成本的主要来源之一。** 官方说 MCP 工具定义**默认延迟加载**，只有工具名和 server 指令进上下文，工具定义等 Claude 真要用时再拉。
+
+三种作用域：
+
+| 作用域 | 位置 | 用途 |
+|---|---|---|
+| 项目级 | 项目根 `.mcp.json` | 团队共享，**第一次需要审批** |
+| 用户级 | `~/.claude.json` | 个人所有项目 |
+| 本地级 | `~/.claude.json` 的 local scope | 当前项目，不进版本库（`claude mcp add` 默认落这里） |
+
+```json
+// .mcp.json
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    }
+  }
+}
+```
+
+装之前先算成本：**每多一个 MCP server，工具名就多占一点常驻上下文**。官方给的做法是用 `/context` 看占用、用 `/mcp` 停掉不用的 server。
+
+还有一条更省钱的：**能用 CLI 就别用 MCP**。`gh`、`aws`、`gcloud` 这类命令不贡献工具定义列表，而 MCP 工具会。
+
+官方文档**不推荐任何具体 MCP server 产品**。社区常见的选择大致是这几类：
+
+| 类别 | 例子 | 用途 |
+|---|---|---|
+| 文档检索 | Context7 | 查库的当前版本 API，防幻觉 |
+| 浏览器 | Playwright / Claude in Chrome | 前端调试、看用户实际看到的 |
+| 代码托管 | DeepWiki | 读陌生仓库的架构 |
+| 设计 | Excalidraw | 出架构图 |
+
+⚠️ **这张表是社区实践，不是官方推荐。** 选型时更该问的是「这个能力能不能用 CLI 或已有工具解决」—— 因为每加一个 server 都在花常驻上下文。
+
+**tool search 默认开启**，它的行为是：server 连上后，Claude Code 在下一次请求里把该 server 的工具名列给 Claude，Claude 能直接搜索并调用，不必等你的下一条消息。用 `ENABLE_TOOL_SEARCH=auto` 时，只有工具定义能塞进上下文 10% 以内才会预加载。
+
+#### 内置 skills 的现状
+
+⚠️ 网上流传的「内置 5 种 skill」清单已经不准了。当前官方文档里能确认的是：
+
+- **Anthropic 内置**：`pdf`、`xlsx`（在 claude.ai 里可以开关同步）
+- **bundled 随安装提供**：`simplify`、`verify` —— 从 v2.1.286 起，会话以这两个名字开头时，Claude Code 会让 Claude 在每次 commit 前跑一遍（文档和测试的改动除外）
+
+要用的话查 `/` 菜单，别照着旧清单写。
+
+---
+
 ## 四、如果你要自己写一个 Agent
 
 上面这些机制不是 Claude Code 独有的。它们可以拆成六层。
@@ -485,6 +693,52 @@ claude --autocompact 500k  # 只这一次
 ```
 
 取值范围 100K–1M，写法支持 `200k` / `1M`。
+
+**11. 记一条命令以外的东西**
+
+```bash
+/context        # 上下文占用分类 + 优化建议
+/memory         # 看当前加载了哪些 CLAUDE.md 和 auto memory
+/mcp            # 停掉不用的 server
+```
+
+---
+
+## 六、编排模式：Command → Agent → Skill
+
+机制讲完，回过头看这三种扩展方式的关系，其实是一条流水线：
+
+| | 作用 | 谁在决定何时用 |
+|---|---|---|
+| **Command** | 把一段知识插进当前对话 | 用户打 `/name` |
+| **Skill** | 一套按需加载的领域流程 | Claude 按 description 判断 |
+| **Subagent** | 独立上下文里跑一个复杂任务 | Claude 按 description 委派 |
+
+**它们不是三选一，是三层。**
+
+一个典型的活是这样流动的：
+
+```
+用户：「发布到预发」
+  ↓
+Command  /deploy        ← 展开一段流程说明进当前对话
+  ↓
+Skill    deploy         ← 正文按需加载，提供领域细节
+  ↓
+Subagent  跑构建和上传   ← 在独立上下文里干脏活，主对话只收摘要
+```
+
+**选型还是那一条**：
+
+| 场景 | 用哪个 |
+|---|---|
+| 固定动作，几步就完 | Command |
+| 有分支的流程，需要领域知识 | Skill |
+| 活很脏（读很多文件、改很多文件），结论很短 | Subagent |
+| 规矩每次都要遵守 | 根 CLAUDE.md 或无条件 rule |
+| 规矩只在某个目录生效 | 带 `paths:` 的 rule 或 skill |
+
+⚠️ **最后两行有个坑**：带 `paths:` 的规则和 skill 正文都会随压缩被总结掉（见 3.4 和 3.8）。**要跨压缩存活，就把它放进项目根 CLAUDE.md。**
 
 ---
 
