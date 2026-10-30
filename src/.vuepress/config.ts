@@ -57,7 +57,7 @@ var _hmt = _hmt || [];
     // 站点验证
     ["meta", { name: "baidu-site-verification", content: "YOUR_BAIDU_VERIFICATION_CODE" }],
     ["meta", { name: "description", content: "Sun 的技术博客，分享研发效能、AI Agent、职场成长、育儿心得" }],
-    ["meta", { name: "keywords", content: "研发效能，AI Agent，软件架构，职场成长，育儿，程序员，华为，上海" }],
+    ["meta", { name: "keywords", content: "研发效能，AI Agent，软件架构，职场成长，育儿，程序员，上海" }],
   ],
 
   // 禁用预取以减少带宽

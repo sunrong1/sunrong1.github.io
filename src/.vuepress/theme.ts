@@ -32,10 +32,6 @@ export default hopeTheme({
     description: "研发效率平台架构设计，AI Agent应用开发，技术项目管理",
     intro: "/intro.html",
     medias: {
-      hwNote: {
-        link: "https://cloud.huawei.com/home#/home",
-        icon: "https://cloud.huawei.com/static/img/notepad.53b1da0..png",
-      },
       yuque: {
         icon: "https://mdn.alipayobjects.com/huamei_0prmtq/afts/img/A*sHlLTI41kIoAAAAAAAAAAAAADvuFAQ/original",
         link: "https://www.yuque.com/dashboard/books",
@@ -186,6 +182,10 @@ export default hopeTheme({
   // 在这里配置主题提供的插件
   plugins: {
     blog: true,
+
+    // 旧路径 301 跳转（目录/文件名脱敏时保留老链接可用）
+    // 2026-10-30：career/huawei-experience → career/growth-series
+    redirect: true,
 
     // 本地全文搜索
     // 注意: hopeTheme 不会自动启用搜索，必须在 plugins.search 里显式配置

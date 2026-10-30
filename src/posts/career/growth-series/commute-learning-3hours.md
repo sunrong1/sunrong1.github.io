@@ -5,6 +5,7 @@ tags:
   - 学习方法
   - 职场成长
 author: Mr.Sun
+redirectFrom: /posts/career/huawei-experience/commute-learning-3hours.html
 ---***
 # 长距离通勤如何利用：每天 3 小时的实战方法论
 

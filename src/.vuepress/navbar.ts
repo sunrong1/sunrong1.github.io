@@ -28,7 +28,7 @@ export default navbar([
     prefix: "/posts/career/",
     link: "/posts/career/",
     children: [
-      { text: "华为成长", link: "huawei-experience/" },
+      { text: "成长笔记", link: "growth-series/" },
       { text: "项目作品", link: "projects.html" },
       { text: "技术栈", link: "tech-stack.html" },
       { text: "技术文章", link: "tech-papers/" },
