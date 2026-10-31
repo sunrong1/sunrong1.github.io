@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""生成 QCC 流程图：P 阶段深挖（选题 → 现状 → 目标 → 析因 → 主因 → 对策）。
+"""输出位置：src/.vuepress/public/images/（public 目录才会进 dist，src/images 下未被引用的图会 404）
+
+生成 QCC 流程图：P 阶段深挖（选题 → 现状 → 目标 → 析因 → 主因 → 对策）。
 
 把 QCC 的 P 阶段六步拆开，每一步给「怎么做」与「主用工具」，
 底部标三阶段评审（主题 / 对策 / 成功）。
@@ -174,5 +176,5 @@ for i, (k, when, what) in enumerate(stages):
                                     linewidth=1.0, color=C_GRN))
     tx += w + 1.2
 
-fig.savefig("/workspace/blog/src/images/qcc-p-stage-deep.png", dpi=170, facecolor=BG)
-print("→ /workspace/blog/src/images/qcc-p-stage-deep.png")
+fig.savefig("/workspace/blog/src/.vuepress/public/images/qcc-p-stage-deep.png", dpi=170, facecolor=BG)
+print("→ /workspace/blog/src/.vuepress/public/images/qcc-p-stage-deep.png")

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""生成 QCC 流程图：PDCA 十步 × 工具 × 产出 × 常见坑。
+"""输出位置：src/.vuepress/public/images/（public 目录才会进 dist，src/images 下未被引用的图会 404）
+
+生成 QCC 流程图：PDCA 十步 × 工具 × 产出 × 常见坑。
 
 主图（qcc-cheatsheet.png）给全局，这张给可执行细节：
 每一步用什么工具、产出什么、最容易在哪翻车。
@@ -129,5 +131,5 @@ ax.text(7.0, box_top - 5.3,
         "评审重点查两件事：数据有没有捏造 · 是不是组长一个人包办",
         ha="left", va="center", fontsize=9.3, color=C_RED, fontweight="bold")
 
-fig.savefig("/workspace/blog/src/images/qcc-pdca-10steps.png", dpi=170, facecolor=BG)
-print("→ /workspace/blog/src/images/qcc-pdca-10steps.png")
+fig.savefig("/workspace/blog/src/.vuepress/public/images/qcc-pdca-10steps.png", dpi=170, facecolor=BG)
+print("→ /workspace/blog/src/.vuepress/public/images/qcc-pdca-10steps.png")

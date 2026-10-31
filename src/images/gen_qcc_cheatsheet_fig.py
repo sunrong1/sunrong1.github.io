@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""生成 QCC 速查图：自主性的小组制改进。
+"""输出位置：src/.vuepress/public/images/（public 目录才会进 dist，src/images 下未被引用的图会 404）
+
+生成 QCC 速查图：自主性的小组制改进。
 
 一张图装下 QCC 复习的全部骨架：
 定义起源 / 四大特点 / 三个角色 / 三种组建程序 / 课题三维度分类 /
@@ -256,5 +258,5 @@ ax.text(98.0, 7.3, "每半月交中间报告（小组注册 + 课题注册双轨
 ax.text(98.0, 4.6, "常见病：虎头蛇尾 · 走过场（假数据）",
         ha="left", va="center", fontsize=8.6, color=C_RED, fontweight="bold")
 
-fig.savefig("/workspace/blog/src/images/qcc-cheatsheet.png", dpi=170, facecolor=BG)
-print("→ /workspace/blog/src/images/qcc-cheatsheet.png")
+fig.savefig("/workspace/blog/src/.vuepress/public/images/qcc-cheatsheet.png", dpi=170, facecolor=BG)
+print("→ /workspace/blog/src/.vuepress/public/images/qcc-cheatsheet.png")

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""生成 QCC 对比图：问题解决型 vs 课题达成型（创新型）。
+"""输出位置：src/.vuepress/public/images/（public 目录才会进 dist，src/images 下未被引用的图会 404）
+
+生成 QCC 对比图：问题解决型 vs 课题达成型（创新型）。
 
 对照两种课题类型的切入点、流程、工具取向，以及判断类型的四条标准。
 """
@@ -179,5 +181,5 @@ ax.text(7.0, BY + 1.6,
         "最大的坑：程序混用 —— 解决型课题套用达成型的「提出方案选最优」，或达成型课题硬做现状调查与原因分析",
         ha="left", va="center", fontsize=9.0, color=C_RED, fontweight="bold")
 
-fig.savefig("/workspace/blog/src/images/qcc-two-types.png", dpi=170, facecolor=BG)
-print("→ /workspace/blog/src/images/qcc-two-types.png")
+fig.savefig("/workspace/blog/src/.vuepress/public/images/qcc-two-types.png", dpi=170, facecolor=BG)
+print("→ /workspace/blog/src/.vuepress/public/images/qcc-two-types.png")
