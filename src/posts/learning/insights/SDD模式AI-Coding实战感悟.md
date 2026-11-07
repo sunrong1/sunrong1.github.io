@@ -1,7 +1,10 @@
 ---
 title: SDD 模式 AI Coding 实战感悟 — 数字员工 AI 项目开发纪实
 category: AI Coding
-tag: SDD / 工程化 / 学习反思
+tag:
+  - SDD
+  - 工程化
+  - 学习反思
 cover: /img/cover-sdd-ai-coding.jpg
 icon: 🦸
 date: 2026-08-03 08:00:00
