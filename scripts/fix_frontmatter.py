@@ -3,7 +3,7 @@
 import re
 from pathlib import Path
 
-POSTS_DIR = Path("/workspace/sunrong1.github.io/src/posts")
+POSTS_DIR = Path(__file__).resolve().parent.parent / "src" / "posts"
 
 def fix_file(path: Path) -> bool:
     """修复单个 .md 文件的 frontmatter。返回是否改动。"""
