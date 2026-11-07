@@ -90,10 +90,15 @@ author: Mr.Sun
 ## 🚀 发布
 
 ```
-push master ──► GitHub Actions ──► build ──► 推 gh-pages 分支 ──► Pages 发布 ──► sunrong.site
+push master ──► GitHub Actions(约 2 分钟) ──► 推 gh-pages 分支 ──► Pages 构建(数小时) ──► sunrong.site
 ```
 
 CI 配置在 `.github/workflows/deploy.yml`，Node 20 → `npm ci` → `npm run build` → `peaceiris/actions-gh-pages` 推到 `gh-pages` 分支。
+
+> ⚠️ **别以为 push 完就上线了。** Pages 的构建周期是**小时级**（实测 6–19 小时），线上内容在构建**完成**时才切换。
+> ⭐ 所以推完之后线上还是旧内容，这是正常的，别急着改代码重推 —— 重推只会多排一个构建。
+> ⭐ 判断有没有上线，看 `GET /repos/{owner}/{repo}/pages` 的 `status`：`built` = 已上线，`building` = 还在构建，`errored` = 构建失败。
+> ⭐ 真实失败会在 **10 分钟内**报 `errored`；超过 10 分钟还在 `building`，基本就是正常的慢构建。
 
 **本地也能手动部署**（需要仓库写权限）：
 
