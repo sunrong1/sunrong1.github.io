@@ -18,7 +18,7 @@ author: Mr.Sun
 
 # 我用 420 行 Python 给自己写了一个 SM-2 复习系统
 
-> 起因：我刚立了 [8 周成为 Agent 应用架构师](https://sunrong.site/posts/ai-practice/agentscope-w1-architecture.html) 的 flag，写了 5 份长文档。但学完不代表记住——人类的遗忘曲线决定了 **24 小时后我会忘掉 70%**。所以我用 SM-2 算法（Anki 底层算法）给自己写了一个复习系统。
+> 起因：我刚立了 [8 周成为 Agent 应用架构师](https://sunrong.site/posts/ai-practice/ai-app/agentscope-w1-architecture.html) 的 flag，写了 5 份长文档。但学完不代表记住——人类的遗忘曲线决定了 **24 小时后我会忘掉 70%**。所以我用 SM-2 算法（Anki 底层算法）给自己写了一个复习系统。
 >
 > **TL;DR**：一个 420 行的 Python 脚本，零外部依赖，6 个 CLI 命令，基于 SM-2 算法自适应调整复习间隔。代码在 [github.com/sunrong1/agentscope](https://github.com/sunrong1/agentscope/tree/learning-journal) 的 `tools/review.py`。
 
