@@ -8,9 +8,12 @@ on:
   # 允许手动触发
   workflow_dispatch:
 
-# 设置 GITHUB_TOKEN 的权限
+# 官方 Pages 部署需要的权限
+# id-token: write 是 actions/deploy-pages 做 OIDC 认证用的,不能少
 permissions:
-  contents: write  # 需要推送 gh-pages 分支
+  contents: read
+  pages: write
+  id-token: write
 
 # 只允许一个并发部署任务
 concurrency:
@@ -20,11 +23,17 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # 获取所有历史记录
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -39,19 +48,18 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-          # 151 篇文章构建时 vuepress-vite 会吃满 Node 堆
+          # 文章数量增长会推高 vuepress-vite 的构建内存
           # GitHub runner 约 7GB 内存，堆设 6144MB 留出系统余量
           NODE_OPTIONS: --max-old-space-size=6144
 
       - name: Copy CNAME
         run: cp CNAME src/.vuepress/dist/
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./src/.vuepress/dist
-          publish_branch: gh-pages
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: 'chore: auto deploy from master branch'
+          path: ./src/.vuepress/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
