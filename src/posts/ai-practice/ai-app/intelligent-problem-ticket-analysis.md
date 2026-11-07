@@ -4,9 +4,9 @@ date: 2026-03-02
 update: 2026-04-03
 tags:
   - AI Agent
-  - 测试智能化
-  - 问题单分析
+  - 测试
   - RAG
+categories:
   - AI 实践
 star: true
 

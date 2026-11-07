@@ -5,9 +5,6 @@ tags:
   - BMAD
   - SDD
   - AI Agent
-  - 多 Agent 协作
-  - 超级个体
-  - 工程化
 categories:
   - AI 实践
 icon: 🏗️

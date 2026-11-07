@@ -5,12 +5,9 @@ update: 2026-07-19
 categories:
   - AI 应用
 tags:
-  - 学习系统
+  - 学习方法
   - SM-2
-  - 间隔重复
-  - 艾宾浩斯
   - AgentScope
-  - 工具
 star: true
 
 author: Mr.Sun

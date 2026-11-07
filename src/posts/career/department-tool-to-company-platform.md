@@ -4,15 +4,13 @@ icon: brand
 date: 2026-10-02
 updated: 2026-10-02
 categories:
-  - 成长
+  - 个人成长
   - 转型
   - 平台架构
 tags:
   - 研发效能
-  - 平台架构
-  - 职业成长
-  - 品牌建设
-  - ISTJ
+  - 架构设计
+  - 个人成长
 author: Mr.Sun
 star: true
 ---

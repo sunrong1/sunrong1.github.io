@@ -7,9 +7,7 @@ categories:
 tags:
   - AI Agent
   - Multi-Agent
-  - AgentVerse
   - 论文精读
-  - 清华大学
 author: Mr.Sun
 star: true
 ---***

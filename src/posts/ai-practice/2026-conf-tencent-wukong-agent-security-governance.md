@@ -8,9 +8,7 @@ categories:
 tags:
   - 会议笔记
   - Agent 安全
-  - 治理
-  - 灰度上线
-  - 框架选型
+  - 技术选型
 author: Mr.Sun
 star: true
 ---***

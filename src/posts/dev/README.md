@@ -3,7 +3,11 @@ title: 开发指南
 index: false
 icon: laptop-code
 categories:
-  - 开发实践
+  - 工程实践
+tags:
+  - 工程化
+  - 方法论
+  - 开发者指南
 ---
 
 <Catalog />

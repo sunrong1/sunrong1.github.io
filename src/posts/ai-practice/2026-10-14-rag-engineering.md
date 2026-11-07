@@ -8,14 +8,8 @@ categories:
   - 软件架构
 tags:
   - RAG
-  - 检索增强生成
-  - 分层评估
+  - 评估
   - 查询转换
-  - 分块策略
-  - Chunking
-  - Agentic RAG
-  - CRAG
-  - Rerank
 author: Mr.Sun
 star: true
 ---***

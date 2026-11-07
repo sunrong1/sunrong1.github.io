@@ -2,10 +2,10 @@
 date: 2026-04-18
 tags:
   - AI Agent
-  - 培训
+  - 团队管理
   - AgentScope
-  - MCP
-  - Agent Platform
+categories:
+  - AI 实践
 author: Mr.Sun
 icon: 🧠
 ---***

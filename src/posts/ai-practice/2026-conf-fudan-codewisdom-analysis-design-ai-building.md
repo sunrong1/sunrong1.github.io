@@ -8,9 +8,7 @@ categories:
 tags:
   - 会议笔记
   - 复旦
-  - 架构师视角
-  - 复杂系统
-  - 人机分工
+  - 架构设计
 author: Mr.Sun
 star: true
 ---***

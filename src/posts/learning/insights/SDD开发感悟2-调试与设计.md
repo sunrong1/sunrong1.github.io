@@ -1,7 +1,7 @@
 ---
 title: SDD 开发感悟 2 — 调试 AI 代码 + design.md 关键性 + 查缺补漏
 category: AI Coding
-tag: SDD / AI工程化 / 个人复盘
+tag: SDD / 工程化 / 学习反思
 cover: /img/cover-sdd-debug.jpg
 icon: 🐛
 date: 2026-08-03 08:45:00

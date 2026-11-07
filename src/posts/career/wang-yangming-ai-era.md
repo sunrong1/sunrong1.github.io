@@ -6,11 +6,9 @@ update: 2026-06-01
 categories:
   - 职业发展
 tags:
-  - 王阳明
   - 心学
   - AI 时代
-  - 知行合一
-  - 致良知
+  - 个人成长
 author: Mr.Sun
 star: true
 ---***

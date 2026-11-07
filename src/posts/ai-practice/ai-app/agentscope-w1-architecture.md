@@ -6,12 +6,8 @@ categories:
   - AI 应用
 tags:
   - AgentScope
-  - MultiAgent
-  - 架构设计
-  - 源码学习
-  - Mermaid
-  - 公开承诺
-  - 架构复核
+  - Multi-Agent
+  - 个人成长
 star: true
 
 author: Mr.Sun

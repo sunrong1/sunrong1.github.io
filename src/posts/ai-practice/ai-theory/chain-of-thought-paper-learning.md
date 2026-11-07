@@ -4,10 +4,10 @@ date: 2026-04-27
 update: 2026-04-27
 tags:
   - AI Agent
-  - Chain-of-Thought
+  - CoT
   - 论文精读
-  - ReAct
-  - AI 理论
+categories:
+  - AI 实践
 author: Mr.Sun
 star: true
 ---***

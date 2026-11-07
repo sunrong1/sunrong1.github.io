@@ -4,7 +4,9 @@ date: 2026-03-20
 update: 2026-06-06
 tags:
   - 项目成果
-  - 自动化测试
+  - 测试
+  - 职业发展
+categories:
   - 职业发展
 
 author: Mr.Sun

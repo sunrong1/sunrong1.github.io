@@ -7,11 +7,8 @@ categories:
   - AI 实践
 tags:
   - Harness
-  - Agent
   - AI Agent
-  - 工程治理
-  - 多轮对话
-  - 上下文工程
+  - Context Engineering
 author: Mr.Sun
 ---***
 # Harness 工程:Harness 不是"调 LLM",是让 Agent 在系统里活下去

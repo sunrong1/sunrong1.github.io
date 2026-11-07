@@ -9,7 +9,6 @@ tags:
   - AI 时代
   - 个人成长
   - 方法论
-  - 认知提升
 author: Mr.Sun
 star: true
 ---***

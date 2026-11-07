@@ -4,15 +4,11 @@ icon: brain
 date: 2026-10-10
 update: 2026-10-10
 categories:
-  - 学习
+  - 学习方法
 tags:
   - 心理学
-  - 心理健康
-  - 心理韧性
-  - 职业倦怠
-  - 自我成长
-  - 认知升级
-  - 40岁
+  - 职业发展
+  - 个人成长
 author: Mr.Sun
 star: true
 public-safe: true

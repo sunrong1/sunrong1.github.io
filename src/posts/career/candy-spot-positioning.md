@@ -3,14 +3,11 @@ icon: lock
 date: 2026-09-20
 update: 2026-09-20
 categories:
-  - 职业成长
+  - 职业发展
 tags:
-  - 职业规划
-  - 自我认知
-  - 甜点生态位
-  - AI 工程师
-  - 转型
-  - ISTJ
+  - 职业发展
+  - 个人成长
+  - 工程化
 star: true
 author: Mr.Sun
 ---

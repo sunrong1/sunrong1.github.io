@@ -8,8 +8,7 @@ categories:
 tags:
   - 知识工程
   - RAG
-  - LLM Wiki
-  - 系列索引
+  - 记忆系统
 author: Mr.Sun
 public-safe: true
 ---

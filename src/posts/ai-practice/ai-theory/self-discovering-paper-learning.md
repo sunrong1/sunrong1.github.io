@@ -7,9 +7,7 @@ categories:
 tags:
   - AI Agent
   - Self-Discovering
-  - 推理结构
-  - Google DeepMind
-  - 论文解读
+  - 论文精读
 author: Mr.Sun
 star: true
 ---***

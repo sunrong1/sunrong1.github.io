@@ -8,8 +8,6 @@ tags:
   - AI Agent
   - ChatDev
   - Multi-Agent
-  - 清华大学
-  - 论文解读
 author: Mr.Sun
 star: true
 ---***

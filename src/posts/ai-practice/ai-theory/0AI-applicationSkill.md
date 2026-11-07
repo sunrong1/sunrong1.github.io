@@ -3,10 +3,11 @@ icon: pen-to-square
 date: 2026-03-12
 update: 2026-03-21
 categories:
-  - AI
+  - AI 实践
 tags:
-  - AI 应用
+  - AI 时代
   - 学习方法
+  - AI Agent
 star: true
 
 author: Mr.Sun

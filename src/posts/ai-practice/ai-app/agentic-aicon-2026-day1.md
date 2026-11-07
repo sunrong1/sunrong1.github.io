@@ -8,9 +8,7 @@ categories:
 tags:
   - 会议笔记
   - AI Agent
-  - 多 Agent 架构
-  - 知识工程
-  - 组织变革
+  - Multi-Agent
 author: Mr.Sun
 star: true
 ---***

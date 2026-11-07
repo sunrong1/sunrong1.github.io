@@ -8,9 +8,7 @@ categories:
 tags:
   - AI Agent
   - Generative Agents
-  - 社会模拟
-  - 斯坦福
-  - 论文解读
+  - 论文精读
 author: Mr.Sun
 star: true
 ---***

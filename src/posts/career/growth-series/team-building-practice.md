@@ -4,13 +4,11 @@ icon: users
 date: 2026-06-01
 update: 2026-06-01
 categories:
-  - 职场
+  - 职业发展
 tags:
-  - 组织文化
-  - 领导力
-  - 团建活动
   - 团队管理
-  - 大型活动组织
+  - 职业发展
+  - 领导力
 author: Mr.Sun
 star: true
 public-safe: true

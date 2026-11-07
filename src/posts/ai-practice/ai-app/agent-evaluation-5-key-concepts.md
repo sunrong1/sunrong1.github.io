@@ -7,15 +7,7 @@ categories:
 tags:
   - Agent 测评
   - Multi-Agent
-  - ReAct
-  - RAG
-  - NL2API
-  - NL2SQL
-  - COT
   - AI Agent
-  - 评估
-  - 工具调用
-  - W8
 star: true
 
 author: Mr.Sun

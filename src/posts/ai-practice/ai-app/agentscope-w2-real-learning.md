@@ -8,11 +8,6 @@ tags:
   - AgentScope
   - 学习反思
   - 元认知
-  - 真实学习
-  - 自我打脸
-  - 8 周公开承诺
-  - reentrant
-  - Q5 bug
 star: true
 
 author: Mr.Sun

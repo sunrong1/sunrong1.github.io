@@ -3,12 +3,10 @@ icon: rocket
 date: 2026-05-08
 update: 2026-05-08
 categories:
-  - 学习成长
+  - 学习方法
 tags:
   - 职业发展
   - AI Agent
-  - 认知升级
-  - 顶层设计者
   - 学习方法
 author: Mr.Sun
 star: true

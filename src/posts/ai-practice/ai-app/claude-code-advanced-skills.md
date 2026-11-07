@@ -7,9 +7,8 @@ categories:
   - AI 实践
 tags:
   - AI Agent
-  - 多 Agent 协作
+  - Multi-Agent
   - 架构设计
-  - Claude Code
 public-safe: true
   - 沟通总结
 author: Mr.Sun

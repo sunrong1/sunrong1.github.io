@@ -9,10 +9,7 @@ categories:
 tags:
   - RAG
   - 知识工程
-  - LLM Wiki
-  - 选型
-  - 知识库
-  - Agent
+  - AI Agent
 author: Mr.Sun
 public-safe: true
 ---

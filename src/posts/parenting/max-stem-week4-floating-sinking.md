@@ -4,13 +4,11 @@ icon: rocket
 date: 2026-05-27
 update: 2026-05-27
 categories:
-  - 育儿
+  - 育儿心得
 tags:
   - STEM
-  - 科学启蒙
-  - 6岁
-  - 漂浮与沉没
-  - 亲子教育
+  - 育儿心得
+  - 亲子实验
 author: Mr.Sun
 ---***
 # 沐沐的 STEM 实验课第 4 周：木头漂起来，石头沉下去

@@ -3,11 +3,10 @@ icon: brain
 date: 2026-04-25
 update: 2026-04-25
 categories:
-  - 开发
+  - 工程实践
 tags:
   - DDD
-  - 能力提升
-  - 微服务
+  - 个人成长
   - AI 实践
 star: true
 

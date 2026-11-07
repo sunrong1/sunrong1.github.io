@@ -3,8 +3,9 @@ date: 2026-03-19
 tags:
   - 上海生活
   - 育儿心得
-  - 亲子时光
   - 中山公园
+categories:
+  - 生活
 author: Mr.Sun
 icon: 🌱
 ---***

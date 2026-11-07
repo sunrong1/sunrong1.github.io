@@ -2,13 +2,11 @@
 date: 2025-08-14
 updated: 2026-04-06
 categories:
-  - AI
+  - AI 实践
 tags:
-  - 数学基础
-  - 线性代数
-  - 微积分
-  - 概率论
-  - AI工程师
+  - STEM
+  - 工程化
+  - 深度学习
 author: Mr.Sun
 icon: 🧠
 ---***

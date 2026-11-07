@@ -7,7 +7,8 @@ categories:
   - AI 实践
 tags:
   - AI Agent
-  - 论文学习
+  - 论文精读
+  - Agent 测评
 public-safe: true
   - 系列索引
 author: Mr.Sun

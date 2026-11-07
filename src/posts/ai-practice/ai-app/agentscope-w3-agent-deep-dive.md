@@ -8,11 +8,6 @@ tags:
   - AgentScope
   - 学习反思
   - 元认知
-  - 真实学习
-  - ReAct
-  - reentrant
-  - Q5 bug
-  - 状态机
 star: true
 
 author: Mr.Sun

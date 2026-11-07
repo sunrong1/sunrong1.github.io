@@ -3,12 +3,11 @@ icon: pen-to-square
 date: 2026-04-08
 update: 2026-05-09
 categories:
-  - AI
+  - AI 实践
 tags:
   - AI Agent
   - OpenClaw
-  - Skill 设计
-  - 组件化思维
+  - 思维模型
 star: true
 
 author: Mr.Sun

@@ -9,9 +9,7 @@ categories:
 tags:
   - Claude Code
   - Context Engineering
-  - 上下文管理
-  - Agent 架构
-  - AI 编程工具
+  - AI Coding
 author: Mr.Sun
 public-safe: true
 ---

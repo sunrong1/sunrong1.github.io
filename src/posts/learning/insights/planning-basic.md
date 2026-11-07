@@ -1,9 +1,9 @@
 ---
 date: 2025-09-01
 categories:
-  - 规划
+  - 人生规划
 tags:
-  - 规划与洞察
+  - 认知升级
   - 学习方法
   - 个人成长
 author: Mr.Sun

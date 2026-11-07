@@ -7,10 +7,8 @@ categories:
   - AI 实践
 tags:
   - 会议笔记
-  - 参会报告
   - PPT
-  - 团队参考
-  - Agentic AICon
+  - 团队管理
 public-safe: true
 author: Mr.Sun
 star: true

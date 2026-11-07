@@ -7,10 +7,8 @@ categories:
   - AI 实践
 tags:
   - 会议笔记
-  - 多年大厂 TMG
-  - Harness
-  - 护城河
-  - 组织 Harness
+  - 职业发展
+  - 个人成长
 author: Mr.Sun
 star: true
 ---***

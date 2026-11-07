@@ -6,10 +6,8 @@ categories:
   - AI 实践
 tags:
   - AI Agent
-  - AgentBench
-  - 评测基准
-  - 清华大学
-  - 论文解读
+  - Agent 测评
+  - 论文精读
 author: Mr.Sun
 star: true
 ---***

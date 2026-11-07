@@ -2,11 +2,11 @@
 icon: book-open
 date: 2026-3-30 22:30:00
 categories:
-  - 学习成长
+  - 学习方法
 tags:
-  - 测试架构
+  - 测试
   - 面试
-  - 自动化测试
+  - 测试架构
 star: true
 public-safe: true
 

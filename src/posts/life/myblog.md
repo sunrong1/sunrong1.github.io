@@ -6,13 +6,9 @@ update: 2026-10-21
 categories:
   - 生活
 tags:
-  - 博客
-  - 技术分享
-  - 成长
-  - 程序员
+  - 实践分享
+  - 个人成长
   - AI Agent
-  - 心学
-  - AgentScope
 author: Mr.Sun
 star: true
 sticky: true

@@ -8,10 +8,7 @@ categories:
 tags:
   - 会议笔记
   - AI Agent
-  - 人机协作
-  - 群体智能
-  - 复盘
-  - 接力系统
+  - 学习反思
 author: Mr.Sun
 star: true
 ---***

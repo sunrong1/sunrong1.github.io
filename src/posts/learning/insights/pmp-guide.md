@@ -4,8 +4,9 @@ date: 2026-03-25
 tags:
   - PMP
   - 项目管理
-  - 职业认证
   - 职业发展
+categories:
+  - 学习方法
 star: true
 
 author: Mr.Sun

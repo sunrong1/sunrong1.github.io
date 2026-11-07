@@ -8,9 +8,7 @@ categories:
 tags:
   - AI Coding
   - 测试
-  - 变异测试
-  - 代码审查
-  - 团队协作
+  - 团队管理
 author: Mr.Sun
 public-safe: true
 ---

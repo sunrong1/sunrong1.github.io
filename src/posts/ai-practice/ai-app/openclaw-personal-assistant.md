@@ -1,10 +1,11 @@
 ---
 date: 2026-03-19
 tags:
-  - AI
+  - AI 时代
   - OpenClaw
-  - 实战项目
-  - AI助手
+  - 实践分享
+categories:
+  - AI 实践
 author: Mr.Sun
 icon: 🚀
 ---***
@@ -468,7 +469,7 @@ openclaw cron runs <job-id>
 > 4月份是深度使用 OpenClaw 的一个月，累计遇到了10+个实际问题。这里记录最核心的几个，供大家避坑。
 
 ***
-### �坑8：企业微信授权失效（850003）
+### 🐞 坑8：企业微信授权失效（850003）
 
 **问题现象**：突然无法发送企业微信消息，提示 `unauthorized` 或授权码无效
 
@@ -499,7 +500,7 @@ cat ~/.openclaw/extensions/wecom-openclaw-plugin/config.json
 **教训**：这是最高频的问题，目前还没有彻底解决，需要每次发生时重新授权。
 
 ***
-### �坑9：MiniMax 模型返回空回复
+### 🐞 坑9：MiniMax 模型返回空回复
 
 **问题现象**：模型配置正确，但回复内容为空（`⚠️ No reply from model`）
 

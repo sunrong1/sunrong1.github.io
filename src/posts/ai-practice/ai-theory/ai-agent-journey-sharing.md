@@ -7,7 +7,7 @@ categories:
   - AI 实践
 tags:
   - AI Agent
-  - 学习笔记
+  - 学习方法
   - 实践分享
 author: Mr.Sun
 star: true

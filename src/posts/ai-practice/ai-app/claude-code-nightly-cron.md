@@ -3,13 +3,8 @@ title: '把 AI 编程塞进 cron：夜间无人值守开发的三层设计与四
 date: '2026-10-13'
 tags:
   - Claude Code
-  - 定时任务
-  - cron
-  - tmux
   - BMAD
-  - 无人值守
-  - AI Agent 编排
-  - 工程自动化
+  - 工程化
 categories:
   - AI 实践
 icon: 🌙

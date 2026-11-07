@@ -6,10 +6,8 @@ categories:
   - AI 实践
 tags:
   - AI Agent
-  - Agentic RAG
   - RAG
-  - 论文解读
-  - 知识管理
+  - 论文精读
 author: Mr.Sun
 star: true
 ---***

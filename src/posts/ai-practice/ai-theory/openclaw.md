@@ -2,7 +2,7 @@
 icon: brain
 date: 2026-02-28
 categories:
-  - AI
+  - AI 实践
 tags:
   - OpenClaw
   - AI Agent

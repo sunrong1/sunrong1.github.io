@@ -3,9 +3,11 @@ icon: user-tie
 date: 2026-03-21
 update: 2026-03-21
 tags:
-  - 面试经验
-  - 职场心得
+  - 面试
   - 职业发展
+  - 个人成长
+categories:
+  - 学习方法
 
 author: Mr.Sun
 public-safe: true

@@ -9,10 +9,7 @@ categories:
 tags:
   - 知识工程
   - RAG
-  - LLM Wiki
-  - Obsidian
-  - 知识图谱
-  - Agent
+  - AI Agent
 author: Mr.Sun
 public-safe: true
 ---

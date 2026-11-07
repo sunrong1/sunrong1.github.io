@@ -2,8 +2,10 @@
 date: 2026-03-19
 tags:
   - 育儿心得
-  - 职场心得
-  - 亲子时光
+  - 职业发展
+  - 个人成长
+categories:
+  - 育儿心得
 author: Mr.Sun
 icon: 👨‍👦
 ---***

@@ -8,9 +8,7 @@ categories:
 tags:
   - AI Agent
   - AgentScope
-  - OpenCode
-  - 技术选型
-  - 团队决策
+  - 团队管理
 author: Mr.Sun
 star: true
 ---***

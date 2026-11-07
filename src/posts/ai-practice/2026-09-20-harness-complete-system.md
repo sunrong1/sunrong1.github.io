@@ -8,12 +8,7 @@ categories:
 tags:
   - Harness
   - AI Coding
-  - Agent
-  - 上下文工程
-  - 多 Agent
-  - Hook
-  - AgentLoop
-  - 工程治理
+  - AI Agent
 author: Mr.Sun
 star: true
 ---***

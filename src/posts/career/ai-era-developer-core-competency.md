@@ -7,9 +7,7 @@ categories:
   - 职业发展
 tags:
   - AI 时代
-  - 开发者能力
-  - 认知能力
-  - 工程方法
+  - 技术能力
   - 个人成长
 author: Mr.Sun
 star: true

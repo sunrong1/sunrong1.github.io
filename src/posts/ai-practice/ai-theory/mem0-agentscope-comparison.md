@@ -3,9 +3,9 @@ date: 2026-04-20
 tags:
   - AI Agent
   - 记忆系统
-  - Mem0
   - AgentScope
-  - 向量数据库
+categories:
+  - AI 实践
 author: Mr.Sun
 icon: 🧠
 ---***

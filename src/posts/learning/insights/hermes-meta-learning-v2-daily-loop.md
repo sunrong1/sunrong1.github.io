@@ -3,16 +3,13 @@ icon: rocket
 date: 2026-06-25
 update: 2026-06-25
 categories:
-  - Hermes
+  - Hermes Agent
   - Multi-Agent
   - 元认知
 tags:
   - Hermes Agent
   - Multi-Agent
-  - 元认知学习
-  - delegate_task
-  - 每日循环
-  - 状态管理
+  - 元认知
 star: true
 ---
 

@@ -7,11 +7,8 @@ categories:
   - AI 实践
 tags:
   - AI Coding
-  - Vibe Coding
   - Prompt 工程
-  - MVP
-  - 团队推广
-  - 方法论
+  - 团队管理
 author: Mr.Sun
 public-safe: true
 ---

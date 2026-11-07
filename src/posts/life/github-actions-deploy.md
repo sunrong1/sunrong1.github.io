@@ -2,10 +2,11 @@
 date: 2026-03-18
 author: Mr.Sun
 tags:
-  - 开源项目
-  - 测试技术
+  - 开源协作
+  - 测试
+  - 工程化
 categories:
-  - 使用指南
+  - 方法论
 cover: /assets/images/github-actions-blog.png
 icon: 🌱
 ---***

@@ -3,12 +3,11 @@ icon: database
 date: 2018-10-11 22:21:00
 update: 2026-05-05
 categories:
-  - 数据库
+  - 工程实践
 tags:
   - MySQL
   - 数据库基础
   - SQL
-  - LeetCode
 star: true
 public-safe: true
 ---***

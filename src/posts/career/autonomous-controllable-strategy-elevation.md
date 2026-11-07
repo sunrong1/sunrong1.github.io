@@ -3,13 +3,9 @@ icon: 💼
 title: 从钱学森之问到 Palantir 模式：一个测试工程师看到的"自主可控"
 date: '2026-07-24'
 tags:
-  - 战略思考
+  - 战略设计
   - 自主可控
   - AI Agent
-  - Palantir
-  - 军民融合
-  - 钱学森之问
-  - 个人定位
 categories:
   - 职业发展
 author: Mr.Sun

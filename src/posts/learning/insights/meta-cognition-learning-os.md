@@ -7,11 +7,8 @@ categories:
   - 元认知
 tags:
   - 元认知
-  - 学习系统
-  - 自我管理
-  - AI 时代
-  - Harness
-  - AgentScope
+  - 学习方法
+  - 个人成长
 star: true
 ---
 

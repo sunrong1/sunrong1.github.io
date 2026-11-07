@@ -3,13 +3,11 @@ icon: salt
 date: 2026-05-18
 update: 2026-05-18
 categories:
-  - 育儿
+  - 育儿心得
 tags:
   - STEM
-  - 科学启蒙
-  - 6岁
+  - 育儿心得
   - 亲子实验
-  - 溶解
 author: Mr.Sun
 ---***
 # 沐沐的 STEM 实验课第 3 周：糖去哪了 — 溶解实验

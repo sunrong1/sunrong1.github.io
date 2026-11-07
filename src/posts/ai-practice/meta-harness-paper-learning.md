@@ -7,10 +7,7 @@ categories:
   - 论文精读
 tags:
   - Harness
-  - Meta-Harness
-  - AI 工程师
   - 履历升级
-  - 复利思维
   - 论文精读
 star: true
 public-safe: true

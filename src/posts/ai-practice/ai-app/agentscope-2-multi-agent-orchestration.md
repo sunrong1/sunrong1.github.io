@@ -6,10 +6,7 @@ categories:
   - AI 应用
 tags:
   - AgentScope
-  - MultiAgent
-  - 源码学习
-  - Pipeline
-  - A2A
+  - Multi-Agent
   - 架构设计
 author: Mr.Sun
 star: true

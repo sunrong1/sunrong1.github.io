@@ -1,10 +1,11 @@
 ---
 date: 2025-09-01
 tags:
-  - 规划与洞察
+  - 认知升级
   - 学习方法
-  - 思维能力
   - 个人成长
+categories:
+  - 学习方法
 author: Mr.Sun
 star: 10
 icon: 💡

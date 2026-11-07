@@ -1,7 +1,7 @@
 ---
 title: SDD + 敏捷混合工作流 — 长期项目的最优解
 category: AI Coding
-tag: SDD / 敏捷 / 工程实践
+tag: SDD / 项目管理 / 工程化
 cover: /img/cover-sdd-agile.jpg
 icon: 🔄
 date: 2026-08-03 08:30:00

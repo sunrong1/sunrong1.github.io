@@ -8,12 +8,8 @@ categories:
   - 软件架构
 tags:
   - RAG
-  - 检索增强生成
-  - GraphRAG
-  - Agentic RAG
-  - Modular RAG
-  - 知识库
-  - 向量检索
+  - 知识工程
+  - AI 应用
 author: Mr.Sun
 star: true
 ---***

@@ -8,8 +8,6 @@ tags:
   - OpenClaw
   - Hermes Agent
   - AI Agent
-  - 个人助手
-  - 工具对比
 star: true
 
 author: Mr.Sun

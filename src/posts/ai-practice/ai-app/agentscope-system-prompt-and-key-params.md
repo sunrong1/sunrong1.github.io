@@ -7,11 +7,7 @@ categories:
 tags:
   - AgentScope
   - System Prompt
-  - Prompt Engineering
-  - ReAct
-  - Context Compression
-  - 实战
-  - 参数调优
+  - Context Engineering
 star: true
 
 author: Mr.Sun

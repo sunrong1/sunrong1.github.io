@@ -8,13 +8,6 @@ tags:
   - AgentScope
   - 学习反思
   - 元认知
-  - 真实学习
-  - W6
-  - 记忆与上下文
-  - 状态管理
-  - 长期记忆
-  - Context Engineering
-  - 学习方法论
 star: true
 
 author: Mr.Sun

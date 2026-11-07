@@ -5,8 +5,6 @@ categories:
 tags:
   - AI Agent
   - Skill 开发
-  - 环境运维
-  - MCP
   - OpenClaw
 author: Mr.Sun
 icon: 🚀

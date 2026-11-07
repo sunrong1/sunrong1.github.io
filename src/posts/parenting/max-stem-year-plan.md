@@ -3,13 +3,11 @@ icon: rocket
 date: 2026-05-10
 update: 2026-05-10
 categories:
-  - 育儿
+  - 育儿心得
 tags:
   - STEM
-  - 科学启蒙
-  - 6岁
-  - 亲子教育
-  - 幼小衔接
+  - 育儿心得
+  - 亲子实验
 author: Mr.Sun
 ---***
 # 沐沐的 STEM + 科学一年规划：用好奇心丈量世界

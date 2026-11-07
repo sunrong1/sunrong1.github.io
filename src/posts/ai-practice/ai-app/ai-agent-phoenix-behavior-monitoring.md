@@ -7,13 +7,7 @@ categories:
 tags:
   - AgentScope
   - Phoenix
-  - OpenTelemetry
   - AI Agent
-  - Evaluation
-  - Observability
-  - W7
-  - 行为监控
-  - Tracing
 star: true
 
 author: Mr.Sun

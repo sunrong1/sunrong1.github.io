@@ -6,13 +6,9 @@ update: 2026-06-18
 categories:
   - AI 实践
 tags:
-  - Vibe Coding
   - AI Coding
   - 游戏开发
-  - TDD
-  - Subagent Driven Development
-  - 架构设计
-  - 重构实战
+  - 测试
 author: Mr.Sun
 star: true
 ---***

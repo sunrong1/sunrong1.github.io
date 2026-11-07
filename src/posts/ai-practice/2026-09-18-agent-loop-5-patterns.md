@@ -6,13 +6,9 @@ update: 2026-09-18
 categories:
   - AI 实践
 tags:
-  - Agent
+  - AI Agent
   - AgentLoop
-  - ReAct
-  - Plan-and-Execute
-  - 反思迭代
-  - 多智能体
-  - Harness
+  - Multi-Agent
 author: Mr.Sun
 ---***
 # Agent Loop 5 大模式:Agent 怎么 step-by-step 跑

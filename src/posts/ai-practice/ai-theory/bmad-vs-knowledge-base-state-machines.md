@@ -10,9 +10,6 @@ tags:
   - 知识工程
   - BMAD
   - AI Coding
-  - Obsidian
-  - Code Wiki
-  - 状态机
 author: Mr.Sun
 public-safe: true
 ---

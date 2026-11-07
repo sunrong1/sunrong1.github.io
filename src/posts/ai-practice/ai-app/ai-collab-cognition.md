@@ -5,10 +5,8 @@ update: 2026-05-07
 categories:
   - AI 实践
 tags:
-  - AI 协作
+  - AI Coding
   - 效率提升
-  - 认知升级
-  - 职业发展
   - AI Agent
 public-safe: true
 author: Mr.Sun

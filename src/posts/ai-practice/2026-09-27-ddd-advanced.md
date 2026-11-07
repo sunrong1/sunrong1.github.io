@@ -8,13 +8,8 @@ categories:
   - 软件架构
 tags:
   - DDD
-  - 领域驱动设计
   - 领域事件
-  - 四层架构
-  - 事务边界
-  - 仓储
-  - 依赖倒置
-  - 误区防范
+  - 架构设计
 author: Mr.Sun
 star: true
 ---***

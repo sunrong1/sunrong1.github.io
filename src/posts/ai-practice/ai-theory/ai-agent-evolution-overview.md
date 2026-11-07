@@ -6,10 +6,8 @@ categories:
   - AI 实践
 tags:
   - AI Agent
-  - 架构演进
-  - LLM
-  - 综述
-  - 前沿进展
+  - 架构设计
+  - 论文精读
 author: Mr.Sun
 star: true
 ---***

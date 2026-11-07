@@ -5,11 +5,9 @@ update: 2026-04-23
 categories:
   - 学习方法
 tags:
-  - 心流
+  - 效率提升
   - AI 学习
-  - 专注力
-  - 学习效率
-  - 自我提升
+  - 个人成长
 star: true
 cover: /assets/images/flow-learning.png
 public-safe: true

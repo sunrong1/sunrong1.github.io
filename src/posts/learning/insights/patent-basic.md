@@ -4,7 +4,9 @@ date: 2026-01-23
 tags:
   - 专利基础
   - 知识产权
-  - 创新
+  - 个人成长
+categories:
+  - 学习方法
 star: 1
 
 author: Mr.Sun

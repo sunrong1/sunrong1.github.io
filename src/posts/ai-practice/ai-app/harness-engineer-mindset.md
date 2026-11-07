@@ -7,10 +7,8 @@ categories:
   - AI 实践
 tags:
   - AI Native
-  - Harness 工程师
-  - 工程师转型
-  - Karpathy 模式
-  - 团队管理
+  - Harness
+  - 职业发展
 author: Mr.Sun
 star: true
 ---***

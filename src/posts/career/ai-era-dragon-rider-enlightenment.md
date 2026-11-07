@@ -8,9 +8,7 @@ categories:
 tags:
   - AI 时代
   - 个人成长
-  - 王阳明
-  - 知行合一
-  - 致良知
+  - 心学
 author: Mr.Sun
 star: true
 ---***

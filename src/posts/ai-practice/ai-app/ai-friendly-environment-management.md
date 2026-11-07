@@ -5,11 +5,9 @@ update: 2026-04-23
 categories:
   - AI 实践
 tags:
-  - AI 友好性
+  - AI 时代
   - JSON 存储
-  - 扁平化架构
-  - 测试自动化
-  - 架构升级
+  - 测试
 star: true
 
 author: Mr.Sun

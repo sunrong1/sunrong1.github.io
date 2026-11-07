@@ -7,9 +7,7 @@ categories:
 tags:
   - AI Agent
   - MemGPT
-  - 层级记忆
-  - 上下文管理
-  - 论文解读
+  - 论文精读
 author: Mr.Sun
 star: true
 ---***

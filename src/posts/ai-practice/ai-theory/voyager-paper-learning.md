@@ -7,9 +7,7 @@ categories:
 tags:
   - AI Agent
   - Voyager
-  - 终身学习
   - 论文精读
-  - Embodied Agent
 author: Mr.Sun
 star: true
 ---***

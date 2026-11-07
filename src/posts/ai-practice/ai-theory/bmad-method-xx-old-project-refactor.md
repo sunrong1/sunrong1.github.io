@@ -3,12 +3,8 @@ title: 'XX老项目 代码重构 — BMAD 流程总结'
 date: '2026-09-12'
 tags:
   - BMAD
-  - 实战
-  - 代码重构
-  - .NET
-  - SDD 对比
+  - 实践分享
   - AI Agent
-  - 超级个体
 categories:
   - AI 实践
 icon: 🛠️

@@ -7,12 +7,7 @@ categories:
 tags:
   - AgentScope
   - 学习反思
-  - 消息与通信
-  - 真实学习
-  - Block
-  - Pydantic
-  - 流式协议
-  - Schema Cascade
+  - Agent 架构
 star: true
 
 author: Mr.Sun

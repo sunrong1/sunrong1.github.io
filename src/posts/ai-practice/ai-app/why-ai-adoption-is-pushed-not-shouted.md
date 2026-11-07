@@ -8,11 +8,8 @@ categories:
   - 软件架构
 tags:
   - 系统思维
-  - AI 编码
-  - 研发效能
-  - 团队推广
-  - 因果回路图
-  - Peter Senge
+  - AI Coding
+  - 团队管理
 author: Mr.Sun
 star: true
 public-safe: true

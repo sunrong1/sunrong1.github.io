@@ -2,10 +2,10 @@
 date: 2026-04-17
 tags:
   - AI Agent
-  - 软件架构
-  - Harness Engineering
-  - AI 转型
-  - 技术洞察
+  - 架构设计
+  - 职业发展
+categories:
+  - AI 实践
 author: Mr.Sun
 icon: 🧠
 ---***

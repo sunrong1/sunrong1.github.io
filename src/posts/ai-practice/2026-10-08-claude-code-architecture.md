@@ -8,12 +8,8 @@ categories:
   - 软件架构
 tags:
   - Harness
-  - Agent Loop
-  - Goal Loop
+  - AgentLoop
   - Context Engineering
-  - Claude Code
-  - Hooks
-  - 独立判断器
 author: Mr.Sun
 star: true
 ---***

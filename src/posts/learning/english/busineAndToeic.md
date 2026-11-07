@@ -3,8 +3,11 @@ icon: pen-to-square
 date: 2021-01-22 20:04:47
 update: 2026-03-09 20:04:47
 categories:
-  - english
+  - 英语学习
 tags:
+  - 英语学习
+  - 面试
+  - 学习方法
 - toeic
 ---
 

@@ -8,12 +8,6 @@ tags:
   - AgentScope
   - 学习反思
   - 元认知
-  - 真实学习
-  - W8
-  - 8 周复盘
-  - 收官
-  - Agent 应用架构师
-  - 心学
 star: true
 
 author: Mr.Sun

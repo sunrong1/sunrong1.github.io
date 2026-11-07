@@ -8,11 +8,7 @@ categories:
 tags:
   - 开源协作
   - AgentScope
-  - Code Review
-  - BMAD
-  - GLM
-  - 致良知
-  - 工程方法论
+  - 方法论
 author: Mr.Sun
 star: true
 ---

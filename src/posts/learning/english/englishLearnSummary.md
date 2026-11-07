@@ -4,9 +4,11 @@ date: 2026-01-22 20:04:47
 since: 2020-06-22 20:04:43
 update: 2026-03-09 20:04:47
 categories:
-  - english
+  - 英语学习
 tags:
-  - 规划与洞察
+  - 英语学习
+  - 认知升级
+  - 学习方法
 
 author: Mr.Sun
 public-safe: true

@@ -8,10 +8,6 @@ tags:
   - AgentScope
   - 学习反思
   - 元认知
-  - 真实学习
-  - W4
-  - 消息与通信
-  - 学习方法论
 star: true
 
 author: Mr.Sun

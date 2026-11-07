@@ -2,9 +2,11 @@
 title: 架构师成长笔记
 icon: briefcase
 tags:
-  - 职场成长
-  - 测试架构
-  - 技术成长
+  - 职业发展
+  - 测试
+  - 个人成长
+categories:
+  - 职业发展
 redirectFrom: /posts/career/huawei-experience/
 ---***
 # 架构师成长笔记

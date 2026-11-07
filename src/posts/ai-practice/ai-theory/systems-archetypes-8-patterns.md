@@ -8,11 +8,8 @@ categories:
   - 软件架构
 tags:
   - 系统思维
-  - 系统基模
-  - 因果回路图
   - Peter Senge
-  - 第五项修炼
-  - 杠杆点
+  - 复杂系统
 author: Mr.Sun
 star: true
 public-safe: true

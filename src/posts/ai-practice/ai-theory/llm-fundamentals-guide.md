@@ -2,19 +2,12 @@
 title: "大模型原理速成指南：从架构、训练到推理（AI 架构师通关手册）"
 date: 2026-08-24
 categories:
-  - ai-practice
+  - AI 实践
   - ai-theory
 tags:
   - LLM
-  - 大模型
   - Transformer
-  - 预训练
-  - SFT
-  - RLHF
-  - Test-Time Scaling
-  - Context Engineering
   - AI Agent
-  - 面试
 description: "面向 AI Agent 架构方向，对大模型原理的系统性梳理。覆盖架构、训练、推理三大主题，每节配套关键金句与自检题。"
 public-safe: true
 ---

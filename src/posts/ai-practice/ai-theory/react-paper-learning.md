@@ -7,9 +7,7 @@ categories:
 tags:
   - AI Agent
   - ReAct
-  - CoT
-  - 论文解读
-  - LLM
+  - 论文精读
 author: Mr.Sun
 star: true
 ---***

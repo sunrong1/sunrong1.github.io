@@ -4,7 +4,8 @@ tags:
   - OpenClaw
   - 本地部署
   - AI Agent
-  - 记忆管理
+categories:
+  - AI 实践
 
 author: Mr.Sun
 icon: 🚀

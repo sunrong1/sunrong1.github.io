@@ -3,15 +3,13 @@ icon: robot
 date: 2026-06-23
 update: 2026-06-23
 categories:
-  - Hermes
+  - Hermes Agent
   - Multi-Agent
   - 元认知
 tags:
   - Hermes Agent
   - Multi-Agent
-  - 元认知学习
-  - Harness 工程师
-  - 自动化
+  - Harness
 star: true
 public-safe: true
 ---

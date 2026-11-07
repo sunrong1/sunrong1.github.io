@@ -8,14 +8,8 @@ categories:
   - 软件架构
 tags:
   - DDD
-  - 领域驱动设计
-  - 整洁架构
-  - 洋葱架构
-  - 六边形架构
-  - 端口适配器
-  - 防腐层
-  - ACL
   - 架构模式
+  - ACL
 author: Mr.Sun
 star: true
 ---***

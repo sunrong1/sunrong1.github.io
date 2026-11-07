@@ -4,11 +4,7 @@ date: '2026-10-13'
 tags:
   - Claude Code
   - MiniMax
-  - 通义千问
-  - DeepSeek
-  - 多模型协作
-  - Token 优化
-  - BMAD
+  - Multi-Agent
 categories:
   - AI 实践
 icon: 🎛️

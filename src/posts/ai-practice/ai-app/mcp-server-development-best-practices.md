@@ -3,8 +3,9 @@ date: 2026-04-22
 tags:
   - MCP
   - AI Agent
-  - 接口设计
-  - 工程实践
+  - 工程化
+categories:
+  - AI 实践
 
 author: Mr.Sun
 icon: 🚀

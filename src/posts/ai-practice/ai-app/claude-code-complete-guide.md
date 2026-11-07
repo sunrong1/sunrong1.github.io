@@ -3,9 +3,10 @@ date: 2026-04-03
 update: 2026-04-03
 tags:
   - Claude Code
-  - AI 编程
-  - 工具使用
+  - AI Coding
   - AI Agent
+categories:
+  - AI 实践
 
 author: Mr.Sun
 icon: 🚀

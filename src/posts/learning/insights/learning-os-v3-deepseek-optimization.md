@@ -7,9 +7,8 @@ categories:
   - 学习方法
 tags:
   - 元认知
-  - 多 Agent
-  - 学习系统
-  - 9 大思维
+  - Multi-Agent
+  - 学习方法
 cover: https://sunrong1.github.io/assets/learning-os-v3-cover.png
 author: Mr.Sun
 star: true

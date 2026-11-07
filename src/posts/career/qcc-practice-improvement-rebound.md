@@ -4,13 +4,11 @@ icon: bullseye
 date: 2026-10-31
 update: 2026-10-31
 categories:
-  - 职场成长
+  - 职业发展
 tags:
-  - QCC
-  - 质量管理
-  - 改进方法
   - PDCA
   - 团队管理
+  - 个人成长
 author: Mr.Sun
 public-safe: true
 ---

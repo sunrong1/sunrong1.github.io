@@ -7,9 +7,8 @@ categories:
   - AI 实践
 tags:
   - Claude Code
-  - AI 编程
-  - 效率提升
-  - 开发工作流
+  - AI Coding
+  - 工程化
 author: Mr.Sun
 star: true
 ---***

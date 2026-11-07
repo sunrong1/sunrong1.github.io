@@ -7,9 +7,7 @@ categories:
 tags:
   - AI Agent
   - Toolformer
-  - 工具调用
-  - 论文解读
-  - 自监督学习
+  - 论文精读
 author: Mr.Sun
 star: true
 ---***

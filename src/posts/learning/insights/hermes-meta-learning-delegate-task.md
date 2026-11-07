@@ -3,15 +3,13 @@ icon: robot
 date: 2026-06-24
 update: 2026-06-24
 categories:
-  - Hermes
+  - Hermes Agent
   - Multi-Agent
   - 元认知
 tags:
   - Hermes Agent
   - Multi-Agent
-  - delegate_task
-  - 元认知学习
-  - 自动化
+  - 元认知
 star: true
 ---
 

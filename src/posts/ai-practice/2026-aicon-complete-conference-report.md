@@ -8,9 +8,7 @@ categories:
 tags:
   - 会议笔记
   - AI Agent
-  - 完整战报
-  - 知识网络
-  - 范式重构
+  - 知识工程
 author: Mr.Sun
 star: true
 ---***

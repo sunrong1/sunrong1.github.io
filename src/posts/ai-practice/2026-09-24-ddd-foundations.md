@@ -8,15 +8,8 @@ categories:
   - 软件架构
 tags:
   - DDD
-  - 领域驱动设计
   - 战略设计
   - 战术设计
-  - 实体
-  - 值对象
-  - 聚合
-  - 限界上下文
-  - 通用语言
-  - 子域
 author: Mr.Sun
 star: true
 ---***

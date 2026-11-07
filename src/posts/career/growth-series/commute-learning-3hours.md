@@ -1,9 +1,11 @@
 ---
 date: 2026-03-19
 tags:
-  - 时间管理
+  - 效率提升
   - 学习方法
-  - 职场成长
+  - 职业发展
+categories:
+  - 职业发展
 author: Mr.Sun
 redirectFrom: /posts/career/huawei-experience/commute-learning-3hours.html
 ---***

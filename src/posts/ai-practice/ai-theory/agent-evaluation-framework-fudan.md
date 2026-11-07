@@ -7,10 +7,8 @@ categories:
   - AI 实践
 tags:
   - AI Agent
-  - 评测
-  - 复旦
-  - AgentBench
-  - 工业落地
+  - 评估
+  - Agent 测评
 author: Mr.Sun
 star: true
 ---***

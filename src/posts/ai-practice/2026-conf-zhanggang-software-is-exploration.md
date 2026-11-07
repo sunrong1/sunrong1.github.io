@@ -7,10 +7,8 @@ categories:
   - AI 实践
 tags:
   - 会议笔记
-  - 软件开发
-  - 问题定义
-  - Vibe Coding
-  - grill-me
+  - 工程化
+  - AI Coding
 author: Mr.Sun
 star: true
 ---***

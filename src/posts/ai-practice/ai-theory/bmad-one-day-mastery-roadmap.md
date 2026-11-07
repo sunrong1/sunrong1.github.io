@@ -4,10 +4,7 @@ date: '2026-10-11'
 tags:
   - BMAD
   - AI Agent
-  - 学习方法论
-  - SDD
-  - 源码阅读
-  - 超级个体
+  - 个人成长
 categories:
   - AI 实践
 icon: 🧭

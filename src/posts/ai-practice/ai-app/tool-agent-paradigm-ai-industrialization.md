@@ -8,9 +8,7 @@ categories:
 tags:
   - AI Agent
   - MCP
-  - AI 工业化
-  - 阿里云
-  - Token 节约
+  - AI 时代
 author: Mr.Sun
 star: true
 ---***

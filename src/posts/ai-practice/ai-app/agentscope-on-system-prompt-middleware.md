@@ -7,10 +7,7 @@ categories:
 tags:
   - AgentScope
   - Middleware
-  - System Prompt
-  - 实战
-  - 动态注入
-  - on_system_prompt
+  - 实践分享
 star: true
 
 author: Mr.Sun

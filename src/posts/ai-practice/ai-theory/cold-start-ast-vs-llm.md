@@ -9,10 +9,6 @@ categories:
 tags:
   - 知识工程
   - AI Coding
-  - Aider
-  - Tree-sitter
-  - Code Wiki
-  - Obsidian
   - BMAD
 author: Mr.Sun
 public-safe: true

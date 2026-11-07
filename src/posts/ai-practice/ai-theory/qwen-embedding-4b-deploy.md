@@ -2,10 +2,10 @@
 date: 2026-04-20
 tags:
   - Qwen
-  - Embedding
-  - llama.cpp
-  - 向量数据库
   - RAG
+  - 向量数据库
+categories:
+  - AI 实践
 author: Mr.Sun
 icon: 🧠
 ---***

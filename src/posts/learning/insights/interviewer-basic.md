@@ -4,12 +4,11 @@ icon: user-check
 date: 2026-05-20
 update: 2026-05-20
 categories:
-  - 学习心得
+  - 学习方法
 tags:
-  - 面试官
-  - 面试经验
-  - 人才评估
-  - 职场成长
+  - 面试
+  - 职业发展
+  - 团队管理
 author: Mr.Sun
 star: 10
 public-safe: true

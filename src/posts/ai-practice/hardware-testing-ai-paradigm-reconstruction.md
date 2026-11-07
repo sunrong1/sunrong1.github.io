@@ -8,9 +8,7 @@ categories:
 tags:
   - AI Agent
   - 测试
-  - 范式重构
-  - Harness
-  - 部门转型
+  - 职业发展
 author: Mr.Sun
 star: true
 ---***

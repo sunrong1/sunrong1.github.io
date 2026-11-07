@@ -1,9 +1,11 @@
 ---
 date: 2026-03-19
 tags:
-  - 职场成长
-  - 测试架构
-  - 技术成长
+  - 职业发展
+  - 测试
+  - 个人成长
+categories:
+  - 职业发展
 author: Mr.Sun
 icon: 🏢
 redirectFrom: /posts/career/huawei-experience/huawei-growth-01.html

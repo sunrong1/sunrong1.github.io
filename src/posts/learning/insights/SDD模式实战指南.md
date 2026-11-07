@@ -1,7 +1,7 @@
 ---
 title: SDD 模式实战指南 — 决策清单 + 三份标准模板
 category: AI Coding
-tag: SDD / 实战模板 / 个人复盘
+tag: SDD / 实践分享 / 学习反思
 cover: /img/cover-sdd-templates.jpg
 icon: 📐
 date: 2026-08-03 08:15:00

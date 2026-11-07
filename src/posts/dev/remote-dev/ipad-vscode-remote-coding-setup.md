@@ -5,8 +5,6 @@ tags:
   - VSCode
   - code-server
   - 远程开发
-  - 工具链
-  - Caddy
 categories:
   - AI 实践
 icon: 🌐

@@ -7,9 +7,7 @@ categories:
 tags:
   - AI Agent
   - Computer Use
-  - GUI Agent
-  - 多模态
-  - 论文解读
+  - 论文精读
 author: Mr.Sun
 star: true
 ---***

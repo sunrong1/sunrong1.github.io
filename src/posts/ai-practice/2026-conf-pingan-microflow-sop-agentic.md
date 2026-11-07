@@ -8,9 +8,7 @@ categories:
 tags:
   - 会议笔记
   - 微流程 SOP
-  - 工程化原则
-  - 金融 AI
-  - 知识图谱
+  - 工程化
 author: Mr.Sun
 star: true
 ---***

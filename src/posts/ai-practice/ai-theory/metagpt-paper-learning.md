@@ -8,8 +8,6 @@ tags:
   - AI Agent
   - MetaGPT
   - Multi-Agent
-  - 论文精读
-  - 软件工程
 author: Mr.Sun
 star: true
 ---***

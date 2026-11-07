@@ -1,9 +1,11 @@
 ---
 icon: user-group
 tags:
-  - 程序员爸爸
   - 育儿心得
-  - 亲子时光
+  - STEM
+  - 亲子实验
+categories:
+  - 育儿心得
 ---***
 # 程序员爸爸系列
 

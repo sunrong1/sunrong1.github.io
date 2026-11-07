@@ -8,7 +8,6 @@ categories:
 tags:
   - AI 时代
   - 职业发展
-  - 认知提升
   - 方法论
 author: Mr.Sun
 star: true

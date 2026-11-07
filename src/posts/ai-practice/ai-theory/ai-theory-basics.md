@@ -3,11 +3,11 @@ icon: book
 date: 2026-04-03
 update: 2026-04-03
 tags:
-  - AI基础
+  - AI 时代
   - 机器学习
   - 深度学习
-  - 计算机视觉
-  - NLP
+categories:
+  - AI 实践
 star: true
 
 author: Mr.Sun

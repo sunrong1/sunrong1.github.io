@@ -3,12 +3,11 @@ icon: robot
 date: 2026-04-29
 update: 2026-04-29
 categories:
-  - AI
+  - AI 实践
 tags:
   - AI Agent
-  - Hermes
-  - 会话管理
-  - 工具调用
+  - Hermes Agent
+  - 状态管理
 star: true
 
 author: Mr.Sun

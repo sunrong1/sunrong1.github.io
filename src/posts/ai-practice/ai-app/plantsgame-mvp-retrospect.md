@@ -8,9 +8,7 @@ categories:
 tags:
   - AI Coding
   - Claude Code
-  - Phaser3
-  - 游戏开发
-  - 项目复盘
+  - 学习反思
 author: Mr.Sun
 star: true
 ---***

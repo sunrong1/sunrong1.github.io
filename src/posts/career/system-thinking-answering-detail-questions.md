@@ -8,9 +8,7 @@ categories:
 tags:
   - AI 时代
   - 职业发展
-  - 系统思维
-  - 工程方法
-  - 面试
+  - 方法论
 author: Mr.Sun
 public-safe: true
 ---***

@@ -3,13 +3,11 @@ icon: ice-cream
 date: 2026-05-17
 update: 2026-05-17
 categories:
-  - 育儿
+  - 育儿心得
 tags:
   - STEM
-  - 科学启蒙
-  - 6岁
+  - 育儿心得
   - 亲子实验
-  - 冰棍
 author: Mr.Sun
 ---***
 # 沐沐的 STEM 实验课第 2 周：自制冰棍

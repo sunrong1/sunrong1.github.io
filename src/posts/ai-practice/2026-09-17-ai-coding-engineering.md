@@ -8,11 +8,7 @@ categories:
 tags:
   - AI Coding
   - Harness
-  - Agent
-  - 上下文工程
-  - 多 Agent
-  - Hook
-  - 工程治理
+  - AI Agent
 author: Mr.Sun
 ---***
 # AI Coding 工程:从 4 大组件到 Harness 完整体系

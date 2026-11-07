@@ -7,10 +7,8 @@ categories:
   - AI 实践
 tags:
   - AI 时代
-  - π 型人才
-  - Harness 工程师
-  - 项目管理 Agent
-  - 35 岁转型
+  - 职业发展
+  - Harness
 author: Mr.Sun
 star: true
 ---***

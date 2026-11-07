@@ -4,13 +4,11 @@ icon: user-check
 date: 2026-05-20
 update: 2026-05-20
 categories:
-  - 职场
+  - 职业发展
 tags:
   - 面试
-  - 技术面试
-  - 面试官
-  - 职场成长
-  - 管理
+  - 职业发展
+  - 团队管理
 author: Mr.Sun
 star: true
 public-safe: true

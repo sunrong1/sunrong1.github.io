@@ -7,9 +7,8 @@ categories:
   - 学习方法
 tags:
   - 元认知
-  - 多 Agent
-  - 学习系统
-  - AI 实践
+  - Multi-Agent
+  - 学习方法
 cover: https://sunrong1.github.io/assets/learning-os-5-agent.png
 author: Mr.Sun
 star: true

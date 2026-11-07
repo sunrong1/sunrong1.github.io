@@ -7,9 +7,7 @@ categories:
 tags:
   - AI Agent
   - Context Engineering
-  - LLM
-  - 学习笔记
-  - Harness
+  - 学习方法
 author: Mr.Sun
 public-safe: true
 ---***

@@ -3,15 +3,11 @@ icon: brain
 date: 2026-08-27
 update: 2026-08-27
 categories:
-  - 自我成长
+  - 个人成长
 tags:
-  - 正念
-  - 领导力
-  - 注意力
-  - 自我觉察
-  - 冥想
-  - 睡眠
-  - 神经科学
+  - 心理学
+  - 团队管理
+  - 个人成长
 star: true
 cover: /assets/images/mindful-leadership.png
 public-safe: true

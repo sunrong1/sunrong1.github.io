@@ -6,10 +6,8 @@ categories:
   - AI 实践
 tags:
   - AI Agent
-  - 论文解读
-  - Reflexion
-  - 自我反思
-  - LLM
+  - 论文精读
+  - 学习反思
 author: Mr.Sun
 star: true
 ---***

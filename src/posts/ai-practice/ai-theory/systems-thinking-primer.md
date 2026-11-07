@@ -8,11 +8,8 @@ categories:
   - 软件架构
 tags:
   - 系统思维
-  - 因果回路图
   - Peter Senge
-  - 第五项修炼
   - 思维模型
-  - 涌现性
 author: Mr.Sun
 star: true
 public-safe: true
