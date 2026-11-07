@@ -187,6 +187,19 @@ public-safe: true
 
 ***
 
+***
+
+## 延伸阅读
+
+这个主题我写过三篇，正好构成一条线：
+
+- [系统思维入门：从"什么东西"到"怎么画图"](https://sunrong.site/posts/ai-practice/ai-theory/systems-thinking-primer.html) — 先把系统思维本身讲清楚：画因果图找的是中间那条看不见的线
+- [系统思维应用：8 个系统基模，和一次职业诊断](https://sunrong.site/posts/ai-practice/ai-theory/systems-archetypes-8-patterns.html) — 认出基模，就知道该动结构还是该动力度
+- [为什么 70% 是推出来的，不是喊出来的](https://sunrong.site/posts/ai-practice/ai-app/why-ai-adoption-is-pushed-not-shouted.html) — 同一个方法用在真实项目上：怎么找到那个杠杆点
+
+**前两篇讲怎么用系统思维分析问题，这篇讲怎么用它应答。**
+
+
 ## EN
 
 > **The mechanism:** when you're asked a bottom-layer detail you genuinely can't recall, what saves you isn't memorizing harder — it's knowing how the system is put together.
