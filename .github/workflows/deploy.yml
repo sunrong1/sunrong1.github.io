@@ -63,3 +63,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # ⭐ 站点产物 129MB / 1481 文件(其中 463 个标签聚合页占 84MB),
+          # Pages 的 syncing_files 阶段可能超过默认 600 秒而被中止,
+          # 导致 status=errored + "Page build failed."(构建本身是成功的)
+          timeout: 3600000

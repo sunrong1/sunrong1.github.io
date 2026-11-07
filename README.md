@@ -90,15 +90,17 @@ author: Mr.Sun
 ## 🚀 发布
 
 ```
-push master ──► GitHub Actions(约 2 分钟) ──► 推 gh-pages 分支 ──► Pages 构建(数小时) ──► sunrong.site
+push master ──► GitHub Actions(约 2 分钟) ──► 官方 Pages 部署 ──► sunrong.site
 ```
 
-CI 配置在 `.github/workflows/deploy.yml`，Node 20 → `npm ci` → `npm run build` → `peaceiris/actions-gh-pages` 推到 `gh-pages` 分支。
+CI 配置在 `.github/workflows/deploy.yml`，Node 20 → `npm ci` → `npm run build` → `actions/upload-pages-artifact` → `actions/deploy-pages`。
 
-> ⚠️ **别以为 push 完就上线了。** Pages 的构建周期是**小时级**（实测 6–19 小时），线上内容在构建**完成**时才切换。
-> ⭐ 所以推完之后线上还是旧内容，这是正常的，别急着改代码重推 —— 重推只会多排一个构建。
-> ⭐ 判断有没有上线，看 `GET /repos/{owner}/{repo}/pages` 的 `status`：`built` = 已上线，`building` = 还在构建，`errored` = 构建失败。
-> ⭐ 真实失败会在 **10 分钟内**报 `errored`；超过 10 分钟还在 `building`，基本就是正常的慢构建。
+> ⭐ **2026-11-07 换了部署管线**：原来是 `peaceiris/actions-gh-pages` 推 `gh-pages` 分支 + Pages 的 legacy 构建（`build_type: legacy`）。那条路在文章变多后会失败（见下方踩坑区），现已改成官方 Actions 部署，仓库 Pages 设置里的 `build_type` 同步改成了 `workflow`。
+> ⭐ **`gh-pages` 分支现在是历史遗留**，新的发布不再写它。
+
+> ⚠️ **别以为 push 完就线上可见。** 官方管线一般 2–5 分钟完成，但产物大时会变慢。
+> ⭐ 判断状态看 `GET /repos/{owner}/{repo}/pages` 的 `status`：`built` = 已上线，`building` = 还在构建，`errored` = 失败。
+> ⭐ 线上跑的是哪个版本，用「上一篇成功发布的文章」去测：200 = 已更新，404 = 线上还是旧版本。
 
 **本地也能手动部署**（需要仓库写权限）：
 
@@ -145,6 +147,13 @@ npm run deploy
 ## ⚠️ 踩过的坑
 
 **构建 OOM。** vuepress-vite 构建期内存随文章数线性增长，150 篇左右就吃满 runner 默认堆，报 `exit code 134`。修法是把 `NODE_OPTIONS` 提到 6144。
+
+**Pages 部署超时（最隐蔽的一种）。** 症状很矛盾：CI 全绿、构建产物正常、`gh-pages` 分支里也有正确 HTML，但线上不更新，`pages` 的 `status` 是 `errored`，`error.message` 只给一句 `Page build failed.`。
+真因不在构建，而在 **Pages 把产物同步到发布层（`syncing_files`）这一步超过了 `deploy-pages` 默认的 600 秒**。日志藏在 GitHub 内部的 `pages build and deployment` workflow 里（`event=dynamic`，跑在 `gh-pages` 分支上），要靠 `GET /repos/{owner}/{repo}/actions/runs?...&branch=gh-pages` 才能找到。
+修法：`actions/deploy-pages` 的 `timeout` 调到 `3600000`。
+⭐ 站点越大越容易撞上 —— 当前产物 129MB / 1481 个文件，其中 463 个标签聚合页就占了 84MB。以后文章继续涨，标签页是第一个要优化的对象。
+
+**排查 Pages 问题的正确顺序。** ① `GET /pages` 看 `status` → ② `GET /pages/builds` 看最近几次构建 → ③ 找 `pages build and deployment` 这个内部 workflow 的 run 拿日志 → ④ 再考虑改配置。⭐ 别一上来就改代码重推，重推只会多排一个构建。
 
 **搜索框消失。** `vuepress-theme-hope` 不会自动启用搜索插件，必须在 `theme.ts` 的 `plugins.search` 里显式配置。删了 `config.ts` 里的 `searchPlugin` 又没在 theme 补回来，导航栏就没搜索框了。
 
