@@ -99,7 +99,8 @@ CI 配置在 `.github/workflows/deploy.yml`，Node 20 → `npm ci` → `npm run 
 > ⭐ **`gh-pages` 分支现在是历史遗留**，新的发布不再写它。
 
 > ⚠️ **别以为 push 完就线上可见。** 官方管线一般 2–5 分钟完成，但产物大时会变慢。
-> ⭐ 判断状态看 `GET /repos/{owner}/{repo}/pages` 的 `status`：`built` = 已上线，`building` = 还在构建，`errored` = 失败。
+> ⭐ 判断状态用 `GET /repos/{owner}/{repo}/deployments?environment=github-pages`，看最新一条的 `status`：`success` = 已上线，`in_progress` = 还在发，`failure` = 失败。
+> ⭐ **别用 `GET /pages` 的 `status` 当判据** —— 换到 workflow 模式后那个字段就不再更新，会一直留着 legacy 时代的旧值（我这边就长期显示着上一轮的 `errored`），差点误判成还没修好。
 > ⭐ 线上跑的是哪个版本，用「上一篇成功发布的文章」去测：200 = 已更新，404 = 线上还是旧版本。
 
 **本地也能手动部署**（需要仓库写权限）：
