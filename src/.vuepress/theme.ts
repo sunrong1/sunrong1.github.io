@@ -96,6 +96,10 @@ export default hopeTheme({
         hint: "输入常用的password",
         password: "111",
       },
+      "/posts/career/system-thinking-answering-detail-questions.html": {
+        hint: "输入常用的password",
+        password: "111",
+      },
     },
   },
 
