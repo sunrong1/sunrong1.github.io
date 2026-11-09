@@ -79,7 +79,7 @@ quadrantChart
 - [Vibe Coding 学习源码的方法论：四层索引 + 并行扫描](/posts/ai-practice/vibe-coding/ai-agent-source-code-learning-methodology.html)
 - [DDD 架构模式：从整洁架构到六边形架构的统一视角](/posts/ai-practice/2026-09-27-ddd-architecture-patterns.html)
 - [悦纳自己：从反 PUA 到心理韧性，一堂心理学课的完整笔记](/posts/learning/insights/悦纳自己-从反PUA到心理韧性-心理学讲座笔记.html)
-- [上海程序员通勤实录：每天 3 小时，我是如何利用的](/posts/career/huawei-experience/commute-learning-3hours.html)
+- [上海程序员通勤实录：每天 3 小时，我是如何利用的](/posts/career/growth-series/commute-learning-3hours.html)
 
 ### 开源与技术栈
 
