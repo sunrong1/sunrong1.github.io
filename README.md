@@ -10,23 +10,23 @@ VuePress 2 驱动的个人技术博客。写 AI 工程实践、职场成长、�
 
 ## 📚 这里有什么
 
-169 篇长文。篇数会持续增长，下表是 2026-11 的快照。
+167 篇长文。篇数会持续增长，下表是 2026-11 的快照。
 
 | 分类 | 源目录 | 篇数 | 内容 |
 | --- | --- | --- | --- |
-| **AI 实践** | `src/posts/ai-practice/` | 102 | AI 理论 39 · AI 应用 37 · vibe-coding 1 · 顶层 25 |
-| **学习洞见** | `src/posts/learning/` | 29 | 洞见 26 · 认知 1 · 英语 2 |
-| **职场成长** | `src/posts/career/` | 20 | 求职、面试、职业选择；成长系列 4 · 技术论文 2 |
-| **育儿心得** | `src/posts/parenting/` | 9 | Max STEM 课程与家庭教育 |
-| **开发技术** | `src/posts/dev/` | 6 | Java 2 · 算法 1 · 数据库 1 · 远程开发 1 |
+| **AI 实践** | `src/posts/ai-practice/` | 101 | AI 理论 38 · AI 应用 37 · vibe-coding 1 · 顶层 25 |
+| **学习洞见** | `src/posts/learning/` | 30 | 洞见 27 · 认知 1 · 英语 2 |
+| **职场成长** | `src/posts/career/` | 19 | 求职、面试、职业选择；成长系列 3 · 技术论文 2 |
+| **育儿心得** | `src/posts/parenting/` | 8 | Max STEM 课程与家庭教育 |
+| **开发技术** | `src/posts/dev/` | 6 | Java 2 · 算法 1 · 数据库 1 · 远程开发 1 · K8s 1 |
 | **生活** | `src/posts/life/` | 3 | 碎片记录 |
 
-**AI 实践占六成**（102/169），是这个站的主线。其余分类按「工作里真遇到的问题」长出来，不是先立目录再填内容。
+**AI 实践占六成**（101/167），是这个站的主线。其余分类按「工作里真遇到的问题」长出来，不是先立目录再填内容。
 
 除目录分类外，文章还带 `categories` / `tags`，会生成独立聚合页：
 
-- 分类页：`/category/<名称>/`（当前 41 个）
-- 标签页：`/tag/<名称>/`（当前 462）
+- 分类页：`/category/<名称>/`（当前 26 个）
+- 标签页：`/tag/<名称>/`（当前 119）
 
 ---
 
@@ -166,7 +166,7 @@ npm run deploy
 **Pages 部署超时（最隐蔽的一种）。** 症状很矛盾：CI 全绿、构建产物正常、`gh-pages` 分支里也有正确 HTML，但线上不更新，`pages` 的 `status` 是 `errored`，`error.message` 只给一句 `Page build failed.`。
 真因不在构建，而在 **Pages 把产物同步到发布层（`syncing_files`）这一步超过了 `deploy-pages` 默认的 600 秒**。日志藏在 GitHub 内部的 `pages build and deployment` workflow 里（`event=dynamic`，跑在 `gh-pages` 分支上），要靠 `GET /repos/{owner}/{repo}/actions/runs?...&branch=gh-pages` 才能找到。
 修法：`actions/deploy-pages` 的 `timeout` 调到 `3600000`。
-⭐ 站点越大越容易撞上 —— 当前产物 129MB / 1481 个文件，其中 463 个标签聚合页就占了 84MB。以后文章继续涨，标签页是第一个要优化的对象。
+⭐ 站点越大越容易撞上 —— 标签聚合页是第一个要优化的对象：标签精简前，463 个标签页曾占掉 84MB（总产物 129MB / 1481 个文件）。以后文章继续涨，先盯标签页。
 
 **排查 Pages 问题的正确顺序。** ① `GET /pages` 看 `status` → ② `GET /pages/builds` 看最近几次构建 → ③ 找 `pages build and deployment` 这个内部 workflow 的 run 拿日志 → ④ 再考虑改配置。⭐ 别一上来就改代码重推，重推只会多排一个构建。
 
