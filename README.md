@@ -168,6 +168,9 @@ npm run deploy
 修法：`actions/deploy-pages` 的 `timeout` 调到 `3600000`。
 ⭐ 站点越大越容易撞上 —— 标签聚合页是第一个要优化的对象：标签精简前，463 个标签页曾占掉 84MB（总产物 129MB / 1481 个文件）。以后文章继续涨，先盯标签页。
 
+**重跑失败的部署会撞上「多产物」。** 部署偶发服务端错误（`Deployment failed, try again later`）时想重跑，注意：`rerun-failed-jobs` 会在**同一个 run 里再上传一份**同名 `github-pages` 产物，`deploy-pages` 发现多份同名产物会直接拒绝（`Multiple artifacts named "github-pages" were unexpectedly found`）。
+修法：重跑前先删掉该 run 里的旧产物 —— `GET /repos/{owner}/{repo}/actions/runs/{run_id}/artifacts` 拿到 id，逐个 `DELETE /repos/{owner}/{repo}/actions/artifacts/{id}`，再 `POST .../runs/{run_id}/rerun-failed-jobs`。⭐ 2026-11-25 实测：不删产物直接重跑必失败，删干净后一次成功。
+
 **排查 Pages 问题的正确顺序。** ① `GET /pages` 看 `status` → ② `GET /pages/builds` 看最近几次构建 → ③ 找 `pages build and deployment` 这个内部 workflow 的 run 拿日志 → ④ 再考虑改配置。⭐ 别一上来就改代码重推，重推只会多排一个构建。
 
 **搜索框消失。** `vuepress-theme-hope` 不会自动启用搜索插件，必须在 `theme.ts` 的 `plugins.search` 里显式配置。删了 `config.ts` 里的 `searchPlugin` 又没在 theme 补回来，导航栏就没搜索框了。
