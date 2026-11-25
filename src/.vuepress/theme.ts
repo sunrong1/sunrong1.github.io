@@ -4,7 +4,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://sunrong1.github.io",
+  hostname: "https://sunrong.site",
 
   author: {
     name: "Mr.Sun",

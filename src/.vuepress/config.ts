@@ -55,7 +55,9 @@ var _hmt = _hmt || [];
       },
     ],
     // 站点验证
-    ["meta", { name: "baidu-site-verification", content: "YOUR_BAIDU_VERIFICATION_CODE" }],
+    // TODO: 到百度搜索资源平台（ziyuan.baidu.com）添加 sunrong.site 并获取真实验证码后，
+    // 取消下面这行注释并填入 content；验证通过前，上方的主动推送脚本不会生效。
+    // ["meta", { name: "baidu-site-verification", content: "真实验证码" }],
     ["meta", { name: "description", content: "Sun 的技术博客，分享研发效能、AI Agent、职场成长、育儿心得" }],
     ["meta", { name: "keywords", content: "研发效能，AI Agent，软件架构，职场成长，育儿，程序员，上海" }],
   ],
